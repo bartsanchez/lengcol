@@ -1,3 +1,4 @@
-Django
+-r base.txt
+
 factory_boy
 tox

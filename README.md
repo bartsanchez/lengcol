@@ -9,7 +9,7 @@ virtualenvwrapper
 ```sh
 $ mkvirtualenv lengcol
 
-(lengcol) $ pip install -r requirements.txt
+(lengcol) $ pip install -r requirements/base.txt
 ```
 
 # Testing
