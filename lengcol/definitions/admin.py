@@ -1,3 +1,7 @@
-from django.contrib import admin
+from django.contrib.admin import site
 
-# Register your models here.
+from definitions import models
+
+
+site.register(models.Term)
+site.register(models.Definition)
