@@ -1,0 +1,4 @@
+# Needed by Heroku
+-r requirements/base.txt
+gunicorn
+whitenoise

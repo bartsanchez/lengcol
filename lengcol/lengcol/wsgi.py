@@ -11,6 +11,10 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lengcol.settings")
+from whitenoise import django
+
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lengcol.settings.base")
 
 application = get_wsgi_application()
+application = django.DjangoWhiteNoise(application)
