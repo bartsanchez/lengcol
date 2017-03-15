@@ -3,5 +3,14 @@
 <ul>
   {% for term in terms %}
     <li>{{ term }}</li>
+
+    {% if term.definition_set.all %}
+      <ul>
+        {% for definition in term.definition_set.all %}
+          <li>{{ definition }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
   {% endfor %}
 </ul>
