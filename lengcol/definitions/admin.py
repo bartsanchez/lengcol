@@ -1,7 +1,16 @@
-from django.contrib.admin import site
+from django.contrib import admin
 
 from definitions import models
 
 
-site.register(models.Term)
-site.register(models.Definition)
+class DefinitionInline(admin.StackedInline):
+    model = models.Definition
+    extra = 0
+
+
+class TermAdmin(admin.ModelAdmin):
+    inlines = (DefinitionInline,)
+
+
+admin.site.register(models.Term, TermAdmin)
+admin.site.register(models.Definition)
