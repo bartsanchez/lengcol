@@ -1,4 +1,7 @@
-<h1>Lenguage coloquial</h1>
+{% extends "lengcol/base.html" %}
+
+{% block content %}
+<h1>Lenguaje coloquial</h1>
 
 <ul>
   {% for term in terms %}
@@ -14,3 +17,4 @@
 
   {% endfor %}
 </ul>
+{% endblock %}
