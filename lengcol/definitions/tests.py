@@ -1,6 +1,8 @@
 from django import test
 
 from definitions import factories
+from definitions import forms
+from definitions import models
 
 
 class TermTests(test.TestCase):
@@ -30,3 +32,129 @@ class IndexViewTests(test.TestCase):
         response = self.client.get('/')
 
         self.assertContains(response, '<h1>Lenguaje coloquial</h1>', html=True)
+
+
+class ModelChoiceFieldAsTextTests(test.TestCase):
+    def setUp(self):
+        self.model_choice_field = forms.ModelChoiceFieldAsText(
+            queryset=models.Definition.objects.all(),
+            field='value',
+        )
+
+    def test_widget(self):
+        self.assertIn(
+            'TextInput',
+            str(self.model_choice_field.widget),
+        )
+
+
+class DefinitionFormTests(test.TestCase):
+    def setUp(self):
+        data = {
+            'term': 'this is a fake term',
+            'value': 'this is a fake definition',
+        }
+        self.form = forms.DefinitionForm(data=data)
+
+    def test_form_is_valid(self):
+        self.assertTrue(self.form.is_valid())
+
+    def test_missing_term(self):
+        data = {
+            'value': 'this is a fake definition',
+        }
+        form = forms.DefinitionForm(data=data)
+
+        self.assertFalse(form.is_valid())
+
+    def test_missing_value(self):
+        data = {
+            'term': 'this is a fake term',
+        }
+        form = forms.DefinitionForm(data=data)
+
+        self.assertFalse(form.is_valid())
+
+    def test_object_created(self):
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        self.form.save()
+
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+
+class DefinitionViewTests(test.TestCase):
+    def setUp(self):
+        self.client = test.Client()
+
+    def test_template_extends(self):
+        response = self.client.get('/add/')
+
+        self.assertTemplateUsed(response, 'lengcol/base.html')
+
+    def test_redirects(self):
+        response = self.client.post(
+            '/add/',
+            {'term': 'fake term', 'value': 'fake definition'},
+        )
+
+        self.assertRedirects(response, '/')
+
+    def test_add_new(self):
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        response = self.client.post(
+            '/add/',
+            {'term': 'fake term', 'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertEqual(
+            models.Term.objects.first().value,
+            'fake term',
+        )
+        self.assertEqual(
+            models.Definition.objects.first().value,
+            'fake definition',
+        )
+
+    def test_missing_term(self):
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        response = self.client.post(
+            '/add/',
+            {'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+    def test_missing_value(self):
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        response = self.client.post(
+            '/add/',
+            {'term': 'fake term'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        self.assertEqual(
+            models.Term.objects.first().value,
+            'fake term',
+        )
