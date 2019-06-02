@@ -3,6 +3,8 @@
 {% block content %}
 <h1>Lenguaje coloquial</h1>
 
+<a href="{% url 'add' %}">Add new definition</a>
+
 <ul>
   {% for term in terms %}
     <li>{{ term }}</li>

@@ -1,4 +1,5 @@
 from django import test
+from django.urls import reverse
 
 from definitions import factories
 from definitions import forms
@@ -32,6 +33,15 @@ class IndexViewTests(test.TestCase):
         response = self.client.get('/')
 
         self.assertContains(response, '<h1>Lenguaje coloquial</h1>', html=True)
+
+    def test_has_link_to_add_new_definition(self):
+        response = self.client.get('/')
+
+        self.assertContains(
+            response,
+            '<a href="{}">Add new definition</a>'.format(reverse('add')),
+            html=True
+        )
 
 
 class ModelChoiceFieldAsTextTests(test.TestCase):
