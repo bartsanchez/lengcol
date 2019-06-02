@@ -1,3 +1,4 @@
 Django
 dj-database-url
 psycopg2
+whitenoise
