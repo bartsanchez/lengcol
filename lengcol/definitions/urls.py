@@ -1,8 +1,11 @@
-from django.conf.urls import url
+from django.urls import path
 from definitions import views
 
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^add/$', views.DefinitionView.as_view(), name='add'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('definitions/add/', views.DefinitionCreateView.as_view(), name='add'),
+    path('definitions/<int:pk>/',
+         views.DefinitionDetailView.as_view(),
+         name='detail'),
 ]

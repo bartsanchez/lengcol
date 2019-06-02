@@ -11,7 +11,11 @@ class IndexView(generic.ListView):
     context_object_name = 'terms'
 
 
-class DefinitionView(generic.CreateView):
+class DefinitionCreateView(generic.CreateView):
     model = models.Definition
     form_class = forms.DefinitionForm
     success_url = urls.reverse_lazy('index')
+
+
+class DefinitionDetailView(generic.DetailView):
+    model = models.Definition

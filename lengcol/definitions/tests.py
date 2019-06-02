@@ -93,18 +93,19 @@ class DefinitionFormTests(test.TestCase):
         self.assertEqual(models.Definition.objects.count(), 1)
 
 
-class DefinitionViewTests(test.TestCase):
+class DefinitionCreateViewTests(test.TestCase):
     def setUp(self):
         self.client = test.Client()
+        self.url = reverse('add')
 
     def test_template_extends(self):
-        response = self.client.get('/add/')
+        response = self.client.get(self.url)
 
         self.assertTemplateUsed(response, 'lengcol/base.html')
 
     def test_redirects(self):
         response = self.client.post(
-            '/add/',
+            self.url,
             {'term': 'fake term', 'value': 'fake definition'},
         )
 
@@ -115,7 +116,7 @@ class DefinitionViewTests(test.TestCase):
         self.assertEqual(models.Definition.objects.count(), 0)
 
         response = self.client.post(
-            '/add/',
+            self.url,
             {'term': 'fake term', 'value': 'fake definition'},
             follow=True,
         )
@@ -139,7 +140,7 @@ class DefinitionViewTests(test.TestCase):
         self.assertEqual(models.Definition.objects.count(), 0)
 
         response = self.client.post(
-            '/add/',
+            self.url,
             {'value': 'fake definition'},
             follow=True,
         )
@@ -154,7 +155,7 @@ class DefinitionViewTests(test.TestCase):
         self.assertEqual(models.Definition.objects.count(), 0)
 
         response = self.client.post(
-            '/add/',
+            self.url,
             {'term': 'fake term'},
             follow=True,
         )
@@ -168,3 +169,27 @@ class DefinitionViewTests(test.TestCase):
             models.Term.objects.first().value,
             'fake term',
         )
+
+
+class DefinitionDetailViewTests(test.TestCase):
+    def setUp(self):
+        self.client = test.Client()
+        self.term = factories.TermFactory(value='fake term')
+        self.definition = factories.DefinitionFactory(term=self.term,
+                                                      value='fake definition')
+        self.url = reverse('detail', kwargs={'pk': self.definition.pk})
+
+    def test_template_extends(self):
+        response = self.client.get(self.url)
+
+        self.assertTemplateUsed(response, 'definitions/definition_detail.html')
+
+    def test_term(self):
+        response = self.client.get('/')
+
+        self.assertContains(response, 'fake term', html=True)
+
+    def test_definition(self):
+        response = self.client.get('/')
+
+        self.assertContains(response, 'fake definition', html=True)
