@@ -12,7 +12,7 @@
     {% if term.definition_set.all %}
       <ul>
         {% for definition in term.definition_set.all %}
-          <li>{{ definition }}</li>
+          <li><a href="{% url 'detail'  definition.pk %}">{{ definition }}</a></li>
         {% endfor %}
       </ul>
     {% endif %}

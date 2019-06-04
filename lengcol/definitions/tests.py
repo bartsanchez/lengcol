@@ -43,6 +43,19 @@ class IndexViewTests(test.TestCase):
             html=True
         )
 
+    def test_has_link_to_definition_detail(self):
+        definition = factories.DefinitionFactory(value='fake definition')
+
+        response = self.client.get('/')
+
+        self.assertContains(
+            response,
+            '<a href="{}">fake definition</a>'.format(
+                reverse('detail', kwargs={'pk': definition.pk})
+            ),
+            html=True
+        )
+
 
 class ModelChoiceFieldAsTextTests(test.TestCase):
     def setUp(self):
