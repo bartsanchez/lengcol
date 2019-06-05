@@ -1,4 +1,5 @@
 -r base.txt
 
 factory_boy
+freezegun
 tox
