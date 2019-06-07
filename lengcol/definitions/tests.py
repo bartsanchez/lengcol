@@ -214,3 +214,10 @@ class DefinitionDetailViewTests(test.TestCase):
         response = self.client.get(self.url)
 
         self.assertContains(response, 'fake definition')
+
+    def test_creation_date(self):
+        response = self.client.get(self.url)
+
+        created = self.definition.created.strftime('%d-%m-%Y')
+
+        self.assertContains(response, 'Created at {}'.format(created))
