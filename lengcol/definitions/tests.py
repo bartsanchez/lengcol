@@ -206,11 +206,11 @@ class DefinitionDetailViewTests(test.TestCase):
         self.assertTemplateUsed(response, 'definitions/definition_detail.html')
 
     def test_term(self):
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
-        self.assertContains(response, 'fake term', html=True)
+        self.assertContains(response, 'fake term')
 
     def test_definition(self):
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
-        self.assertContains(response, 'fake definition', html=True)
+        self.assertContains(response, 'fake definition')
