@@ -9,13 +9,17 @@ from definitions import models
 
 
 class TermTests(test.TestCase):
-    def test_str(self):
-        term = factories.TermFactory(value='my fake term')
+    def setUp(self):
+        self.term = factories.TermFactory(value='my fake term')
 
-        self.assertEqual(str(term), 'my fake term')
+    def test_str(self):
+        self.assertEqual(str(self.term), 'my fake term')
 
     def test_inheritance(self):
         self.assertTrue(issubclass(models.Term, base_models.BaseModel))
+
+    def test_slug(self):
+        self.assertEqual(self.term.slug, 'my-fake-term')
 
 
 class DefinitionTests(test.TestCase):

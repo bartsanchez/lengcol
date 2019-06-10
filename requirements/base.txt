@@ -1,4 +1,5 @@
 Django
+django-extensions
 dj-database-url
 psycopg2
 whitenoise
