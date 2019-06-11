@@ -12,6 +12,10 @@ class Term(base_models.BaseModel):
     def __str__(self):
         return self.value
 
+    @property
+    def definitions(self):
+        return self.definition_set.all()
+
 
 class Definition(base_models.BaseModel):
     term = models.ForeignKey(Term, on_delete=models.CASCADE)

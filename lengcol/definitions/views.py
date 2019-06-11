@@ -19,3 +19,7 @@ class DefinitionCreateView(generic.CreateView):
 
 class DefinitionDetailView(generic.DetailView):
     model = models.Definition
+
+
+class TermDetailView(generic.DetailView):
+    model = models.Term

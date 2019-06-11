@@ -21,6 +21,19 @@ class TermTests(test.TestCase):
     def test_slug(self):
         self.assertEqual(self.term.slug, 'my-fake-term')
 
+    def test_definitions(self):
+        definition_foo = factories.DefinitionFactory(term=self.term,
+                                                     value='foo')
+        definition_bar = factories.DefinitionFactory(term=self.term,
+                                                     value='bar')
+        queryset = models.Definition.objects.filter(
+            pk__in=[definition_foo.pk, definition_bar.pk]
+        )
+        self.assertQuerysetEqual(self.term.definitions,
+                                 queryset,
+                                 ordered=False,
+                                 transform=lambda x: x)
+
 
 class DefinitionTests(test.TestCase):
     def test_str(self):
@@ -49,9 +62,10 @@ class IndexViewTests(test.TestCase):
     def test_has_link_to_add_new_definition(self):
         response = self.client.get('/')
 
+        linked_url = reverse('definition-add')
         self.assertContains(
             response,
-            '<a href="{}">Add new definition</a>'.format(reverse('add')),
+            '<a href="{}">Add new definition</a>'.format(linked_url),
             html=True
         )
 
@@ -63,7 +77,7 @@ class IndexViewTests(test.TestCase):
         self.assertContains(
             response,
             '<a href="{}">fake definition</a>'.format(
-                reverse('detail', kwargs={'pk': definition.pk})
+                reverse('definition-detail', kwargs={'pk': definition.pk})
             ),
             html=True
         )
@@ -121,7 +135,7 @@ class DefinitionFormTests(test.TestCase):
 class DefinitionCreateViewTests(test.TestCase):
     def setUp(self):
         self.client = test.Client()
-        self.url = reverse('add')
+        self.url = reverse('definition-add')
 
     def test_template_extends(self):
         response = self.client.get(self.url)
@@ -202,7 +216,8 @@ class DefinitionDetailViewTests(test.TestCase):
         self.term = factories.TermFactory(value='fake term')
         self.definition = factories.DefinitionFactory(term=self.term,
                                                       value='fake definition')
-        self.url = reverse('detail', kwargs={'pk': self.definition.pk})
+        self.url = reverse('definition-detail',
+                           kwargs={'pk': self.definition.pk})
 
     def test_template_extends(self):
         response = self.client.get(self.url)
@@ -225,3 +240,31 @@ class DefinitionDetailViewTests(test.TestCase):
         created = self.definition.created.strftime('%d-%m-%Y')
 
         self.assertContains(response, 'Created at {}'.format(created))
+
+
+class TermDetailViewTests(test.TestCase):
+    def setUp(self):
+        self.client = test.Client()
+        self.term = factories.TermFactory(value='fake term')
+        self.definition_foo = factories.DefinitionFactory(term=self.term,
+                                                          value='foo')
+        self.definition_bar = factories.DefinitionFactory(term=self.term,
+                                                          value='bar')
+        self.url = reverse('term-detail',
+                           kwargs={'slug': self.term.slug})
+
+    def test_template_extends(self):
+        response = self.client.get(self.url)
+
+        self.assertTemplateUsed(response, 'lengcol/base.html')
+
+    def test_term(self):
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'fake term')
+
+    def test_definitions(self):
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'foo')
+        self.assertContains(response, 'bar')
