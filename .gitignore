@@ -3,3 +3,4 @@ __pycache__
 .tox/
 lengcol.egg-info
 *.pyc
+*.swp
