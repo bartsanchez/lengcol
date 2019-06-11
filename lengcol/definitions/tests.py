@@ -222,7 +222,7 @@ class DefinitionDetailViewTests(test.TestCase):
     def test_template_extends(self):
         response = self.client.get(self.url)
 
-        self.assertTemplateUsed(response, 'definitions/definition_detail.html')
+        self.assertTemplateUsed(response, 'lengcol/base.html')
 
     def test_term(self):
         response = self.client.get(self.url)
