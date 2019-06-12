@@ -7,7 +7,7 @@
 
 <ul>
   {% for term in terms %}
-    <li>{{ term }}</li>
+    <li><a href="{% url 'term-detail' term.slug %}">{{ term }}</a></li>
 
     {% if term.definition_set.all %}
       <ul>

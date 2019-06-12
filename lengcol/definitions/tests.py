@@ -59,6 +59,19 @@ class IndexViewTests(test.TestCase):
 
         self.assertContains(response, '<h1>Lenguaje coloquial</h1>', html=True)
 
+    def test_has_link_to_term_detail(self):
+        term = factories.TermFactory(value='my fake term')
+
+        response = self.client.get('/')
+
+        self.assertContains(
+            response,
+            '<a href="{}">my fake term</a>'.format(
+                reverse('term-detail', kwargs={'slug': term.slug})
+            ),
+            html=True
+        )
+
     def test_has_link_to_add_new_definition(self):
         response = self.client.get('/')
 
