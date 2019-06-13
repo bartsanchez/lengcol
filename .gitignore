@@ -4,3 +4,5 @@ __pycache__
 lengcol.egg-info
 *.pyc
 *.swp
+lengcol/.coverage
+htmlcov/
