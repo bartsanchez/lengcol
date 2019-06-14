@@ -1,48 +1,8 @@
 from django import test
 from django.urls import reverse
 
-from base import models as base_models
-
 from definitions import factories
-from definitions import forms
 from definitions import models
-
-
-class TermTests(test.TestCase):
-    def setUp(self):
-        self.term = factories.TermFactory(value='my fake term')
-
-    def test_str(self):
-        self.assertEqual(str(self.term), 'my fake term')
-
-    def test_inheritance(self):
-        self.assertTrue(issubclass(models.Term, base_models.BaseModel))
-
-    def test_slug(self):
-        self.assertEqual(self.term.slug, 'my-fake-term')
-
-    def test_definitions(self):
-        definition_foo = factories.DefinitionFactory(term=self.term,
-                                                     value='foo')
-        definition_bar = factories.DefinitionFactory(term=self.term,
-                                                     value='bar')
-        queryset = models.Definition.objects.filter(
-            pk__in=[definition_foo.pk, definition_bar.pk]
-        )
-        self.assertQuerysetEqual(self.term.definitions,
-                                 queryset,
-                                 ordered=False,
-                                 transform=lambda x: x)
-
-
-class DefinitionTests(test.TestCase):
-    def test_str(self):
-        definition = factories.DefinitionFactory(value='my fake definition')
-
-        self.assertEqual(str(definition), 'my fake definition')
-
-    def test_inheritance(self):
-        self.assertTrue(issubclass(models.Definition, base_models.BaseModel))
 
 
 class IndexViewTests(test.TestCase):
@@ -94,55 +54,6 @@ class IndexViewTests(test.TestCase):
             ),
             html=True
         )
-
-
-class ModelChoiceFieldAsTextTests(test.TestCase):
-    def setUp(self):
-        self.model_choice_field = forms.ModelChoiceFieldAsText(
-            queryset=models.Definition.objects.all(),
-            field='value',
-        )
-
-    def test_widget(self):
-        self.assertIn(
-            'TextInput',
-            str(self.model_choice_field.widget),
-        )
-
-
-class DefinitionFormTests(test.TestCase):
-    def setUp(self):
-        data = {
-            'term': 'this is a fake term',
-            'value': 'this is a fake definition',
-        }
-        self.form = forms.DefinitionForm(data=data)
-
-    def test_form_is_valid(self):
-        self.assertTrue(self.form.is_valid())
-
-    def test_missing_term(self):
-        data = {
-            'value': 'this is a fake definition',
-        }
-        form = forms.DefinitionForm(data=data)
-
-        self.assertFalse(form.is_valid())
-
-    def test_missing_value(self):
-        data = {
-            'term': 'this is a fake term',
-        }
-        form = forms.DefinitionForm(data=data)
-
-        self.assertFalse(form.is_valid())
-
-    def test_object_created(self):
-        self.assertEqual(models.Definition.objects.count(), 0)
-
-        self.form.save()
-
-        self.assertEqual(models.Definition.objects.count(), 1)
 
 
 class DefinitionCreateViewTests(test.TestCase):
