@@ -4,3 +4,4 @@ factory_boy
 freezegun
 tox
 coverage
+requests

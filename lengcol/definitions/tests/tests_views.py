@@ -1,28 +1,31 @@
 from django import test
 from django.urls import reverse
 
+from base import mixins
+
 from definitions import factories
 from definitions import models
 
 
-class IndexViewTests(test.TestCase):
+class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
+        self.url = '/'
 
     def test_template_extends(self):
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
         self.assertTemplateUsed(response, 'lengcol/base.html')
 
     def test_title(self):
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
         self.assertContains(response, '<h1>Lenguaje coloquial</h1>', html=True)
 
     def test_has_link_to_term_detail(self):
         term = factories.TermFactory(value='my fake term')
 
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
         self.assertContains(
             response,
@@ -33,7 +36,7 @@ class IndexViewTests(test.TestCase):
         )
 
     def test_has_link_to_add_new_definition(self):
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
         linked_url = reverse('definition-add')
         self.assertContains(
@@ -45,7 +48,7 @@ class IndexViewTests(test.TestCase):
     def test_has_link_to_definition_detail(self):
         definition = factories.DefinitionFactory(value='fake definition')
 
-        response = self.client.get('/')
+        response = self.client.get(self.url)
 
         self.assertContains(
             response,
@@ -56,7 +59,7 @@ class IndexViewTests(test.TestCase):
         )
 
 
-class DefinitionCreateViewTests(test.TestCase):
+class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
         self.url = reverse('definition-add')
@@ -134,7 +137,7 @@ class DefinitionCreateViewTests(test.TestCase):
         )
 
 
-class DefinitionDetailViewTests(test.TestCase):
+class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
         self.term = factories.TermFactory(value='fake term')
@@ -166,7 +169,7 @@ class DefinitionDetailViewTests(test.TestCase):
         self.assertContains(response, 'Created at {}'.format(created))
 
 
-class TermDetailViewTests(test.TestCase):
+class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
         self.term = factories.TermFactory(value='fake term')
