@@ -7,7 +7,9 @@ Term
 
 Definitions
 
-{% for definition in object.definitions %}
-<p>{{ definition.value }}</p>
-{% endfor %}
+<ul>
+  {% for definition in object.definitions %}
+    <li>{{ definition.value }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}
