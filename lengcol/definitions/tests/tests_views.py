@@ -20,7 +20,7 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def test_title(self):
         response = self.client.get(self.url)
 
-        self.assertContains(response, '<h1>Lenguaje coloquial</h1>', html=True)
+        self.assertContains(response, 'Lenguaje coloquial')
 
     def test_has_link_to_term_detail(self):
         term = factories.TermFactory(value='my fake term')
