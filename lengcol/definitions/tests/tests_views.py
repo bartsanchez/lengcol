@@ -10,7 +10,7 @@ from definitions import models
 class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
-        self.url = '/'
+        self.url = reverse('index')
 
     def test_template_extends(self):
         response = self.client.get(self.url)
@@ -75,7 +75,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
             {'term': 'fake term', 'value': 'fake definition'},
         )
 
-        self.assertRedirects(response, '/')
+        self.assertRedirects(response, reverse('index'))
 
     def test_add_new(self):
         self.assertEqual(models.Term.objects.count(), 0)
