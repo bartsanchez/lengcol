@@ -24,13 +24,14 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
     def test_has_link_to_term_detail(self):
         term = factories.TermFactory(value='my fake term')
-
+        definition = factories.DefinitionFactory(term=term,
+                                                 value='fake definition')
         response = self.client.get(self.url)
 
         self.assertContains(
             response,
             '<a href="{}">my fake term</a>'.format(
-                reverse('term-detail', kwargs={'slug': term.slug})
+                reverse('term-detail', kwargs={'slug': definition.term.slug})
             ),
             html=True
         )

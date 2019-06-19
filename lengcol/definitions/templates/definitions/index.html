@@ -3,18 +3,20 @@
 {% block content %}
 <a href="{% url 'definition-add' %}">Add new definition</a>
 
-<ul>
-  {% for term in terms %}
-    <li><a href="{% url 'term-detail' term.slug %}">{{ term }}</a></li>
+{% for term in terms %}
+  <div class="card-deck">
+  {% for definition in term.definition_set.all %}
+    <div class="card">
+      <div class="card-header">
+        <a href="{% url 'term-detail' term.slug %}">{{ term }}</a>
+      </div>
 
-    {% if term.definition_set.all %}
-      <ul>
-        {% for definition in term.definition_set.all %}
-          <li><a href="{% url 'definition-detail' definition.pk %}">{{ definition }}</a></li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-
+      <div class="card-body">
+        <a href="{% url 'definition-detail' definition.pk %}">{{ definition }}</a>
+      </div>
+    </div>
   {% endfor %}
-</ul>
+  </div>
+{% endfor %}
+
 {% endblock %}
