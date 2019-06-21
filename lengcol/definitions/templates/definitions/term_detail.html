@@ -1,15 +1,17 @@
 {% extends "lengcol/base.html" %}
 
 {% block content %}
-Term
+<div class="card-deck">
+{% for definition in object.definitions %}
+  <div class="card">
+    <div class="card-header">
+      <p>{{ object.value }}</p>
+    </div>
 
-<p>{{ object.value }}</p>
-
-Definitions
-
-<ul>
-  {% for definition in object.definitions %}
-    <li>{{ definition.value }}</li>
-  {% endfor %}
-</ul>
+    <div class="card-body">
+      <p>{{ definition.value }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>
 {% endblock %}

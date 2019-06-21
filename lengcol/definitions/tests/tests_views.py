@@ -194,5 +194,5 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def test_definitions(self):
         response = self.client.get(self.url)
 
-        self.assertContains(response, '<li>foo</li>', html=True)
-        self.assertContains(response, '<li>bar</li>', html=True)
+        self.assertContains(response, 'foo')
+        self.assertContains(response, 'bar')
