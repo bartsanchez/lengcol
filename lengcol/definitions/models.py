@@ -23,3 +23,11 @@ class Definition(base_models.BaseModel):
 
     def __str__(self):
         return self.value
+
+
+class Example(base_models.BaseModel):
+    definition = models.ForeignKey(Definition, on_delete=models.CASCADE)
+    value = models.TextField()
+
+    def __str__(self):
+        return self.value

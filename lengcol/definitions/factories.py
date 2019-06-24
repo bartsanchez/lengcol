@@ -19,3 +19,12 @@ class DefinitionFactory(django.DjangoModelFactory):
 
     term = factory.SubFactory(TermFactory)
     value = 'definition fake'
+
+
+class ExampleFactory(django.DjangoModelFactory):
+    class Meta:
+        model = models.Example
+        django_get_or_create = ('definition', 'value')
+
+    definition = factory.SubFactory(DefinitionFactory)
+    value = 'example fake'
