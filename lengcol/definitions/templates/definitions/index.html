@@ -1,12 +1,10 @@
 {% extends "lengcol/base.html" %}
 
 {% block content %}
-{% for term in terms %}
-  <div class="card-deck">
-  {% for definition in term.definition_set.all %}
+  {% for definition in definitions %}
     <div class="card">
       <div class="card-header">
-        <a href="{% url 'term-detail' term.slug %}">{{ term }}</a>
+        <a href="{% url 'term-detail' definition.term.slug %}">{{ definition.term }}</a>
       </div>
 
       <div class="card-body">
@@ -14,7 +12,5 @@
       </div>
     </div>
   {% endfor %}
-  </div>
-{% endfor %}
 
 {% endblock %}

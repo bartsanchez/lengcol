@@ -6,9 +6,9 @@ from definitions import models
 
 
 class IndexView(generic.ListView):
-    model = models.Term
+    model = models.Definition
     template_name = 'definitions/index.html'
-    context_object_name = 'terms'
+    context_object_name = 'definitions'
 
 
 class DefinitionCreateView(generic.CreateView):
