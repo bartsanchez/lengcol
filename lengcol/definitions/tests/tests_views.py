@@ -173,6 +173,36 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(response, 'Created at {}'.format(created))
 
+    def test_example_creation(self):
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake example 1')
+        self.assertNotContains(response, 'fake example 2')
+
+        response = self.client.post(
+            self.url,
+            {'example': 'fake example 1'},
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Example.objects.count(), 1)
+
+        self.assertContains(response, 'fake example 1')
+        self.assertNotContains(response, 'fake example 2')
+
+        response = self.client.post(
+            self.url,
+            {'example': 'fake example 2'},
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Example.objects.count(), 2)
+
+        self.assertContains(response, 'fake example 1')
+        self.assertContains(response, 'fake example 2')
+
 
 class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):

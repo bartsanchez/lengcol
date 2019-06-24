@@ -29,3 +29,7 @@ class DefinitionForm(forms.ModelForm):
     class Meta:
         model = models.Definition
         fields = '__all__'
+
+
+class ExampleForm(forms.Form):
+    example = forms.CharField()

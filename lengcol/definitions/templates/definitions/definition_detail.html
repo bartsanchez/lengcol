@@ -1,9 +1,22 @@
 {% extends "lengcol/base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 Definition
 
 <p>{{ object.term.value }}: {{ object.value }}</p>
 
 <p>Created at {{ object.created | date:'d-m-Y' }}</p>
+
+
+{% for example in object.example_set.all %}
+  {{ example }}
+{% endfor %}
+
+<form action="#" method="post">{% csrf_token %}
+  {{ form|crispy }}
+  <input type="submit" value="Añadir" class="btn btn-primary"/>
+</form>
+
 {% endblock %}
