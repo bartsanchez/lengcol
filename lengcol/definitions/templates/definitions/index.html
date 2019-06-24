@@ -1,8 +1,6 @@
 {% extends "lengcol/base.html" %}
 
 {% block content %}
-<a href="{% url 'definition-add' %}">Add new definition</a>
-
 {% for term in terms %}
   <div class="card-deck">
   {% for definition in term.definition_set.all %}
