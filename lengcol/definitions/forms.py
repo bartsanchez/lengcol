@@ -32,4 +32,4 @@ class DefinitionForm(forms.ModelForm):
 
 
 class ExampleForm(forms.Form):
-    example = forms.CharField()
+    example = forms.CharField(label='Ejemplo')
