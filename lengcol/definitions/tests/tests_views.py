@@ -75,12 +75,19 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertTemplateUsed(response, 'lengcol/base.html')
 
     def test_redirects(self):
+        self.assertEqual(models.Definition.objects.count(), 0)
+
         response = self.client.post(
             self.url,
             {'term': 'fake term', 'value': 'fake definition'},
         )
 
-        self.assertRedirects(response, reverse('index'))
+        definition = models.Definition.objects.get()
+
+        self.assertRedirects(
+            response,
+            reverse('definition-detail', kwargs={'pk': definition.pk})
+        )
 
     def test_add_new(self):
         self.assertEqual(models.Term.objects.count(), 0)

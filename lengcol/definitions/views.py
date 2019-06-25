@@ -16,7 +16,9 @@ class IndexView(generic.ListView):
 class DefinitionCreateView(generic.CreateView):
     model = models.Definition
     form_class = forms.DefinitionForm
-    success_url = urls.reverse_lazy('index')
+
+    def get_success_url(self):
+        return urls.reverse('definition-detail', kwargs={'pk': self.object.pk})
 
 
 class DefinitionDisplayView(generic.DetailView):
