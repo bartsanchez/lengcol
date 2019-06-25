@@ -22,7 +22,7 @@ class Term(base_models.BaseModel):
 class Definition(base_models.BaseModel):
     term = models.ForeignKey(Term, on_delete=models.CASCADE)
     value = models.TextField()
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
 
     def __str__(self):
         return self.value
