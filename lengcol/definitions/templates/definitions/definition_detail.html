@@ -3,20 +3,27 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-Definición
+  <div class="card">
 
-<p>{{ object.term.value }}: {{ object.value }}</p>
+    <div class="card-header">
+      {{ object.term.value }}
+    </div>
 
-<p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
+    <div class="card-body">
+      {{ object.value }}
+
+    <p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
 
 
-{% for example in object.example_set.all %}
-  {{ example }}
-{% endfor %}
+    {% for example in object.example_set.all %}
+      {{ example }}
+    {% endfor %}
 
-<form action="#" method="post">{% csrf_token %}
-  {{ form|crispy }}
-  <input type="submit" value="Añadir" class="btn btn-primary"/>
-</form>
+    <form action="#" method="post">{% csrf_token %}
+      {{ form|crispy }}
+      <input type="submit" value="Añadir" class="btn btn-primary"/>
+    </form>
+    </div>
 
+  </div>
 {% endblock %}
