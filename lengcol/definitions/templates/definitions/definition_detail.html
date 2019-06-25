@@ -3,11 +3,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-Definition
+Definición
 
 <p>{{ object.term.value }}: {{ object.value }}</p>
 
-<p>Created at {{ object.created | date:'d-m-Y' }}</p>
+<p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
 
 
 {% for example in object.example_set.all %}

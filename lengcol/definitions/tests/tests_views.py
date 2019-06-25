@@ -178,7 +178,7 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         created = self.definition.created.strftime('%d-%m-%Y')
 
-        self.assertContains(response, 'Created at {}'.format(created))
+        self.assertContains(response, 'Fecha de creación {}'.format(created))
 
     def test_example_creation(self):
         response = self.client.get(self.url)
