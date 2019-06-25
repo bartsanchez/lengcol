@@ -58,7 +58,7 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertContains(
             response,
             '<a href="{}">fake definition</a>'.format(
-                reverse('definition-detail', kwargs={'pk': definition.pk})
+                reverse('definition-detail', kwargs={'uuid': definition.uuid})
             ),
             html=True
         )
@@ -86,7 +86,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertRedirects(
             response,
-            reverse('definition-detail', kwargs={'pk': definition.pk})
+            reverse('definition-detail', kwargs={'uuid': definition.uuid})
         )
 
     def test_add_new(self):
@@ -156,7 +156,7 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.definition = factories.DefinitionFactory(term=self.term,
                                                       value='fake definition')
         self.url = reverse('definition-detail',
-                           kwargs={'pk': self.definition.pk})
+                           kwargs={'uuid': self.definition.uuid})
 
     def test_template_extends(self):
         response = self.client.get(self.url)

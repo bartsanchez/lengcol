@@ -1,3 +1,4 @@
+from django import shortcuts
 from django import urls
 from django import views
 from django.views import generic
@@ -18,7 +19,9 @@ class DefinitionCreateView(generic.CreateView):
     form_class = forms.DefinitionForm
 
     def get_success_url(self):
-        return urls.reverse('definition-detail', kwargs={'pk': self.object.pk})
+        return urls.reverse(
+            'definition-detail', kwargs={'uuid': self.object.uuid}
+        )
 
 
 class DefinitionDisplayView(generic.DetailView):
@@ -29,11 +32,19 @@ class DefinitionDisplayView(generic.DetailView):
         context['form'] = forms.ExampleForm()
         return context
 
+    def get_object(self):
+        return shortcuts.get_object_or_404(models.Definition,
+                                           uuid=self.kwargs['uuid'])
+
 
 class ExampleView(detail.SingleObjectMixin, generic.FormView):
     template_name = 'definitions/definition_detail.html'
     form_class = forms.ExampleForm
     model = models.Definition
+
+    def get_object(self):
+        return shortcuts.get_object_or_404(models.Definition,
+                                           uuid=self.kwargs['uuid'])
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
@@ -51,7 +62,9 @@ class ExampleView(detail.SingleObjectMixin, generic.FormView):
         return super().post(request, *args, **kwargs)
 
     def get_success_url(self):
-        return urls.reverse('definition-detail', kwargs={'pk': self.object.pk})
+        return urls.reverse(
+            'definition-detail', kwargs={'uuid': self.object.uuid}
+        )
 
 
 class DefinitionDetailView(views.View):

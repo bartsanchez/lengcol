@@ -9,7 +9,7 @@ urlpatterns = [
          views.DefinitionCreateView.as_view(),
          name='definition-add'),
 
-    path('definitions/<int:pk>/',
+    path('definitions/<uuid:uuid>/',
          views.DefinitionDetailView.as_view(),
          name='definition-detail'),
 
