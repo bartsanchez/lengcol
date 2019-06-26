@@ -210,6 +210,18 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertContains(response, 'fake example 1')
         self.assertContains(response, 'fake example 2')
 
+    def test_has_link_to_term_detail(self):
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            '<a href="{}">fake term</a>'.format(
+                reverse('term-detail',
+                        kwargs={'slug': self.definition.term.slug})
+            ),
+            html=True
+        )
+
 
 class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):

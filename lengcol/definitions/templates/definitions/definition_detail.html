@@ -6,7 +6,7 @@
   <div class="card">
 
     <div class="card-header">
-      {{ object.term.value }}
+        <a href="{% url 'term-detail' definition.term.slug %}">{{ object.term }}</a>
     </div>
 
     <div class="card-body">
