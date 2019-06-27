@@ -249,3 +249,15 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(response, 'foo')
         self.assertContains(response, 'bar')
+
+    def test_has_link_to_definition_detail(self):
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            '<a href="{}">foo</a>'.format(
+                reverse('definition-detail',
+                        kwargs={'uuid': self.definition_foo.uuid})
+            ),
+            html=True
+        )
