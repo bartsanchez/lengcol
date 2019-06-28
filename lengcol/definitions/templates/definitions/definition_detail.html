@@ -15,9 +15,14 @@
     <p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
 
 
-    {% for example in object.example_set.all %}
-      {{ example }}
-    {% endfor %}
+    {% if object.example_set.exists %}
+    <ul class="list-group">
+      <li class="list-group-item active">Ejemplos</li>
+      {% for example in object.example_set.all %}
+        <li class="list-group-item">{{ example }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 
     <form action="#" method="post">{% csrf_token %}
       {{ form|crispy }}
