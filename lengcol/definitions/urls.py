@@ -13,7 +13,11 @@ urlpatterns = [
          views.DefinitionDetailView.as_view(),
          name='definition-detail'),
 
-    path('terms/<str:slug>/',
+    path('terms/search/<str:term>',
+         views.TermSearchView.as_view(),
+         name='term-search'),
+
+    path('terms/<slug:slug>/',
          views.TermDetailView.as_view(),
          name='term-detail'),
 ]

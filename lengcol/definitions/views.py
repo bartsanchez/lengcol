@@ -79,3 +79,12 @@ class DefinitionDetailView(views.View):
 
 class TermDetailView(generic.DetailView):
     model = models.Term
+
+
+class TermSearchView(generic.ListView):
+    template_name = 'definitions/term_search.html'
+    model = models.Term
+
+    def get_queryset(self):
+        term = self.kwargs['term']
+        return models.Term.objects.filter(value__icontains=term)
