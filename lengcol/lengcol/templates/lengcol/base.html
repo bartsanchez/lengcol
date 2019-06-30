@@ -15,6 +15,10 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="/">Lenguaje coloquial</a>
+      <form action="{% url 'term-search' %}" method="get" class="form-inline my-0">
+        <input name="v" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button id="form-button" class="btn btn-outline-warning my-0" type="submit">Buscar</button>
+      </form>
       <a href="{% url 'definition-add' %}">Add new definition</a>
     </nav>
 

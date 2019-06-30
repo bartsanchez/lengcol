@@ -6,3 +6,4 @@ tox
 coverage
 requests
 ipdb
+splinter[django]

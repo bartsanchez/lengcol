@@ -2,6 +2,8 @@ from django import test
 from django.urls import reverse
 from django.utils import http
 
+import splinter
+
 from base import mixins
 
 from definitions import factories
@@ -63,6 +65,25 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
             ),
             html=True
         )
+
+    def test_term_search_form_is_working(self):
+        foo_term = factories.TermFactory(value='foo term')
+        bar_term = factories.TermFactory(value='bar term')
+        factories.DefinitionFactory(term=foo_term, value='foo')
+        factories.DefinitionFactory(term=bar_term, value='bar')
+
+        with splinter.Browser('django') as browser:
+            browser.visit(self.url)
+
+            self.assertIn('foo term', browser.html)
+            self.assertIn('bar term', browser.html)
+
+            browser.fill('v', 'f')
+            browser.find_by_id('form-button').click()
+
+            self.assertEqual(browser.url, reverse('term-search'))
+            self.assertIn('foo term', browser.html)
+            self.assertNotIn('bar term', browser.html)
 
 
 class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
