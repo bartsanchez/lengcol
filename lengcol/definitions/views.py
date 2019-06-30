@@ -86,5 +86,8 @@ class TermSearchView(generic.ListView):
     model = models.Term
 
     def get_queryset(self):
-        term = self.kwargs['term']
-        return models.Term.objects.filter(value__icontains=term)
+        term = self.request.GET.get('v', '')
+        query = models.Term.objects.all()
+        if term:
+            query = query.filter(value__icontains=term)
+        return query

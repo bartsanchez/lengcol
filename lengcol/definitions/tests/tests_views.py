@@ -1,5 +1,6 @@
 from django import test
 from django.urls import reverse
+from django.utils import http
 
 from base import mixins
 
@@ -272,21 +273,28 @@ class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
                                                           value='foo')
         self.definition_bar = factories.DefinitionFactory(term=self.bar_term,
                                                           value='bar')
-        self.url = reverse('term-search', kwargs={'term': 'foo'})
+        self.url = reverse('term-search')
 
     def test_template_extends(self):
         response = self.client.get(self.url)
 
         self.assertTemplateUsed(response, 'lengcol/base.html')
 
-    def test_search_foo(self):
+    def test_search(self):
         response = self.client.get(self.url)
+
+        self.assertContains(response, 'foo term')
+        self.assertContains(response, 'bar term')
+
+    def test_search_foo(self):
+        url = '{}?{}'.format(self.url, http.urlencode({'v': 'foo'}))
+        response = self.client.get(url)
 
         self.assertContains(response, 'foo term')
         self.assertNotContains(response, 'bar term')
 
     def test_search_bar(self):
-        url = reverse('term-search', kwargs={'term': 'bar'})
+        url = '{}?{}'.format(self.url, http.urlencode({'v': 'bar'}))
         response = self.client.get(url)
 
         self.assertContains(response, 'bar term')
