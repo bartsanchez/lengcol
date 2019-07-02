@@ -87,6 +87,19 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
             self.assertIn('foo term', browser.html)
             self.assertNotIn('bar term', browser.html)
 
+    def test_has_examples(self):
+        definition = factories.DefinitionFactory(value='fake definition')
+
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake example')
+
+        factories.ExampleFactory(definition=definition, value='fake example')
+
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'fake example')
+
 
 class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
