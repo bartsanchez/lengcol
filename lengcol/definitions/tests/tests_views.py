@@ -299,6 +299,17 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
             html=True
         )
 
+    def test_has_examples(self):
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake example')
+
+        factories.ExampleFactory(definition=self.definition_foo, value='fake example')
+
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'fake example')
+
 
 class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
