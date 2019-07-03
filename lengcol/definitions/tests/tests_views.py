@@ -304,7 +304,8 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertNotContains(response, 'fake example')
 
-        factories.ExampleFactory(definition=self.definition_foo, value='fake example')
+        factories.ExampleFactory(definition=self.definition_foo,
+                                 value='fake example')
 
         response = self.client.get(self.url)
 
