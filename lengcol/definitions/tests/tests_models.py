@@ -24,6 +24,8 @@ class TermTests(test.TestCase):
                                                      value='foo')
         definition_bar = factories.DefinitionFactory(term=self.term,
                                                      value='bar')
+        factories.DefinitionFactory(value='qux')
+
         queryset = models.Definition.objects.filter(
             pk__in=[definition_foo.pk, definition_bar.pk]
         )
