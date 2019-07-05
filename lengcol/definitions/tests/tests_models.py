@@ -37,7 +37,9 @@ class TermTests(test.TestCase):
 
 class DefinitionTests(test.TestCase):
     def setUp(self):
-        self.definition = factories.DefinitionFactory(value='my fake definition')
+        self.definition = factories.DefinitionFactory(
+            value='my fake definition'
+        )
 
     def test_str(self):
         self.assertEqual(str(self.definition), 'my fake definition')
