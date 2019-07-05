@@ -27,6 +27,14 @@ class Definition(base_models.BaseModel):
     def __str__(self):
         return self.value
 
+    @property
+    def has_examples(self):
+        return self.example_set.exists()
+
+    @property
+    def examples(self):
+        return self.example_set.all()
+
 
 class Example(base_models.BaseModel):
     definition = models.ForeignKey(Definition, on_delete=models.CASCADE)

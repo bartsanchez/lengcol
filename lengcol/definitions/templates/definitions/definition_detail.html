@@ -15,10 +15,10 @@
     <p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
 
 
-    {% if object.example_set.exists %}
+    {% if object.has_examples %}
     <ul class="list-group">
       <li class="list-group-item active">Ejemplos</li>
-      {% for example in object.example_set.all %}
+      {% for example in object.examples %}
         <li class="list-group-item">{{ example }}</li>
       {% endfor %}
     </ul>

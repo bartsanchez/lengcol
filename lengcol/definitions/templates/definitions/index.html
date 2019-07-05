@@ -10,10 +10,10 @@
       <div class="card-body">
         <a href="{% url 'definition-detail' definition.uuid %}">{{ definition }}</a>
 
-        {% if definition.example_set.exists %}
+        {% if definition.has_examples %}
         <ul class="list-group">
           <li class="list-group-item active">Ejemplos</li>
-          {% for example in definition.example_set.all %}
+          {% for example in definition.examples %}
             <li class="list-group-item">{{ example }}</li>
           {% endfor %}
         </ul>
