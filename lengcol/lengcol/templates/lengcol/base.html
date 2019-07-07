@@ -33,7 +33,20 @@
             <a class="nav-link" href="{% url 'definition-add' %}">Add new definition</a>
           </li>
         </ul>
-        <span class="navbar-text">User: {{ user }}</span>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuario: {% if user.is_authenticated %}{{ user }}{% else %}Anónimo{% endif %}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% if user.is_authenticated %}
+                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+              {% endif %}
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
 

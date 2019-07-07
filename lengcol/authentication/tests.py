@@ -23,11 +23,11 @@ class LoginViewTests(test.TestCase, mixins.W3ValidatorMixin):
         with splinter.Browser('django') as browser:
             browser.visit(self.url)
 
-            self.assertIn('User: AnonymousUser', browser.html)
+            self.assertIn('Usuario: Anónimo', browser.html)
 
             self.fill_and_send_form(browser, 'fake_username', 'fake_password')
 
-            self.assertIn('User: fake_user', browser.html)
+            self.assertIn('Usuario: fake_user', browser.html)
 
             self.assertEqual(browser.url, reverse('index'))
 
@@ -38,11 +38,11 @@ class LoginViewTests(test.TestCase, mixins.W3ValidatorMixin):
         with splinter.Browser('django') as browser:
             browser.visit(url)
 
-            self.assertIn('User: AnonymousUser', browser.html)
+            self.assertIn('Usuario: Anónimo', browser.html)
 
             self.fill_and_send_form(browser, 'fake_username', 'fake_password')
 
-            self.assertIn('User: fake_user', browser.html)
+            self.assertIn('Usuario: fake_user', browser.html)
 
             self.assertEqual(browser.url, search_url)
 
@@ -50,11 +50,11 @@ class LoginViewTests(test.TestCase, mixins.W3ValidatorMixin):
         with splinter.Browser('django') as browser:
             browser.visit(self.url)
 
-            self.assertIn('User: AnonymousUser', browser.html)
+            self.assertIn('Usuario: Anónimo', browser.html)
 
             self.fill_and_send_form(browser, 'fake_username', 'wrong_password')
 
-            self.assertIn('User: AnonymousUser', browser.html)
+            self.assertIn('Usuario: Anónimo', browser.html)
 
             self.assertEqual(browser.url, self.url)
 
@@ -73,17 +73,17 @@ class LogoutViewTests(test.TestCase):
         with splinter.Browser('django') as browser:
             browser.visit(reverse('login'))
 
-            self.assertIn('User: AnonymousUser', browser.html)
+            self.assertIn('Usuario: Anónimo', browser.html)
 
             self.fill_and_send_form(browser, 'fake_username', 'fake_password')
 
-            self.assertIn('User: fake_user', browser.html)
+            self.assertIn('Usuario: fake_user', browser.html)
 
             self.assertEqual(browser.url, reverse('index'))
 
             browser.visit(self.url)
 
-            self.assertIn('User: AnonymousUser', browser.html)
+            self.assertIn('Usuario: Anónimo', browser.html)
 
     def test_logout_redirect_to_index(self):
         with splinter.Browser('django') as browser:
