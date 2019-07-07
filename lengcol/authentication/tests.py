@@ -9,7 +9,7 @@ from base import mixins
 from authentication import factories
 
 
-class AuthViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class LoginViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.url = reverse('login')
         self.user = factories.UserFactory()
@@ -57,3 +57,38 @@ class AuthViewTests(test.TestCase, mixins.W3ValidatorMixin):
             self.assertIn('User: AnonymousUser', browser.html)
 
             self.assertEqual(browser.url, self.url)
+
+
+class LogoutViewTests(test.TestCase):
+    def setUp(self):
+        self.url = reverse('logout')
+        self.user = factories.UserFactory()
+
+    def fill_and_send_form(self, browser, username, password):
+        browser.fill('username', username)
+        browser.fill('password', password)
+        browser.find_by_id('login-form').click()
+
+    def test_logout_view(self):
+        with splinter.Browser('django') as browser:
+            browser.visit(reverse('login'))
+
+            self.assertIn('User: AnonymousUser', browser.html)
+
+            self.fill_and_send_form(browser, 'fake_username', 'fake_password')
+
+            self.assertIn('User: fake_user', browser.html)
+
+            self.assertEqual(browser.url, reverse('index'))
+
+            browser.visit(self.url)
+
+            self.assertIn('User: AnonymousUser', browser.html)
+
+    def test_logout_redirect_to_index(self):
+        with splinter.Browser('django') as browser:
+            browser.visit(reverse('login'))
+
+            browser.visit(self.url)
+
+            self.assertEqual(browser.url, reverse('index'))

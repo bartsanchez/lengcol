@@ -10,4 +10,11 @@ urlpatterns = [
         ),
         name='login'
     ),
+    path(
+        'logout/',
+        auth_views.LogoutView.as_view(
+            template_name='authentication/logout.html',
+        ),
+        name='logout'
+    ),
 ]
