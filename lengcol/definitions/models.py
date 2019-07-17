@@ -1,5 +1,6 @@
 import uuid
 
+from django.conf import settings
 from django.db import models
 
 from django_extensions.db import fields
@@ -23,6 +24,10 @@ class Definition(base_models.BaseModel):
     term = models.ForeignKey(Term, on_delete=models.CASCADE)
     value = models.TextField()
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             blank=True,
+                             null=True,
+                             on_delete=models.PROTECT)
 
     def __str__(self):
         return self.value
