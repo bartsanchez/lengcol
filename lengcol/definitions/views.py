@@ -1,6 +1,7 @@
 from django import shortcuts
 from django import urls
 from django import views
+from django.contrib import auth
 from django.views import generic
 from django.views.generic import detail
 
@@ -22,6 +23,15 @@ class DefinitionCreateView(generic.CreateView):
         return urls.reverse(
             'definition-detail', kwargs={'uuid': self.object.uuid}
         )
+
+    def form_valid(self, form):
+        user = self.request.user
+        if user.is_authenticated:
+            UserModel = auth.get_user_model()
+            definition = form.save(commit=False)
+            definition.user = UserModel.objects.get(username=user.username)
+            definition.save()
+        return super().form_valid(form)
 
 
 class DefinitionDisplayView(generic.DetailView):

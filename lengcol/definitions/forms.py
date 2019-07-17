@@ -28,7 +28,7 @@ class DefinitionForm(forms.ModelForm):
 
     class Meta:
         model = models.Definition
-        fields = '__all__'
+        exclude = ('user',)
 
 
 class ExampleForm(forms.Form):

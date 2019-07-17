@@ -6,6 +6,8 @@ import splinter
 
 from base import mixins
 
+from authentication import factories as auth_factories
+
 from definitions import factories
 from definitions import models
 
@@ -183,6 +185,39 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(
             models.Term.objects.first().value,
             'fake term',
+        )
+
+    def test_dont_set_not_logged_in_user(self):
+        response = self.client.post(
+            self.url,
+            {'term': 'fake term', 'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertIsNone(models.Definition.objects.first().user)
+
+    def test_set_logged_in_user(self):
+        user = auth_factories.UserFactory()
+
+        self.client.login(username=user.username, password='fake_password')
+
+        response = self.client.post(
+            self.url,
+            {'term': 'fake term', 'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertEqual(
+            models.Definition.objects.first().user,
+            user,
         )
 
 
