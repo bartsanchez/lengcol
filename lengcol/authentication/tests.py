@@ -99,10 +99,12 @@ class RegisterViewTests(test.TestCase):  # TODO: add W3ValidatorMixin
     def setUp(self):
         self.url = reverse('register')
 
-    def fill_and_send_form(self, browser, username, password1, password2):
+    def fill_and_send_form(self, browser, username, password1, password2,
+                           email):
         browser.fill('username', username)
         browser.fill('password1', password1)
         browser.fill('password2', password2)
+        browser.fill('email', email)
         browser.find_by_id('register-form').click()
 
     def test_register_view(self):
@@ -112,13 +114,18 @@ class RegisterViewTests(test.TestCase):  # TODO: add W3ValidatorMixin
             self.assertEqual(auth.get_user_model().objects.count(), 0)
 
             self.fill_and_send_form(
-                browser, 'fake_user', 'fake_password', 'fake_password'
+                browser=browser,
+                username='fake_user',
+                password1='fake_password',
+                password2='fake_password',
+                email='foo@bar.qux',
             )
 
             self.assertEqual(auth.get_user_model().objects.count(), 1)
 
             user = auth.get_user_model().objects.first()
             self.assertEqual(user.username, 'fake_user')
+            self.assertEqual(user.email, 'foo@bar.qux')
             self.assertFalse(user.is_staff)
             self.assertFalse(user.is_superuser)
 
@@ -133,7 +140,11 @@ class RegisterViewTests(test.TestCase):  # TODO: add W3ValidatorMixin
             self.assertEqual(auth.get_user_model().objects.count(), 1)
 
             self.fill_and_send_form(
-                browser, 'fake_user', 'fake_password', 'fake_password'
+                browser=browser,
+                username='fake_user',
+                password1='fake_password',
+                password2='fake_password',
+                email='foo@bar.qux',
             )
 
             self.assertEqual(auth.get_user_model().objects.count(), 1)
