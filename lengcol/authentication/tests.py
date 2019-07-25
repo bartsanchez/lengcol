@@ -95,7 +95,7 @@ class LogoutViewTests(test.TestCase):
             self.assertEqual(browser.url, reverse('index'))
 
 
-class RegisterViewTests(test.TestCase):  # TODO: add W3ValidatorMixin
+class RegisterViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.url = reverse('register')
 
