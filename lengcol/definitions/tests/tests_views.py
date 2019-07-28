@@ -1,4 +1,5 @@
 from django import test
+from django.core import mail
 from django.urls import reverse
 from django.utils import http
 
@@ -219,6 +220,26 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
             models.Definition.objects.first().user,
             user,
         )
+
+    def test_new_definition_send_an_email(self):
+        self.assertEqual(len(mail.outbox), 0)
+
+        response = self.client.post(
+            self.url,
+            {'term': 'fake term', 'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(len(mail.outbox), 1)
+
+        email_sent = mail.outbox[0]
+        self.assertEqual(email_sent.subject, 'New definition was created')
+        self.assertEqual(email_sent.body, 'PK: 1')
+        self.assertEqual(email_sent.from_email, 'info@lenguajecoloquial.com')
+        self.assertTrue(len(email_sent.to), 1)
+        self.assertEqual(email_sent.to[0], 'info@lenguajecoloquial.com')
 
 
 class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
