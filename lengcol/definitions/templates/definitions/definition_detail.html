@@ -13,6 +13,7 @@
       {{ object.value }}
 
     <p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
+    <p>Autor: {% if object.user %}{{ object.user.username }}{% else %}Anónimo{% endif %}</p>
 
 
     {% if object.has_examples %}

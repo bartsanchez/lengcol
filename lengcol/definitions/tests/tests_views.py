@@ -241,6 +241,32 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertTrue(len(email_sent.to), 1)
         self.assertEqual(email_sent.to[0], 'info@lenguajecoloquial.com')
 
+    def test_has_author(self):
+        user = auth_factories.UserFactory()
+
+        self.client.login(username=user.username, password='fake_password')
+
+        response = self.client.post(
+            self.url,
+            {'term': 'fake term', 'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertContains(response, 'Autor: {}'.format(user.username))
+
+    def test_hasnt_author(self):
+        response = self.client.post(
+            self.url,
+            {'term': 'fake term', 'value': 'fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertContains(response, 'Autor: Anónimo')
+
 
 class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
