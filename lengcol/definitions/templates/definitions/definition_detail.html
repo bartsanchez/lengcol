@@ -12,10 +12,6 @@
     <div class="card-body">
       {{ object.value }}
 
-    <p>Fecha de creación {{ object.created | date:'d-m-Y' }}</p>
-    <p>Autor: {% if object.user %}{{ object.user.username }}{% else %}Anónimo{% endif %}</p>
-
-
     {% if object.has_examples %}
     <ul class="list-group">
       <li class="list-group-item active">Ejemplos</li>
@@ -29,6 +25,15 @@
       {{ form|crispy }}
       <input type="submit" value="Añadir" class="btn btn-primary"/>
     </form>
+    </div>
+
+    <div class="card-footer text-right text-muted">
+        <div>
+        Fecha de creación {{ object.created | date:'d-m-Y' }}
+        </div>
+        <div>
+        Autor: {% if object.user %}{{ object.user.username }}{% else %}Anónimo{% endif %}
+        </div>
     </div>
 
   </div>
