@@ -47,7 +47,7 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
         linked_url = reverse('definition-add')
         self.assertContains(
             response,
-            '<a class="nav-link" href="{}">Add new definition</a>'.format(
+            '<a class="nav-link" href="{}">Añadir definición</a>'.format(
                 linked_url
             ),
             html=True
