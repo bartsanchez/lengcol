@@ -97,3 +97,13 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
         response = self.client.get(self.url)
 
         self.assertContains(response, 'fake example')
+
+    def test_has_email_contact_link(self):
+        response = self.client.get(self.url)
+
+        email_link = 'info@lenguajecoloquial.com'
+        self.assertContains(
+            response,
+            '<a href="mailto:{0}">{0}</a>'.format(email_link),
+            html=True
+        )
