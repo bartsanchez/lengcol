@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <a href="{% url 'term-detail' definition.term.slug %}">{{ definition.term }}</a>
+  </div>
+
+  <div class="card-body">
+    <a href="{% url 'definition-detail' definition.uuid %}">{{ definition }}</a>
+
+    {% if definition.has_examples %}
+    <ul class="list-group">
+      <li class="list-group-item active">Ejemplos</li>
+      {% for example in definition.examples %}
+        <li class="list-group-item">{{ example }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

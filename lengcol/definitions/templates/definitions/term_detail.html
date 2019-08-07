@@ -1,26 +1,7 @@
 {% extends "lengcol/base.html" %}
 
 {% block content %}
-<div class="card-deck">
 {% for definition in object.definitions %}
-  <div class="card">
-    <div class="card-header">
-      <p>{{ object.value }}</p>
-    </div>
-
-    <div class="card-body">
-      <a href="{% url 'definition-detail' definition.uuid %}">{{ definition.value }}</a>
-
-      {% if definition.has_examples %}
-      <ul class="list-group">
-        <li class="list-group-item active">Ejemplos</li>
-        {% for example in definition.examples %}
-          <li class="list-group-item">{{ example }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </div>
-  </div>
+  {% include 'definitions/definition.html' with definition=definition %}
 {% endfor %}
-</div>
 {% endblock %}
