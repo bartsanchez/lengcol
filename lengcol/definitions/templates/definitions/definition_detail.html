@@ -3,38 +3,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+  {% include 'definitions/definition.html' with definition=definition %}
   <div class="card">
-
-    <div class="card-header">
-        <a href="{% url 'term-detail' definition.term.slug %}">{{ object.term }}</a>
-    </div>
-
-    <div class="card-body">
-      {{ object.value }}
-
-    {% if object.has_examples %}
-    <ul class="list-group">
-      <li class="list-group-item active">Ejemplos</li>
-      {% for example in object.examples %}
-        <li class="list-group-item">{{ example }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    <form action="#" method="post">{% csrf_token %}
-      {{ form|crispy }}
-      <input type="submit" value="Añadir" class="btn btn-primary"/>
-    </form>
-    </div>
-
-    <div class="card-footer text-right text-muted">
-        <div>
-        Fecha de creación {{ object.created | date:'d-m-Y' }}
-        </div>
-        <div>
-        Autor: {% if object.user %}{{ object.user.username }}{% else %}Anónimo{% endif %}
-        </div>
-    </div>
-
+  <form action="#" method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Añadir" class="btn btn-primary"/>
+  </form>
   </div>
 {% endblock %}
