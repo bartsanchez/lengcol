@@ -208,8 +208,8 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertContains(response, 'Fecha de creación {}'.format(created))
 
     def test_example_creation__same_user(self):
-        self.client.login(username=self.user.username, password='fake_password')
-
+        self.client.login(username=self.user.username,
+                          password='fake_password')
         response = self.client.get(self.url)
 
         self.assertNotContains(response, 'fake example 1')
@@ -264,7 +264,8 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         url = reverse('definition-detail',
                       kwargs={'uuid': definition.uuid})
 
-        self.client.login(username=self.user.username, password='fake_password')
+        self.client.login(username=self.user.username,
+                          password='fake_password')
         response = self.client.get(url)
 
         self.assertNotContains(response, 'fake example 1')
