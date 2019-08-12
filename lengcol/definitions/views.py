@@ -1,3 +1,4 @@
+from django import http
 from django import shortcuts
 from django import urls
 from django import views
@@ -54,12 +55,15 @@ class ExampleView(detail.SingleObjectMixin, generic.FormView):
 
     def get_object(self):
         return shortcuts.get_object_or_404(models.Definition,
-                                           uuid=self.kwargs['uuid'])
+                                           uuid=self.kwargs['uuid'],
+                                           user__isnull=False)
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
 
         form = self.get_form()
+        if self.object.user != request.user:
+            return http.HttpResponse('Unauthorized', status=401)
         if form.is_valid():
             example, created = models.Example.objects.get_or_create(
                 definition=self.object,

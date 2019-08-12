@@ -177,9 +177,11 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
+        self.user = auth_factories.UserFactory()
         self.term = factories.TermFactory(value='fake term')
         self.definition = factories.DefinitionFactory(term=self.term,
-                                                      value='fake definition')
+                                                      value='fake definition',
+                                                      user=self.user)
         self.url = reverse('definition-detail',
                            kwargs={'uuid': self.definition.uuid})
 
@@ -205,7 +207,9 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(response, 'Fecha de creación {}'.format(created))
 
-    def test_example_creation(self):
+    def test_example_creation__same_user(self):
+        self.client.login(username=self.user.username, password='fake_password')
+
         response = self.client.get(self.url)
 
         self.assertNotContains(response, 'fake example 1')
@@ -234,6 +238,68 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(response, 'fake example 1')
         self.assertContains(response, 'fake example 2')
+
+    def test_example_not_logged_user(self):
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake example 1')
+        self.assertNotContains(response, 'fake example 2')
+
+        response = self.client.post(
+            self.url,
+            {'example': 'fake example 1'},
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 401)
+        self.assertEqual(response.content, b'Unauthorized')
+
+        self.assertEqual(models.Example.objects.count(), 0)
+
+    def test_example_different_user(self):
+        other_user = auth_factories.UserFactory(username='other_user')
+        term = factories.TermFactory(value='other term')
+        definition = factories.DefinitionFactory(term=term,
+                                                 value='other definition',
+                                                 user=other_user)
+        url = reverse('definition-detail',
+                      kwargs={'uuid': definition.uuid})
+
+        self.client.login(username=self.user.username, password='fake_password')
+        response = self.client.get(url)
+
+        self.assertNotContains(response, 'fake example 1')
+        self.assertNotContains(response, 'fake example 2')
+
+        response = self.client.post(
+            url,
+            {'example': 'fake example 1'},
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 401)
+        self.assertEqual(response.content, b'Unauthorized')
+
+        self.assertEqual(models.Example.objects.count(), 0)
+
+    def test_example_does_not_work_for_anonymous_definitions(self):
+        term = factories.TermFactory(value='other term')
+        definition = factories.DefinitionFactory(term=term,
+                                                 value='other definition')
+        url = reverse('definition-detail',
+                      kwargs={'uuid': definition.uuid})
+
+        response = self.client.get(url)
+
+        self.assertNotContains(response, 'fake example 1')
+        self.assertNotContains(response, 'fake example 2')
+
+        response = self.client.post(
+            url,
+            {'example': 'fake example 1'},
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 404)
+
+        self.assertEqual(models.Example.objects.count(), 0)
 
     def test_has_link_to_term_detail(self):
         response = self.client.get(self.url)
