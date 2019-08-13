@@ -4,10 +4,12 @@
 
 {% block content %}
   {% include 'definitions/definition.html' with definition=definition %}
+  {% if definition.user == user %}
   <div class="card">
   <form action="#" method="post">{% csrf_token %}
     {{ form|crispy }}
     <input type="submit" value="Añadir" class="btn btn-primary"/>
   </form>
   </div>
+  {% endif %}
 {% endblock %}
