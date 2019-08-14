@@ -155,3 +155,17 @@ class RegisterViewTests(test.TestCase, mixins.W3ValidatorMixin):
             )
 
             self.assertEqual(browser.url, self.url)
+
+    def test_user_is_logged_after_register(self):
+        with splinter.Browser('django') as browser:
+            browser.visit(self.url)
+
+            self.fill_and_send_form(
+                browser=browser,
+                username='fake_user',
+                password1='fake_password',
+                password2='fake_password',
+                email='foo@bar.qux',
+            )
+
+            self.assertIn('Usuario: fake_user', browser.html)
