@@ -1,5 +1,7 @@
 from django.db import models
 
+from base import managers
+
 
 class BaseModel(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -11,4 +13,5 @@ class BaseModel(models.Model):
 
 
 class TestModel(BaseModel):
-    pass
+    objects = models.Manager()
+    active_objects = managers.ActiveManager()

@@ -30,3 +30,20 @@ class BaseModelTests(test.TestCase):
 
             self.assertNotEqual(fake_instance.created, fake_instance.updated)
             self.assertEqual(fake_instance.updated, timezone.now())
+
+    def test_active_manager(self):
+        foo = models.TestModel()
+        foo.save()
+
+        bar = models.TestModel()
+        bar.active = False
+        bar.save()
+
+        self.assertListEqual(
+            list(models.TestModel.objects.all()),
+            [foo, bar]
+        )
+        self.assertEqual(
+            list(models.TestModel.active_objects.all()),
+            [foo]
+        )
