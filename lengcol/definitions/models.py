@@ -5,6 +5,7 @@ from django.db import models
 
 from django_extensions.db import fields
 
+from base import managers
 from base import models as base_models
 
 
@@ -28,6 +29,9 @@ class Definition(base_models.BaseModel):
                              blank=True,
                              null=True,
                              on_delete=models.PROTECT)
+
+    objects = managers.ActiveManager()
+    all_objects = models.Manager()
 
     def __str__(self):
         return self.value

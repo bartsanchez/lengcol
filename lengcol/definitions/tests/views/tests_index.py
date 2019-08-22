@@ -107,3 +107,17 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
             '<a href="mailto:{0}">{0}</a>'.format(email_link),
             html=True
         )
+
+    def test_inactive_definitions_does_not_appear(self):
+        definition = factories.DefinitionFactory(value='fake definition')
+
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'fake definition')
+
+        definition.active = False
+        definition.save()
+
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake definition')
