@@ -30,6 +30,10 @@ class DefinitionForm(forms.ModelForm):
         model = models.Definition
         exclude = ('user',)
 
+    # TODO: delete?
+    def clean_active(self):
+        return True
+
 
 class ExampleForm(forms.Form):
     example = forms.CharField(label='Ejemplo')
