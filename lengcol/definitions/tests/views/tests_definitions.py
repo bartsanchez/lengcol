@@ -313,3 +313,23 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
             ),
             html=True
         )
+
+    def test_inactive_examples_does_not_appear(self):
+        response = self.client.get(self.url)
+
+        factories.ExampleFactory(definition=self.definition,
+                                 value='fake example')
+
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'fake example')
+
+        self.assertEqual(models.Example.objects.count(), 1)
+        example = models.Example.objects.first()
+
+        example.active = False
+        example.save()
+
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake example')

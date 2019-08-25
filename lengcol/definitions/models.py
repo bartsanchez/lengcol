@@ -49,5 +49,8 @@ class Example(base_models.BaseModel):
     definition = models.ForeignKey(Definition, on_delete=models.CASCADE)
     value = models.TextField()
 
+    objects = managers.ActiveManager()
+    all_objects = models.Manager()
+
     def __str__(self):
         return self.value
