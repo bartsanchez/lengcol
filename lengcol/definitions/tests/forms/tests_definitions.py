@@ -51,3 +51,8 @@ class DefinitionFormTests(test.TestCase):
         self.form.save()
 
         self.assertEqual(models.Definition.objects.count(), 1)
+
+    def test_active_field_is_not_included(self):
+        f = forms.DefinitionForm()
+
+        self.assertNotIn('active', f.fields)

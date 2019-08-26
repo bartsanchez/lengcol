@@ -28,7 +28,7 @@ class DefinitionForm(forms.ModelForm):
 
     class Meta:
         model = models.Definition
-        exclude = ('user',)
+        exclude = ('user', 'active')
 
     # TODO: delete?
     def clean_active(self):
