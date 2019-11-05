@@ -1,0 +1,5 @@
+[run]
+omit=
+    lengcol/settings/prod.py
+    lengcol/wsgi.py
+    manage.py
