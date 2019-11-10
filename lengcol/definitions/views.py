@@ -73,8 +73,6 @@ class ExampleView(detail.SingleObjectMixin, generic.FormView):
         else:
             return self.form_invalid(form)
 
-        return super().post(request, *args, **kwargs)
-
     def get_success_url(self):
         return urls.reverse(
             'definition-detail', kwargs={'uuid': self.object.uuid}

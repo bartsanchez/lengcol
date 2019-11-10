@@ -333,3 +333,17 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         response = self.client.get(self.url)
 
         self.assertNotContains(response, 'fake example')
+
+    def test_invalid_example(self):
+        self.client.login(username=self.user.username,
+                          password='fake_password')
+        response = self.client.get(self.url)
+
+        response = self.client.post(
+            self.url,
+            {'example': ''},
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Example.objects.count(), 0)
