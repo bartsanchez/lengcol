@@ -1,7 +1,31 @@
 version: '3'
 services:
+    db:
+        image: postgres:latest
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: fake_db_password
+            POSTGRES_USER: fake_db_user
+            POSTGRES_DB: db
+
+    run_migrations:
+        build: .
+        command: ../scripts/run_migrations.sh
+        environment:
+            DATABASE_URL: "postgres://fake_db_user:fake_db_password@db:5432/db"
+        depends_on:
+            - db
+        links:
+            - db
+
     lengcol:
         build: .
         restart: always
+        environment:
+            DATABASE_URL: "postgres://fake_db_user:fake_db_password@db:5432/db"
         ports:
             - 8000:8000
+        depends_on:
+            - db
+        links:
+            - db
