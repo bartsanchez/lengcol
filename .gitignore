@@ -6,3 +6,4 @@ lengcol.egg-info
 *.swp
 lengcol/.coverage
 htmlcov/
+.env
