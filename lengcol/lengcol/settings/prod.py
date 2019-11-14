@@ -3,6 +3,10 @@ from lengcol.settings.base import *
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
+ADMINS = [
+    ('Bart', 'bsanchezsalado@gmail.com'),
+]
+
 DEBUG = False
 
 ALLOWED_HOSTS = [
