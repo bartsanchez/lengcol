@@ -10,7 +10,6 @@ ADMINS = [
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'lengcol.herokuapp.com',
     'www.lenguajecoloquial.com',
     'www.lenguajecoloquial.es',
 ]
