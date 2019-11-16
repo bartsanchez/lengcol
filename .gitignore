@@ -7,3 +7,4 @@ lengcol.egg-info
 lengcol/.coverage
 htmlcov/
 .env
+docker/static/*
