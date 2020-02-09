@@ -13,6 +13,9 @@ from definitions import models
 class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
+        self.user = auth_factories.UserFactory()
+        self.client.login(username=self.user.username,
+                          password='fake_password')
         self.url = reverse('definition-add')
 
     def test_template_extends(self):
@@ -59,6 +62,25 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
             'fake definition',
         )
 
+    def test_add_new__not_logged_user(self):
+        self.client.logout()
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        response = self.client.post(
+            self.url,
+            {'term': 'fake term', 'value': 'fake definition'},
+        )
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(
+            response.url,
+            '{}?next={}'.format(reverse('login'), self.url)
+        )
+
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
     def test_missing_term(self):
         self.assertEqual(models.Term.objects.count(), 0)
         self.assertEqual(models.Definition.objects.count(), 0)
@@ -94,24 +116,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
             'fake term',
         )
 
-    def test_dont_set_not_logged_in_user(self):
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
-
-        self.assertEqual(response.status_code, 200)
-
-        self.assertEqual(models.Definition.objects.count(), 1)
-
-        self.assertIsNone(models.Definition.objects.first().user)
-
     def test_set_logged_in_user(self):
-        user = auth_factories.UserFactory()
-
-        self.client.login(username=user.username, password='fake_password')
-
         response = self.client.post(
             self.url,
             {'term': 'fake term', 'value': 'fake definition'},
@@ -124,7 +129,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertEqual(
             models.Definition.objects.first().user,
-            user,
+            self.user,
         )
 
     def test_new_definition_send_an_email(self):
@@ -148,10 +153,6 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(email_sent.to[0], 'info@lenguajecoloquial.com')
 
     def test_has_author(self):
-        user = auth_factories.UserFactory()
-
-        self.client.login(username=user.username, password='fake_password')
-
         response = self.client.post(
             self.url,
             {'term': 'fake term', 'value': 'fake definition'},
@@ -160,18 +161,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertEqual(response.status_code, 200)
 
-        self.assertContains(response, 'Autor: {}'.format(user.username))
-
-    def test_hasnt_author(self):
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
-
-        self.assertEqual(response.status_code, 200)
-
-        self.assertContains(response, 'Autor: Anónimo')
+        self.assertContains(response, 'Autor: {}'.format(self.user.username))
 
 
 class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
