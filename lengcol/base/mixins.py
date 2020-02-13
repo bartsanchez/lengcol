@@ -1,6 +1,5 @@
 import requests
 
-
 W3_VALIDATOR_URL = 'https://validator.w3.org/nu/'
 
 

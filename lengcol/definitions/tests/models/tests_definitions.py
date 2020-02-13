@@ -1,9 +1,6 @@
-from django import test
-
 from base import models as base_models
-
-from definitions import factories
-from definitions import models
+from definitions import factories, models
+from django import test
 
 
 class DefinitionTests(test.TestCase):

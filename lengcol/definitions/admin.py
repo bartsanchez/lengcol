@@ -1,6 +1,5 @@
-from django.contrib import admin
-
 from definitions import models
+from django.contrib import admin
 
 
 class DefinitionInline(admin.StackedInline):

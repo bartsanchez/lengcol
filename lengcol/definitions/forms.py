@@ -1,6 +1,5 @@
-from django import forms
-
 from definitions import models
+from django import forms
 
 
 class ModelChoiceFieldAsText(forms.ModelChoiceField):

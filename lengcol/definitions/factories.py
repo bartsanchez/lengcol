@@ -1,7 +1,6 @@
 import factory
-from factory import django
-
 from definitions import models
+from factory import django
 
 
 class TermFactory(django.DjangoModelFactory):

@@ -1,12 +1,9 @@
+import splinter
+from authentication import factories
+from base import mixins
 from django import test
 from django.contrib import auth
 from django.urls import reverse
-
-import splinter
-
-from base import mixins
-
-from authentication import factories
 
 
 class RegisterViewTests(test.TestCase, mixins.W3ValidatorMixin):
