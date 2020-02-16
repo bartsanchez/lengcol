@@ -1,0 +1,17 @@
+---
+- hosts: lengcolaws
+  remote_user: ubuntu
+  tasks:
+    - name: Create project folder
+      become: true
+      file:
+        path: /opt/apps
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: '700'
+
+    - name: Get project
+      git:
+        repo: 'https://github.com/bartsanchez/lengcol.git'
+        dest: /opt/apps/lengcol
