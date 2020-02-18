@@ -15,3 +15,16 @@
       git:
         repo: 'https://github.com/bartsanchez/lengcol.git'
         dest: /opt/apps/lengcol
+
+    - name: Create env file
+      file:
+        path: /opt/apps/lengcol/.env
+        state: touch
+        owner: ubuntu
+        group: ubuntu
+        mode: '400'
+
+    - name: Build containers
+      shell:
+        chdir: /opt/apps/lengcol
+        cmd: docker-compose build
