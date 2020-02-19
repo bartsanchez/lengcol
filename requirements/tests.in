@@ -1,0 +1,9 @@
+-r base.txt
+
+factory_boy
+freezegun
+tox
+coverage
+requests
+ipdb
+splinter[django]
