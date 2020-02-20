@@ -28,3 +28,8 @@
       shell:
         chdir: /opt/apps/lengcol
         cmd: docker-compose build
+
+    - name: Start containers
+      shell:
+        chdir: /opt/apps/lengcol
+        cmd: docker-compose up -d
