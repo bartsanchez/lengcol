@@ -29,6 +29,11 @@
         chdir: /opt/apps/lengcol
         cmd: docker-compose build
 
+    - name: Stop running containers
+      shell:
+        chdir: /opt/apps/lengcol
+        cmd: docker-compose down
+
     - name: Start containers
       shell:
         chdir: /opt/apps/lengcol
