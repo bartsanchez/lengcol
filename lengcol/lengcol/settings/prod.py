@@ -9,6 +9,8 @@ ADMINS = [
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    'lenguajecoloquial.com',
+    'lenguajecoloquial.com',
     'www.lenguajecoloquial.com',
     'www.lenguajecoloquial.es',
 ]
