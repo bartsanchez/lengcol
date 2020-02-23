@@ -16,10 +16,11 @@
         repo: 'https://github.com/bartsanchez/lengcol.git'
         dest: /opt/apps/lengcol
 
-    - name: Create env file
-      file:
-        path: /opt/apps/lengcol/.env
-        state: touch
+    - name: Upload env file
+      copy:
+        src: files/encrypted_env
+        dest: /opt/apps/lengcol/.env
+        decrypt: yes
         owner: ubuntu
         group: ubuntu
         mode: '400'
