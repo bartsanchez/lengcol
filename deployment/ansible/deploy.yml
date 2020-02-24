@@ -28,14 +28,14 @@
     - name: Build containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose build
+        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
 
     - name: Stop running containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose down
+        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
 
     - name: Start containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose up -d
+        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
