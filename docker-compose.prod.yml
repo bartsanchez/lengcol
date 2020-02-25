@@ -3,3 +3,11 @@ services:
     db:
         volumes:
             - /data/db/pg_data:/var/lib/postgresql/data
+
+    collect_static:
+        volumes:
+            - /data/static:/opt/lengcol/lengcol/lengcol/static
+
+    lengcol:
+        volumes:
+            - /data/static:/opt/lengcol/lengcol/lengcol/static
