@@ -19,5 +19,5 @@ $ mkvirtualenv lengcol
 Simply, run:
 
 ```sh
-$ tox
+$ make test
 ```
