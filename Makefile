@@ -7,6 +7,9 @@ run:
 stop:
 	docker-compose down
 
+clean:
+	find . -name "*.pyc" -delete
+
 test:
 	pip install tox
 	tox
