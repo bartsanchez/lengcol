@@ -1,3 +1,5 @@
+.PHONY: build run stop clean test
+
 build:
 	docker-compose build
 
