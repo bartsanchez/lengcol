@@ -31,6 +31,12 @@
         name: fail2ban
         state: present
 
+    - name: Ensure fail2ban service is running
+      become: true
+      service:
+        name: fail2ban
+        state: started
+
     - name: Build containers
       shell:
         chdir: /opt/apps/lengcol
