@@ -25,6 +25,12 @@
         group: ubuntu
         mode: '400'
 
+    - name: Install fail2ban
+      become: true
+      package:
+        name: fail2ban
+        state: present
+
     - name: Build containers
       shell:
         chdir: /opt/apps/lengcol
