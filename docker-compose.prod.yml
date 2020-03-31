@@ -13,6 +13,7 @@ services:
             - /data/static:/opt/lengcol/lengcol/lengcol/static
 
     web:
+        restart: always
         ports:
             - 80:80
             - 443:443
@@ -34,3 +35,4 @@ services:
         entrypoint: "/bin/sh -c 'trap exit TERM; while :; do logrotate -v logrotate.conf; sleep 12h & wait $${!}; done;'"
         volumes:
             - /data/logs/nginx/:/var/log/
+            - /var/run/docker.sock:/var/run/docker.sock
