@@ -1,0 +1,5 @@
+[DEFAULT]
+
+nginx_error_log = /data/logs/nginx/error.log
+
+nginx_access_log = /data/logs/nginx/access.log

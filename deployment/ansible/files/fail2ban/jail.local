@@ -335,7 +335,7 @@ logpath = /opt/openhab/logs/request.log
 
 
 [nginx-http-auth]
-
+enabled = true
 port    = http,https
 logpath = %(nginx_error_log)s
 
@@ -344,11 +344,12 @@ logpath = %(nginx_error_log)s
 # http://nginx.org/en/docs/http/ngx_http_limit_req_module.html
 # or for example see in 'config/filter.d/nginx-limit-req.conf'
 [nginx-limit-req]
+enabled = true
 port    = http,https
 logpath = %(nginx_error_log)s
 
 [nginx-botsearch]
-
+enabled  = true
 port     = http,https
 logpath  = %(nginx_error_log)s
 maxretry = 2
