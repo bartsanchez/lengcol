@@ -348,6 +348,7 @@ logpath = %(nginx_error_log)s
 enabled = true
 port    = http,https
 logpath = %(nginx_error_log)s
+maxretry = 2
 
 [nginx-botsearch]
 
@@ -359,6 +360,7 @@ maxretry = 2
 enabled  = true
 port     = http,https
 logpath  = %(nginx_444_error_log)s
+maxretry = 2
 
 
 # Ban attackers that try to use PHP's URL-fopen() functionality
