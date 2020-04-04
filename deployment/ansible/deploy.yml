@@ -31,11 +31,29 @@
         name: fail2ban
         state: present
 
+    - name: Upload local iptables multiport config
+      become: true
+      copy:
+        src: files/fail2ban/action.d/iptables-multiport.local
+        dest: /etc/fail2ban/action.d/iptables-multiport.local
+        owner: root
+        group: root
+        mode: '644'
+
     - name: Upload local jail config file
       become: true
       copy:
         src: files/fail2ban/jail.local
         dest: /etc/fail2ban/jail.local
+        owner: root
+        group: root
+        mode: '644'
+
+    - name: Upload nginx-444 jail
+      become: true
+      copy:
+        src: files/fail2ban/filter.d/nginx-444.conf
+        dest: /etc/fail2ban/filter.d/nginx-444.conf
         owner: root
         group: root
         mode: '644'

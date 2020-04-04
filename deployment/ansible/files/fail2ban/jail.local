@@ -244,6 +244,7 @@ action = %(action_)s
 port    = ssh
 logpath = %(sshd_log)s
 backend = %(sshd_backend)s
+chain   = INPUT
 
 
 [dropbear]
@@ -353,6 +354,11 @@ enabled  = true
 port     = http,https
 logpath  = %(nginx_error_log)s
 maxretry = 2
+
+[nginx-444]
+enabled  = true
+port     = http,https
+logpath  = %(nginx_444_error_log)s
 
 
 # Ban attackers that try to use PHP's URL-fopen() functionality
