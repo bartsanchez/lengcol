@@ -336,7 +336,7 @@ logpath = /opt/openhab/logs/request.log
 
 
 [nginx-http-auth]
-enabled = true
+
 port    = http,https
 logpath = %(nginx_error_log)s
 
@@ -350,7 +350,7 @@ port    = http,https
 logpath = %(nginx_error_log)s
 
 [nginx-botsearch]
-enabled  = true
+
 port     = http,https
 logpath  = %(nginx_error_log)s
 maxretry = 2
