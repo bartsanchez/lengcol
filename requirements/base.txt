@@ -5,12 +5,18 @@
 #    pip-compile --output-file=./base.txt base.in
 #
 asgiref==3.2.3            # via django
-dj-database-url==0.5.0    # via -r base.in (line 3)
-django-crispy-forms==1.8.1  # via -r base.in (line 6)
-django-extensions==2.2.8  # via -r base.in (line 2)
-django==3.0.3             # via -r base.in (line 1)
-psycopg2-binary==2.8.4    # via -r base.in (line 4)
+certifi==2020.4.5         # via requests
+chardet==3.0.4            # via requests
+dj-database-url==0.5.0    # via -r base.in
+django-crispy-forms==1.8.1  # via -r base.in
+django-extensions==2.2.8  # via -r base.in
+django-recaptcha3==0.2.0  # via -r base.in
+django==3.0.3             # via -r base.in
+idna==2.9                 # via requests
+psycopg2-binary==2.8.4    # via -r base.in
 pytz==2019.3              # via django
+requests==2.23.0          # via django-recaptcha3
 six==1.14.0               # via django-extensions
 sqlparse==0.3.0           # via django
-whitenoise==5.0.1         # via -r base.in (line 5)
+urllib3==1.25.8           # via requests
+whitenoise==5.0.1         # via -r base.in

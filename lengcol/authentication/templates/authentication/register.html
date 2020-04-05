@@ -1,6 +1,12 @@
 {% extends "lengcol/base.html" %}
 
+{% load recaptcha3 %}
 {% load crispy_forms_tags %}
+
+{% block extrahead %}
+  {% recaptcha_init %}
+  {% recaptcha_ready action_name='login' %}
+{% endblock %}
 
 {% block content %}
 

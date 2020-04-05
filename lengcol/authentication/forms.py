@@ -2,6 +2,8 @@ from django import forms
 from django.contrib import auth
 from django.contrib.auth import forms as auth_forms
 
+from snowpenguin.django.recaptcha3 import fields
+
 
 class CustomUserCreationForm(auth_forms.UserCreationForm):
     password1 = forms.CharField(
@@ -15,6 +17,8 @@ class CustomUserCreationForm(auth_forms.UserCreationForm):
         widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
     )
     email = forms.EmailField()
+
+    captcha = fields.ReCaptchaField()
 
     class Meta:
         model = auth.get_user_model()
