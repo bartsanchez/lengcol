@@ -15,4 +15,4 @@ COPY . /opt/lengcol/
 
 WORKDIR /opt/lengcol/lengcol/
 
-CMD ["gunicorn", "lengcol.wsgi:application", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "--log-level", "debug"]
+CMD ["gunicorn", "lengcol.wsgi:application", "--bind", "0.0.0.0:8000", "--access-logfile", "-"]
