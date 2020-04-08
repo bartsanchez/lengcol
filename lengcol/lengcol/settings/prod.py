@@ -24,3 +24,29 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = 'info@lenguajecoloquial.com'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_SSL = True
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s: %(message)s'
+        }
+    },
+    'handlers': {
+        'logfile': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': '/var/log/gunicorn/recaptcha.log',
+            'maxBytes': 1024*1024,  # 1MB
+            'backupCount': 3,
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'snowpenguin.django.recaptcha3': {
+            'handlers': ['logfile'],
+            'level': 'DEBUG',
+        },
+    },
+}
