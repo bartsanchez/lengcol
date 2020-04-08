@@ -9,9 +9,10 @@ services:
             - /data/static:/opt/lengcol/lengcol/lengcol/static
 
     lengcol:
+        command: gunicorn "lengcol.wsgi:application" -c "../docker/gunicorn/settings/prod.py"
         volumes:
             - /data/static:/opt/lengcol/lengcol/lengcol/static
-
+            - /data/logs/gunicorn/:/var/log/gunicorn/
     web:
         restart: always
         ports:
