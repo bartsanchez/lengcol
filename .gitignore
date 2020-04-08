@@ -8,3 +8,4 @@ lengcol/.coverage
 htmlcov/
 .env
 docker/static/*
+deployment/aws_key_pair.pem
