@@ -1,6 +1,8 @@
 from definitions import models
 from django import forms
 
+from snowpenguin.django.recaptcha3 import fields
+
 
 class ModelChoiceFieldAsText(forms.ModelChoiceField):
     def __init__(self, queryset, field, *args, **kwargs):
@@ -24,6 +26,8 @@ class DefinitionForm(forms.ModelForm):
         label='Término',
     )
     value = forms.CharField(label='Definición')
+
+    captcha = fields.ReCaptchaField()
 
     class Meta:
         model = models.Definition
