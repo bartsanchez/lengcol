@@ -96,3 +96,10 @@
       shell:
         chdir: /opt/apps/lengcol
         cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+    - name: Set scheduled backup
+      cron:
+        name: "database backup"
+        minute: "1"
+        hour: "4"
+        job: "/opt/apps/lengcol/scripts/create_backup.sh"
