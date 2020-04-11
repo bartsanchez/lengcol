@@ -1,0 +1,4 @@
+DJANGO_SETTINGS_MODULE=lengcol.settings.base
+DATABASE_URL=postgres://fake_db_user:fake_db_password@db:5432/db
+SECRET_KEY=fake_key
+RECAPTCHA_DISABLE=1
