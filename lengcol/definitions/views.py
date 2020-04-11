@@ -1,8 +1,9 @@
-from definitions import forms, models
 from django import http, shortcuts, urls, views
 from django.contrib.auth import mixins
 from django.views import generic
 from django.views.generic import detail
+
+from definitions import forms, models
 
 
 class IndexView(generic.ListView):

@@ -1,6 +1,7 @@
-from authentication import forms
 from django.contrib import auth
 from django.views.generic import edit
+
+from authentication import forms
 
 
 class RegisterView(edit.FormView):

@@ -1,10 +1,11 @@
 import uuid
 
-from base import managers
-from base import models as base_models
 from django.conf import settings
 from django.db import models
 from django_extensions.db import fields
+
+from base import managers
+from base import models as base_models
 
 
 class Term(base_models.BaseModel):

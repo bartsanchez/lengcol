@@ -1,8 +1,9 @@
-from base import mixins
-from definitions import factories
 from django import test
 from django.urls import reverse
 from django.utils import http
+
+from base import mixins
+from definitions import factories
 
 
 class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):

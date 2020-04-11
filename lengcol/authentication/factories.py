@@ -1,6 +1,7 @@
 import factory
-from authentication import models
 from factory import django
+
+from authentication import models
 
 
 class UserFactory(django.DjangoModelFactory):

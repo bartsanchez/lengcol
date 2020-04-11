@@ -1,7 +1,7 @@
-from definitions import models
 from django import forms
-
 from snowpenguin.django.recaptcha3 import fields
+
+from definitions import models
 
 
 class ModelChoiceFieldAsText(forms.ModelChoiceField):

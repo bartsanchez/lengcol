@@ -1,8 +1,9 @@
 import splinter
-from base import mixins
-from definitions import factories
 from django import test
 from django.urls import reverse
+
+from base import mixins
+from definitions import factories
 
 
 class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):

@@ -1,7 +1,8 @@
-from definitions import models
 from django import dispatch
 from django.core import mail
 from django.db.models import signals
+
+from definitions import models
 
 
 @dispatch.receiver(signals.post_save, sender=models.Definition)

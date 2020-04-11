@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib import auth
 from django.contrib.auth import forms as auth_forms
-
 from snowpenguin.django.recaptcha3 import fields
 
 

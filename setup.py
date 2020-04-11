@@ -1,6 +1,5 @@
 import setuptools
 
-
 setuptools.setup(
     name='lengcol',
     description='Lenguaje Coloquial project',

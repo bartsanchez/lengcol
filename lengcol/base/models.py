@@ -1,5 +1,6 @@
-from base import managers
 from django.db import models
+
+from base import managers
 
 
 class BaseModel(models.Model):

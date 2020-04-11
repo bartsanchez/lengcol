@@ -1,9 +1,10 @@
-from authentication import factories as auth_factories
-from base import mixins
-from definitions import factories, models
 from django import test
 from django.core import mail
 from django.urls import reverse
+
+from authentication import factories as auth_factories
+from base import mixins
+from definitions import factories, models
 
 
 class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):

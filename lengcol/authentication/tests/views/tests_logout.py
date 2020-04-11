@@ -1,7 +1,8 @@
 import splinter
-from authentication import factories
 from django import test
 from django.urls import reverse
+
+from authentication import factories
 
 
 class LogoutViewTests(test.TestCase):
