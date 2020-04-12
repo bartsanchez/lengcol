@@ -4,7 +4,7 @@ __pycache__
 lengcol.egg-info
 *.pyc
 *.swp
-lengcol/.coverage
+.coverage
 htmlcov/
 .env
 docker/static/*

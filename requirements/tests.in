@@ -1,9 +1,10 @@
 -r base.txt
 
+pytest-django
+pytest-cov
 factory_boy
 freezegun
 tox
-coverage
 requests
 ipdb
 splinter[django]
