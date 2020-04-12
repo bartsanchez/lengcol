@@ -2,6 +2,7 @@
 
 pytest-django
 pytest-cov
+pytest-recording
 factory_boy
 freezegun
 tox
