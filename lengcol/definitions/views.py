@@ -1,5 +1,4 @@
 from django import http, shortcuts, urls, views
-from django.contrib.auth import mixins
 from django.views import generic
 from django.views.generic import detail
 
@@ -12,10 +11,9 @@ class IndexView(generic.ListView):
     context_object_name = 'definitions'
 
 
-class DefinitionCreateView(mixins.LoginRequiredMixin, generic.CreateView):
+class DefinitionCreateView(generic.CreateView):
     model = models.Definition
     form_class = forms.DefinitionForm
-    login_url = '/login/'
 
     def get_success_url(self):
         return urls.reverse(
@@ -23,7 +21,9 @@ class DefinitionCreateView(mixins.LoginRequiredMixin, generic.CreateView):
         )
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        user = self.request.user
+        if user.is_authenticated:
+            form.instance.user = user
         return super().form_valid(form)
 
 
