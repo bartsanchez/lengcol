@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <a href="{% url 'term-detail' definition.term.slug %}">{{ definition.term }}</a>
+    <a href="{{ definition.term.get_absolute_url }}">{{ definition.term }}</a>
   </div>
 
   <div class="card-body">

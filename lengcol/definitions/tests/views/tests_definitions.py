@@ -331,10 +331,7 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(
             response,
-            '<a href="{}">fake term</a>'.format(
-                reverse('term-detail',
-                        kwargs={'slug': self.definition.term.slug})
-            ),
+            f'<a href="{self.term.get_absolute_url()}">fake term</a>',
             html=True
         )
 

@@ -20,6 +20,9 @@ class Term(base_models.BaseModel):
     def definitions(self):
         return self.definition_set.all()
 
+    def get_absolute_url(self):
+        return reverse('term-detail', kwargs={'slug': self.slug})
+
 
 class Definition(base_models.BaseModel):
     term = models.ForeignKey(Term, on_delete=models.CASCADE)
