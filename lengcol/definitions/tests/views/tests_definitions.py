@@ -1,4 +1,5 @@
 from django import test
+from django.conf import settings
 from django.core import mail
 from django.urls import reverse
 
@@ -162,14 +163,22 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertEqual(response.status_code, 200)
 
+        self.assertEqual(models.Definition.objects.count(), 1)
         self.assertEqual(len(mail.outbox), 1)
 
         email_sent = mail.outbox[0]
         self.assertEqual(email_sent.subject, 'New definition was created')
-        self.assertEqual(email_sent.body, 'PK: 1')
         self.assertEqual(email_sent.from_email, 'info@lenguajecoloquial.com')
         self.assertTrue(len(email_sent.to), 1)
         self.assertEqual(email_sent.to[0], 'info@lenguajecoloquial.com')
+
+        # Body
+        definition = models.Definition.objects.first()
+        definition_url = definition.get_absolute_url()
+        self.assertEqual(
+            email_sent.body,
+            f'{settings.BASE_URL}{definition_url}'
+        )
 
     def test_has_author(self):
         self._login()

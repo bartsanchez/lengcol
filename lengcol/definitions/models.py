@@ -2,6 +2,7 @@ import uuid
 
 from django.conf import settings
 from django.db import models
+from django.urls import reverse
 from django_extensions.db import fields
 
 from base import managers
@@ -34,6 +35,9 @@ class Definition(base_models.BaseModel):
 
     def __str__(self):
         return self.value
+
+    def get_absolute_url(self):
+        return reverse('definition-detail', kwargs={'uuid': self.uuid})
 
     @property
     def has_examples(self):
