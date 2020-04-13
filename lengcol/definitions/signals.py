@@ -11,7 +11,7 @@ def new_definition_handler(sender, instance, *args, **kwargs):
     mail.send_mail(
         'New definition was created',
         f'{settings.BASE_URL}{instance.get_absolute_url()}',
-        'info@lenguajecoloquial.com',
-        ['info@lenguajecoloquial.com'],
+        f'{settings.APP_EMAIL}',
+        [f'{settings.APP_EMAIL}'],
         fail_silently=True,
     )

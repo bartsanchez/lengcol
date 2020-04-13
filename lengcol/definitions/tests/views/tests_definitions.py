@@ -168,9 +168,9 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         email_sent = mail.outbox[0]
         self.assertEqual(email_sent.subject, 'New definition was created')
-        self.assertEqual(email_sent.from_email, 'info@lenguajecoloquial.com')
+        self.assertEqual(email_sent.from_email, settings.APP_EMAIL)
         self.assertTrue(len(email_sent.to), 1)
-        self.assertEqual(email_sent.to[0], 'info@lenguajecoloquial.com')
+        self.assertEqual(email_sent.to[0], settings.APP_EMAIL)
 
         # Body
         definition = models.Definition.objects.first()

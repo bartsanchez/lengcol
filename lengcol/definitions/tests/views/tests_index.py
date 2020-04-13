@@ -1,5 +1,6 @@
 import splinter
 from django import test
+from django.conf import settings
 from django.urls import reverse
 
 from base import mixins
@@ -99,7 +100,7 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def test_has_email_contact_link(self):
         response = self.client.get(self.url)
 
-        email_link = 'info@lenguajecoloquial.com'
+        email_link = settings.APP_EMAIL
         self.assertContains(
             response,
             '<a href="mailto:{0}">{0}</a>'.format(email_link),

@@ -8,6 +8,8 @@ BASE_DOMAIN = 'lenguajecoloquial.com'
 BASE_SUBDOMAIN = f'www.{BASE_DOMAIN}'
 BASE_URL = f'https://{BASE_SUBDOMAIN}'
 
+APP_EMAIL = 'info@lenguajecoloquial.com'
+
 SECRET_KEY = 'rh*dh$k=p*u#l13)pn&2*#iw=nh-p6wmmswgo1$vfvt_xqz6-e'
 
 DEBUG = True
