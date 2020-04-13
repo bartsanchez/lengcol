@@ -9,7 +9,7 @@
         </div>
 
         <div class="card-body">
-          <a href="{% url 'definition-detail' definition.uuid %}">{{ definition }}</a>
+          <a href="{{ definition.get_absolute_url }}">{{ definition }}</a>
         </div>
       </div>
     {% endfor %}

@@ -33,10 +33,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         definition = models.Definition.objects.get()
 
-        self.assertRedirects(
-            response,
-            reverse('definition-detail', kwargs={'uuid': definition.uuid})
-        )
+        self.assertRedirects(response, definition.get_absolute_url())
 
     def test_add_new(self):
         self.assertEqual(models.Term.objects.count(), 0)
@@ -212,8 +209,7 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.definition = factories.DefinitionFactory(term=self.term,
                                                       value='fake definition',
                                                       user=self.user)
-        self.url = reverse('definition-detail',
-                           kwargs={'uuid': self.definition.uuid})
+        self.url = self.definition.get_absolute_url()
 
     def test_template_extends(self):
         response = self.client.get(self.url)
@@ -291,8 +287,7 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         definition = factories.DefinitionFactory(term=term,
                                                  value='other definition',
                                                  user=other_user)
-        url = reverse('definition-detail',
-                      kwargs={'uuid': definition.uuid})
+        url = definition.get_absolute_url()
 
         self.client.login(username=self.user.username,
                           password='fake_password')
@@ -315,8 +310,7 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         term = factories.TermFactory(value='other term')
         definition = factories.DefinitionFactory(term=term,
                                                  value='other definition')
-        url = reverse('definition-detail',
-                      kwargs={'uuid': definition.uuid})
+        url = definition.get_absolute_url()
 
         response = self.client.get(url)
 

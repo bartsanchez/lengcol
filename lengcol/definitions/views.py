@@ -1,4 +1,4 @@
-from django import http, shortcuts, urls, views
+from django import http, shortcuts, views
 from django.views import generic
 from django.views.generic import detail
 
@@ -16,9 +16,7 @@ class DefinitionCreateView(generic.CreateView):
     form_class = forms.DefinitionForm
 
     def get_success_url(self):
-        return urls.reverse(
-            'definition-detail', kwargs={'uuid': self.object.uuid}
-        )
+        return self.object.get_absolute_url()
 
     def form_valid(self, form):
         user = self.request.user
@@ -66,9 +64,7 @@ class ExampleView(detail.SingleObjectMixin, generic.FormView):
             return self.form_invalid(form)
 
     def get_success_url(self):
-        return urls.reverse(
-            'definition-detail', kwargs={'uuid': self.object.uuid}
-        )
+        return self.object.get_absolute_url()
 
 
 class DefinitionDetailView(views.View):

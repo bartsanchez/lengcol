@@ -59,9 +59,7 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(
             response,
-            '<a href="{}">fake definition</a>'.format(
-                reverse('definition-detail', kwargs={'uuid': definition.uuid})
-            ),
+            f'<a href="{definition.get_absolute_url()}">fake definition</a>',
             html=True
         )
 

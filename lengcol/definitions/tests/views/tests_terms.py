@@ -38,10 +38,7 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(
             response,
-            '<a href="{}">foo</a>'.format(
-                reverse('definition-detail',
-                        kwargs={'uuid': self.definition_foo.uuid})
-            ),
+            f'<a href="{self.definition_foo.get_absolute_url()}">foo</a>',
             html=True
         )
 
