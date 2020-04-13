@@ -8,10 +8,11 @@ from definitions import models
 
 @dispatch.receiver(signals.post_save, sender=models.Definition)
 def new_definition_handler(sender, instance, *args, **kwargs):
-    mail.send_mail(
-        'New definition was created',
-        f'{settings.BASE_URL}{instance.get_absolute_url()}',
-        f'{settings.APP_EMAIL}',
-        [f'{settings.APP_EMAIL}'],
-        fail_silently=True,
-    )
+    mail_content = {
+        'subject': 'New definition was created',
+        'message': f'{settings.BASE_URL}{instance.get_absolute_url()}',
+        'from_email': f'{settings.APP_EMAIL}',
+        'recipient_list': [f'{settings.APP_EMAIL}'],
+        'fail_silently': True,
+    }
+    mail.send_mail(**mail_content)
