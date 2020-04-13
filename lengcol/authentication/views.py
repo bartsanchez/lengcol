@@ -1,4 +1,5 @@
 from django.contrib import auth
+from django.contrib.auth import views
 from django.views.generic import edit
 
 from authentication import forms
@@ -18,3 +19,7 @@ class RegisterView(edit.FormView):
         )
         auth.login(self.request, user)
         return super().form_valid(form)
+
+
+class CustomLoginView(views.LoginView):
+    form_class = forms.CustomAuthenticationForm

@@ -23,3 +23,7 @@ class CustomUserCreationForm(auth_forms.UserCreationForm):
         model = auth.get_user_model()
         fields = ('username', 'password1', 'password2', 'email')
         field_classes = {'username': auth_forms.UsernameField}
+
+
+class CustomAuthenticationForm(auth_forms.AuthenticationForm):
+    captcha = fields.ReCaptchaField()

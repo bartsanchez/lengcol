@@ -6,7 +6,7 @@ from authentication import views
 urlpatterns = [
     path(
         'login/',
-        auth_views.LoginView.as_view(
+        views.CustomLoginView.as_view(
             template_name='authentication/login.html',
         ),
         name='login'
