@@ -14,3 +14,4 @@ class TermAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Term, TermAdmin)
 admin.site.register(models.Definition)
+admin.site.register(models.Example)
