@@ -1,4 +1,4 @@
-.PHONY: build run stop clean test
+.PHONY: build run stop clean deploy test
 
 build:
 	docker-compose build
@@ -11,6 +11,9 @@ stop:
 
 clean:
 	find . -name "*.pyc" -delete
+
+deploy:
+	/bin/bash ./deployment/deploy.sh
 
 test:
 	pip install tox
