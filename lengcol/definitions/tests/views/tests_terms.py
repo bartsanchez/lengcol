@@ -10,10 +10,16 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
         self.term = factories.TermFactory(value='fake term')
-        self.definition_foo = factories.DefinitionFactory(term=self.term,
-                                                          value='foo')
-        self.definition_bar = factories.DefinitionFactory(term=self.term,
-                                                          value='bar')
+        self.definition_foo = factories.DefinitionFactory(
+            uuid='cb8d30f8-b60a-46e8-9cad-f3d5ff28d269',
+            term=self.term,
+            value='foo',
+        )
+        self.definition_bar = factories.DefinitionFactory(
+            uuid='75484634-4f96-4bc9-8d94-bfe8523ba7cd',
+            term=self.term,
+            value='bar',
+        )
         self.url = reverse('term-detail',
                            kwargs={'slug': self.term.slug})
 
@@ -60,10 +66,16 @@ class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.client = test.Client()
         self.foo_term = factories.TermFactory(value='foo term')
         self.bar_term = factories.TermFactory(value='bar term')
-        self.definition_foo = factories.DefinitionFactory(term=self.foo_term,
-                                                          value='foo')
-        self.definition_bar = factories.DefinitionFactory(term=self.bar_term,
-                                                          value='bar')
+        self.definition_foo = factories.DefinitionFactory(
+            uuid='b3ec0487-d422-4d0e-86c0-0b80402fb012',
+            term=self.foo_term,
+            value='foo',
+        )
+        self.definition_bar = factories.DefinitionFactory(
+            uuid='8ce7d087-b231-4562-b43f-dd27c7af7eba',
+            term=self.bar_term,
+            value='bar',
+        )
         self.url = reverse('term-search')
 
     def test_template_extends(self):

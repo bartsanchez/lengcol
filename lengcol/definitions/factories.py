@@ -1,3 +1,5 @@
+import datetime
+
 import factory
 from factory import django
 
@@ -15,10 +17,12 @@ class TermFactory(django.DjangoModelFactory):
 class DefinitionFactory(django.DjangoModelFactory):
     class Meta:
         model = models.Definition
-        django_get_or_create = ('term', 'value')
+        django_get_or_create = ('uuid', 'term', 'value')
 
+    uuid = factory.Faker('uuid4')
     term = factory.SubFactory(TermFactory)
     value = 'definition fake'
+    created = datetime.datetime(year=2020, month=1, day=1)
 
 
 class ExampleFactory(django.DjangoModelFactory):

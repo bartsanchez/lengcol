@@ -206,9 +206,12 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
         self.term = factories.TermFactory(value='fake term')
-        self.definition = factories.DefinitionFactory(term=self.term,
-                                                      value='fake definition',
-                                                      user=self.user)
+        self.definition = factories.DefinitionFactory(
+            uuid='6b4a7a9f-3b8f-494b-8565-f960065802ba',
+            term=self.term,
+            value='fake definition',
+            user=self.user,
+        )
         self.url = self.definition.get_absolute_url()
 
     def test_template_extends(self):

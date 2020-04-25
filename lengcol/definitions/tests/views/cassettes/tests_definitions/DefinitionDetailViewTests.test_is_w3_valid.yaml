@@ -102,4 +102,643 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
+      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
+      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
+      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
+      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
+      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
+      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
+      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
+      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
+      \ coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg\
+      \ navbar-dark bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje\
+      \ coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"\
+      collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
+      \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
+      \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n  <div\
+      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
+      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/b722f404-ac5f-481f-a861-09ee2a403287/\"\
+      >fake definition</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    <div>Fecha de creaci\xF3n 23-04-2020</div>\n    <div>Autor:\
+      \ fake_username</div>\n  </div>\n</div>\n\n  \n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/8a232571-01ab-44b8-b298-0da3a48290e6/\"\
+      >definition fake</a></li>\n              \n              <li><a href=\"/definitions/b722f404-ac5f-481f-a861-09ee2a403287/\"\
+      >fake definition</a></li>\n              \n            </ul>\n          </div>\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3954'
+      Content-Type:
+      - text/html
+      User-Agent:
+      - python-requests/2.23.0
+      charset:
+      - utf-8
+    method: POST
+    uri: https://validator.w3.org/nu/?out=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+    headers:
+      accept-encoding:
+      - gzip
+      access-control-allow-headers:
+      - content-type
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 23 Apr 2020 19:08:50 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      public-key-pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      server:
+      - Jetty(9.4.z-SNAPSHOT)
+      strict-transport-security:
+      - max-age=15552015; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding, User-Agent
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
+      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
+      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
+      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
+      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
+      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
+      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
+      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
+      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
+      \ coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg\
+      \ navbar-dark bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje\
+      \ coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"\
+      collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
+      \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
+      \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n  <div\
+      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
+      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/6204b7ca-1a73-4dbd-be36-44e5ca5ec9d0/\"\
+      >fake definition</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    <div>Fecha de creaci\xF3n 23-04-2020</div>\n    <div>Autor:\
+      \ fake_username</div>\n  </div>\n</div>\n\n  \n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\"\
+      >fake_definition</a></li>\n              \n              <li><a href=\"/definitions/6204b7ca-1a73-4dbd-be36-44e5ca5ec9d0/\"\
+      >fake definition</a></li>\n              \n            </ul>\n          </div>\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3954'
+      Content-Type:
+      - text/html
+      User-Agent:
+      - python-requests/2.23.0
+      charset:
+      - utf-8
+    method: POST
+    uri: https://validator.w3.org/nu/?out=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+    headers:
+      accept-encoding:
+      - gzip
+      access-control-allow-headers:
+      - content-type
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 23 Apr 2020 19:13:09 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      public-key-pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      server:
+      - Jetty(9.4.z-SNAPSHOT)
+      strict-transport-security:
+      - max-age=15552015; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding, User-Agent
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
+      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
+      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
+      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
+      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
+      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
+      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
+      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
+      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
+      \ coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg\
+      \ navbar-dark bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje\
+      \ coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"\
+      collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
+      \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
+      \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n  <div\
+      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
+      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/fe76cd8c-1554-4c10-9400-8900e738f328/\"\
+      >fake definition</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    <div>Fecha de creaci\xF3n 23-04-2020</div>\n    <div>Autor:\
+      \ fake_username</div>\n  </div>\n</div>\n\n  \n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\"\
+      >fake_definition</a></li>\n              \n              <li><a href=\"/definitions/fe76cd8c-1554-4c10-9400-8900e738f328/\"\
+      >fake definition</a></li>\n              \n            </ul>\n          </div>\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3954'
+      Content-Type:
+      - text/html
+      User-Agent:
+      - python-requests/2.23.0
+      charset:
+      - utf-8
+    method: POST
+    uri: https://validator.w3.org/nu/?out=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+    headers:
+      accept-encoding:
+      - gzip
+      access-control-allow-headers:
+      - content-type
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Thu, 23 Apr 2020 19:24:05 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      public-key-pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      server:
+      - Jetty(9.4.z-SNAPSHOT)
+      strict-transport-security:
+      - max-age=15552015; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding, User-Agent
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
+      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
+      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
+      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
+      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
+      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
+      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
+      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
+      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
+      \ coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg\
+      \ navbar-dark bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje\
+      \ coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"\
+      collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
+      \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
+      \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n  <div\
+      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
+      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/26a0a5a4-3a53-4aec-bdab-d90062280c97/\"\
+      >fake definition</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    <div>Fecha de creaci\xF3n 25-04-2020</div>\n    <div>Autor:\
+      \ fake_username</div>\n  </div>\n</div>\n\n  \n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/26a0a5a4-3a53-4aec-bdab-d90062280c97/\"\
+      >fake definition</a></li>\n              \n            </ul>\n          </div>\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3835'
+      Content-Type:
+      - text/html
+      User-Agent:
+      - python-requests/2.23.0
+      charset:
+      - utf-8
+    method: POST
+    uri: https://validator.w3.org/nu/?out=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+    headers:
+      accept-encoding:
+      - gzip
+      access-control-allow-headers:
+      - content-type
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Sat, 25 Apr 2020 09:13:38 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      public-key-pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      server:
+      - Jetty(9.4.z-SNAPSHOT)
+      strict-transport-security:
+      - max-age=15552015; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding, User-Agent
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
+      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
+      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
+      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
+      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
+      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
+      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
+      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
+      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
+      \ coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg\
+      \ navbar-dark bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje\
+      \ coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"\
+      collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
+      \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
+      \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n  <div\
+      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
+      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\"\
+      >fake definition</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    <div>Fecha de creaci\xF3n 25-04-2020</div>\n    <div>Autor:\
+      \ fake_username</div>\n  </div>\n</div>\n\n  \n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\"\
+      >fake definition</a></li>\n              \n            </ul>\n          </div>\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3835'
+      Content-Type:
+      - text/html
+      User-Agent:
+      - python-requests/2.23.0
+      charset:
+      - utf-8
+    method: POST
+    uri: https://validator.w3.org/nu/?out=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+    headers:
+      accept-encoding:
+      - gzip
+      access-control-allow-headers:
+      - content-type
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Sat, 25 Apr 2020 09:45:28 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      public-key-pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      server:
+      - Jetty(9.4.z-SNAPSHOT)
+      strict-transport-security:
+      - max-age=15552015; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding, User-Agent
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
+      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
+      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
+      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
+      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
+      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
+      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
+      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
+      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
+      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
+      \ coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg\
+      \ navbar-dark bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje\
+      \ coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"\
+      collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
+      \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
+      \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n  <div\
+      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
+      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\"\
+      >fake definition</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    <div>Fecha de creaci\xF3n 25-04-2020</div>\n    <div>Autor:\
+      \ fake_username</div>\n  </div>\n</div>\n\n  \n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\"\
+      >fake definition</a></li>\n              \n            </ul>\n          </div>\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3835'
+      Content-Type:
+      - text/html
+      User-Agent:
+      - python-requests/2.23.0
+      charset:
+      - utf-8
+    method: POST
+    uri: https://validator.w3.org/nu/?out=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+    headers:
+      accept-encoding:
+      - gzip
+      access-control-allow-headers:
+      - content-type
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Sat, 25 Apr 2020 09:48:15 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      public-key-pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      server:
+      - Jetty(9.4.z-SNAPSHOT)
+      strict-transport-security:
+      - max-age=15552015; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding, User-Agent
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
 version: 1

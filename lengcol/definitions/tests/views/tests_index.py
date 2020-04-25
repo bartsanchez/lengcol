@@ -9,6 +9,10 @@ from definitions import factories
 
 class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
+        factories.DefinitionFactory(
+            uuid='13bf0f68-eeb2-4777-a739-6ee5be30bacc',
+            value='fake_definition',
+        )
         self.client = test.Client()
         self.url = reverse('index')
 
