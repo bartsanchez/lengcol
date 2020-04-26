@@ -23,7 +23,7 @@ class LastDefinitionsTests(test.TestCase):
         response = self.client.get(self.url)
         self.assertContains(
             response,
-            '<a href="{}">fake_definition</a>'.format(
+            '<li><a href="{}">term fake</a></li>'.format(
                 definition.get_absolute_url()
             ),
             html=True

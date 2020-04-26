@@ -83,22 +83,37 @@ class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertTemplateUsed(response, 'lengcol/base.html')
 
+    def get_html_link(self, obj):
+        return '<a href="{}">{}</a>'.format(obj.get_absolute_url(), obj.value)
+
     def test_search(self):
         response = self.client.get(self.url)
 
-        self.assertContains(response, 'foo term')
-        self.assertContains(response, 'bar term')
+        self.assertContains(
+            response, self.get_html_link(self.foo_term), html=True
+        )
+        self.assertContains(
+            response, self.get_html_link(self.bar_term), html=True
+        )
 
     def test_search_foo(self):
         url = '{}?{}'.format(self.url, http.urlencode({'v': 'foo'}))
         response = self.client.get(url)
 
-        self.assertContains(response, 'foo term')
-        self.assertNotContains(response, 'bar term')
+        self.assertContains(
+            response, self.get_html_link(self.foo_term), html=True
+        )
+        self.assertNotContains(
+            response, self.get_html_link(self.bar_term), html=True
+        )
 
     def test_search_bar(self):
         url = '{}?{}'.format(self.url, http.urlencode({'v': 'bar'}))
         response = self.client.get(url)
 
-        self.assertContains(response, 'bar term')
-        self.assertNotContains(response, 'foo term')
+        self.assertContains(
+            response, self.get_html_link(self.bar_term), html=True
+        )
+        self.assertNotContains(
+            response, self.get_html_link(self.foo_term), html=True
+        )

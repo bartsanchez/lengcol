@@ -69,19 +69,24 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
         bar_term = factories.TermFactory(value='bar term')
         factories.DefinitionFactory(term=foo_term, value='foo')
         factories.DefinitionFactory(term=bar_term, value='bar')
-
+        foo_term_html = '<a href="{}">foo term</a>'.format(
+            foo_term.get_absolute_url()
+        )
+        bar_term_html = '<a href="{}">bar term</a>'.format(
+            bar_term.get_absolute_url()
+        )
         with splinter.Browser('django') as browser:
             browser.visit(self.url)
 
-            self.assertIn('foo term', browser.html)
-            self.assertIn('bar term', browser.html)
+            self.assertIn(foo_term_html, browser.html)
+            self.assertIn(bar_term_html, browser.html)
 
             browser.fill('v', 'f')
             browser.find_by_id('form-button').click()
 
             self.assertEqual(browser.url, reverse('term-search'))
-            self.assertIn('foo term', browser.html)
-            self.assertNotIn('bar term', browser.html)
+            self.assertIn(foo_term_html, browser.html)
+            self.assertNotIn(bar_term_html, browser.html)
 
     def test_has_examples(self):
         definition = factories.DefinitionFactory(value='fake definition')

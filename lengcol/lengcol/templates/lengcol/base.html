@@ -64,7 +64,7 @@
             <h4 class="font-italic">Últimas definiciones</h4>
             <ul>
               {% for definition in last_definitions %}
-              <li><a href="{{ definition.get_absolute_url }}">{{ definition }}</a></li>
+              <li><a href="{{ definition.get_absolute_url }}">{{ definition.term }}</a></li>
               {% endfor %}
             </ul>
           </div>
