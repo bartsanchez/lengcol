@@ -1,3 +1,4 @@
+import freezegun
 from django import test
 from django.urls import reverse
 from django.utils import http
@@ -6,6 +7,7 @@ from base import mixins
 from definitions import factories
 
 
+@freezegun.freeze_time('2020-01-01')
 class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()

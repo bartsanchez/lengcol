@@ -1,3 +1,4 @@
+import freezegun
 import splinter
 from django import test
 from django.conf import settings
@@ -7,6 +8,7 @@ from base import mixins
 from definitions import factories
 
 
+@freezegun.freeze_time('2020-01-01')
 class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         factories.DefinitionFactory(

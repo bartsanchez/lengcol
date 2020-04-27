@@ -1,3 +1,4 @@
+import freezegun
 from django import test
 from django.conf import settings
 from django.core import mail
@@ -201,6 +202,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertContains(response, 'Autor: Anónimo')
 
 
+@freezegun.freeze_time('2020-01-01')
 class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()

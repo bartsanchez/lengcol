@@ -1,5 +1,3 @@
-import datetime
-
 import factory
 from factory import django
 
@@ -22,7 +20,6 @@ class DefinitionFactory(django.DjangoModelFactory):
     uuid = factory.Faker('uuid4')
     term = factory.SubFactory(TermFactory)
     value = 'definition fake'
-    created = datetime.datetime(year=2020, month=1, day=1)
 
 
 class ExampleFactory(django.DjangoModelFactory):
