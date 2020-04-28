@@ -1,8 +1,12 @@
+import logging
+
 from django import http, shortcuts, views
 from django.views import generic
 from django.views.generic import detail
 
 from definitions import forms, models
+
+logger = logging.getLogger('lengcol.definitions.views')
 
 
 class IndexView(generic.ListView):
@@ -69,6 +73,7 @@ class ExampleView(detail.SingleObjectMixin, generic.FormView):
 
 class DefinitionDetailView(views.View):
     def get(self, request, *args, **kwargs):
+        logger.info('{}'.format(request.is_secure()))
         view = DefinitionDisplayView.as_view()
         return view(request, *args, **kwargs)
 
