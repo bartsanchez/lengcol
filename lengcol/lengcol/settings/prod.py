@@ -39,14 +39,6 @@ LOGGING = {
         }
     },
     'handlers': {
-        'logfile': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/var/log/gunicorn/lengcol.log',
-            'maxBytes': 1024*1024,  # 1MB
-            'backupCount': 3,
-            'formatter': 'verbose',
-        },
         'recaptcha_logfile': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
@@ -57,10 +49,6 @@ LOGGING = {
         },
     },
     'loggers': {
-        'lengcol': {
-            'handlers': ['logfile'],
-            'level': 'DEBUG',
-        },
         'snowpenguin.django.recaptcha3': {
             'handlers': ['recaptcha_logfile'],
             'level': 'DEBUG',
