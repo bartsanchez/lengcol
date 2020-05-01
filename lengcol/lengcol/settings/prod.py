@@ -29,6 +29,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+CELERY_TASK_ALWAYS_EAGER = False
+
 EMAIL_HOST = 'smtp.ionos.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'info@lenguajecoloquial.com'

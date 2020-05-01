@@ -5,3 +5,5 @@ psycopg2-binary
 whitenoise
 django-crispy-forms
 django-recaptcha3
+celery
+redis

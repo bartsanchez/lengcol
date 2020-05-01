@@ -99,6 +99,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+CELERY_BROKER_URL = 'redis://redis_broker:6379/0'
+CELERY_TASK_ALWAYS_EAGER = True
+
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY', 'fake_private_key')
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY', 'fake_public_key')
 RECAPTCHA_DEFAULT_ACTION = 'generic'

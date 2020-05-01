@@ -48,3 +48,19 @@ services:
             - lengcol
         links:
             - lengcol
+
+    celery_worker:
+        build: .
+        command: celery -A lengcol.celery worker --loglevel=info
+        restart: always
+        env_file: .env
+        depends_on:
+            - db
+            - redis_broker
+        links:
+            - db
+            - redis_broker
+
+    redis_broker:
+        image: redis
+        restart: always
