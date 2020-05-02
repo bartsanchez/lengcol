@@ -1,9 +1,10 @@
 <div class="card">
-  <div class="card-header">
-    <a href="{{ definition.term.get_absolute_url }}">{{ definition.term }}</a>
-  </div>
 
   <div class="card-body">
+    <h5 class="card-title">
+      <a href="{{ definition.term.get_absolute_url }}">{{ definition.term }}</a>
+    </h5>
+
     <a href="{{ definition.get_absolute_url }}">{{ definition }}</a>
 
     {% if definition.has_examples %}
