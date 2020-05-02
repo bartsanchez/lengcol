@@ -1,3 +1,14 @@
 .card {
   margin: 1em;
 }
+ul.examples {
+  list-style: none;
+}
+ul.examples li {
+  font-style: italic;
+}
+ul.examples li:before {
+  content: '\27A4';
+  margin-left: -20px;
+  margin-right: 10px;
+}

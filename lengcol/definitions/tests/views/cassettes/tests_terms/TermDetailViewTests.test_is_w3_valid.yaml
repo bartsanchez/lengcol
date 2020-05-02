@@ -35,20 +35,20 @@ interactions:
       \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
       \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
       \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
-      \       <div class=\"col-md-8\">\n          \n\n  <div class=\"card\">\n  <div\
-      \ class=\"card-header\">\n    <a href=\"/terms/fake-term/\">fake term</a>\n\
-      \  </div>\n\n  <div class=\"card-body\">\n    <a href=\"/definitions/cb8d30f8-b60a-46e8-9cad-f3d5ff28d269/\"\
-      >foo</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right text-muted\"\
-      >\n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n    <div>Autor: An\xF3nimo</div>\n\
-      \  </div>\n</div>\n\n\n  <div class=\"card\">\n  <div class=\"card-header\"\
-      >\n    <a href=\"/terms/fake-term/\">fake term</a>\n  </div>\n\n  <div class=\"\
-      card-body\">\n    <a href=\"/definitions/75484634-4f96-4bc9-8d94-bfe8523ba7cd/\"\
-      >bar</a>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right text-muted\"\
-      >\n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n    <div>Autor: An\xF3nimo</div>\n\
-      \  </div>\n</div>\n\n\n\n        </div>\n        <aside class=\"col-md-4\">\n\
-      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
-      font-italic\">\xDAltimas definiciones</h4>\n            <ul>\n             \
-      \ \n              <li><a href=\"/definitions/cb8d30f8-b60a-46e8-9cad-f3d5ff28d269/\"\
+      \       <div class=\"col-md-8\">\n          \n\n  <div class=\"card\">\n\n \
+      \ <div class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"\
+      /terms/fake-term/\">fake term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/cb8d30f8-b60a-46e8-9cad-f3d5ff28d269/\"\
+      >&#128279;</a>\n      foo\n    </p>\n\n    \n  </div>\n\n  <div class=\"card-footer\
+      \ text-right text-muted\">\n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n\
+      \    <div>Autor: An\xF3nimo</div>\n  </div>\n</div>\n\n\n  <div class=\"card\"\
+      >\n\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"\
+      /terms/fake-term/\">fake term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/75484634-4f96-4bc9-8d94-bfe8523ba7cd/\"\
+      >&#128279;</a>\n      bar\n    </p>\n\n    \n  </div>\n\n  <div class=\"card-footer\
+      \ text-right text-muted\">\n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n\
+      \    <div>Autor: An\xF3nimo</div>\n  </div>\n</div>\n\n\n\n        </div>\n\
+      \        <aside class=\"col-md-4\">\n          \n          <div class=\"p-3\
+      \ mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n\
+      \            <ul>\n              \n              <li><a href=\"/definitions/cb8d30f8-b60a-46e8-9cad-f3d5ff28d269/\"\
       >fake term</a></li>\n              \n              <li><a href=\"/definitions/75484634-4f96-4bc9-8d94-bfe8523ba7cd/\"\
       >fake term</a></li>\n              \n            </ul>\n          </div>\n \
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
@@ -63,7 +63,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4288'
+      - '4366'
       Content-Type:
       - text/html
       User-Agent:
@@ -90,7 +90,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Mon, 27 Apr 2020 19:42:09 GMT
+      - Sat, 02 May 2020 17:38:54 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
