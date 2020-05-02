@@ -62,7 +62,7 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertContains(
             response,
-            f'<a href="{definition.get_absolute_url()}">fake definition</a>',
+            f'<a href="{definition.get_absolute_url()}">&#128279;</a>',
             html=True
         )
 

@@ -5,7 +5,10 @@
       <a href="{{ definition.term.get_absolute_url }}">{{ definition.term }}</a>
     </h5>
 
-    <a href="{{ definition.get_absolute_url }}">{{ definition }}</a>
+    <p>
+      <a href="{{ definition.get_absolute_url }}">&#128279;</a>
+      {{ definition }}
+    </p>
 
     {% if definition.has_examples %}
     <ul class="list-group">

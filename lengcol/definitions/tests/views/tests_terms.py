@@ -44,9 +44,10 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def test_has_link_to_definition_detail(self):
         response = self.client.get(self.url)
 
+        definition = self.definition_foo
         self.assertContains(
             response,
-            f'<a href="{self.definition_foo.get_absolute_url()}">foo</a>',
+            f'<a href="{definition.get_absolute_url()}">&#128279;</a>',
             html=True
         )
 
