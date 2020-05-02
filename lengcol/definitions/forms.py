@@ -26,12 +26,24 @@ class DefinitionForm(forms.ModelForm):
         label='Término',
     )
     value = forms.CharField(label='Definición')
+    example = forms.CharField(label='Ejemplo', required=False)
 
     captcha = fields.ReCaptchaField()
 
     class Meta:
         model = models.Definition
         exclude = ('user', 'active')
+
+    def save(self, *args, **kwargs):
+        return_value = super().save(*args, **kwargs)
+        if self.is_valid():
+            example = self.cleaned_data['example']
+            if example:
+                obj, created = models.Example.objects.get_or_create(
+                    definition=self.instance,
+                    value=example,
+                )
+        return return_value
 
 
 class ExampleForm(forms.Form):

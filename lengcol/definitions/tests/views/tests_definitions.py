@@ -61,6 +61,35 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
             'fake definition',
         )
 
+    def test_add_new__with_example(self):
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+        self.assertEqual(models.Example.objects.count(), 0)
+
+        self._login()
+        response = self.client.post(
+            self.url,
+            {
+                'term': 'fake term',
+                'value': 'fake definition',
+                'example': 'fake example'
+            },
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertEqual(models.Example.objects.count(), 1)
+
+        definition = models.Definition.objects.first()
+        self.assertEqual(definition.value, 'fake definition')
+
+        example = models.Example.objects.first()
+        self.assertEqual(example.value, 'fake example')
+        self.assertEqual(example.definition, definition)
+
     def test_add_new__not_logged_user(self):
         self.assertEqual(models.Term.objects.count(), 0)
         self.assertEqual(models.Definition.objects.count(), 0)
