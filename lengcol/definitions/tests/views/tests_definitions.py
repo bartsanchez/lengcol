@@ -369,6 +369,49 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
             html=True
         )
 
+    def test_has_link_to_definition_update(self):
+        self.client.login(username=self.user.username,
+                          password='fake_password')
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            '<a href="{}">&#9998; Editar</a>'.format(
+                reverse('definition-update',
+                        kwargs={'uuid': self.definition.uuid})
+            ),
+            html=True
+        )
+
+    def test_hasnt_link_to_definition_update__another_user(self):
+        another_user = auth_factories.UserFactory(
+            username='another_username',
+        )
+        self.client.login(username=another_user,
+                          password='fake_password')
+        response = self.client.get(self.url)
+
+        self.assertNotContains(
+            response,
+            '<a href="{}">&#9998; Editar</a>'.format(
+                reverse('definition-update',
+                        kwargs={'uuid': self.definition.uuid})
+            ),
+            html=True
+        )
+
+    def test_hasnt_link_to_definition_update__anonymous(self):
+        response = self.client.get(self.url)
+
+        self.assertNotContains(
+            response,
+            '<a href="{}">&#9998; Editar</a>'.format(
+                reverse('definition-update',
+                        kwargs={'uuid': self.definition.uuid})
+            ),
+            html=True
+        )
+
     def test_inactive_examples_does_not_appear(self):
         response = self.client.get(self.url)
 
@@ -402,3 +445,147 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(response.status_code, 200)
 
         self.assertEqual(models.Example.objects.count(), 0)
+
+
+class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
+    def setUp(self):
+        self.client = test.Client()
+        self.user = auth_factories.UserFactory()
+        self.definition = factories.DefinitionFactory(
+            uuid='869fc83b-2004-428d-9870-9089a8f29f20',
+            user=self.user,
+        )
+        self.url = reverse(
+            'definition-update',
+            kwargs={'uuid': self.definition.uuid}
+        )
+
+    def _login(self):
+        self.client.login(username=self.user.username,
+                          password='fake_password')
+
+    def test_update_definition(self):
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertEqual(
+            self.definition.uuid,
+            '869fc83b-2004-428d-9870-9089a8f29f20',
+        )
+        self.assertEqual(self.definition.term.value, 'term fake')
+        self.assertEqual(self.definition.value, 'definition fake')
+        self.assertEqual(self.definition.user, self.user)
+
+        self._login()
+        response = self.client.post(
+            self.url,
+            {'value': 'updated fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertEqual(
+            models.Term.objects.first().value,
+            'term fake',
+        )
+        self.assertEqual(
+            models.Definition.objects.first().value,
+            'updated fake definition',
+        )
+
+    def test_update_definition__not_owner(self):
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertEqual(
+            self.definition.uuid,
+            '869fc83b-2004-428d-9870-9089a8f29f20',
+        )
+        self.assertEqual(self.definition.term.value, 'term fake')
+        self.assertEqual(self.definition.value, 'definition fake')
+        self.assertEqual(self.definition.user, self.user)
+
+        another_user = auth_factories.UserFactory(
+            username='another_username',
+        )
+        self.assertNotEqual(self.user, another_user)
+
+        self.client.login(username=another_user.username,
+                          password='fake_password')
+        response = self.client.post(
+            self.url,
+            {'value': 'updated fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 403)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertEqual(
+            models.Term.objects.first().value,
+            'term fake',
+        )
+        self.assertEqual(
+            models.Definition.objects.first().value,
+            'definition fake',
+        )
+
+    def test_update_definition__not_authenticated(self):
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertEqual(
+            self.definition.uuid,
+            '869fc83b-2004-428d-9870-9089a8f29f20',
+        )
+        self.assertEqual(self.definition.term.value, 'term fake')
+        self.assertEqual(self.definition.value, 'definition fake')
+        self.assertEqual(self.definition.user, self.user)
+
+        response = self.client.post(
+            self.url,
+            {'value': 'updated fake definition'},
+            follow=True,
+        )
+
+        self.assertEqual(response.status_code, 404)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertEqual(
+            models.Term.objects.first().value,
+            'term fake',
+        )
+        self.assertEqual(
+            models.Definition.objects.first().value,
+            'definition fake',
+        )
+
+    def test_update_definition__get(self):
+        self._login()
+
+        response = self.client.get(self.url, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_update_definition__get__not_owner(self):
+        another_user = auth_factories.UserFactory(
+            username='another_username',
+        )
+        self.assertNotEqual(self.user, another_user)
+
+        self.client.login(username=another_user.username,
+                          password='fake_password')
+
+        response = self.client.get(self.url, follow=True)
+
+        self.assertEqual(response.status_code, 403)
+
+    def test_update_definition__get__not_authenticated(self):
+        response = self.client.get(self.url, follow=True)
+
+        self.assertEqual(response.status_code, 404)

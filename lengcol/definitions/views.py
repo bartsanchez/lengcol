@@ -1,4 +1,5 @@
 from django import http, shortcuts, views
+from django.contrib.auth import mixins
 from django.views import generic
 from django.views.generic import detail
 
@@ -13,7 +14,7 @@ class IndexView(generic.ListView):
 
 class DefinitionCreateView(generic.CreateView):
     model = models.Definition
-    form_class = forms.DefinitionForm
+    form_class = forms.NewDefinitionForm
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -75,6 +76,22 @@ class DefinitionDetailView(views.View):
     def post(self, request, *args, **kwargs):
         view = ExampleView.as_view()
         return view(request, *args, **kwargs)
+
+
+class DefinitionUpdateView(mixins.LoginRequiredMixin,
+                           mixins.UserPassesTestMixin,
+                           generic.UpdateView):
+    model = models.Definition
+    form_class = forms.DefinitionForm
+
+    def test_func(self):
+        user = self.request.user
+        definition_user = self.get_object().user
+        return user == definition_user
+
+    def get_object(self):
+        return shortcuts.get_object_or_404(models.Definition,
+                                           uuid=self.kwargs['uuid'])
 
 
 class TermDetailView(generic.DetailView):

@@ -20,10 +20,37 @@ class ModelChoiceFieldAsTextTests(test.TestCase):
 class DefinitionFormTests(test.TestCase):
     def setUp(self):
         data = {
-            'term': 'this is a fake term',
             'value': 'this is a fake definition',
         }
         self.form = forms.DefinitionForm(data=data)
+
+    def test_form_is_valid(self):
+        self.assertTrue(self.form.is_valid())
+
+    def test_missing_value(self):
+        data = {}
+        form = forms.DefinitionForm(data=data)
+
+        self.assertFalse(form.is_valid())
+
+    def test_term_field_is_not_included(self):
+        f = forms.DefinitionForm()
+
+        self.assertNotIn('term', f.fields)
+
+    def test_active_field_is_not_included(self):
+        f = forms.DefinitionForm()
+
+        self.assertNotIn('active', f.fields)
+
+
+class NewDefinitionFormTests(test.TestCase):
+    def setUp(self):
+        data = {
+            'term': 'this is a fake term',
+            'value': 'this is a fake definition',
+        }
+        self.form = forms.NewDefinitionForm(data=data)
 
     def test_form_is_valid(self):
         self.assertTrue(self.form.is_valid())
@@ -32,7 +59,7 @@ class DefinitionFormTests(test.TestCase):
         data = {
             'value': 'this is a fake definition',
         }
-        form = forms.DefinitionForm(data=data)
+        form = forms.NewDefinitionForm(data=data)
 
         self.assertFalse(form.is_valid())
 
@@ -40,7 +67,7 @@ class DefinitionFormTests(test.TestCase):
         data = {
             'term': 'this is a fake term',
         }
-        form = forms.DefinitionForm(data=data)
+        form = forms.NewDefinitionForm(data=data)
 
         self.assertFalse(form.is_valid())
 
@@ -52,6 +79,6 @@ class DefinitionFormTests(test.TestCase):
         self.assertEqual(models.Definition.objects.count(), 1)
 
     def test_active_field_is_not_included(self):
-        f = forms.DefinitionForm()
+        f = forms.NewDefinitionForm()
 
         self.assertNotIn('active', f.fields)

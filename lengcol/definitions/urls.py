@@ -13,6 +13,12 @@ urlpatterns = [
          views.DefinitionDetailView.as_view(),
          name='definition-detail'),
 
+    path('definitions/<uuid:uuid>/change',
+         views.DefinitionUpdateView.as_view(
+             template_name='definitions/definition_update_form.html'
+         ),
+         name='definition-update'),
+
     path('terms/search/',
          views.TermSearchView.as_view(),
          name='term-search'),

@@ -20,15 +20,22 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
 
 
 class DefinitionForm(forms.ModelForm):
+    value = forms.CharField(label='Definición')
+
+    captcha = fields.ReCaptchaField()
+
+    class Meta:
+        model = models.Definition
+        exclude = ('user', 'term', 'active')
+
+
+class NewDefinitionForm(DefinitionForm):
     term = ModelChoiceFieldAsText(
         queryset=models.Term.objects.all(),
         field='value',
         label='Término',
     )
-    value = forms.CharField(label='Definición')
     example = forms.CharField(label='Ejemplo', required=False)
-
-    captcha = fields.ReCaptchaField()
 
     class Meta:
         model = models.Definition
