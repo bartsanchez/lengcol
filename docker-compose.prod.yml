@@ -34,7 +34,7 @@ services:
 
     logrotate:
         build: ./docker/logrotate/
-        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do sleep 10; logrotate -v logrotate.conf; sleep 12h & wait $${!}; done;'"
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do logrotate -v logrotate.conf; sleep 12h & wait $${!}; done;'"
         depends_on:
             - web
         volumes:
