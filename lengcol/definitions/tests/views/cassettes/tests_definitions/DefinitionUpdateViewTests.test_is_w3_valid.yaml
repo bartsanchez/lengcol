@@ -44,18 +44,18 @@ interactions:
       \ type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n      \
       \  \n\n<div id=\"div_id_value\" class=\"control-group\"> <label for=\"id_value\"\
       \ class=\"control-label requiredField\">\n                Definici\xF3n<span\
-      \ class=\"asteriskField\">*</span> </label> <div class=\"controls\"> <input\
-      \ type=\"text\" name=\"value\" value=\"definition fake\" class=\"textinput textInput\"\
-      \ required id=\"id_value\"> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"\
-      \ name=\"g-recaptcha-response\">\n\n        <input type=\"submit\" value=\"\
-      Guardar\" class=\"btn btn-primary\"/>\n      </form>\n    </div>\n  </div>\n\
-      \n        </div>\n        <aside class=\"col-md-4\">\n          \n         \
-      \ <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDA\
-      ltimas definiciones</h4>\n            <ul>\n              \n              <li><a\
-      \ href=\"/definitions/869fc83b-2004-428d-9870-9089a8f29f20/\">term fake</a></li>\n\
-      \              \n            </ul>\n          </div>\n          \n         \
-      \ <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n\
-      \            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      \ class=\"asteriskField\">*</span> </label> <div class=\"controls\"> <textarea\
+      \ name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea\" required id=\"id_value\"\
+      >\ndefinition fake</textarea> </div> </div> <input type=\"hidden\" class=\"\
+      django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n        <input\
+      \ type=\"submit\" value=\"Guardar\" class=\"btn btn-primary\"/>\n      </form>\n\
+      \    </div>\n  </div>\n\n        </div>\n        <aside class=\"col-md-4\">\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">\xDAltimas definiciones</h4>\n            <ul>\n             \
+      \ \n              <li><a href=\"/definitions/869fc83b-2004-428d-9870-9089a8f29f20/\"\
+      >term fake</a></li>\n              \n            </ul>\n          </div>\n \
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
       >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
       \    </div>\n    </main>\n\n  </body>\n</html>\n"
     headers:
@@ -66,7 +66,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4538'
+      - '4541'
       Content-Type:
       - text/html
       User-Agent:
@@ -93,7 +93,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 03 May 2020 16:18:41 GMT
+      - Tue, 05 May 2020 19:11:10 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

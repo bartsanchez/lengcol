@@ -48,9 +48,9 @@ interactions:
       \ name=\"term\" class=\"textinput textInput\" required id=\"id_term\"> </div>\
       \ </div> <div id=\"div_id_value\" class=\"control-group\"> <label for=\"id_value\"\
       \ class=\"control-label requiredField\">\n                Definici\xF3n<span\
-      \ class=\"asteriskField\">*</span> </label> <div class=\"controls\"> <input\
-      \ type=\"text\" name=\"value\" class=\"textinput textInput\" required id=\"\
-      id_value\"> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"\
+      \ class=\"asteriskField\">*</span> </label> <div class=\"controls\"> <textarea\
+      \ name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea\" required id=\"id_value\"\
+      >\n</textarea> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"\
       \ name=\"g-recaptcha-response\"> <div id=\"div_id_example\" class=\"control-group\"\
       > <label for=\"id_example\" class=\"control-label \">\n                Ejemplo\n\
       \            </label> <div class=\"controls\"> <input type=\"text\" name=\"\
@@ -70,7 +70,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4762'
+      - '4774'
       Content-Type:
       - text/html
       User-Agent:
@@ -97,7 +97,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 03 May 2020 16:30:28 GMT
+      - Tue, 05 May 2020 19:11:09 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

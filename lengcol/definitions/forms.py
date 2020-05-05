@@ -20,7 +20,7 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
 
 
 class DefinitionForm(forms.ModelForm):
-    value = forms.CharField(label='Definición')
+    value = forms.CharField(label='Definición', widget=forms.Textarea())
 
     captcha = fields.ReCaptchaField()
 
