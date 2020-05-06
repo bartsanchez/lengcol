@@ -15,6 +15,8 @@ ALLOWED_HOSTS = [
     'www.lenguajecoloquial.es',
 ]
 
+SESSION_COOKIE_AGE = 7200  # 2 hours
+
 # SSL
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
