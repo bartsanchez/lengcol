@@ -14,7 +14,6 @@ RUN mkdir -p /opt/lengcol/
 WORKDIR /opt/lengcol
 
 COPY requirements.txt .
-COPY requirements/base.txt ./requirements/
 RUN pip3 install -r requirements.txt
 
 COPY . /opt/lengcol/

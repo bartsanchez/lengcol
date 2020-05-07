@@ -1,3 +1,10 @@
-# Needed by Heroku
--r requirements/base.txt
+Django
+django-extensions
+dj-database-url
+psycopg2-binary
+whitenoise
+django-crispy-forms
+django-recaptcha3
+celery
+redis
 gunicorn

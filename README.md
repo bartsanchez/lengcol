@@ -5,13 +5,16 @@
 # Requirements
 
 virtualenvwrapper
+docker
+docker-compose
 
 # Installation
 
 ```sh
 $ mkvirtualenv lengcol
 
-(lengcol) $ pip install -r requirements/base.txt
+(lengcol) $ make build
+(lengcol) $ make run
 ```
 
 # Testing
