@@ -14,9 +14,7 @@ urlpatterns = [
          name='definition-detail'),
 
     path('definitions/<uuid:uuid>/change',
-         views.DefinitionUpdateView.as_view(
-             template_name='definitions/definition_update_form.html'
-         ),
+         views.DefinitionUpdateView.as_view(),
          name='definition-update'),
 
     path('terms/search/',

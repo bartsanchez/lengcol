@@ -51,17 +51,38 @@ interactions:
       \ class=\"asteriskField\">*</span> </label> <div class=\"controls\"> <textarea\
       \ name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea\" required id=\"id_value\"\
       >\n</textarea> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"\
-      \ name=\"g-recaptcha-response\"> <div id=\"div_id_example\" class=\"control-group\"\
-      > <label for=\"id_example\" class=\"control-label \">\n                Ejemplo\n\
-      \            </label> <div class=\"controls\"> <input type=\"text\" name=\"\
-      example\" class=\"textinput textInput\" id=\"id_example\"> </div> </div>\n\n\
-      \        <input type=\"submit\" value=\"Guardar\" class=\"btn btn-primary\"\
-      />\n      </form>\n    </div>\n  </div>\n\n        </div>\n        <aside class=\"\
-      col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n     \
-      \       <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"mb-0\"\
-      ><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n\
-      \          </div>\n        </aside>\n      </div>\n    </main>\n\n  </body>\n\
-      </html>\n"
+      \ name=\"g-recaptcha-response\">\n\n        <p>Ejemplos</p>\n        \n    \
+      \      \n    \n\n<input type=\"hidden\" name=\"example_set-TOTAL_FORMS\" value=\"\
+      2\" id=\"id_example_set-TOTAL_FORMS\"> <input type=\"hidden\" name=\"example_set-INITIAL_FORMS\"\
+      \ value=\"0\" id=\"id_example_set-INITIAL_FORMS\"> <input type=\"hidden\" name=\"\
+      example_set-MIN_NUM_FORMS\" value=\"0\" id=\"id_example_set-MIN_NUM_FORMS\"\
+      > <input type=\"hidden\" name=\"example_set-MAX_NUM_FORMS\" value=\"5\" id=\"\
+      id_example_set-MAX_NUM_FORMS\">\n\n\n\n    <div class=\"multiField\">\n    \
+      \    \n\n<div id=\"div_id_example_set-0-value\" class=\"control-group\"> <div\
+      \ class=\"controls\"> <input type=\"text\" name=\"example_set-0-value\" class=\"\
+      textinput textInput\" id=\"id_example_set-0-value\"> </div> </div> <input type=\"\
+      hidden\" name=\"example_set-0-id\" id=\"id_example_set-0-id\"> <div id=\"div_id_example_set-0-DELETE\"\
+      \ class=\"control-group\"> <div class=\"controls\"> <label for=\"id_example_set-0-DELETE\"\
+      \ class=\"checkbox \"> <input type=\"checkbox\" name=\"example_set-0-DELETE\"\
+      \ class=\"checkboxinput\" id=\"id_example_set-0-DELETE\">\n                \
+      \        Delete\n                    </label> </div> </div> <input type=\"hidden\"\
+      \ name=\"example_set-0-definition\" id=\"id_example_set-0-definition\">\n\n\
+      \    </div>\n\n    <div class=\"multiField\">\n        \n\n<div id=\"div_id_example_set-1-value\"\
+      \ class=\"control-group\"> <div class=\"controls\"> <input type=\"text\" name=\"\
+      example_set-1-value\" class=\"textinput textInput\" id=\"id_example_set-1-value\"\
+      > </div> </div> <input type=\"hidden\" name=\"example_set-1-id\" id=\"id_example_set-1-id\"\
+      > <div id=\"div_id_example_set-1-DELETE\" class=\"control-group\"> <div class=\"\
+      controls\"> <label for=\"id_example_set-1-DELETE\" class=\"checkbox \"> <input\
+      \ type=\"checkbox\" name=\"example_set-1-DELETE\" class=\"checkboxinput\" id=\"\
+      id_example_set-1-DELETE\">\n                        Delete\n               \
+      \     </label> </div> </div> <input type=\"hidden\" name=\"example_set-1-definition\"\
+      \ id=\"id_example_set-1-definition\">\n\n    </div>\n\n\n        \n        <input\
+      \ type=\"submit\" value=\"Guardar\" class=\"btn btn-primary\"/>\n      </form>\n\
+      \    </div>\n  </div>\n\n        </div>\n        <aside class=\"col-md-4\">\n\
+      \          \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
+      \    </div>\n    </main>\n\n  </body>\n</html>\n"
     headers:
       Accept:
       - '*/*'
@@ -70,7 +91,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4774'
+      - '6426'
       Content-Type:
       - text/html
       User-Agent:
@@ -97,7 +118,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 05 May 2020 19:11:09 GMT
+      - Sat, 09 May 2020 20:49:49 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

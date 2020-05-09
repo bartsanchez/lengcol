@@ -1,0 +1,29 @@
+{% extends "lengcol/base.html" %}
+
+{% load recaptcha3 %}
+{% load crispy_forms_tags %}
+
+{% block extrahead %}
+  {% recaptcha_init %}
+  {% recaptcha_ready action_name='update_definition' %}
+{% endblock %}
+
+{% block content %}
+  <div class="card">
+
+    <div class="card-header">
+      Editar definición
+    </div>
+
+    <div class="card-body">
+      <form action="#" method="post">{% csrf_token %}
+        {{ form|crispy }}
+        <p>Ejemplos</p>
+        {% for formset in inlines %}
+          {{ formset|crispy }}
+        {% endfor %}
+        <input type="submit" value="Guardar" class="btn btn-primary"/>
+      </form>
+    </div>
+  </div>
+{% endblock %}

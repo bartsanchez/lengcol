@@ -1,7 +1,7 @@
-from django import http, shortcuts, views
+from django import shortcuts
 from django.contrib.auth import mixins
 from django.views import generic
-from django.views.generic import detail
+from extra_views import CreateWithInlinesView, UpdateWithInlinesView
 
 from definitions import forms, models
 
@@ -12,12 +12,11 @@ class IndexView(generic.ListView):
     context_object_name = 'definitions'
 
 
-class DefinitionCreateView(generic.CreateView):
+class DefinitionCreateView(CreateWithInlinesView):
     model = models.Definition
     form_class = forms.NewDefinitionForm
-
-    def get_success_url(self):
-        return self.object.get_absolute_url()
+    inlines = [forms.ExampleInline]
+    template_name = 'definitions/create_definition_and_examples.html'
 
     def form_valid(self, form):
         user = self.request.user
@@ -26,63 +25,21 @@ class DefinitionCreateView(generic.CreateView):
         return super().form_valid(form)
 
 
-class DefinitionDisplayView(generic.DetailView):
+class DefinitionDetailView(generic.DetailView):
     model = models.Definition
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form'] = forms.ExampleForm()
-        return context
 
     def get_object(self):
         return shortcuts.get_object_or_404(models.Definition,
                                            uuid=self.kwargs['uuid'])
 
 
-class ExampleView(detail.SingleObjectMixin, generic.FormView):
-    template_name = 'definitions/definition_detail.html'
-    form_class = forms.ExampleForm
-    model = models.Definition
-
-    def get_object(self):
-        return shortcuts.get_object_or_404(models.Definition,
-                                           uuid=self.kwargs['uuid'],
-                                           user__isnull=False)
-
-    def post(self, request, *args, **kwargs):
-        self.object = self.get_object()
-
-        form = self.get_form()
-        if self.object.user != request.user:
-            return http.HttpResponse('Unauthorized', status=401)
-        if form.is_valid():
-            example, created = models.Example.objects.get_or_create(
-                definition=self.object,
-                value=form.data['example'],
-            )
-            return self.form_valid(form)
-        else:
-            return self.form_invalid(form)
-
-    def get_success_url(self):
-        return self.object.get_absolute_url()
-
-
-class DefinitionDetailView(views.View):
-    def get(self, request, *args, **kwargs):
-        view = DefinitionDisplayView.as_view()
-        return view(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        view = ExampleView.as_view()
-        return view(request, *args, **kwargs)
-
-
 class DefinitionUpdateView(mixins.LoginRequiredMixin,
                            mixins.UserPassesTestMixin,
-                           generic.UpdateView):
+                           UpdateWithInlinesView):
     model = models.Definition
     form_class = forms.DefinitionForm
+    inlines = [forms.ExampleInline]
+    template_name = 'definitions/update_definition_and_examples.html'
 
     def test_func(self):
         user = self.request.user
@@ -92,6 +49,9 @@ class DefinitionUpdateView(mixins.LoginRequiredMixin,
     def get_object(self):
         return shortcuts.get_object_or_404(models.Definition,
                                            uuid=self.kwargs['uuid'])
+
+    def get_sucess_url(self):
+        return self.object.get_absolute_url()
 
 
 class TermDetailView(generic.DetailView):

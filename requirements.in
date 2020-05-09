@@ -4,6 +4,7 @@ dj-database-url
 psycopg2-binary
 whitenoise
 django-crispy-forms
+django-extra-views
 django-recaptcha3
 celery
 redis

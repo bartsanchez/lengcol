@@ -14,6 +14,18 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
         self.url = reverse('definition-add')
+        self.management_data = {
+            "example_set-TOTAL_FORMS": "2",
+            "example_set-INITIAL_FORMS": "0",
+            "example_set-MIN_NUM_FORMS": "0",
+            "example_set-MAX_NUM_FORMS": "5",
+            "example_set-0-value": "",
+            "example_set-0-id": "",
+            "example_set-0-definition": "",
+            "example_set-1-value": "",
+            "example_set-1-id": "",
+            "example_set-1-definition": ""
+        }
 
     def _login(self):
         self.client.login(username=self.user.username,
@@ -27,10 +39,10 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def test_redirects(self):
         self.assertEqual(models.Definition.objects.count(), 0)
 
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-        )
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data)
 
         definition = models.Definition.objects.get()
 
@@ -41,11 +53,11 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(models.Definition.objects.count(), 0)
 
         self._login()
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -67,15 +79,15 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(models.Example.objects.count(), 0)
 
         self._login()
-        response = self.client.post(
-            self.url,
-            {
-                'term': 'fake term',
-                'value': 'fake definition',
-                'example': 'fake example'
-            },
-            follow=True,
-        )
+
+        form_data = {
+            'term': 'fake term',
+            'value': 'fake definition',
+        }
+        form_data.update(self.management_data)
+        form_data['example_set-0-value'] = 'fake example'
+
+        response = self.client.post(self.url, form_data, follow=True,)
 
         self.assertEqual(response.status_code, 200)
 
@@ -94,11 +106,10 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(models.Term.objects.count(), 0)
         self.assertEqual(models.Definition.objects.count(), 0)
 
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -118,11 +129,10 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(models.Term.objects.count(), 0)
         self.assertEqual(models.Definition.objects.count(), 0)
 
-        response = self.client.post(
-            self.url,
-            {'value': 'fake definition'},
-            follow=True,
-        )
+        form_data = {'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -133,11 +143,10 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(models.Term.objects.count(), 0)
         self.assertEqual(models.Definition.objects.count(), 0)
 
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term'},
-            follow=True,
-        )
+        form_data = {'term': 'fake term'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -151,11 +160,11 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
     def test_set_logged_in_user(self):
         self._login()
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -167,11 +176,10 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         )
 
     def test_dont_set_not_logged_in_user(self):
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -182,11 +190,10 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def test_new_definition_send_an_email(self):
         self.assertEqual(len(mail.outbox), 0)
 
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -209,22 +216,21 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
     def test_has_author(self):
         self._login()
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
         self.assertContains(response, 'Autor: {}'.format(self.user.username))
 
     def test_has_no_author(self):
-        response = self.client.post(
-            self.url,
-            {'term': 'fake term', 'value': 'fake definition'},
-            follow=True,
-        )
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -266,99 +272,6 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         created = self.definition.created.strftime('%d-%m-%Y')
 
         self.assertContains(response, 'Fecha de creación {}'.format(created))
-
-    def test_example_creation__same_user(self):
-        self.client.login(username=self.user.username,
-                          password='fake_password')
-        response = self.client.get(self.url)
-
-        self.assertNotContains(response, 'fake example 1')
-        self.assertNotContains(response, 'fake example 2')
-
-        response = self.client.post(
-            self.url,
-            {'example': 'fake example 1'},
-            follow=True,
-        )
-        self.assertEqual(response.status_code, 200)
-
-        self.assertEqual(models.Example.objects.count(), 1)
-
-        self.assertContains(response, 'fake example 1')
-        self.assertNotContains(response, 'fake example 2')
-
-        response = self.client.post(
-            self.url,
-            {'example': 'fake example 2'},
-            follow=True,
-        )
-        self.assertEqual(response.status_code, 200)
-
-        self.assertEqual(models.Example.objects.count(), 2)
-
-        self.assertContains(response, 'fake example 1')
-        self.assertContains(response, 'fake example 2')
-
-    def test_example_not_logged_user(self):
-        response = self.client.get(self.url)
-
-        self.assertNotContains(response, 'fake example 1')
-        self.assertNotContains(response, 'fake example 2')
-
-        response = self.client.post(
-            self.url,
-            {'example': 'fake example 1'},
-            follow=True,
-        )
-        self.assertEqual(response.status_code, 401)
-        self.assertEqual(response.content, b'Unauthorized')
-
-        self.assertEqual(models.Example.objects.count(), 0)
-
-    def test_example_different_user(self):
-        other_user = auth_factories.UserFactory(username='other_user')
-        term = factories.TermFactory(value='other term')
-        definition = factories.DefinitionFactory(term=term,
-                                                 value='other definition',
-                                                 user=other_user)
-        url = definition.get_absolute_url()
-
-        self.client.login(username=self.user.username,
-                          password='fake_password')
-        response = self.client.get(url)
-
-        self.assertNotContains(response, 'fake example 1')
-        self.assertNotContains(response, 'fake example 2')
-
-        response = self.client.post(
-            url,
-            {'example': 'fake example 1'},
-            follow=True,
-        )
-        self.assertEqual(response.status_code, 401)
-        self.assertEqual(response.content, b'Unauthorized')
-
-        self.assertEqual(models.Example.objects.count(), 0)
-
-    def test_example_does_not_work_for_anonymous_definitions(self):
-        term = factories.TermFactory(value='other term')
-        definition = factories.DefinitionFactory(term=term,
-                                                 value='other definition')
-        url = definition.get_absolute_url()
-
-        response = self.client.get(url)
-
-        self.assertNotContains(response, 'fake example 1')
-        self.assertNotContains(response, 'fake example 2')
-
-        response = self.client.post(
-            url,
-            {'example': 'fake example 1'},
-            follow=True,
-        )
-        self.assertEqual(response.status_code, 404)
-
-        self.assertEqual(models.Example.objects.count(), 0)
 
     def test_has_link_to_term_detail(self):
         response = self.client.get(self.url)
@@ -432,20 +345,6 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertNotContains(response, 'fake example')
 
-    def test_invalid_example(self):
-        self.client.login(username=self.user.username,
-                          password='fake_password')
-        response = self.client.get(self.url)
-
-        response = self.client.post(
-            self.url,
-            {'example': ''},
-            follow=True,
-        )
-        self.assertEqual(response.status_code, 200)
-
-        self.assertEqual(models.Example.objects.count(), 0)
-
 
 class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
@@ -459,6 +358,18 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
             'definition-update',
             kwargs={'uuid': self.definition.uuid}
         )
+        self.management_data = {
+            "example_set-TOTAL_FORMS": "2",
+            "example_set-INITIAL_FORMS": "0",
+            "example_set-MIN_NUM_FORMS": "0",
+            "example_set-MAX_NUM_FORMS": "5",
+            "example_set-0-value": "",
+            "example_set-0-id": "",
+            "example_set-0-definition": "",
+            "example_set-1-value": "",
+            "example_set-1-id": "",
+            "example_set-1-definition": ""
+        }
 
     def _login(self):
         self.client.login(username=self.user.username,
@@ -476,11 +387,11 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(self.definition.user, self.user)
 
         self._login()
-        response = self.client.post(
-            self.url,
-            {'value': 'updated fake definition'},
-            follow=True,
-        )
+
+        form_data = {'value': 'updated fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
 
@@ -514,11 +425,11 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.client.login(username=another_user.username,
                           password='fake_password')
-        response = self.client.post(
-            self.url,
-            {'value': 'updated fake definition'},
-            follow=True,
-        )
+
+        form_data = {'value': 'updated fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 403)
 
@@ -545,11 +456,10 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(self.definition.value, 'definition fake')
         self.assertEqual(self.definition.user, self.user)
 
-        response = self.client.post(
-            self.url,
-            {'value': 'updated fake definition'},
-            follow=True,
-        )
+        form_data = {'value': 'updated fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 404)
 
@@ -589,3 +499,51 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         response = self.client.get(self.url, follow=True)
 
         self.assertEqual(response.status_code, 404)
+
+    def test_update_definition__remove_example(self):  # TODO deactivate
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        foo_example = factories.ExampleFactory(
+            value="foo", definition=self.definition
+        )
+        bar_example = factories.ExampleFactory(
+            value="bar", definition=self.definition
+        )
+
+        self.assertEqual(models.Example.objects.count(), 2)
+
+        self._login()
+
+        form_data = {'value': 'updated fake definition'}
+        management_data = {
+            "example_set-TOTAL_FORMS": "4",
+            "example_set-INITIAL_FORMS": "2",
+            "example_set-MIN_NUM_FORMS": "0",
+            "example_set-MAX_NUM_FORMS": "5",
+            "example_set-0-value": "foo",
+            "example_set-0-id": "{}".format(foo_example.pk),
+            "example_set-0-definition": "{}".format(self.definition.pk),
+            "example_set-0-DELETE": "on",
+            "example_set-1-value": "bar",
+            "example_set-1-id": "{}".format(bar_example.pk),
+            "example_set-1-definition": "{}".format(self.definition.pk),
+            "example_set-2-value": "",
+            "example_set-2-id": "",
+            "example_set-2-definition": "{}".format(self.definition.pk),
+            "example_set-3-value": "",
+            "example_set-3-id": "",
+            "example_set-3-definition": "{}".format(self.definition.pk),
+        }
+        form_data.update(management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertEqual(models.Example.objects.count(), 1)
+
+        example = models.Example.objects.first()
+
+        self.assertEqual(example.value, 'bar')
+        self.assertEqual(example.definition, self.definition)

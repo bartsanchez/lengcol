@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'extra_views',
     'crispy_forms',
     'snowpenguin.django.recaptcha3',
 ]

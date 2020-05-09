@@ -1,4 +1,5 @@
 from django import forms
+from extra_views import InlineFormSetFactory
 from snowpenguin.django.recaptcha3 import fields
 
 from definitions import models
@@ -35,23 +36,21 @@ class NewDefinitionForm(DefinitionForm):
         field='value',
         label='Término',
     )
-    example = forms.CharField(label='Ejemplo', required=False)
 
     class Meta:
         model = models.Definition
         exclude = ('user', 'active')
 
-    def save(self, *args, **kwargs):
-        return_value = super().save(*args, **kwargs)
-        if self.is_valid():
-            example = self.cleaned_data['example']
-            if example:
-                obj, created = models.Example.objects.get_or_create(
-                    definition=self.instance,
-                    value=example,
-                )
-        return return_value
+
+class ExampleForm(forms.ModelForm):
+    value = forms.CharField(label='')
+
+    class Meta:
+        model = models.Example
+        fields = ('value',)
 
 
-class ExampleForm(forms.Form):
-    example = forms.CharField(label='Ejemplo')
+class ExampleInline(InlineFormSetFactory):
+    model = models.Example
+    form_class = ExampleForm
+    factory_kwargs = {'extra': 2, 'max_num': 5}
