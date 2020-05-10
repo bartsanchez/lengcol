@@ -50,9 +50,6 @@ class DefinitionUpdateView(mixins.LoginRequiredMixin,
         return shortcuts.get_object_or_404(models.Definition,
                                            uuid=self.kwargs['uuid'])
 
-    def get_sucess_url(self):
-        return self.object.get_absolute_url()
-
 
 class TermDetailView(generic.DetailView):
     model = models.Term
