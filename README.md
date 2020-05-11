@@ -11,6 +11,8 @@ docker-compose
 # Installation
 
 ```sh
+$ cp example_env .env
+
 $ mkvirtualenv lengcol
 
 (lengcol) $ make build
