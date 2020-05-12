@@ -92,6 +92,7 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(response.status_code, 200)
 
         self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.all_objects.count(), 1)
         self.assertEqual(models.Definition.objects.count(), 1)
         self.assertEqual(models.Example.objects.count(), 1)
 
@@ -500,7 +501,7 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertEqual(response.status_code, 404)
 
-    def test_update_definition__remove_example(self):  # TODO deactivate
+    def test_update_definition__remove_example(self):
         self.assertEqual(models.Definition.objects.count(), 1)
 
         foo_example = factories.ExampleFactory(
@@ -511,6 +512,7 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         )
 
         self.assertEqual(models.Example.objects.count(), 2)
+        self.assertEqual(models.Example.all_objects.count(), 2)
 
         self._login()
 
@@ -542,6 +544,7 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertEqual(models.Definition.objects.count(), 1)
         self.assertEqual(models.Example.objects.count(), 1)
+        self.assertEqual(models.Example.all_objects.count(), 2)
 
         example = models.Example.objects.first()
 

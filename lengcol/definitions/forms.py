@@ -54,3 +54,13 @@ class ExampleInline(InlineFormSetFactory):
     model = models.Example
     form_class = ExampleForm
     factory_kwargs = {'extra': 2, 'max_num': 5}
+
+    def construct_formset(self):
+        formset = super().construct_formset()
+        formset.delete_existing = self.delete_existing
+        return formset
+
+    def delete_existing(self, obj, commit=True):
+        if commit:
+            obj.active = False
+            obj.save()
