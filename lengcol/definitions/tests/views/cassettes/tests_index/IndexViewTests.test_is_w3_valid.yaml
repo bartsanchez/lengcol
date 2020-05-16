@@ -42,12 +42,15 @@ interactions:
       >\n      \n        <li>example fake</li>\n      \n    </ul>\n    \n  </div>\n\
       \n  <div class=\"card-footer text-right text-muted\">\n    \n    <div>Fecha\
       \ de creaci\xF3n 01-01-2020</div>\n    <div>Autor: An\xF3nimo</div>\n  </div>\n\
-      </div>\n\n\n\n        </div>\n        <aside class=\"col-md-4\">\n         \
-      \ \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\"\
-      >\xDAltimas definiciones</h4>\n            <ul>\n              \n          \
-      \    <li><a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\">term\
-      \ fake</a></li>\n              \n            </ul>\n          </div>\n     \
-      \     \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      </div>\n\n\n\n<div class=\"row justify-content-md-center\">\n<nav aria-label=\"\
+      Page navigation example\">\n  <ul class=\"pagination\">\n\n    \n\n    <li class=\"\
+      page-item active\"><a class=\"page-link\" href=\"#\">1<span class=\"sr-only\"\
+      >(current)</span></a></li>\n\n    \n\n  </ul>\n</nav>\n</div>\n\n\n\n      \
+      \  </div>\n        <aside class=\"col-md-4\">\n          \n          <div class=\"\
+      p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n\
+      \            <ul>\n              \n              <li><a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\"\
+      >term fake</a></li>\n              \n            </ul>\n          </div>\n \
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
       font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
       >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
       \    </div>\n    </main>\n\n  </body>\n</html>\n"
@@ -59,7 +62,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3952'
+      - '4216'
       Content-Type:
       - text/html
       User-Agent:
@@ -86,7 +89,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 03 May 2020 16:30:29 GMT
+      - Sat, 16 May 2020 17:09:50 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

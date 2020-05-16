@@ -1,0 +1,25 @@
+{% if page_obj %}
+<div class="row justify-content-md-center">
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+
+    {% if page_obj.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&#8592; Anterior</a></li>
+
+      {% if page_obj.number > 2 %}<li class="page-item"><a class="page-link" href="?page=1">1</a></li>{% endif %}
+      {% if page_obj.number > 3 %}<span class="mx-2">...</span>{% endif %}
+
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></li>
+    {% endif %}
+
+    <li class="page-item active"><a class="page-link" href="#">{{ page_obj.number }}<span class="sr-only">(current)</span></a></li>
+
+    {% if page_obj.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Siguiente &#8594;</a></li>
+    {% endif %}
+
+  </ul>
+</nav>
+</div>
+{% endif %}

@@ -10,6 +10,7 @@ class IndexView(generic.ListView):
     model = models.Definition
     template_name = 'definitions/index.html'
     context_object_name = 'definitions'
+    paginate_by = 5
 
 
 class DefinitionCreateView(CreateWithInlinesView):

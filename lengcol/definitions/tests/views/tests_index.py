@@ -5,7 +5,7 @@ from django.conf import settings
 from django.urls import reverse
 
 from base import mixins
-from definitions import factories
+from definitions import factories, views
 
 
 @freezegun.freeze_time('2020-01-01')
@@ -127,3 +127,72 @@ class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
         response = self.client.get(self.url)
 
         self.assertNotContains(response, 'fake definition')
+
+
+class IndexPaginationTests(test.TestCase):
+    def setUp(self):
+        self.client = test.Client()
+        self.url = reverse('index')
+
+    def test_dont_have_link_current_page_with_no_items(self):
+        response = self.client.get(self.url)
+
+        html_text = (
+            '<a class="page-link" href="#">'
+            '1'
+            '<span class="sr-only">(current)</span>'
+            '</a>'
+        )
+        self.assertNotContains(response, html_text, html=True)
+
+    def test_has_link_current_page(self):
+        factories.DefinitionFactory()
+        response = self.client.get(self.url)
+
+        html_text = (
+            '<a class="page-link" href="#">'
+            '1'
+            '<span class="sr-only">(current)</span>'
+            '</a>'
+        )
+        self.assertContains(response, html_text, html=True)
+
+    def test_has_link_to_next_page(self):
+        num_items_per_page = views.IndexView.paginate_by
+
+        for item in range(num_items_per_page + 1):
+            factories.DefinitionFactory()
+
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=2">2</a>',
+            html=True
+        )
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=2">Siguiente &#8594;</a>',
+            html=True
+        )
+
+    def test_has_link_to_first_page(self):
+        num_items_per_page = views.IndexView.paginate_by
+
+        for item in range(num_items_per_page + 1):
+            factories.DefinitionFactory()
+
+        url = f'{self.url}?page=2'
+
+        response = self.client.get(url)
+
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=1">1</a>',
+            html=True
+        )
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=1">&#8592; Anterior</a>',
+            html=True
+        )
