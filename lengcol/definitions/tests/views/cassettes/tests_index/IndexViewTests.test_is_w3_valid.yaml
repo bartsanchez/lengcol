@@ -42,7 +42,7 @@ interactions:
       >\n      \n        <li>example fake</li>\n      \n    </ul>\n    \n  </div>\n\
       \n  <div class=\"card-footer text-right text-muted\">\n    \n    <div>Fecha\
       \ de creaci\xF3n 01-01-2020</div>\n    <div>Autor: An\xF3nimo</div>\n  </div>\n\
-      </div>\n\n\n\n<div class=\"row justify-content-md-center\">\n<nav aria-label=\"\
+      </div>\n\n\n\n<div class=\"row justify-content-center\">\n<nav aria-label=\"\
       Page navigation example\">\n  <ul class=\"pagination\">\n\n    \n\n    <li class=\"\
       page-item active\"><a class=\"page-link\" href=\"#\">1<span class=\"sr-only\"\
       >(current)</span></a></li>\n\n    \n\n  </ul>\n</nav>\n</div>\n\n\n\n      \
@@ -62,7 +62,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4216'
+      - '4213'
       Content-Type:
       - text/html
       User-Agent:
@@ -89,7 +89,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 16 May 2020 17:09:50 GMT
+      - Mon, 18 May 2020 21:11:20 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
