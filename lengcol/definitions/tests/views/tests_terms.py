@@ -5,6 +5,7 @@ from django.utils import http
 
 from base import mixins
 from definitions import factories
+from definitions import views
 
 
 @freezegun.freeze_time('2020-01-01')
@@ -119,4 +120,94 @@ class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
         )
         self.assertNotContains(
             response, self.get_html_link(self.foo_term), html=True
+        )
+
+
+class TermSearchViewPaginationTests(test.TestCase):
+    def setUp(self):
+        self.client = test.Client()
+        self.url = reverse('term-search')
+
+    def test_do_have_link_current_page_with_no_searches(self):
+        term = factories.TermFactory()
+        response = self.client.get(self.url)
+
+        html_text = (
+            '<a class="page-link" href="#">'
+            '1'
+            '<span class="sr-only">(current)</span>'
+            '</a>'
+        )
+        self.assertContains(response, html_text, html=True)
+
+    def test_dont_have_link_current_page_with_no_items(self):
+        term = factories.TermFactory()
+        searched_value = term.value[:2]
+        url = '{}?{}'.format(self.url, http.urlencode({'v': 'zñ'}))
+        response = self.client.get(url)
+
+        html_text = (
+            '<a class="page-link" href="#">'
+            '1'
+            '<span class="sr-only">(current)</span>'
+            '</a>'
+        )
+        self.assertNotContains(response, html_text, html=True)
+
+    def test_has_link_current_page(self):
+        term = factories.TermFactory()
+        searched_value = term.value[:2]
+        url = '{}?{}'.format(self.url, http.urlencode({'v': searched_value}))
+        response = self.client.get(url)
+
+        html_text = (
+            '<a class="page-link" href="#">'
+            '1'
+            '<span class="sr-only">(current)</span>'
+            '</a>'
+        )
+        self.assertContains(response, html_text, html=True)
+
+    def test_has_link_to_next_page(self):
+        num_items_per_page = views.TermSearchView.paginate_by
+
+        for n, item in enumerate(range(num_items_per_page + 1)):
+            term = factories.TermFactory(value='a' * (n + 1))
+            factories.DefinitionFactory(term=term)
+
+        url = '{}?{}'.format(self.url, http.urlencode({'v': 'a'}))
+        response = self.client.get(url)
+
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=2">2</a>',
+            html=True
+        )
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=2">Siguiente &#8594;</a>',
+            html=True
+        )
+
+    def test_has_link_to_first_page(self):
+        num_items_per_page = views.IndexView.paginate_by
+
+        for n, item in enumerate(range(num_items_per_page + 1)):
+            term = factories.TermFactory(value='a' * (n + 1))
+            factories.DefinitionFactory(term=term)
+
+        url = '{}?{}'.format(self.url, http.urlencode({'v': 'a', 'page': 2}))
+        response = self.client.get(url)
+
+        response = self.client.get(url)
+
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=1">1</a>',
+            html=True
+        )
+        self.assertContains(
+            response,
+            '<a class="page-link" href="?page=1">&#8592; Anterior</a>',
+            html=True
         )

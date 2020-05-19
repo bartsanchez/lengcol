@@ -43,10 +43,14 @@ interactions:
       \        <div class=\"card-header\">\n          <a href=\"/terms/bar-term/\"\
       >bar term</a>\n        </div>\n\n        <div class=\"card-body\">\n       \
       \   <a href=\"/definitions/8ce7d087-b231-4562-b43f-dd27c7af7eba/\">bar</a>\n\
-      \        </div>\n      </div>\n    \n  \n\n        </div>\n        <aside class=\"\
-      col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n     \
-      \       <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n           \
-      \ <ul>\n              \n              <li><a href=\"/definitions/8ce7d087-b231-4562-b43f-dd27c7af7eba/\"\
+      \        </div>\n      </div>\n    \n  \n  \n<div class=\"row justify-content-center\"\
+      >\n<nav aria-label=\"Page navigation example\">\n  <ul class=\"pagination\"\
+      >\n\n    \n\n    <li class=\"page-item active\"><a class=\"page-link\" href=\"\
+      #\">1<span class=\"sr-only\">(current)</span></a></li>\n\n    \n\n  </ul>\n\
+      </nav>\n</div>\n\n\n\n        </div>\n        <aside class=\"col-md-4\">\n \
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">\xDAltimas definiciones</h4>\n            <ul>\n             \
+      \ \n              <li><a href=\"/definitions/8ce7d087-b231-4562-b43f-dd27c7af7eba/\"\
       >bar term</a></li>\n              \n              <li><a href=\"/definitions/b3ec0487-d422-4d0e-86c0-0b80402fb012/\"\
       >foo term</a></li>\n              \n            </ul>\n          </div>\n  \
       \        \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
@@ -61,7 +65,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4114'
+      - '4377'
       Content-Type:
       - text/html
       User-Agent:
@@ -88,7 +92,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Mon, 27 Apr 2020 19:42:10 GMT
+      - Tue, 19 May 2020 21:05:57 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

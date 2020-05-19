@@ -59,6 +59,7 @@ class TermDetailView(generic.DetailView):
 class TermSearchView(generic.ListView):
     template_name = 'definitions/term_search.html'
     model = models.Term
+    paginate_by = 5
 
     def get_queryset(self):
         term = self.request.GET.get('v', '')
