@@ -4,8 +4,7 @@ from django.urls import reverse
 from django.utils import http
 
 from base import mixins
-from definitions import factories
-from definitions import views
+from definitions import factories, views
 
 
 @freezegun.freeze_time('2020-01-01')
@@ -129,7 +128,7 @@ class TermSearchViewPaginationTests(test.TestCase):
         self.url = reverse('term-search')
 
     def test_do_have_link_current_page_with_no_searches(self):
-        term = factories.TermFactory()
+        factories.TermFactory()
         response = self.client.get(self.url)
 
         html_text = (
@@ -141,8 +140,7 @@ class TermSearchViewPaginationTests(test.TestCase):
         self.assertContains(response, html_text, html=True)
 
     def test_dont_have_link_current_page_with_no_items(self):
-        term = factories.TermFactory()
-        searched_value = term.value[:2]
+        factories.TermFactory()
         url = '{}?{}'.format(self.url, http.urlencode({'v': 'zñ'}))
         response = self.client.get(url)
 
