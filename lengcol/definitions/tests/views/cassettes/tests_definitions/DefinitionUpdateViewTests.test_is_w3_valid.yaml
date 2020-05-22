@@ -40,10 +40,11 @@ interactions:
       \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
       \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n   \
       \ <div class=\"card-header\">\n      Editar definici\xF3n\n    </div>\n\n  \
-      \  <div class=\"card-body\">\n      <form action=\"#\" method=\"post\"><input\
-      \ type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n      \
-      \  \n\n<div id=\"div_id_value\" class=\"form-group\"> <label for=\"id_value\"\
-      \ class=\" requiredField\">\n                Definici\xF3n<span class=\"asteriskField\"\
+      \  <div class=\"card-body\">\n      <h5 class=\"card-title\">\n        term\
+      \ fake\n      </h5>\n\n      <form action=\"#\" method=\"post\"><input type=\"\
+      hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n        \n\n<div\
+      \ id=\"div_id_value\" class=\"form-group\"> <label for=\"id_value\" class=\"\
+      \ requiredField\">\n                Definici\xF3n<span class=\"asteriskField\"\
       >*</span> </label> <div class=\"\"> <textarea name=\"value\" cols=\"40\" rows=\"\
       10\" class=\"textarea form-control\" required id=\"id_value\">\ndefinition fake</textarea>\
       \ </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"\
@@ -92,7 +93,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6492'
+      - '6553'
       Content-Type:
       - text/html
       User-Agent:
@@ -119,7 +120,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 10 May 2020 14:02:31 GMT
+      - Fri, 22 May 2020 19:05:40 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

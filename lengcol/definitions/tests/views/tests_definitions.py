@@ -376,6 +376,19 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.client.login(username=self.user.username,
                           password='fake_password')
 
+    def test_term_appear_in_title(self):
+        term_text = self.definition.term.value
+
+        self._login()
+
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            f'<h5 class="card-title">{term_text}</h5>',
+            html=True
+        )
+
     def test_update_definition(self):
         self.assertEqual(models.Term.objects.count(), 1)
         self.assertEqual(models.Definition.objects.count(), 1)
