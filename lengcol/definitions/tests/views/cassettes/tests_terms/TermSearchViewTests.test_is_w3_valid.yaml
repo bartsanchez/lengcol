@@ -36,14 +36,18 @@ interactions:
       \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
       \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
       \       <div class=\"col-md-8\">\n          \n  \n    \n      <div class=\"\
-      card\">\n        <div class=\"card-header\">\n          <a href=\"/terms/foo-term/\"\
-      >foo term</a>\n        </div>\n\n        <div class=\"card-body\">\n       \
-      \   <a href=\"/definitions/b3ec0487-d422-4d0e-86c0-0b80402fb012/\">foo</a>\n\
-      \        </div>\n      </div>\n    \n  \n    \n      <div class=\"card\">\n\
-      \        <div class=\"card-header\">\n          <a href=\"/terms/bar-term/\"\
-      >bar term</a>\n        </div>\n\n        <div class=\"card-body\">\n       \
-      \   <a href=\"/definitions/8ce7d087-b231-4562-b43f-dd27c7af7eba/\">bar</a>\n\
-      \        </div>\n      </div>\n    \n  \n  \n<div class=\"row justify-content-center\"\
+      card\">\n\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">\n    \
+      \  <a href=\"/terms/foo-term/\">foo term</a>\n    </h5>\n\n    <p>\n      <a\
+      \ href=\"/definitions/b3ec0487-d422-4d0e-86c0-0b80402fb012/\">&#128279;</a>\n\
+      \      foo\n    </p>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    \n    <div>Fecha de creaci\xF3n 23-05-2020</div>\n    <div>Autor:\
+      \ An\xF3nimo</div>\n  </div>\n</div>\n\n    \n  \n    \n      <div class=\"\
+      card\">\n\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">\n    \
+      \  <a href=\"/terms/bar-term/\">bar term</a>\n    </h5>\n\n    <p>\n      <a\
+      \ href=\"/definitions/8ce7d087-b231-4562-b43f-dd27c7af7eba/\">&#128279;</a>\n\
+      \      bar\n    </p>\n\n    \n  </div>\n\n  <div class=\"card-footer text-right\
+      \ text-muted\">\n    \n    <div>Fecha de creaci\xF3n 23-05-2020</div>\n    <div>Autor:\
+      \ An\xF3nimo</div>\n  </div>\n</div>\n\n    \n  \n  \n<div class=\"row justify-content-center\"\
       >\n<nav aria-label=\"Page navigation example\">\n  <ul class=\"pagination\"\
       >\n\n    \n\n    <li class=\"page-item active\"><a class=\"page-link\" href=\"\
       #\">1<span class=\"sr-only\">(current)</span></a></li>\n\n    \n\n  </ul>\n\
@@ -65,7 +69,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4377'
+      - '4667'
       Content-Type:
       - text/html
       User-Agent:
@@ -92,7 +96,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 19 May 2020 21:05:57 GMT
+      - Sat, 23 May 2020 14:50:40 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

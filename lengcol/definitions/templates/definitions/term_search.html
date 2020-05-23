@@ -3,15 +3,7 @@
 {% block content %}
   {% for term in object_list %}
     {% for definition in term.definitions %}
-      <div class="card">
-        <div class="card-header">
-          <a href="{{ term.get_absolute_url }}">{{ term }}</a>
-        </div>
-
-        <div class="card-body">
-          <a href="{{ definition.get_absolute_url }}">{{ definition }}</a>
-        </div>
-      </div>
+      {% include 'definitions/definition.html' with definition=definition %}
     {% endfor %}
   {% endfor %}
   {% include 'lengcol/pagination.html' %}
