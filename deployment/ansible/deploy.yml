@@ -2,85 +2,9 @@
 - hosts: lengcolaws
   remote_user: ubuntu
   tasks:
-    - name: Create project folder
-      become: true
-      file:
-        path: /opt/apps
-        state: directory
-        owner: ubuntu
-        group: ubuntu
-        mode: '700'
+    - import_tasks: tasks/setup_repo.yml
 
-    - name: Get project
-      git:
-        repo: 'https://github.com/bartsanchez/lengcol.git'
-        dest: /opt/apps/lengcol
-
-    - name: Upload env file
-      copy:
-        src: files/encrypted_env
-        dest: /opt/apps/lengcol/.env
-        decrypt: yes
-        owner: ubuntu
-        group: ubuntu
-        mode: '400'
-
-    - name: Install fail2ban
-      become: true
-      package:
-        name: fail2ban
-        state: present
-
-    - name: Upload local iptables multiport config
-      become: true
-      copy:
-        src: files/fail2ban/action.d/iptables-multiport.local
-        dest: /etc/fail2ban/action.d/iptables-multiport.local
-        owner: root
-        group: root
-        mode: '644'
-
-    - name: Upload local jail config file
-      become: true
-      copy:
-        src: files/fail2ban/jail.local
-        dest: /etc/fail2ban/jail.local
-        owner: root
-        group: root
-        mode: '644'
-
-    - name: Upload nginx-444 jail
-      become: true
-      copy:
-        src: files/fail2ban/filter.d/nginx-444.conf
-        dest: /etc/fail2ban/filter.d/nginx-444.conf
-        owner: root
-        group: root
-        mode: '644'
-
-    - name: Upload nginx-400 jail
-      become: true
-      copy:
-        src: files/fail2ban/filter.d/nginx-400.conf
-        dest: /etc/fail2ban/filter.d/nginx-400.conf
-        owner: root
-        group: root
-        mode: '644'
-
-    - name: Upload local paths-overrides config file
-      become: true
-      copy:
-        src: files/fail2ban/paths-overrides.local
-        dest: /etc/fail2ban/paths-overrides.local
-        owner: root
-        group: root
-        mode: '644'
-
-    - name: Ensure fail2ban service is running
-      become: true
-      service:
-        name: fail2ban
-        state: restarted
+    - import_tasks: tasks/fail2ban.yml
 
     - name: Build containers
       shell:
@@ -97,9 +21,4 @@
         chdir: /opt/apps/lengcol
         cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
-    - name: Set scheduled backup
-      cron:
-        name: "database backup"
-        minute: "1"
-        hour: "4"
-        job: "/opt/apps/lengcol/scripts/create_backup.sh"
+    - import_tasks: tasks/post_install.yml
