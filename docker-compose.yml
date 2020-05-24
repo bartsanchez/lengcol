@@ -66,3 +66,17 @@ services:
         restart: always
         sysctls:
             net.core.somaxconn: 511
+
+    prometheus:
+        image: prom/prometheus
+        volumes:
+            - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
+
+    grafana:
+        image: grafana/grafana
+        ports:
+            - 3000:3000
+        links:
+            - prometheus
+        depends_on:
+            - prometheus

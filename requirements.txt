@@ -14,12 +14,14 @@ dj-database-url==0.5.0    # via -r requirements.in
 django-crispy-forms==1.9.0  # via -r requirements.in
 django-extensions==2.2.9  # via -r requirements.in
 django-extra-views==0.13.0  # via -r requirements.in
+django-prometheus==2.0.0  # via -r requirements.in
 django-recaptcha3==0.2.0  # via -r requirements.in
 django==3.0.5             # via -r requirements.in, django-extra-views
 gunicorn==20.0.4          # via -r requirements.in
 idna==2.9                 # via requests
 importlib-metadata==1.6.0  # via kombu
 kombu==4.6.8              # via celery
+prometheus-client==0.7.1  # via django-prometheus
 psycopg2-binary==2.8.5    # via -r requirements.in
 pytz==2019.3              # via celery, django
 redis==3.5.0              # via -r requirements.in

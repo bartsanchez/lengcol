@@ -6,6 +6,7 @@ whitenoise
 django-crispy-forms
 django-extra-views
 django-recaptcha3
+django-prometheus
 celery
 redis
 gunicorn

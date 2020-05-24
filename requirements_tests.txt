@@ -21,6 +21,7 @@ dj-database-url==0.5.0    # via -r requirements.txt
 django-crispy-forms==1.9.0  # via -r requirements.txt
 django-extensions==2.2.9  # via -r requirements.txt
 django-extra-views==0.13.0  # via -r requirements.txt
+django-prometheus==2.0.0  # via -r requirements.txt
 django-recaptcha3==0.2.0  # via -r requirements.txt
 django==3.0.5             # via -r requirements.txt, django-extra-views, splinter
 factory-boy==2.12.0       # via -r requirements_tests.in
@@ -43,6 +44,7 @@ parso==0.7.0              # via jedi
 pexpect==4.8.0            # via ipython
 pickleshare==0.7.5        # via ipython
 pluggy==0.13.1            # via pytest, tox
+prometheus-client==0.7.1  # via -r requirements.txt, django-prometheus
 prompt-toolkit==3.0.5     # via ipython
 psycopg2-binary==2.8.5    # via -r requirements.txt
 ptyprocess==0.6.0         # via pexpect
