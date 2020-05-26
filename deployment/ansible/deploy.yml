@@ -6,6 +6,11 @@
 
     - import_tasks: tasks/fail2ban.yml
 
+    - name: Pull new images
+      shell:
+        chdir: /opt/apps/lengcol
+        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull
+
     - name: Build containers
       shell:
         chdir: /opt/apps/lengcol
