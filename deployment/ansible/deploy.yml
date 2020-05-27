@@ -6,6 +6,11 @@
 
     - import_tasks: tasks/fail2ban.yml
 
+    - name: Prune dangling images
+      shell:
+        chdir: /opt/apps/lengcol
+        cmd: docker image prune -f
+
     - name: Pull new images
       shell:
         chdir: /opt/apps/lengcol
