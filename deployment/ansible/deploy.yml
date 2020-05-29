@@ -11,6 +11,11 @@
         chdir: /opt/apps/lengcol
         cmd: docker image prune -f
 
+    - name: Prune volumes
+      shell:
+        chdir: /opt/apps/lengcol
+        cmd: docker volume prune -f
+
     - name: Pull new images
       shell:
         chdir: /opt/apps/lengcol
