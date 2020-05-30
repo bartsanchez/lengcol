@@ -1,2 +1,3 @@
+.git/
 ./docker/db
 ./docker/static
