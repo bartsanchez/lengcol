@@ -64,6 +64,7 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertContains(response, 'fake example')
 
 
+@freezegun.freeze_time('2020-01-01')
 class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
     def setUp(self):
         self.client = test.Client()
