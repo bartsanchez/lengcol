@@ -2,3 +2,6 @@
 .tox/
 ./docker/db
 ./docker/static
+.env
+.coverage
+.coveragerc
