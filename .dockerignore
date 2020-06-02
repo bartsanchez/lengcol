@@ -1,5 +1,6 @@
 .git/
 .tox/
+.pytest_cache/
 ./docker/db
 ./docker/static
 .env
