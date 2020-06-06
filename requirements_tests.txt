@@ -23,14 +23,13 @@ django-extensions==2.2.9  # via -r requirements.txt
 django-extra-views==0.13.0  # via -r requirements.txt
 django-prometheus==2.0.0  # via -r requirements.txt
 django-recaptcha3==0.2.0  # via -r requirements.txt
-django==3.0.5             # via -r requirements.txt, django-extra-views, splinter
+django==3.0.7             # via -r requirements.txt, django-extra-views, splinter
 factory-boy==2.12.0       # via -r requirements_tests.in
 faker==4.0.3              # via factory-boy
 filelock==3.0.12          # via tox, virtualenv
 freezegun==0.3.15         # via -r requirements_tests.in
 gunicorn==20.0.4          # via -r requirements.txt
 idna==2.9                 # via -r requirements.txt, requests, yarl
-importlib-metadata==1.6.0  # via -r requirements.txt, kombu, pluggy, pytest, tox, virtualenv
 ipdb==0.13.2              # via -r requirements_tests.in
 ipython-genutils==0.2.0   # via traitlets
 ipython==7.14.0           # via ipdb
@@ -76,7 +75,6 @@ wcwidth==0.1.9            # via prompt-toolkit, pytest
 whitenoise==5.0.1         # via -r requirements.txt
 wrapt==1.12.1             # via vcrpy
 yarl==1.4.2               # via vcrpy
-zipp==3.1.0               # via -r requirements.txt, importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
