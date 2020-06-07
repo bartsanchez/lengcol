@@ -7,6 +7,6 @@ django-crispy-forms
 django-extra-views
 django-recaptcha3
 django-prometheus
-celery
+celery==4.4.2
 redis
 gunicorn
