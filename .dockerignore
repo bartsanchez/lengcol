@@ -6,6 +6,7 @@
 .env
 .coverage
 .coveragerc
+.travis.yml
 deployment/
 htmlcov/
 **/__pycache__
