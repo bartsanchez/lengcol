@@ -11,3 +11,4 @@ deployment/
 htmlcov/
 **/__pycache__
 **/tests/
+*egg-info
