@@ -47,3 +47,8 @@ services:
         volumes:
             - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
             - /data/prometheus:/prometheus
+
+    grafana:
+        user: root
+        volumes:
+            - /data/grafana:/var/lib/grafana
