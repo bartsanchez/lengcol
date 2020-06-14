@@ -13,7 +13,8 @@ billiard==3.6.3.0         # via -r requirements.txt, celery
 celery==4.4.2             # via -r requirements.txt
 certifi==2020.4.5.1       # via -r requirements.txt, requests
 chardet==3.0.4            # via -r requirements.txt, requests
-coverage==5.1             # via pytest-cov
+codecov==2.1.6            # via -r requirements_tests.in
+coverage==4.5.4           # via codecov, pytest-cov
 cssselect==1.1.0          # via splinter
 decorator==4.4.2          # via ipython, traitlets
 distlib==0.3.0            # via virtualenv
@@ -59,7 +60,7 @@ python-dateutil==2.8.1    # via faker, freezegun
 pytz==2020.1              # via -r requirements.txt, celery, django
 pyyaml==5.3.1             # via vcrpy
 redis==3.5.3              # via -r requirements.txt
-requests==2.23.0          # via -r requirements.txt, -r requirements_tests.in, django-recaptcha3
+requests==2.23.0          # via -r requirements.txt, -r requirements_tests.in, codecov, django-recaptcha3
 selenium==3.141.0         # via splinter
 six==1.15.0               # via -r requirements.txt, django-extensions, django-extra-views, freezegun, packaging, python-dateutil, splinter, tox, traitlets, vcrpy, virtualenv
 splinter[django]==0.13.0  # via -r requirements_tests.in
