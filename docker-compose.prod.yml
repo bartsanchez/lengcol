@@ -41,3 +41,9 @@ services:
             - /data/logs/nginx/:/var/log/nginx/
             - /data/logs/gunicorn/:/var/log/gunicorn/
             - /var/run/docker.sock:/var/run/docker.sock
+
+    prometheus:
+        user: root
+        volumes:
+            - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
+            - /data/prometheus:/prometheus
