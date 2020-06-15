@@ -1,3 +1,4 @@
+.dockerignore
 .git/
 .tox/
 .pytest_cache/
