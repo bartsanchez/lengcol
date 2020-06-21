@@ -35,7 +35,7 @@ services:
         links:
             - db
         volumes:
-            - ./docker/static:/opt/lengcol/lengcol/lengcol/static
+            - ./lengcol:/opt/lengcol/lengcol/
 
     web:
         image: nginx
