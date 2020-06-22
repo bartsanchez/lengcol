@@ -563,3 +563,91 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
         self.assertEqual(example.value, 'bar')
         self.assertEqual(example.definition, self.definition)
+
+
+class DefinitionDisableViewTests(test.TestCase, mixins.W3ValidatorMixin):
+    def setUp(self):
+        self.client = test.Client()
+        self.user = auth_factories.UserFactory()
+        self.definition = factories.DefinitionFactory(
+            uuid='869fc83b-2004-428d-9870-9089a8f29f20',
+            user=self.user,
+        )
+        self.url = reverse(
+            'definition-disable',
+            kwargs={'uuid': self.definition.uuid}
+        )
+
+    def _login(self):
+        self.client.login(username=self.user.username,
+                          password='fake_password')
+
+    def test_confirm_message_appear_in_view(self):
+        term_text = self.definition.term.value
+
+        self._login()
+
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            'Se va a proceder a eliminar la definición '
+            f'"{term_text}". ¿Estás seguro?'
+        )
+
+    def test_confirm_message_appear_in_view__another_user(self):
+        another_user = auth_factories.UserFactory(
+            username='another_username',
+        )
+        self.client.login(username=another_user,
+                          password='fake_password')
+
+        response = self.client.get(self.url)
+
+        self.assertEqual(response.status_code, 404)
+
+    def test_disable_definition(self):
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertEqual(
+            self.definition.uuid,
+            '869fc83b-2004-428d-9870-9089a8f29f20',
+        )
+        self.assertEqual(self.definition.term.value, 'term fake')
+        self.assertEqual(self.definition.value, 'definition fake')
+        self.assertEqual(self.definition.user, self.user)
+
+        self.assertTrue(models.Term.objects.first().active)
+        self.assertTrue(models.Definition.objects.first().active)
+
+        self._login()
+
+        response = self.client.post(self.url)
+
+        self.assertEqual(response.status_code, 302)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 0)
+        self.assertEqual(models.Definition.all_objects.count(), 1)
+
+        self.assertTrue(models.Term.objects.first().active)
+        self.assertFalse(models.Definition.all_objects.first().active)
+
+    def test_disable_definition__another_user(self):
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        another_user = auth_factories.UserFactory(
+            username='another_username',
+        )
+        self.client.login(username=another_user,
+                          password='fake_password')
+
+        self.assertTrue(models.Term.objects.first().active)
+        self.assertTrue(models.Definition.objects.first().active)
+
+        response = self.client.post(self.url)
+
+        self.assertEqual(response.status_code, 404)
+
+        self.assertEqual(models.Definition.objects.count(), 1)
+        self.assertTrue(models.Definition.objects.first().active)

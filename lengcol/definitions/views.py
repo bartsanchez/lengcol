@@ -1,4 +1,4 @@
-from django import shortcuts
+from django import http, shortcuts, urls
 from django.contrib.auth import mixins
 from django.views import generic
 from extra_views import CreateWithInlinesView, UpdateWithInlinesView
@@ -50,6 +50,24 @@ class DefinitionUpdateView(mixins.LoginRequiredMixin,
     def get_object(self):
         return shortcuts.get_object_or_404(models.Definition,
                                            uuid=self.kwargs['uuid'])
+
+
+class DefinitionDisableView(generic.edit.DeleteView):
+    model = models.Definition
+    success_url = urls.reverse_lazy('index')
+
+    def get_object(self):
+        user = self.request.user
+        return shortcuts.get_object_or_404(models.Definition,
+                                           user=user,
+                                           uuid=self.kwargs['uuid'])
+
+    def delete(self, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.active = False
+        self.object.save()
+        return http.HttpResponseRedirect(success_url)
 
 
 class TermDetailView(generic.DetailView):

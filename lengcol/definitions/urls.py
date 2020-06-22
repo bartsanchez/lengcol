@@ -17,6 +17,10 @@ urlpatterns = [
          views.DefinitionUpdateView.as_view(),
          name='definition-update'),
 
+    path('definitions/<uuid:uuid>/disable',
+         views.DefinitionDisableView.as_view(),
+         name='definition-disable'),
+
     path('terms/search/',
          views.TermSearchView.as_view(),
          name='term-search'),

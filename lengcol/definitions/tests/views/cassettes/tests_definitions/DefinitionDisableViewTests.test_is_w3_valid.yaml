@@ -34,22 +34,16 @@ interactions:
       \           \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n\
       \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
       \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
-      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n  <div\
-      \ class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\"\
-      >fake term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\"\
-      >&#128279;</a>\n      fake definition\n    </p>\n\n    \n  </div>\n\n  <div\
-      \ class=\"card-footer text-right text-muted\">\n    \n      <div class=\"float-left\"\
-      >\n          <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/change\"\
-      >&#9998; Editar</a></div>\n          <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/disable\"\
-      >&#10007; Eliminar</a></div>\n      </div>\n    \n    <div>Fecha de creaci\xF3\
-      n 01-01-2020</div>\n    <div>Autor: fake_username</div>\n  </div>\n</div>\n\n\
-      \n        </div>\n        <aside class=\"col-md-4\">\n          \n         \
-      \ <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDA\
-      ltimas definiciones</h4>\n            <ul>\n              \n              <li><a\
-      \ href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">fake term</a></li>\n\
-      \              \n            </ul>\n          </div>\n          \n         \
-      \ <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n\
-      \            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      \       <div class=\"col-md-8\">\n          \n<form method=\"post\"><input type=\"\
+      hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n    <p>Se va a proceder\
+      \ a eliminar la definici\xF3n \"term fake\". \xBFEst\xE1s seguro?</p>\n    <input\
+      \ type=\"submit\" value=\"Confirmar\">\n</form>\n\n        </div>\n        <aside\
+      \ class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\"\
+      >\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n    \
+      \        <ul>\n              \n              <li><a href=\"/definitions/869fc83b-2004-428d-9870-9089a8f29f20/\"\
+      >term fake</a></li>\n              \n            </ul>\n          </div>\n \
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
+      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
       >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
       \    </div>\n    </main>\n\n  </body>\n</html>\n"
     headers:
@@ -60,7 +54,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4072'
+      - '3604'
       Content-Type:
       - text/html
       User-Agent:

@@ -21,7 +21,10 @@
 
   <div class="card-footer text-right text-muted">
     {% if user == definition.user %}
-      <div class="float-left"><a href="{% url 'definition-update' definition.uuid %}">&#9998; Editar</a></div>
+      <div class="float-left">
+          <div><a href="{% url 'definition-update' definition.uuid %}">&#9998; Editar</a></div>
+          <div><a href="{% url 'definition-disable' definition.uuid %}">&#10007; Eliminar</a></div>
+      </div>
     {% endif %}
     <div>Fecha de creación {{ definition.created | date:'d-m-Y' }}</div>
     <div>Autor: {% if definition.user %}{{ definition.user.username }}{% else %}Anónimo{% endif %}</div>

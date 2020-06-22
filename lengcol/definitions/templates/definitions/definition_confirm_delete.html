@@ -1,0 +1,8 @@
+{% extends "lengcol/base.html" %}
+
+{% block content %}
+<form method="post">{% csrf_token %}
+    <p>Se va a proceder a eliminar la definición "{{ object.term.value }}". ¿Estás seguro?</p>
+    <input type="submit" value="Confirmar">
+</form>
+{% endblock %}
