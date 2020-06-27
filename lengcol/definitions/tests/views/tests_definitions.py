@@ -1,7 +1,5 @@
 import freezegun
 from django import test
-from django.conf import settings
-from django.core import mail
 from django.urls import reverse
 
 from authentication import factories as auth_factories
@@ -187,33 +185,6 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(models.Definition.objects.count(), 1)
 
         self.assertIsNone(models.Definition.objects.first().user)
-
-    def test_new_definition_send_an_email(self):
-        self.assertEqual(len(mail.outbox), 0)
-
-        form_data = {'term': 'fake term', 'value': 'fake definition'}
-        form_data.update(self.management_data)
-
-        response = self.client.post(self.url, form_data, follow=True)
-
-        self.assertEqual(response.status_code, 200)
-
-        self.assertEqual(models.Definition.objects.count(), 1)
-        self.assertEqual(len(mail.outbox), 1)
-
-        email_sent = mail.outbox[0]
-        self.assertEqual(email_sent.subject, 'New definition was created')
-        self.assertEqual(email_sent.from_email, settings.APP_EMAIL)
-        self.assertTrue(len(email_sent.to), 1)
-        self.assertEqual(email_sent.to[0], settings.APP_EMAIL)
-
-        # Body
-        definition = models.Definition.objects.first()
-        definition_url = definition.get_absolute_url()
-        self.assertEqual(
-            email_sent.body,
-            f'{settings.BASE_URL}{definition_url}'
-        )
 
     def test_has_author(self):
         self._login()
