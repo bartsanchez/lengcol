@@ -1,14 +1,19 @@
 from django import test
 from django.conf import settings
 from django.core import mail
+from django.db.models import signals
 from django.urls import reverse
 
 from authentication import factories as auth_factories
+from authentication import models as auth_models
+from authentication import signals as auth_signals
 from definitions import factories, models
 
 
 class NewDefinitionMailTests(test.TestCase):
     def setUp(self):
+        signals.post_save.disconnect(auth_signals.new_registered_user_handler,
+                                     sender=auth_models.User)
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
         self.url = reverse('definition-add')
