@@ -16,3 +16,4 @@ htmlcov/
 tox.ini
 .gitignore
 Makefile
+example_env
