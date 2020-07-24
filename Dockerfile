@@ -18,4 +18,6 @@ COPY . /opt/lengcol/
 
 WORKDIR /opt/lengcol/lengcol/
 
+EXPOSE 8000
+
 CMD ["gunicorn", "lengcol.wsgi:application", "--bind", "0.0.0.0:8000", "--access-logfile", "-"]
