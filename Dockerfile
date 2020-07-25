@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-RUN apt update && apt install -y python3-psycopg2
+RUN apt update && apt install -y python3-psycopg2 git
 
 RUN mkdir -p /var/log/gunicorn/
 RUN touch /var/log/gunicorn/access.log
