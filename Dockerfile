@@ -1,5 +1,7 @@
 FROM python:3.8-slim
 
+LABEL maintainer="Bartolome Sanchez Salado"
+
 RUN apt update && apt install -y python3-psycopg2 git
 
 RUN mkdir -p /var/log/gunicorn/
