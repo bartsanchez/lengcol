@@ -11,6 +11,11 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
         self.widget = forms.TextInput()
         self.field = field
 
+    def prepare_value(self, value):
+        if not value:
+            return None
+        return self.queryset.get(pk=value).value
+
     def to_python(self, value):
         if value in self.empty_values:
             return None
@@ -21,21 +26,15 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
 
 
 class DefinitionForm(forms.ModelForm):
-    value = forms.CharField(label='Definición', widget=forms.Textarea())
-
-    captcha = fields.ReCaptchaField()
-
-    class Meta:
-        model = models.Definition
-        exclude = ('user', 'term', 'active')
-
-
-class NewDefinitionForm(DefinitionForm):
     term = ModelChoiceFieldAsText(
         queryset=models.Term.objects.all(),
         field='value',
         label='Término',
+        to_field_name='value',
     )
+    value = forms.CharField(label='Definición', widget=forms.Textarea())
+
+    captcha = fields.ReCaptchaField()
 
     class Meta:
         model = models.Definition

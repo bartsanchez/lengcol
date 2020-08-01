@@ -16,10 +16,6 @@
     </div>
 
     <div class="card-body">
-      <h5 class="card-title">
-        {{ object.term }}
-      </h5>
-
       <form action="#" method="post">{% csrf_token %}
         {{ form|crispy }}
         <p>Ejemplos</p>

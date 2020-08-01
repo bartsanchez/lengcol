@@ -15,7 +15,7 @@ class IndexView(generic.ListView):
 
 class DefinitionCreateView(CreateWithInlinesView):
     model = models.Definition
-    form_class = forms.NewDefinitionForm
+    form_class = forms.DefinitionForm
     inlines = [forms.ExampleInline]
     template_name = 'definitions/create_definition_and_examples.html'
 

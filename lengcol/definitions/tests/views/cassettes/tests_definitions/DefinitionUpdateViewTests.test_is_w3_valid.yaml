@@ -37,9 +37,12 @@ interactions:
       container\">\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n\
       \          \n  <div class=\"card\">\n\n    <div class=\"card-header\">\n   \
       \   Editar definici\xF3n\n    </div>\n\n    <div class=\"card-body\">\n    \
-      \  <h5 class=\"card-title\">\n        term fake\n      </h5>\n\n      <form\
-      \ action=\"#\" method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
-      \ value=\"fake_csrf\">\n        \n\n<div id=\"div_id_value\" class=\"form-group\"\
+      \  <form action=\"#\" method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
+      \ value=\"fake_csrf\">\n        \n\n<div id=\"div_id_term\" class=\"form-group\"\
+      > <label for=\"id_term\" class=\" requiredField\">\n                T\xE9rmino<span\
+      \ class=\"asteriskField\">*</span> </label> <div class=\"\"> <input type=\"\
+      text\" name=\"term\" value=\"term fake\" class=\"textinput textInput form-control\"\
+      \ required id=\"id_term\"> </div> </div> <div id=\"div_id_value\" class=\"form-group\"\
       > <label for=\"id_value\" class=\" requiredField\">\n                Definici\xF3\
       n<span class=\"asteriskField\">*</span> </label> <div class=\"\"> <textarea\
       \ name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea form-control\" required\
@@ -89,7 +92,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6152'
+      - '6390'
       Content-Type:
       - text/html
       User-Agent:
@@ -116,7 +119,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 25 Jul 2020 17:25:37 GMT
+      - Sat, 01 Aug 2020 19:02:20 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
