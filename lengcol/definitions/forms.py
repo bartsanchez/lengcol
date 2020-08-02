@@ -12,9 +12,9 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
         self.field = field
 
     def prepare_value(self, value):
-        if not value:
-            return None
-        return self.queryset.get(pk=value).value
+        if isinstance(value, int):
+            return self.queryset.get(pk=value).value
+        return value
 
     def to_python(self, value):
         if value in self.empty_values:
