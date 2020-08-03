@@ -1,5 +1,4 @@
 import freezegun
-import pytest
 from django import test
 from django.urls import reverse
 
