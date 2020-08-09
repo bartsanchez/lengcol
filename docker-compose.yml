@@ -74,7 +74,7 @@ services:
             - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
 
     grafana:
-        image: grafana/grafana:7.0.6
+        image: grafana/grafana:7.1.3
         links:
             - prometheus
         depends_on:
