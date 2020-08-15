@@ -7,6 +7,6 @@ django-crispy-forms
 django-extra-views
 git+git://github.com/kbytesys/django-recaptcha3.git@c89a7c08b66b7bad60987c8041578b5dde73fa75
 django-prometheus
-celery==4.4.2
+celery
 redis
 gunicorn

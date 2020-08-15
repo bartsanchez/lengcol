@@ -10,7 +10,7 @@ asgiref==3.2.10           # via -r requirements.txt, django
 attrs==19.3.0             # via pytest, pytest-recording
 backcall==0.2.0           # via ipython
 billiard==3.6.3.0         # via -r requirements.txt, celery
-celery==4.4.2             # via -r requirements.txt
+celery==4.4.7             # via -r requirements.txt
 certifi==2020.6.20        # via -r requirements.txt, requests
 chardet==3.0.4            # via -r requirements.txt, requests
 codecov==2.1.8            # via -r requirements_tests.in
@@ -25,7 +25,7 @@ django-extra-views==0.13.0  # via -r requirements.txt
 django-prometheus==2.0.0  # via -r requirements.txt
 git+git://github.com/kbytesys/django-recaptcha3.git@c89a7c08b66b7bad60987c8041578b5dde73fa75  # via -r requirements.txt
 django==3.1               # via -r requirements.txt, django-extra-views, splinter
-factory-boy==2.12.0       # via -r requirements_tests.in
+factory-boy==3.0.1        # via -r requirements_tests.in
 faker==4.1.1              # via factory-boy
 filelock==3.0.12          # via tox, virtualenv
 freezegun==0.3.15         # via -r requirements_tests.in
@@ -53,9 +53,9 @@ ptyprocess==0.6.0         # via pexpect
 py==1.9.0                 # via pytest, tox
 pygments==2.6.1           # via ipython
 pyparsing==2.4.7          # via packaging
-pytest-cov==2.10.0        # via -r requirements_tests.in
+pytest-cov==2.10.1        # via -r requirements_tests.in
 pytest-django==3.9.0      # via -r requirements_tests.in
-pytest-recording==0.8.1   # via -r requirements_tests.in
+pytest-recording==0.9.0   # via -r requirements_tests.in
 pytest==6.0.1             # via pytest-cov, pytest-django, pytest-recording
 python-dateutil==2.8.1    # via faker, freezegun
 pytz==2020.1              # via -r requirements.txt, celery, django
