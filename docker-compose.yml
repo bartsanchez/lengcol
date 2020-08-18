@@ -70,11 +70,15 @@ services:
 
     prometheus:
         image: prom/prometheus:v2.20.1
+        links:
+          - blackbox_exporter
         volumes:
             - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
 
     blackbox_exporter:
         image: prom/blackbox-exporter
+        links:
+          - lengcol
 
     grafana:
         image: grafana/grafana:7.1.3
