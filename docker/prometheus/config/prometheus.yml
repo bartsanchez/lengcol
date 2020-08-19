@@ -23,7 +23,7 @@ scrape_configs:
   - job_name: 'lengcol'
 
     static_configs:
-    - targets: ['lengcol:8001', 'lengcol:8002', 'lengcol:8003']
+    - targets: ['lengcol:8001']
 
   - job_name: 'blackbox'
     metrics_path: /probe
