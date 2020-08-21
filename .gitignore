@@ -5,6 +5,7 @@ lengcol.egg-info
 *.pyc
 *.swp
 .coverage
+coverage.xml
 htmlcov/
 .env
 docker/static/*
