@@ -12,11 +12,11 @@ certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
 dj-database-url==0.5.0    # via -r requirements.in
 django-crispy-forms==1.9.2  # via -r requirements.in
-django-extensions==3.0.5  # via -r requirements.in
+django-extensions==3.0.7  # via -r requirements.in
 django-extra-views==0.13.0  # via -r requirements.in
-django-prometheus==2.0.0  # via -r requirements.in
+django-prometheus==2.1.0  # via -r requirements.in
 git+git://github.com/kbytesys/django-recaptcha3.git@c89a7c08b66b7bad60987c8041578b5dde73fa75  # via -r requirements.in
-django==3.1               # via -r requirements.in, django-extra-views
+django==3.1.1             # via -r requirements.in, django-extra-views
 gunicorn==20.0.4          # via -r requirements.in
 idna==2.10                # via requests
 importlib-metadata==1.7.0  # via kombu
