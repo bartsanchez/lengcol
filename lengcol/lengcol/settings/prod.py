@@ -33,11 +33,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CELERY_TASK_ALWAYS_EAGER = False
 
-EMAIL_HOST = 'smtp.ionos.com'
-EMAIL_PORT = 465
+EMAIL_HOST = 'smtp.ionos.es'
+EMAIL_PORT = 587
 EMAIL_HOST_USER = 'info@lenguajecoloquial.com'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_USE_SSL = True
+EMAIL_USE_TLS = True
 
 LOGGING = {
     'version': 1,
