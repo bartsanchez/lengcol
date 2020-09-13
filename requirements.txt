@@ -12,7 +12,7 @@ certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
 dj-database-url==0.5.0    # via -r requirements.in
 django-crispy-forms==1.9.2  # via -r requirements.in
-django-extensions==3.0.7  # via -r requirements.in
+django-extensions==3.0.8  # via -r requirements.in
 django-extra-views==0.13.0  # via -r requirements.in
 django-prometheus==2.1.0  # via -r requirements.in
 git+git://github.com/kbytesys/django-recaptcha3.git@c89a7c08b66b7bad60987c8041578b5dde73fa75  # via -r requirements.in
@@ -22,7 +22,7 @@ idna==2.10                # via requests
 importlib-metadata==1.7.0  # via kombu
 kombu==4.6.11             # via celery
 prometheus-client==0.8.0  # via django-prometheus
-psycopg2-binary==2.8.5    # via -r requirements.in
+psycopg2-binary==2.8.6    # via -r requirements.in
 pytz==2020.1              # via celery, django
 redis==3.5.3              # via -r requirements.in
 requests==2.24.0          # via django-recaptcha3
