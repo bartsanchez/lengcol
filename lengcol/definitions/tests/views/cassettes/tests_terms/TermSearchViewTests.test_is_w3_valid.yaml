@@ -54,13 +54,14 @@ interactions:
       </nav>\n</div>\n\n\n\n        </div>\n        <aside class=\"col-md-4\">\n \
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
       font-italic\">\xDAltimas definiciones</h4>\n            <ul>\n             \
-      \ \n              <li><a href=\"/definitions/b3ec0487-d422-4d0e-86c0-0b80402fb012/\"\
-      >foo term</a></li>\n              \n              <li><a href=\"/definitions/8ce7d087-b231-4562-b43f-dd27c7af7eba/\"\
-      >bar term</a></li>\n              \n            </ul>\n          </div>\n  \
-      \        \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
-      font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
-      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
-      \    </div>\n    </main>\n\n  </body>\n</html>\n"
+      \ \n              <li><a class=\"last-terms\" href=\"/terms/foo-term/\">foo\
+      \ term</a></li>\n              \n              <li><a class=\"last-terms\" href=\"\
+      /terms/bar-term/\">bar term</a></li>\n              \n            </ul>\n  \
+      \        </div>\n          \n          <div class=\"p-3 mb-3 bg-light\">\n \
+      \           <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"\
+      mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n\
+      \          </div>\n        </aside>\n      </div>\n    </main>\n\n  </body>\n\
+      </html>\n"
     headers:
       Accept:
       - '*/*'
@@ -69,11 +70,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4667'
+      - '4637'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       charset:
       - utf-8
     method: POST
@@ -96,7 +97,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 30 May 2020 18:43:46 GMT
+      - Tue, 15 Sep 2020 20:01:56 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

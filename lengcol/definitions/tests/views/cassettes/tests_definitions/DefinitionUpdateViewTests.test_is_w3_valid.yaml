@@ -78,7 +78,7 @@ interactions:
       />\n      </form>\n    </div>\n  </div>\n\n        </div>\n        <aside class=\"\
       col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n     \
       \       <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n           \
-      \ <ul>\n              \n              <li><a href=\"/definitions/869fc83b-2004-428d-9870-9089a8f29f20/\"\
+      \ <ul>\n              \n              <li><a class=\"last-terms\" href=\"/terms/term-fake/\"\
       >term fake</a></li>\n              \n            </ul>\n          </div>\n \
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"\
       font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
@@ -92,7 +92,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6390'
+      - '6376'
       Content-Type:
       - text/html
       User-Agent:
@@ -119,7 +119,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 01 Aug 2020 19:02:20 GMT
+      - Tue, 15 Sep 2020 20:01:52 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

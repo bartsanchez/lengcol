@@ -4,27 +4,27 @@ from django.urls import reverse
 from definitions import factories
 
 
-class LastDefinitionsTests(test.TestCase):
+class LastTermsTests(test.TestCase):
     def setUp(self):
         self.client = test.Client()
         self.url = reverse('index')
 
-    def test_hasnt_header_in_last_definitions(self):
+    def test_hasnt_header_in_last_terms(self):
         response = self.client.get(self.url)
         self.assertNotContains(response, 'Últimas definiciones')
 
-    def test_has_header_in_last_definitions(self):
-        factories.DefinitionFactory()
+    def test_has_header_in_last_terms(self):
+        factories.TermFactory()
         response = self.client.get(self.url)
         self.assertContains(response, 'Últimas definiciones')
 
-    def test_has_link_to_last_definition(self):
-        definition = factories.DefinitionFactory(value="fake_definition")
+    def test_has_link_to_last_term(self):
+        term = factories.TermFactory(value="fake_term")
         response = self.client.get(self.url)
         self.assertContains(
             response,
-            '<li><a href="{}">term fake</a></li>'.format(
-                definition.get_absolute_url()
+            '<li><a class="last-terms" href="{}">fake_term</a></li>'.format(
+                term.get_absolute_url()
             ),
             html=True
         )

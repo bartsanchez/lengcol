@@ -1,6 +1,6 @@
 from definitions import services
 
 
-def last_definitions(request):
-    last_definitions = services.DefinitionGathering.get_last_definitions(5)
-    return {'last_definitions': last_definitions}
+def last_terms(request):
+    last_terms = services.TermGathering.get_last_terms(5)
+    return {'last_terms': last_terms}
