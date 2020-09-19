@@ -75,6 +75,13 @@ services:
         volumes:
             - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
 
+    alertmanager:
+        image: prom/alertmanager:v0.21.0
+        links:
+            - prometheus
+        depends_on:
+            - prometheus
+
     blackbox_exporter:
         image: prom/blackbox-exporter
         links:
