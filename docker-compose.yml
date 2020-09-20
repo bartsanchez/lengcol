@@ -73,7 +73,7 @@ services:
         links:
           - blackbox_exporter
         volumes:
-            - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
+            - ./docker/prometheus/config/:/etc/prometheus/
 
     alertmanager:
         image: prom/alertmanager:v0.21.0

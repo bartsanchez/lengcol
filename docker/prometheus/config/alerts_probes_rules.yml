@@ -1,0 +1,6 @@
+groups:
+- name: probes
+  rules:
+  - alert: HttpRequestFailure
+    expr: probe_success{job="lengcol_home"} < 1
+    for: 5m
