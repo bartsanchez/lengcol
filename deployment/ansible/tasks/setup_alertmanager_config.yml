@@ -1,0 +1,8 @@
+- name: Add Alertmanager configuration file
+  copy:
+    src: files/alertmanager/alertmanager.yml
+    dest: /opt/apps/lengcol/docker/prometheus/alertmanager.yml
+    decrypt: yes
+    owner: ubuntu
+    group: ubuntu
+    mode: '644'

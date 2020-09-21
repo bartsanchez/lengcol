@@ -4,6 +4,8 @@
   tasks:
     - import_tasks: tasks/setup_repo.yml
 
+    - import_tasks: tasks/setup_alertmanager_config.yml
+
     - import_tasks: tasks/fail2ban.yml
 
     - name: Prune dangling images

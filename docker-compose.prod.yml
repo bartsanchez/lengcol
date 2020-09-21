@@ -48,6 +48,10 @@ services:
             - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
             - /data/prometheus:/prometheus
 
+    alertmanager:
+        volumes:
+            - ./docker/prometheus/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+
     grafana:
         user: root
         volumes:
