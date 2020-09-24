@@ -10,6 +10,10 @@ RUN touch /var/log/gunicorn/error.log
 RUN chmod 640 /var/log/gunicorn/access.log
 RUN chmod 640 /var/log/gunicorn/error.log
 
+RUN mkdir -p /var/log/celery/
+RUN touch /var/log/celery/worker.log
+RUN chmod 640 /var/log/celery/worker.log
+
 RUN mkdir -p /opt/lengcol/
 WORKDIR /opt/lengcol
 

@@ -52,7 +52,7 @@ services:
 
     celery_worker:
         build: .
-        command: celery -A lengcol.celery worker --loglevel=info
+        command: celery -A lengcol.celery worker --loglevel=info --logfile=/var/log/celery/worker.log
         restart: always
         env_file: .env
         depends_on:
