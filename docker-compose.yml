@@ -69,7 +69,7 @@ services:
             net.core.somaxconn: 511
 
     prometheus:
-        image: prom/prometheus:v2.20.1
+        image: prom/prometheus:v2.21.0
         links:
           - blackbox_exporter
         volumes:
