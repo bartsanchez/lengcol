@@ -91,5 +91,6 @@ services:
         image: grafana/grafana:7.1.5
         links:
             - prometheus
+            - alertmanager
         depends_on:
             - prometheus
