@@ -44,6 +44,7 @@ services:
         volumes:
             - /data/logs/nginx/:/var/log/nginx/
             - /data/logs/gunicorn/:/var/log/gunicorn/
+            - /data/logs/celery/:/var/log/celery/
             - /var/run/docker.sock:/var/run/docker.sock
 
     prometheus:
