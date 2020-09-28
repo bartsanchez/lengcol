@@ -92,5 +92,6 @@ services:
         links:
             - prometheus
             - alertmanager
+            - redis_broker
         depends_on:
             - prometheus
