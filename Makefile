@@ -1,13 +1,13 @@
 .PHONY: build run stop clean deploy test
 
 build:
-	docker-compose build
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
 
 run:
-	docker-compose up -d
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
 stop:
-	docker-compose down
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
 
 clean:
 	find . -name "*.pyc" -delete
