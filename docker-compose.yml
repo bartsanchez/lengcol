@@ -74,8 +74,6 @@ services:
             - blackbox_exporter
         volumes:
             - ./docker/prometheus/config/:/etc/prometheus/
-        ports:
-            - 9090:9090
 
     alertmanager:
         image: prom/alertmanager:v0.21.0
