@@ -34,8 +34,6 @@ services:
             - db
         links:
             - db
-        volumes:
-            - ./lengcol:/opt/lengcol/lengcol/
 
     web:
         image: nginx:1.19.2

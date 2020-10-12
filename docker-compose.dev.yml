@@ -1,8 +1,13 @@
 version: '3'
 services:
+    lengcol:
+        volumes:
+            - ./lengcol:/opt/lengcol/lengcol/
+
     prometheus:
         ports:
             - 9090:9090
+
     alertmanager:
         ports:
             - 9093:9093
