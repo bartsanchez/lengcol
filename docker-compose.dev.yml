@@ -1,5 +1,9 @@
 version: '3'
 services:
+    db:
+        volumes:
+            - ./docker/db/pg_data:/var/lib/postgresql/data
+
     lengcol:
         volumes:
             - ./lengcol:/opt/lengcol/lengcol/
