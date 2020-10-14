@@ -21,8 +21,6 @@ services:
         build: .
         command: ../scripts/collect_static.sh
         env_file: .env
-        volumes:
-            - ./docker/static:/opt/lengcol/lengcol/lengcol/static
 
     lengcol:
         build: .

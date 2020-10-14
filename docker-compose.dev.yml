@@ -4,6 +4,10 @@ services:
         volumes:
             - ./docker/db/pg_data:/var/lib/postgresql/data
 
+    collect_static:
+        volumes:
+            - ./docker/static:/opt/lengcol/lengcol/lengcol/static
+
     lengcol:
         volumes:
             - ./lengcol:/opt/lengcol/lengcol/
