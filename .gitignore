@@ -9,4 +9,5 @@ coverage.xml
 htmlcov/
 .env
 docker/static/*
+docker/logs/*
 deployment/aws_key_pair.pem

@@ -12,6 +12,10 @@ services:
         volumes:
             - ./lengcol:/opt/lengcol/lengcol/
 
+    celery_worker:
+        volumes:
+            - ./docker/logs/celery/:/var/log/celery/
+
     prometheus:
         ports:
             - 9090:9090

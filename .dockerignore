@@ -4,6 +4,7 @@
 .pytest_cache/
 ./docker/db
 ./docker/static
+./docker/logs
 .env
 .coverage
 .coveragerc
