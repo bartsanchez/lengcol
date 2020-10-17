@@ -11,6 +11,7 @@ services:
     lengcol:
         volumes:
             - ./lengcol:/opt/lengcol/lengcol/
+            - ./docker/logs/gunicorn/:/var/log/gunicorn/
 
     celery_worker:
         volumes:
