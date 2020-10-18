@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/bartsanchez/lengcol.svg?branch=master)](https://travis-ci.org/bartsanchez/lengcol)
 [![codecov](https://codecov.io/gh/bartsanchez/lengcol/branch/master/graph/badge.svg)](https://codecov.io/gh/bartsanchez/lengcol)
 
 # Lenguaje coloquial project
