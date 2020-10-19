@@ -1,4 +1,4 @@
-![Tests status](https://github.com/bartsanchez/lengcol/workflows/Python%20package/badge.svg?branch=master)
+![Tests status](https://github.com/bartsanchez/lengcol/workflows/Tests/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/bartsanchez/lengcol/branch/master/graph/badge.svg)](https://codecov.io/gh/bartsanchez/lengcol)
 
 # Lenguaje coloquial project
