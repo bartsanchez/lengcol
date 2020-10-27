@@ -23,6 +23,17 @@ services:
         volumes:
             - ./docker/logs/celery/:/var/log/celery/
 
+    logrotate:
+        build: ./docker/logrotate/
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do logrotate -v logrotate.conf; sleep 12h & wait $${!}; done;'"
+        depends_on:
+            - web
+        volumes:
+            - ./docker/logs/nginx/:/var/log/nginx/
+            - ./docker/logs/gunicorn/:/var/log/gunicorn/
+            - ./docker/logs/celery/:/var/log/celery/
+            - /var/run/docker.sock:/var/run/docker.sock
+
     prometheus:
         ports:
             - 9090:9090
