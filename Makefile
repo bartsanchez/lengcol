@@ -1,4 +1,4 @@
-.PHONY: build run stop clean deploy test
+.PHONY: build run stop logs clean deploy test
 
 build:
 	docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
@@ -8,6 +8,9 @@ run:
 
 stop:
 	docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
+
+logs:
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml logs
 
 clean:
 	find . -name "*.pyc" -delete
