@@ -10,7 +10,7 @@ stop:
 	docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
 
 logs:
-	docker-compose -f docker-compose.yml -f docker-compose.dev.yml logs
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml logs $(ARGS)
 
 clean:
 	find . -name "*.pyc" -delete
