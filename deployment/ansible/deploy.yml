@@ -26,16 +26,16 @@
     - name: Build containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
+        cmd: make build ENV=prod
 
     - name: Stop running containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
+        cmd: make stop ENV=prod
 
     - name: Start containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+        cmd: make run ENV=prod
 
     - import_tasks: tasks/post_install.yml
