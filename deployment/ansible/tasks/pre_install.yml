@@ -1,0 +1,5 @@
+- name: Install Make
+  become: true
+  package:
+    name: make
+    state: present
