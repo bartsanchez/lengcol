@@ -2,6 +2,8 @@
 - hosts: lengcolaws
   remote_user: ubuntu
   tasks:
+    - import_tasks: tasks/pre_install.yml
+
     - import_tasks: tasks/setup_repo.yml
 
     - import_tasks: tasks/setup_alertmanager_config.yml
