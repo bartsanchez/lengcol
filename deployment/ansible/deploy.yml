@@ -23,7 +23,7 @@
     - name: Pull new images
       shell:
         chdir: /opt/apps/lengcol
-        cmd: docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull
+        cmd: make pull ENV=prod
 
     - name: Build containers
       shell:

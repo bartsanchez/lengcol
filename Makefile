@@ -5,6 +5,9 @@ ENV ?= dev
 build:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml build
 
+pull:
+	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml pull
+
 run:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml up -d
 
