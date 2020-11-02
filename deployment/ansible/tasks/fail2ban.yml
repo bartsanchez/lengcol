@@ -40,6 +40,15 @@
     group: root
     mode: '644'
 
+- name: Upload dashboard-failed-logins
+  become: true
+  copy:
+    src: files/fail2ban/filter.d/dashboard-failed-logins.conf
+    dest: /etc/fail2ban/filter.d/dashboard-failed-logins.conf
+    owner: root
+    group: root
+    mode: '644'
+
 - name: Upload local paths-overrides config file
   become: true
   copy:

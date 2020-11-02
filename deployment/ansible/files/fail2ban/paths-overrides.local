@@ -5,3 +5,5 @@ nginx_error_log = /data/logs/nginx/error.log
 nginx_access_log = /data/logs/nginx/access.log
 
 nginx_444_error_log = /data/logs/nginx/444error.log
+
+dashboard_access_log = /data/logs/nginx/dashboard_access.log
