@@ -50,7 +50,7 @@ services:
     prometheus:
         user: root
         volumes:
-            - ./docker/prometheus/config/prometheus.yml:/etc/prometheus/prometheus.yml
+            - ./docker/prometheus/config/prometheus.prod.yml:/etc/prometheus/prometheus.yml
             - /data/prometheus:/prometheus
 
     alertmanager:
