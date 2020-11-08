@@ -14,7 +14,7 @@ SECRET_KEY = 'rh*dh$k=p*u#l13)pn&2*#iw=nh-p6wmmswgo1$vfvt_xqz6-e'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'base.apps.BaseConfig',
