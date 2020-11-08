@@ -43,3 +43,7 @@ services:
     alertmanager:
         ports:
             - 9093:9093
+
+    blackbox_exporter:
+        ports:
+            - 9115:9115
