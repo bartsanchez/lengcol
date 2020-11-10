@@ -1,4 +1,4 @@
-.PHONY: build run stop logs clean deploy test
+.PHONY: build run stop logs clean deploy tests
 
 ENV ?= dev
 
@@ -23,6 +23,6 @@ clean:
 deploy:
 	/bin/bash ./deployment/deploy.sh
 
-test:
+tests:
 	pip install tox
 	tox
