@@ -1,0 +1,9 @@
+version: '3'
+services:
+    test:
+        build: docker/test/
+        depends_on:
+            - web
+            - run_migrations
+        links:
+            - web
