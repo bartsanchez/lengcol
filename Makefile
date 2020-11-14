@@ -26,3 +26,6 @@ deploy:
 tests:
 	pip install tox
 	tox
+
+integration_tests:
+	scripts/run_integration_tests.sh
