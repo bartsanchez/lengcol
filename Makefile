@@ -1,6 +1,8 @@
-.PHONY: build run stop logs clean deploy tests
+.PHONY: build run start stop run logs clean deploy tests
 
 ENV ?= dev
+START_SERVICES ?=
+RUN_SERVICE ?=
 
 build:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml build
@@ -8,11 +10,14 @@ build:
 pull:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml pull
 
-run:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml up -d
+start:
+	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml up -d $(START_SERVICES)
 
 stop:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml down
+
+run:
+	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml run $(RUN_SERVICE)
 
 logs:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml logs $(ARGS)
