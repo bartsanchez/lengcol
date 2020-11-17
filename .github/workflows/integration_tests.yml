@@ -1,0 +1,28 @@
+name: IntegrationTests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: [3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install Docker Compose
+        run: pip install docker-compose
+
+      - name: Set env file
+        run: cp example_env .env
+
+      - name: Run integration tests
+        run: make integration_tests
