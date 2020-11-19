@@ -38,6 +38,6 @@
     - name: Start containers
       shell:
         chdir: /opt/apps/lengcol
-        cmd: make run ENV=prod
+        cmd: make start ENV=prod
 
     - import_tasks: tasks/post_install.yml
