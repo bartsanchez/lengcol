@@ -7,6 +7,8 @@ services:
             POSTGRES_PASSWORD: fake_db_password
             POSTGRES_USER: fake_db_user
             POSTGRES_DB: db
+        volumes:
+            - ./docker/postgres/scripts:/docker-entrypoint-initdb.d
 
     run_migrations:
         build: .

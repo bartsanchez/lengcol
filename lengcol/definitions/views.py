@@ -1,5 +1,7 @@
 from django import http, shortcuts, urls
+from django.conf import settings
 from django.contrib.auth import mixins
+from django.contrib.postgres import search
 from django.views import generic
 from extra_views import CreateWithInlinesView, UpdateWithInlinesView
 
@@ -79,9 +81,17 @@ class TermSearchView(generic.ListView):
     model = models.Term
     paginate_by = 5
 
+    def db_engine_is_sqlite(self):
+        return 'sqlite' in settings.DATABASES['default']['ENGINE']
+
     def get_queryset(self):
         term = self.request.GET.get('v', '')
         query = models.Term.objects.all()
         if term:
-            query = query.filter(value__icontains=term)
+            if self.db_engine_is_sqlite():
+                query = models.Term.objects.filter(value__icontains=term)
+            else:
+                query = models.Term.objects.annotate(
+                    similarity=search.TrigramSimilarity('value', term)
+                ).filter(similarity__gt=0.1).order_by('-similarity')
         return query
