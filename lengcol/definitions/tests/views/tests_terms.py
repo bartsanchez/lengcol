@@ -1,3 +1,5 @@
+from unittest import mock
+
 import freezegun
 from django import test
 from django.urls import reverse
@@ -121,6 +123,21 @@ class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertNotContains(
             response, self.get_html_link(self.foo_term), html=True
         )
+
+    @mock.patch("definitions.models.Term.objects.annotate")
+    @mock.patch(
+        "definitions.views.TermSearchView.db_engine_is_sqlite",
+        return_value=False
+    )
+    def test_search_postgresql_engine(self, db_check_mock, annotate_mock):
+        url = '{}?{}'.format(self.url, http.urlencode({'v': 'bar'}))
+        self.client.get(url)
+
+        db_check_mock.assert_called_once_with()
+        annotate_mock.assert_called_once()
+
+    def test_db_engine_is_sqlite(self):
+        self.assertTrue(views.TermSearchView().db_engine_is_sqlite())
 
 
 class TermSearchViewPaginationTests(test.TestCase):
