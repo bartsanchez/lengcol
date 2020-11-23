@@ -2,6 +2,8 @@
 
 {% load crispy_forms_tags %}
 
+{% block h1 %}Definición de {{ definition.term }}{% endblock %}
+
 {% block content %}
   {% include 'definitions/definition.html' with definition=definition %}
 {% endblock %}

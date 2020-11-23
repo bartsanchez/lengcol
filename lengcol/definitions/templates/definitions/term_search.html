@@ -1,5 +1,7 @@
 {% extends "lengcol/base.html" %}
 
+{% block h1 %}Resultados de la búsqueda{% endblock %}
+
 {% block content %}
   {% for term in object_list %}
     {% for definition in term.definitions %}

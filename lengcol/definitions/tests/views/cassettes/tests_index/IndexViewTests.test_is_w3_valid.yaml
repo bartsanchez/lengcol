@@ -34,10 +34,11 @@ interactions:
       \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
       \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
       \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
-      \    </nav>\n\n    <main class=\"container\">\n      <div class=\"row\">\n \
-      \       <div class=\"col-md-8\">\n          \n\n  <div class=\"card\">\n\n \
-      \ <div class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"\
-      /terms/term-fake/\">term fake</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\"\
+      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Definiciones\
+      \ al azar</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n\
+      \          \n\n  <div class=\"card\">\n\n  <div class=\"card-body\">\n    <h5\
+      \ class=\"card-title\">\n      <a href=\"/terms/term-fake/\">term fake</a>\n\
+      \    </h5>\n\n    <p>\n      <a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\"\
       >&#128279;</a>\n      fake_definition\n    </p>\n\n    \n    <ul class=\"examples\"\
       >\n      \n        <li>example fake</li>\n      \n    </ul>\n    \n  </div>\n\
       \n  <div class=\"card-footer text-right text-muted\">\n    \n    <div>Fecha\
@@ -53,8 +54,8 @@ interactions:
       \  </ul>\n          </div>\n          \n          <div class=\"p-3 mb-3 bg-light\"\
       >\n            <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"\
       mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n\
-      \          </div>\n        </aside>\n      </div>\n    </main>\n\n  </body>\n\
-      </html>\n"
+      \          </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\
+      \n  </body>\n</html>\n"
     headers:
       Accept:
       - '*/*'
@@ -63,7 +64,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4199'
+      - '4268'
       Content-Type:
       - text/html
       User-Agent:
@@ -90,7 +91,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 15 Sep 2020 20:01:54 GMT
+      - Mon, 23 Nov 2020 21:07:35 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

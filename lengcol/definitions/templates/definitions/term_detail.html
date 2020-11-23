@@ -1,5 +1,7 @@
 {% extends "lengcol/base.html" %}
 
+{% block h1 %}Definición de {{ object }}{% endblock %}
+
 {% block content %}
 {% for definition in object.definitions %}
   {% include 'definitions/definition.html' with definition=definition %}

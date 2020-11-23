@@ -1,6 +1,11 @@
 .card {
   margin: 1em;
 }
+h1 {
+  font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
 ul.examples {
   list-style: none;
 }
