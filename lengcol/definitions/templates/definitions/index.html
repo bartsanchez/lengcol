@@ -1,5 +1,7 @@
 {% extends "lengcol/base.html" %}
 
+{% block h1 %}Definiciones al azar{% endblock %}
+
 {% block content %}
 {% for definition in definitions %}
   {% include 'definitions/definition.html' with definition=definition %}

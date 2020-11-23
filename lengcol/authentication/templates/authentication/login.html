@@ -8,6 +8,8 @@
   {% recaptcha_ready action_name='login' %}
 {% endblock %}
 
+{% block h1 %}Identificación{% endblock %}
+
 {% block content %}
 
 <form method="post" action="{% url 'login' %}">
