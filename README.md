@@ -4,27 +4,33 @@
 
 # Lenguaje coloquial project
 
-# Requirements
+## Requirements
 
-virtualenvwrapper
-docker
-docker-compose
+[docker](https://www.docker.com/)
 
-# Installation
+[docker-compose](https://docs.docker.com/compose/)
+
+## Run locally
 
 ```sh
 $ cp example_env .env
 
-$ mkvirtualenv lengcol
+$ make start
 
-(lengcol) $ make build
-(lengcol) $ make run
+$ make stop
 ```
 
-# Testing
+## Testing
+
+### Requirements
+
+[pip](https://pypi.org/project/pip/)
+
+### Run tests
 
 Simply, run:
 
 ```sh
-$ make test
+$ make tests
+$ make integration_tests
 ```
