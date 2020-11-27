@@ -84,7 +84,7 @@ services:
           - lengcol
 
     grafana:
-        image: grafana/grafana:7.2.0
+        image: grafana/grafana:7.3.4
         links:
             - prometheus
             - alertmanager
