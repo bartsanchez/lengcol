@@ -15,6 +15,10 @@ ALLOWED_HOSTS = [
     'www.lenguajecoloquial.es',
 ]
 
+INSTALLED_APPS += [
+    'django_prometheus',
+]
+
 SESSION_COOKIE_AGE = 7200  # 2 hours
 
 # SSL
