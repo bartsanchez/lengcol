@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'extra_views',
     'crispy_forms',
     'snowpenguin.django.recaptcha3',
-    'django_prometheus',
 ]
 
 MIDDLEWARE = [
