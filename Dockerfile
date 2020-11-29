@@ -2,6 +2,8 @@ FROM python:3.8-slim
 
 LABEL maintainer="Bartolome Sanchez Salado"
 
+ENV ENVIRONMENT dev
+
 RUN apt update && apt install -y python3-psycopg2 git
 
 RUN mkdir -p /var/log/gunicorn/
@@ -26,4 +28,4 @@ WORKDIR /opt/lengcol/lengcol/
 
 EXPOSE 8000
 
-CMD ["gunicorn", "lengcol.wsgi:application", "-c", "../docker/gunicorn/settings/dev.py"]
+CMD gunicorn lengcol.wsgi:application -c ../docker/gunicorn/settings/${ENVIRONMENT}.py
