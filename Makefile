@@ -1,4 +1,4 @@
-.PHONY: build run start stop run logs clean deploy tests
+.PHONY: build run start stop run logs ps clean deploy tests
 
 ENV ?= dev
 START_SERVICES ?=
@@ -21,6 +21,9 @@ run:
 
 logs:
 	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml logs $(ARGS)
+
+ps:
+	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml ps
 
 clean:
 	find . -name "*.pyc" -delete
