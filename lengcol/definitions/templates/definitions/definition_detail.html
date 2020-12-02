@@ -1,5 +1,7 @@
 {% extends "lengcol/base.html" %}
 
+{% block metadescription %}Definición de {{ definition.term }} para el proyecto Lenguaje Coloquial a la hora {{ definition.created }} por {{ definition.user }}.{% endblock %}
+
 {% load crispy_forms_tags %}
 
 {% block h1 %}Definición de {{ definition.term }}{% endblock %}
