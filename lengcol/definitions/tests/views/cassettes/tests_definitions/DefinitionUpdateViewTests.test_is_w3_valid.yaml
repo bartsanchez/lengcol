@@ -2,7 +2,9 @@ interactions:
 - request:
     body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
       >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
-      \ shrink-to-fit=no\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ shrink-to-fit=no\">\n    <meta name=\"description\" content=\"P\xE1gina para\
+      \ modificar la definici\xF3n term fake para el proyecto Lenguaje Coloquial.\"\
+      >\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
       \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
       \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
       \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
@@ -93,7 +95,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6445'
+      - '6570'
       Content-Type:
       - text/html
       User-Agent:
@@ -120,7 +122,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Mon, 23 Nov 2020 21:07:33 GMT
+      - Wed, 02 Dec 2020 21:10:19 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
