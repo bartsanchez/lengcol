@@ -36,7 +36,7 @@ interactions:
       \ aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"\
       dropdown-item\" href=\"/logout/\">Logout</a>\n              \n            </div>\n\
       \          </li>\n        </ul>\n      </div>\n    </nav>\n\n    <main class=\"\
-      container\">\n      <article>\n      <h1>Definiciones al azar</h1>\n      <div\
+      container\">\n      <article>\n      <h1>Editar definici\xF3n</h1>\n      <div\
       \ class=\"row\">\n        <div class=\"col-md-8\">\n          \n  <div class=\"\
       card\">\n\n    <div class=\"card-header\">\n      Editar definici\xF3n\n   \
       \ </div>\n\n    <div class=\"card-body\">\n      <form action=\"#\" method=\"\
@@ -95,7 +95,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6570'
+      - '6568'
       Content-Type:
       - text/html
       User-Agent:
@@ -122,7 +122,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 02 Dec 2020 21:10:19 GMT
+      - Fri, 04 Dec 2020 19:00:18 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
