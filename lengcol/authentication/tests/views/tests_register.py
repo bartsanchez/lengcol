@@ -7,7 +7,11 @@ from authentication import factories
 from base import mixins
 
 
-class RegisterViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class RegisterViewTests(test.TestCase,
+                        mixins.W3ValidatorMixin,
+                        mixins.HTMLValidatorMixin):
+    h1_header = 'Registro'
+
     def setUp(self):
         self.url = reverse('register')
 

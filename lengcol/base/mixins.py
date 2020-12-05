@@ -1,3 +1,4 @@
+import re
 from unittest import mock
 
 import pytest
@@ -24,3 +25,21 @@ class W3ValidatorMixin:
 
         self.assertEqual(request.status_code, 200)
         self.assertListEqual(request.json()['messages'], [])
+
+
+class HTMLValidatorMixin:
+    def test_has_correct_h1_header(self):
+        if hasattr(self, 'user'):
+            self.client.login(username=self.user, password='fake_password')
+
+        html_content = self.client.get(self.url).content
+
+        h1_header_re = re.compile(b'<h1>(.*)</h1>')
+
+        result = re.findall(h1_header_re, html_content)
+
+        self.assertEqual(len(result), 1)
+
+        h1_header = result[0].decode()
+
+        self.assertEqual(h1_header, self.h1_header)

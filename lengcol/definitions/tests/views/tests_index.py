@@ -9,7 +9,11 @@ from definitions import factories, views
 
 
 @freezegun.freeze_time('2020-01-01')
-class IndexViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class IndexViewTests(test.TestCase,
+                     mixins.W3ValidatorMixin,
+                     mixins.HTMLValidatorMixin):
+    h1_header = 'Definiciones al azar'
+
     def setUp(self):
         definition = factories.DefinitionFactory(
             uuid='13bf0f68-eeb2-4777-a739-6ee5be30bacc',
