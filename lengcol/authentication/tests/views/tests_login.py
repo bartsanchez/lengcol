@@ -7,7 +7,11 @@ from authentication import factories
 from base import mixins
 
 
-class LoginViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class LoginViewTests(test.TestCase,
+                     mixins.W3ValidatorMixin,
+                     mixins.HTMLValidatorMixin):
+    h1_header = 'Identificación'
+
     def setUp(self):
         self.url = reverse('login')
         self.user = factories.UserFactory()

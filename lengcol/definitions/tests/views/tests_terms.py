@@ -10,7 +10,11 @@ from definitions import factories, views
 
 
 @freezegun.freeze_time('2020-01-01')
-class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class TermDetailViewTests(test.TestCase,
+                          mixins.W3ValidatorMixin,
+                          mixins.HTMLValidatorMixin):
+    h1_header = 'Definición de fake term'
+
     def setUp(self):
         self.client = test.Client()
         self.term = factories.TermFactory(value='fake term')
@@ -67,7 +71,11 @@ class TermDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
 
 @freezegun.freeze_time('2020-01-01')
-class TermSearchViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class TermSearchViewTests(test.TestCase,
+                          mixins.W3ValidatorMixin,
+                          mixins.HTMLValidatorMixin):
+    h1_header = 'Resultados de la búsqueda'
+
     def setUp(self):
         self.client = test.Client()
         self.foo_term = factories.TermFactory(value='foo term')

@@ -7,7 +7,11 @@ from base import mixins
 from definitions import factories, models
 
 
-class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class DefinitionCreateViewTests(test.TestCase,
+                                mixins.W3ValidatorMixin,
+                                mixins.HTMLValidatorMixin):
+    h1_header = 'Insertar definición'
+
     def setUp(self):
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
@@ -210,7 +214,11 @@ class DefinitionCreateViewTests(test.TestCase, mixins.W3ValidatorMixin):
 
 
 @freezegun.freeze_time('2020-01-01')
-class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class DefinitionDetailViewTests(test.TestCase,
+                                mixins.W3ValidatorMixin,
+                                mixins.HTMLValidatorMixin):
+    h1_header = 'Definición de fake term'
+
     def setUp(self):
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
@@ -318,7 +326,11 @@ class DefinitionDetailViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertNotContains(response, 'fake example')
 
 
-class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class DefinitionUpdateViewTests(test.TestCase,
+                                mixins.W3ValidatorMixin,
+                                mixins.HTMLValidatorMixin):
+    h1_header = 'Editar definición'
+
     def setUp(self):
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
@@ -635,7 +647,11 @@ class DefinitionUpdateViewTests(test.TestCase, mixins.W3ValidatorMixin):
         self.assertEqual(second_term.definitions.first(), self.definition)
 
 
-class DefinitionDisableViewTests(test.TestCase, mixins.W3ValidatorMixin):
+class DefinitionDisableViewTests(test.TestCase,
+                                 mixins.W3ValidatorMixin,
+                                 mixins.HTMLValidatorMixin):
+    h1_header = 'Eliminar definición'
+
     def setUp(self):
         self.client = test.Client()
         self.user = auth_factories.UserFactory()
