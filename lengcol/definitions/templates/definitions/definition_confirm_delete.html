@@ -1,5 +1,7 @@
 {% extends "lengcol/base.html" %}
 
+{% block h1 %}Eliminar definición{% endblock %}
+
 {% block content %}
 <form method="post">{% csrf_token %}
     <p>Se va a proceder a eliminar la definición "{{ object.term.value }}". ¿Estás seguro?</p>

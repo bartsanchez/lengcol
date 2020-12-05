@@ -34,9 +34,9 @@ interactions:
       \     <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n   \
       \           \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n\
       \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
-      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Definiciones\
-      \ al azar</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n\
-      \          \n<form method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
+      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Eliminar\
+      \ definici\xF3n</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\"\
+      >\n          \n<form method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
       \ value=\"fake_csrf\">\n    <p>Se va a proceder a eliminar la definici\xF3n\
       \ \"term fake\". \xBFEst\xE1s seguro?</p>\n    <input type=\"submit\" value=\"\
       Confirmar\">\n</form>\n\n        </div>\n        <aside class=\"col-md-4\">\n\
@@ -83,7 +83,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 02 Dec 2020 21:10:20 GMT
+      - Sat, 05 Dec 2020 16:04:02 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
