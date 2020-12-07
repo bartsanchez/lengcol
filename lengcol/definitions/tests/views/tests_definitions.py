@@ -9,8 +9,12 @@ from definitions import factories, models
 
 class DefinitionCreateViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
-                                mixins.HTMLValidatorMixin):
+                                mixins.HTMLValidatorMixin,
+                                mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Insertar definición'
+    meta_description = (
+        'Añadir nueva definición para el proyecto Lenguaje Coloquial.'
+    )
 
     def setUp(self):
         self.client = test.Client()
@@ -216,8 +220,13 @@ class DefinitionCreateViewTests(test.TestCase,
 @freezegun.freeze_time('2020-01-01')
 class DefinitionDetailViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
-                                mixins.HTMLValidatorMixin):
+                                mixins.HTMLValidatorMixin,
+                                mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Definición de fake term'
+    meta_description = (
+        'Definición de fake term para el proyecto Lenguaje Coloquial a la hora'
+        ' Jan. 1, 2020, midnight por fake_username.'
+    )
 
     def setUp(self):
         self.client = test.Client()
@@ -328,8 +337,13 @@ class DefinitionDetailViewTests(test.TestCase,
 
 class DefinitionUpdateViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
-                                mixins.HTMLValidatorMixin):
+                                mixins.HTMLValidatorMixin,
+                                mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Editar definición'
+    meta_description = (
+        'Página para modificar la definición term fake para el proyecto '
+        'Lenguaje Coloquial.'
+    )
 
     def setUp(self):
         self.client = test.Client()
@@ -649,8 +663,13 @@ class DefinitionUpdateViewTests(test.TestCase,
 
 class DefinitionDisableViewTests(test.TestCase,
                                  mixins.W3ValidatorMixin,
-                                 mixins.HTMLValidatorMixin):
+                                 mixins.HTMLValidatorMixin,
+                                 mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Eliminar definición'
+    meta_description = (
+        'Página de confirmación para eliminar la definición term fake para el '
+        'proyecto Lenguaje Coloquial.'
+    )
 
     def setUp(self):
         self.client = test.Client()

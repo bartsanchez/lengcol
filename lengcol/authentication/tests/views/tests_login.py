@@ -9,8 +9,13 @@ from base import mixins
 
 class LoginViewTests(test.TestCase,
                      mixins.W3ValidatorMixin,
-                     mixins.HTMLValidatorMixin):
+                     mixins.HTMLValidatorMixin,
+                     mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Identificación'
+    meta_description = (
+        'Página de autenticación de usuarios para el proyecto Lenguaje '
+        'Coloquial.'
+    )
 
     def setUp(self):
         self.url = reverse('login')

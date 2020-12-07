@@ -43,3 +43,23 @@ class HTMLValidatorMixin:
         h1_header = result[0].decode()
 
         self.assertEqual(h1_header, self.h1_header)
+
+
+class MetaDescriptionValidatorMixin:
+    def test_has_correct_meta_description(self):
+        if hasattr(self, 'user'):
+            self.client.login(username=self.user, password='fake_password')
+
+        html_content = self.client.get(self.url).content
+
+        meta_description_re = re.compile(
+            b'<meta name="description" content="(.*)">'
+        )
+
+        result = re.findall(meta_description_re, html_content)
+
+        self.assertEqual(len(result), 1)
+
+        meta_description = result[0].decode()
+
+        self.assertEqual(meta_description, self.meta_description)
