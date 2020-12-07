@@ -9,8 +9,12 @@ from base import mixins
 
 class RegisterViewTests(test.TestCase,
                         mixins.W3ValidatorMixin,
-                        mixins.HTMLValidatorMixin):
+                        mixins.HTMLValidatorMixin,
+                        mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Registro'
+    meta_description = (
+        'Página de registro de usuarios para el proyecto Lenguaje Coloquial.'
+    )
 
     def setUp(self):
         self.url = reverse('register')

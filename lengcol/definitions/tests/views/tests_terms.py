@@ -12,8 +12,12 @@ from definitions import factories, views
 @freezegun.freeze_time('2020-01-01')
 class TermDetailViewTests(test.TestCase,
                           mixins.W3ValidatorMixin,
-                          mixins.HTMLValidatorMixin):
+                          mixins.HTMLValidatorMixin,
+                          mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Definición de fake term'
+    meta_description = (
+        'Definiciones de fake term para el proyecto Lenguaje Coloquial.'
+    )
 
     def setUp(self):
         self.client = test.Client()
@@ -73,8 +77,13 @@ class TermDetailViewTests(test.TestCase,
 @freezegun.freeze_time('2020-01-01')
 class TermSearchViewTests(test.TestCase,
                           mixins.W3ValidatorMixin,
-                          mixins.HTMLValidatorMixin):
+                          mixins.HTMLValidatorMixin,
+                          mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Resultados de la búsqueda'
+    meta_description = (
+        'Resultados de una búsqueda de definición para el '
+        'proyecto Lenguaje Coloquial.'
+    )
 
     def setUp(self):
         self.client = test.Client()

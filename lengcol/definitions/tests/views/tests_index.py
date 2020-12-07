@@ -11,8 +11,13 @@ from definitions import factories, views
 @freezegun.freeze_time('2020-01-01')
 class IndexViewTests(test.TestCase,
                      mixins.W3ValidatorMixin,
-                     mixins.HTMLValidatorMixin):
+                     mixins.HTMLValidatorMixin,
+                     mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Definiciones al azar'
+    meta_description = (
+        'Diccionario que recoge la lengua hablada, no formal,'
+        ' que usualmente se habla en la calle.'
+    )
 
     def setUp(self):
         definition = factories.DefinitionFactory(
