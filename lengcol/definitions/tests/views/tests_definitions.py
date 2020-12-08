@@ -224,8 +224,7 @@ class DefinitionDetailViewTests(test.TestCase,
                                 mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Definición de fake term'
     meta_description = (
-        'Definición de fake term para el proyecto Lenguaje Coloquial a la hora'
-        ' Jan. 1, 2020, midnight por fake_username.'
+        'Definición de fake term por fake_username: fake definition.'
     )
 
     def setUp(self):
