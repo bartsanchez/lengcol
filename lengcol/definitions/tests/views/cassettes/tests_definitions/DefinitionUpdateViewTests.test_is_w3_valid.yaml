@@ -14,53 +14,53 @@ interactions:
       \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
       \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
       text/css\" href=\"/static/definitions/style.css\">\n\n    \n  \n  \n\n\n   \
-      \ <title>Lenguaje coloquial</title>\n  </head>\n  <body>\n\n    <nav class=\"\
-      navbar navbar-expand-lg navbar-dark bg-dark\">\n      <a class=\"navbar-brand\"\
-      \ href=\"/\">Lenguaje coloquial</a>\n      <button class=\"navbar-toggler\"\
-      \ type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\" aria-controls=\"\
-      navbarToggler\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n\
-      \        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n    \
-      \  <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n        <ul\
-      \ class=\"navbar-nav m-auto\">\n          <li class=\"nav-item mx-2\">\n   \
-      \         <form class=\"form-inline\" action=\"/terms/search/\" method=\"get\"\
-      >\n              <input name=\"v\" class=\"form-control\" type=\"search\" placeholder=\"\
-      Buscar\" aria-label=\"Buscar\">\n              <button id=\"form-button\" class=\"\
-      btn btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n           \
-      \ </form>\n          </li>\n          <li class=\"nav-item\">\n            <a\
-      \ class=\"nav-link\" href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n\
-      \          </li>\n        </ul>\n        <ul class=\"navbar-nav ml-auto\">\n\
-      \          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link\
-      \ dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"\
-      dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n               \
-      \ Usuario: fake_username\n            </a>\n            <div class=\"dropdown-menu\"\
-      \ aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"\
-      dropdown-item\" href=\"/logout/\">Logout</a>\n              \n            </div>\n\
-      \          </li>\n        </ul>\n      </div>\n    </nav>\n\n    <main class=\"\
-      container\">\n      <article>\n      <h1>Editar definici\xF3n</h1>\n      <div\
-      \ class=\"row\">\n        <div class=\"col-md-8\">\n          \n  <div class=\"\
-      card\">\n\n    <div class=\"card-header\">\n      Editar definici\xF3n\n   \
-      \ </div>\n\n    <div class=\"card-body\">\n      <form action=\"#\" method=\"\
-      post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\"\
-      >\n        \n\n<div id=\"div_id_term\" class=\"form-group\"> <label for=\"id_term\"\
-      \ class=\" requiredField\">\n                T\xE9rmino<span class=\"asteriskField\"\
-      >*</span> </label> <div class=\"\"> <input type=\"text\" name=\"term\" value=\"\
-      term fake\" class=\"textinput textInput form-control\" required id=\"id_term\"\
-      > </div> </div> <div id=\"div_id_value\" class=\"form-group\"> <label for=\"\
-      id_value\" class=\" requiredField\">\n                Definici\xF3n<span class=\"\
-      asteriskField\">*</span> </label> <div class=\"\"> <textarea name=\"value\"\
-      \ cols=\"40\" rows=\"10\" class=\"textarea form-control\" required id=\"id_value\"\
-      >\ndefinition fake</textarea> </div> </div> <input type=\"hidden\" class=\"\
-      django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n        <p>Ejemplos</p>\n\
-      \        \n          \n    \n\n<input type=\"hidden\" name=\"example_set-TOTAL_FORMS\"\
-      \ value=\"2\" id=\"id_example_set-TOTAL_FORMS\"> <input type=\"hidden\" name=\"\
-      example_set-INITIAL_FORMS\" value=\"0\" id=\"id_example_set-INITIAL_FORMS\"\
-      > <input type=\"hidden\" name=\"example_set-MIN_NUM_FORMS\" value=\"0\" id=\"\
-      id_example_set-MIN_NUM_FORMS\"> <input type=\"hidden\" name=\"example_set-MAX_NUM_FORMS\"\
-      \ value=\"5\" id=\"id_example_set-MAX_NUM_FORMS\">\n\n\n\n    <div class=\"\
-      multiField\">\n        \n\n<div id=\"div_id_example_set-0-value\" class=\"form-group\"\
-      > <div class=\"\"> <input type=\"text\" name=\"example_set-0-value\" class=\"\
-      textinput textInput form-control\" id=\"id_example_set-0-value\"> </div> </div>\
-      \ <input type=\"hidden\" name=\"example_set-0-id\" id=\"id_example_set-0-id\"\
+      \ <title>Lenguaje coloquial | Diccionario en espa\xF1ol</title>\n  </head>\n\
+      \  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\"\
+      >\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n     \
+      \ <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"\
+      \ data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
+      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
+      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
+      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
+      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
+      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
+      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
+      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
+      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
+      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
+      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
+      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
+      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
+      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
+      false\">\n                Usuario: fake_username\n            </a>\n       \
+      \     <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n   \
+      \           \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n\
+      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
+      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Editar\
+      \ definici\xF3n</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\"\
+      >\n          \n  <div class=\"card\">\n\n    <div class=\"card-header\">\n \
+      \     Editar definici\xF3n\n    </div>\n\n    <div class=\"card-body\">\n  \
+      \    <form action=\"#\" method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
+      \ value=\"fake_csrf\">\n        \n\n<div id=\"div_id_term\" class=\"form-group\"\
+      > <label for=\"id_term\" class=\" requiredField\">\n                T\xE9rmino<span\
+      \ class=\"asteriskField\">*</span> </label> <div class=\"\"> <input type=\"\
+      text\" name=\"term\" value=\"term fake\" class=\"textinput textInput form-control\"\
+      \ required id=\"id_term\"> </div> </div> <div id=\"div_id_value\" class=\"form-group\"\
+      > <label for=\"id_value\" class=\" requiredField\">\n                Definici\xF3\
+      n<span class=\"asteriskField\">*</span> </label> <div class=\"\"> <textarea\
+      \ name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea form-control\" required\
+      \ id=\"id_value\">\ndefinition fake</textarea> </div> </div> <input type=\"\
+      hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\"\
+      >\n\n        <p>Ejemplos</p>\n        \n          \n    \n\n<input type=\"hidden\"\
+      \ name=\"example_set-TOTAL_FORMS\" value=\"2\" id=\"id_example_set-TOTAL_FORMS\"\
+      > <input type=\"hidden\" name=\"example_set-INITIAL_FORMS\" value=\"0\" id=\"\
+      id_example_set-INITIAL_FORMS\"> <input type=\"hidden\" name=\"example_set-MIN_NUM_FORMS\"\
+      \ value=\"0\" id=\"id_example_set-MIN_NUM_FORMS\"> <input type=\"hidden\" name=\"\
+      example_set-MAX_NUM_FORMS\" value=\"5\" id=\"id_example_set-MAX_NUM_FORMS\"\
+      >\n\n\n\n    <div class=\"multiField\">\n        \n\n<div id=\"div_id_example_set-0-value\"\
+      \ class=\"form-group\"> <div class=\"\"> <input type=\"text\" name=\"example_set-0-value\"\
+      \ class=\"textinput textInput form-control\" id=\"id_example_set-0-value\">\
+      \ </div> </div> <input type=\"hidden\" name=\"example_set-0-id\" id=\"id_example_set-0-id\"\
       > <div class=\"form-group\"> <div id=\"div_id_example_set-0-DELETE\" class=\"\
       form-check\"> <input type=\"checkbox\" name=\"example_set-0-DELETE\" class=\"\
       checkboxinput form-check-input\" id=\"id_example_set-0-DELETE\"> <label for=\"\
@@ -95,7 +95,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6568'
+      - '6594'
       Content-Type:
       - text/html
       User-Agent:
@@ -122,7 +122,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 04 Dec 2020 19:00:18 GMT
+      - Wed, 09 Dec 2020 21:22:17 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
