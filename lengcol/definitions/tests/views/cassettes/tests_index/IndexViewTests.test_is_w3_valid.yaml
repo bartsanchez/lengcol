@@ -3,8 +3,9 @@ interactions:
     body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
       >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
       \ shrink-to-fit=no\">\n    <meta name=\"description\" content=\"Diccionario\
-      \ que recoge la lengua hablada, no formal, que usualmente se habla en la calle.\"\
-      >\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
+      \ online gratuito con ejemplos sobre el lenguaje coloquial en espa\xF1ol hablado\
+      \ en la calle o en ambientes informales.\">\n\n    \n\n    <link rel=\"stylesheet\"\
+      \ href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
       \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
       \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
       \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
@@ -66,7 +67,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4424'
+      - '4462'
       Content-Type:
       - text/html
       User-Agent:
@@ -93,7 +94,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 09 Dec 2020 21:22:19 GMT
+      - Mon, 14 Dec 2020 17:29:31 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

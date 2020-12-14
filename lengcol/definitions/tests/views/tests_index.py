@@ -15,8 +15,8 @@ class IndexViewTests(test.TestCase,
                      mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Definiciones al azar'
     meta_description = (
-        'Diccionario que recoge la lengua hablada, no formal,'
-        ' que usualmente se habla en la calle.'
+        'Diccionario online gratuito con ejemplos sobre el lenguaje coloquial '
+        'en español hablado en la calle o en ambientes informales.'
     )
 
     def setUp(self):
