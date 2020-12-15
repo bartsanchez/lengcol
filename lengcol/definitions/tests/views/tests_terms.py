@@ -16,7 +16,8 @@ class TermDetailViewTests(test.TestCase,
                           mixins.MetaDescriptionValidatorMixin):
     h1_header = 'Definición de fake term'
     meta_description = (
-        'Definiciones de fake term para el proyecto Lenguaje Coloquial.'
+        'Significados y ejemplos en español de la palabra o expresión '
+        'coloquial fake term.'
     )
 
     def setUp(self):
