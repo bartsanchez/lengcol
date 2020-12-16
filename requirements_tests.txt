@@ -9,29 +9,30 @@ asgiref==3.3.1            # via -r requirements.txt, django
 attrs==20.3.0             # via pytest, pytest-recording
 backcall==0.2.0           # via ipython
 billiard==3.6.3.0         # via -r requirements.txt, celery
-celery==5.0.2             # via -r requirements.txt
-certifi==2020.11.8        # via -r requirements.txt, requests
-chardet==3.0.4            # via -r requirements.txt, requests
+celery==5.0.5             # via -r requirements.txt
+certifi==2020.12.5        # via -r requirements.txt, requests
+chardet==4.0.0            # via -r requirements.txt, requests
 click-didyoumean==0.0.3   # via -r requirements.txt, celery
+click-plugins==1.1.1      # via -r requirements.txt, celery
 click-repl==0.1.6         # via -r requirements.txt, celery
-click==7.1.2              # via -r requirements.txt, celery, click-didyoumean, click-repl
+click==7.1.2              # via -r requirements.txt, celery, click-didyoumean, click-plugins, click-repl
 codecov==2.1.10           # via -r requirements_tests.in
 coverage==5.3             # via codecov, pytest-cov
 cssselect==1.1.0          # via splinter
 decorator==4.4.2          # via ipython
 dj-database-url==0.5.0    # via -r requirements.txt
-django-crispy-forms==1.9.2  # via -r requirements.txt
-django-extensions==3.0.9  # via -r requirements.txt
+django-crispy-forms==1.10.0  # via -r requirements.txt
+django-extensions==3.1.0  # via -r requirements.txt
 django-extra-views==0.13.0  # via -r requirements.txt
 django-prometheus==2.1.0  # via -r requirements.txt
 django-recaptcha3==0.4.0  # via -r requirements.txt
-django==3.1.3             # via -r requirements.txt, django-extra-views, splinter
+django==3.1.4             # via -r requirements.txt, django-extra-views, splinter
 factory-boy==3.1.0        # via -r requirements_tests.in
-faker==5.0.1              # via factory-boy
+faker==5.0.2              # via factory-boy
 freezegun==1.0.0          # via -r requirements_tests.in
 gunicorn==20.0.4          # via -r requirements.txt
 idna==2.10                # via -r requirements.txt, requests, yarl
-importlib-metadata==2.0.0  # via -r requirements.txt, kombu, pluggy, pytest
+importlib-metadata==3.3.0  # via -r requirements.txt, kombu, pluggy, pytest
 iniconfig==1.1.1          # via pytest
 ipdb==0.13.4              # via -r requirements_tests.in
 ipython-genutils==0.2.0   # via traitlets
@@ -45,7 +46,7 @@ parso==0.7.1              # via jedi
 pexpect==4.8.0            # via ipython
 pickleshare==0.7.5        # via ipython
 pluggy==0.13.1            # via pytest
-prometheus-client==0.8.0  # via -r requirements.txt, django-prometheus
+prometheus-client==0.9.0  # via -r requirements.txt, django-prometheus
 prompt-toolkit==3.0.8     # via -r requirements.txt, click-repl, ipython
 psycopg2-binary==2.8.6    # via -r requirements.txt
 ptyprocess==0.6.0         # via pexpect
@@ -55,12 +56,12 @@ pyparsing==2.4.7          # via packaging
 pytest-cov==2.10.1        # via -r requirements_tests.in
 pytest-django==4.1.0      # via -r requirements_tests.in
 pytest-recording==0.11.0  # via -r requirements_tests.in
-pytest==6.2.0             # via pytest-cov, pytest-django, pytest-recording
+pytest==6.2.1             # via pytest-cov, pytest-django, pytest-recording
 python-dateutil==2.8.1    # via faker, freezegun
 pytz==2020.4              # via -r requirements.txt, celery, django
 pyyaml==5.3.1             # via vcrpy
 redis==3.5.3              # via -r requirements.txt
-requests==2.24.0          # via -r requirements.txt, -r requirements_tests.in, codecov, django-recaptcha3
+requests==2.25.1          # via -r requirements.txt, -r requirements_tests.in, codecov, django-recaptcha3
 selenium==3.141.0         # via splinter
 six==1.15.0               # via -r requirements.txt, click-repl, django-extra-views, python-dateutil, splinter, vcrpy
 splinter[django]==0.14.0  # via -r requirements_tests.in
@@ -68,8 +69,8 @@ sqlparse==0.4.1           # via -r requirements.txt, django
 text-unidecode==1.3       # via faker
 toml==0.10.2              # via pytest
 traitlets==5.0.5          # via ipython
-typing-extensions==3.7.4.3  # via yarl
-urllib3==1.25.11          # via -r requirements.txt, requests, selenium
+typing-extensions==3.7.4.3  # via -r requirements.txt, importlib-metadata, yarl
+urllib3==1.26.2           # via -r requirements.txt, requests, selenium
 vcrpy==4.1.1              # via pytest-recording
 vine==5.0.0               # via -r requirements.txt, amqp, celery
 wcwidth==0.2.5            # via -r requirements.txt, prompt-toolkit
