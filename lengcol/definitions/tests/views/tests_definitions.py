@@ -11,6 +11,7 @@ class DefinitionCreateViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
                                 mixins.HTMLValidatorMixin,
                                 mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Insertar definición'
     meta_description = (
         'Añadir nueva definición para el proyecto Lenguaje Coloquial.'
@@ -222,6 +223,7 @@ class DefinitionDetailViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
                                 mixins.HTMLValidatorMixin,
                                 mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Definición de fake term'
     meta_description = (
         'fake term se define en español como fake definition.'
@@ -338,6 +340,7 @@ class DefinitionUpdateViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
                                 mixins.HTMLValidatorMixin,
                                 mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Editar definición'
     meta_description = (
         'Página para modificar la definición term fake para el proyecto '
@@ -664,6 +667,7 @@ class DefinitionDisableViewTests(test.TestCase,
                                  mixins.W3ValidatorMixin,
                                  mixins.HTMLValidatorMixin,
                                  mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Eliminar definición'
     meta_description = (
         'Página de confirmación para eliminar la definición term fake para el '

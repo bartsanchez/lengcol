@@ -14,6 +14,7 @@ class TermDetailViewTests(test.TestCase,
                           mixins.W3ValidatorMixin,
                           mixins.HTMLValidatorMixin,
                           mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Definiciones de fake term'
     h1_header = 'Definición de fake term'
     meta_description = (
         'Significados y ejemplos en español de la palabra o expresión '
@@ -80,6 +81,7 @@ class TermSearchViewTests(test.TestCase,
                           mixins.W3ValidatorMixin,
                           mixins.HTMLValidatorMixin,
                           mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Resultados de la búsqueda'
     meta_description = (
         'Resultados de una búsqueda de definición para el '

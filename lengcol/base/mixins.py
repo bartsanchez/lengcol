@@ -28,6 +28,22 @@ class W3ValidatorMixin:
 
 
 class HTMLValidatorMixin:
+    def test_has_correct_page_title(self):
+        if hasattr(self, 'user'):
+            self.client.login(username=self.user, password='fake_password')
+
+        html_content = self.client.get(self.url).content
+
+        page_title_re = re.compile(b'<title>(.*)</title>')
+
+        result = re.findall(page_title_re, html_content)
+
+        self.assertEqual(len(result), 1)
+
+        page_title = result[0].decode()
+
+        self.assertEqual(page_title, self.page_title)
+
     def test_has_correct_h1_header(self):
         if hasattr(self, 'user'):
             self.client.login(username=self.user, password='fake_password')

@@ -13,6 +13,7 @@ class IndexViewTests(test.TestCase,
                      mixins.W3ValidatorMixin,
                      mixins.HTMLValidatorMixin,
                      mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Definiciones al azar'
     meta_description = (
         'Diccionario online gratuito con ejemplos sobre el lenguaje coloquial '
