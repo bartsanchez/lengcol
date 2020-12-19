@@ -14,7 +14,7 @@ interactions:
       \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
       \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
       text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
-      \ coloquial | Diccionario en espa\xF1ol</title>\n  </head>\n  <body>\n\n   \
+      \ Coloquial | Definiciones de fake term</title>\n  </head>\n  <body>\n\n   \
       \ <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n      <a class=\"\
       navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n      <button class=\"navbar-toggler\"\
       \ type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\" aria-controls=\"\
@@ -67,7 +67,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4472'
+      - '4474'
       Content-Type:
       - text/html
       User-Agent:
@@ -94,7 +94,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 15 Dec 2020 21:38:57 GMT
+      - Sat, 19 Dec 2020 19:17:03 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

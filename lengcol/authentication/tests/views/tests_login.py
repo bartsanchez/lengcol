@@ -11,6 +11,7 @@ class LoginViewTests(test.TestCase,
                      mixins.W3ValidatorMixin,
                      mixins.HTMLValidatorMixin,
                      mixins.MetaDescriptionValidatorMixin):
+    page_title = 'Lenguaje Coloquial | Diccionario en español'
     h1_header = 'Identificación'
     meta_description = (
         'Página de autenticación de usuarios para el proyecto Lenguaje '
