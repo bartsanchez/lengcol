@@ -223,7 +223,9 @@ class DefinitionDetailViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
                                 mixins.HTMLValidatorMixin,
                                 mixins.MetaDescriptionValidatorMixin):
-    page_title = 'Lenguaje Coloquial | Diccionario en español'
+    page_title = (
+        'Lenguaje Coloquial | Definiciones de fake term por fake_username'
+    )
     h1_header = 'Definición de fake term'
     meta_description = (
         'fake term se define en español como fake definition.'
@@ -340,7 +342,9 @@ class DefinitionUpdateViewTests(test.TestCase,
                                 mixins.W3ValidatorMixin,
                                 mixins.HTMLValidatorMixin,
                                 mixins.MetaDescriptionValidatorMixin):
-    page_title = 'Lenguaje Coloquial | Diccionario en español'
+    page_title = (
+        'Lenguaje Coloquial | Definiciones de term fake por fake_username'
+    )
     h1_header = 'Editar definición'
     meta_description = (
         'Página para modificar la definición term fake para el proyecto '
