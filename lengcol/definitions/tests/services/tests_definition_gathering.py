@@ -9,6 +9,7 @@ class DefinitionGatherinTests(test.TestCase):
         self.fake_def_1 = factories.DefinitionFactory(value='l')
         self.fake_def_2 = factories.DefinitionFactory(value='o')
         self.fake_def_3 = factories.DefinitionFactory(value='e')
+        self.fake_def_4 = factories.DefinitionFactory(value='d', active=False)
         self.objects = [self.fake_def_1, self.fake_def_2, self.fake_def_3]
 
     def test_get_definitions(self):

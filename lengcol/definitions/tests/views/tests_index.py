@@ -124,6 +124,20 @@ class IndexViewTests(test.TestCase,
             html=True
         )
 
+    def test_inactive_terms_does_not_appear(self):
+        term = factories.TermFactory(value='fake term')
+
+        response = self.client.get(self.url)
+
+        self.assertContains(response, 'fake term')
+
+        term.active = False
+        term.save()
+
+        response = self.client.get(self.url)
+
+        self.assertNotContains(response, 'fake term')
+
     def test_inactive_definitions_does_not_appear(self):
         definition = factories.DefinitionFactory(value='fake definition')
 

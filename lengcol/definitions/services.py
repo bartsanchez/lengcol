@@ -12,7 +12,7 @@ class ObjectGathering:
         if order_by:
             objects = objects.order_by(order_by)
 
-        return objects.all()[:items]
+        return objects.filter(active=True)[:items]
 
     @classmethod
     def _get_last_objects(cls, items=5):
