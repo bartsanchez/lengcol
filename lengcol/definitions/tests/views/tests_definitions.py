@@ -1,5 +1,8 @@
+from unittest import mock
+
 import freezegun
 from django import test
+from django.core import exceptions
 from django.urls import reverse
 
 from authentication import factories as auth_factories
@@ -216,6 +219,79 @@ class DefinitionCreateViewTests(test.TestCase,
         self.assertEqual(response.status_code, 200)
 
         self.assertContains(response, 'Autor: Anónimo')
+
+    @mock.patch('snowpenguin.django.recaptcha3.fields.ReCaptchaField.clean')
+    def test_recaptcha_failed(self, recaptcha_clean_mock):
+        def _validation_error_side_effect(values):
+            raise exceptions.ValidationError(
+                'Connection to reCaptcha server failed',
+                code='connection_failed'
+            )
+        recaptcha_clean_mock.side_effect = _validation_error_side_effect
+
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        form_data = {'term': 'fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+
+        recaptcha_clean_mock.assert_called_once()
+
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Term.all_objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        self.assertEqual(
+            models.Term.all_objects.first().value,
+            'fake term',
+        )
+
+    @mock.patch('snowpenguin.django.recaptcha3.fields.ReCaptchaField.clean')
+    def test_recaptcha_failed__already_existing_term(self,
+                                                     recaptcha_clean_mock):
+        def _validation_error_side_effect(values):
+            raise exceptions.ValidationError(
+                'Connection to reCaptcha server failed',
+                code='connection_failed'
+            )
+        recaptcha_clean_mock.side_effect = _validation_error_side_effect
+
+        self.term = factories.TermFactory(value='fake term')
+        self.definition = factories.DefinitionFactory(
+            uuid='6b4a7a9f-3b8f-494b-8565-f960065802ba',
+            term=self.term,
+            value='fake definition 1',
+            user=self.user,
+        )
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        form_data = {'term': 'fake term', 'value': 'fake definition 2'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+
+        recaptcha_clean_mock.assert_called_once()
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Term.all_objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        self.assertEqual(
+            models.Term.all_objects.first().value,
+            'fake term',
+        )
+        self.assertEqual(
+            models.Definition.all_objects.first().value,
+            'fake definition 1',
+        )
 
 
 @freezegun.freeze_time('2020-01-01')
