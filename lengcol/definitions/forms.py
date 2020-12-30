@@ -40,6 +40,14 @@ class DefinitionForm(forms.ModelForm):
         model = models.Definition
         exclude = ('user', 'active')
 
+    def clean(self, *args, **kwargs):
+        super().clean()
+        if not self.is_valid() and 'captcha' in self.errors:
+            term = self.cleaned_data['term']
+            if term.definitions.count() == 0:
+                term.active = False
+                term.save()
+
 
 class ExampleForm(forms.ModelForm):
     value = forms.CharField(label='')

@@ -13,6 +13,9 @@ class Term(base_models.BaseModel):
     value = models.CharField(max_length=255, unique=True)
     slug = fields.AutoSlugField(populate_from=('value',))
 
+    objects = managers.ActiveManager()
+    all_objects = models.Manager()
+
     def __str__(self):
         return self.value
 
