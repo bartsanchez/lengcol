@@ -32,7 +32,6 @@ deploy:
 	/bin/bash ./deployment/deploy.sh
 
 tests:
-	pip install tox
 	tox
 
 integration_tests:
