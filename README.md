@@ -24,7 +24,7 @@ $ make stop
 
 ### Requirements
 
-[pip](https://pypi.org/project/pip/)
+[tox](https://tox.readthedocs.io/)
 
 ### Run tests
 
