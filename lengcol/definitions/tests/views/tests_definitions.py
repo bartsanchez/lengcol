@@ -136,6 +136,32 @@ class DefinitionCreateViewTests(test.TestCase,
             'fake definition',
         )
 
+    def test_add_new__existing_and_disabled_term(self):
+        factories.TermFactory(active=False, value='disabled fake term')
+
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Term.all_objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        term = models.Term.all_objects.first()
+
+        self.assertFalse(term.active)
+
+        form_data = {'term': 'disabled fake term', 'value': 'fake definition'}
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Term.all_objects.count(), 1)
+        self.assertEqual(models.Definition.objects.count(), 1)
+
+        term = models.Term.all_objects.first()
+
+        self.assertTrue(term.active)
+
     def test_missing_term(self):
         self.assertEqual(models.Term.objects.count(), 0)
         self.assertEqual(models.Definition.objects.count(), 0)

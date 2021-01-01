@@ -20,7 +20,11 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
         if value in self.empty_values:
             return None
 
-        obj, created = self.queryset.get_or_create(**{self.field: value})
+        model = self.queryset.model
+        obj, created = model.all_objects.update_or_create(
+            defaults={'active': True},
+            **{self.field: value}
+        )
 
         return obj
 
