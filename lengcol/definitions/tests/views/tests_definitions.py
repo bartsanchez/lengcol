@@ -187,11 +187,12 @@ class DefinitionCreateViewTests(test.TestCase,
 
         self.assertEqual(response.status_code, 200)
 
-        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Term.all_objects.count(), 1)
         self.assertEqual(models.Definition.objects.count(), 0)
 
         self.assertEqual(
-            models.Term.objects.first().value,
+            models.Term.all_objects.first().value,
             'fake term',
         )
 
@@ -264,6 +265,8 @@ class DefinitionCreateViewTests(test.TestCase,
         response = self.client.post(self.url, form_data, follow=True)
 
         self.assertEqual(response.status_code, 200)
+
+        self.assertContains(response, 'Google ReCaptcha has failed!')
 
         recaptcha_clean_mock.assert_called_once()
 
@@ -701,7 +704,6 @@ class DefinitionUpdateViewTests(test.TestCase,
         self.assertEqual(second_term.definitions.count(), 1)
         self.assertEqual(second_term.definitions.first(), self.definition)
 
-    # TODO: check weird behaviour
     def test_update_definition__missing_value(self):
         self.assertEqual(models.Term.objects.count(), 1)
         self.assertEqual(models.Definition.objects.count(), 1)
@@ -722,15 +724,21 @@ class DefinitionUpdateViewTests(test.TestCase,
 
         self.assertEqual(response.status_code, 200)
 
-        self.assertEqual(models.Term.objects.count(), 2)
+        self.assertEqual(models.Term.objects.count(), 1)
+        self.assertEqual(models.Term.all_objects.count(), 2)
         self.assertEqual(models.Definition.objects.count(), 1)
 
-        first_term = models.Term.objects.get(value='term fake')
-        second_term = models.Term.objects.get(value='updated term fake')
+        active_term = models.Term.objects.get(
+            active=True, value='term fake'
+        )
+        inactive_term = models.Term.all_objects.get(
+            active=False, value='updated term fake'
+        )
 
-        self.assertEqual(first_term.definitions.count(), 1)
-        self.assertEqual(first_term.definitions.first(), self.definition)
-        self.assertEqual(second_term.definitions.count(), 0)
+        self.assertEqual(active_term.definitions.count(), 1)
+        self.assertEqual(active_term.definitions.first(), self.definition)
+
+        self.assertEqual(inactive_term.definitions.count(), 0)
 
     def test_update_definition__change_term_multiple_defs(self):
         other_def = factories.DefinitionFactory(term=self.definition.term)
