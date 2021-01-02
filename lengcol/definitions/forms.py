@@ -1,4 +1,5 @@
 from django import forms
+from django.core import exceptions
 from extra_views import InlineFormSetFactory
 from snowpenguin.django.recaptcha3 import fields
 
@@ -44,13 +45,18 @@ class DefinitionForm(forms.ModelForm):
         model = models.Definition
         exclude = ('user', 'active')
 
-    def clean(self, *args, **kwargs):
+    def clean(self):
         super().clean()
-        if not self.is_valid() and 'captcha' in self.errors:
+        if not self.is_valid() and 'term' in self.cleaned_data:
             term = self.cleaned_data['term']
             if term.definitions.count() == 0:
                 term.active = False
                 term.save()
+                self.cleaned_data.pop('term')
+            if 'captcha' in self.errors:
+                raise exceptions.ValidationError(
+                    'Google ReCaptcha has failed!'
+                )
 
 
 class ExampleForm(forms.ModelForm):
