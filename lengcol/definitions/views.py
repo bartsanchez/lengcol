@@ -2,6 +2,7 @@ from django import http, shortcuts, urls
 from django.conf import settings
 from django.contrib.auth import mixins
 from django.contrib.postgres import search
+from django.db.models import functions
 from django.views import generic
 from extra_views import CreateWithInlinesView, UpdateWithInlinesView
 
@@ -92,6 +93,9 @@ class TermSearchView(generic.ListView):
                 query = models.Term.objects.filter(value__icontains=term)
             else:
                 query = models.Term.objects.annotate(
-                    similarity=search.TrigramSimilarity('value', term)
+                    similarity=functions.Greatest(
+                        search.TrigramSimilarity('value', term),
+                        search.TrigramSimilarity('definition__value', term),
+                    )
                 ).filter(similarity__gt=0.1).order_by('-similarity')
         return query
