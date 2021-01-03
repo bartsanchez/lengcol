@@ -30,7 +30,7 @@ def test_search_is_improved():
     first_definition = b"The secret messages are calling to me endlessly"
     r = insert_definition(
         definition=first_definition,
-        value=b"Electrick Light Orchestra",
+        value=b"Electric Light Orchestra",
     )
     assert r.status_code == 200
 
@@ -51,3 +51,12 @@ def test_search_is_improved():
     assert r.status_code == 200
     assert len(re.findall(first_definition, r.content)) == 1
     assert len(re.findall(second_definition, r.content)) == 2
+
+
+def test_search_includes_definition_value():
+    first_definition = b"The secret messages are calling to me endlessly"
+
+    r = requests.get("http://web/terms/search/?v=orkestra")
+    assert r.status_code == 200
+    # One appearing is in last_definitions, so we have to increment by 1
+    assert len(re.findall(first_definition, r.content)) == 2
