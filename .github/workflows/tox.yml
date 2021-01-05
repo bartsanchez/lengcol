@@ -28,8 +28,5 @@ jobs:
       - name: Run flake8
         run: tox -e flake8
 
-      - name: Run isort-seed-config
-        run: tox -e isort-seed-config
-
       - name: Run isort
         run: tox -e isort
