@@ -35,8 +35,8 @@ interactions:
       \ Usuario: An\xF3nimo\n            </a>\n            <div class=\"dropdown-menu\"\
       \ aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"\
       dropdown-item\" href=\"/login/\">Login</a>\n                <a class=\"dropdown-item\"\
-      \ href=\"/register/\">Register</a>\n              \n            </div>\n   \
-      \       </li>\n        </ul>\n      </div>\n    </nav>\n\n    <main class=\"\
+      \ href=\"/register/\">Crea tu cuenta</a>\n              \n            </div>\n\
+      \          </li>\n        </ul>\n      </div>\n    </nav>\n\n    <main class=\"\
       container\">\n      <article>\n      <h1>Resultados de la b\xFAsqueda</h1>\n\
       \      <div class=\"row\">\n        <div class=\"col-md-8\">\n          \n \
       \ \n    \n      <div class=\"card\">\n\n  <div class=\"card-body\">\n    <h5\
@@ -73,11 +73,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4858'
+      - '4864'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.24.0
+      - python-requests/2.25.1
       charset:
       - utf-8
     method: POST
@@ -100,7 +100,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 19 Dec 2020 19:17:04 GMT
+      - Tue, 12 Jan 2021 20:37:57 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
