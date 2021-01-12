@@ -35,11 +35,11 @@ interactions:
       false\">\n                Usuario: An\xF3nimo\n            </a>\n          \
       \  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n      \
       \        \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n\
-      \                <a class=\"dropdown-item\" href=\"/register/\">Register</a>\n\
+      \                <a class=\"dropdown-item\" href=\"/register/\">Crea tu cuenta</a>\n\
       \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
-      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Registro</h1>\n\
-      \      <div class=\"row\">\n        <div class=\"col-md-8\">\n          \n\n\
-      <form method=\"post\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
+      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Crea\
+      \ tu cuenta</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\"\
+      >\n          \n\n<form method=\"post\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\"\
       \ value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\" class=\"form-group\"\
       > <label for=\"id_username\" class=\" requiredField\">\n                Username<span\
       \ class=\"asteriskField\">*</span> </label> <div class=\"\"> <input type=\"\
@@ -74,11 +74,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4916'
+      - '4928'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.24.0
+      - python-requests/2.25.1
       charset:
       - utf-8
     method: POST
@@ -101,7 +101,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 19 Dec 2020 19:16:58 GMT
+      - Tue, 12 Jan 2021 20:37:55 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

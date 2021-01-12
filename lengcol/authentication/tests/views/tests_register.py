@@ -12,7 +12,7 @@ class RegisterViewTests(test.TestCase,
                         mixins.HTMLValidatorMixin,
                         mixins.MetaDescriptionValidatorMixin):
     page_title = 'Lenguaje Coloquial | Diccionario en español'
-    h1_header = 'Registro'
+    h1_header = 'Crea tu cuenta'
     meta_description = (
         'Página de registro de usuarios para el proyecto Lenguaje Coloquial.'
     )
