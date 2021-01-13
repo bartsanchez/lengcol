@@ -6,16 +6,16 @@ from snowpenguin.django.recaptcha3 import fields
 
 class CustomUserCreationForm(auth_forms.UserCreationForm):
     password1 = forms.CharField(
-        label='Password',
+        label='Contraseña',
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
     )
     password2 = forms.CharField(
-        label='Password confirmation',
+        label='Confirma tu contraseña',
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
     )
-    email = forms.EmailField()
+    email = forms.EmailField(label='Correo electrónico')
 
     captcha = fields.ReCaptchaField()
 
@@ -23,6 +23,10 @@ class CustomUserCreationForm(auth_forms.UserCreationForm):
         model = auth.get_user_model()
         fields = ('username', 'password1', 'password2', 'email')
         field_classes = {'username': auth_forms.UsernameField}
+        labels = {
+            'username': 'Usuario',
+            'email': 'Correo electrónico',
+        }
 
 
 class CustomAuthenticationForm(auth_forms.AuthenticationForm):
