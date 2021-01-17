@@ -25,7 +25,6 @@ class CustomUserCreationForm(auth_forms.UserCreationForm):
         field_classes = {'username': auth_forms.UsernameField}
         labels = {
             'username': 'Usuario',
-            'email': 'Correo electrónico',
         }
 
 
