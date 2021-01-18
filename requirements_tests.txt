@@ -80,7 +80,7 @@ django==3.1.5
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==5.3.0
+faker==5.6.1
     # via factory-boy
 freezegun==1.0.0
     # via -r requirements_tests.in
@@ -91,7 +91,7 @@ idna==2.10
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==3.3.0
+importlib-metadata==3.4.0
     # via
     #   -r requirements.txt
     #   kombu
@@ -129,7 +129,7 @@ prometheus-client==0.9.0
     # via
     #   -r requirements.txt
     #   django-prometheus
-prompt-toolkit==3.0.9
+prompt-toolkit==3.0.10
     # via
     #   -r requirements.txt
     #   click-repl
@@ -140,11 +140,11 @@ ptyprocess==0.7.0
     # via pexpect
 py==1.10.0
     # via pytest
-pygments==2.7.3
+pygments==2.7.4
     # via ipython
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.10.1
+pytest-cov==2.11.0
     # via -r requirements_tests.in
 pytest-django==4.1.0
     # via -r requirements_tests.in
