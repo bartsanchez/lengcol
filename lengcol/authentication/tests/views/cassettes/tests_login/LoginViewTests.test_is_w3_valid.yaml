@@ -41,20 +41,20 @@ interactions:
       \    \n\n<form method=\"post\" action=\"/login/\">\n<input type=\"hidden\" name=\"\
       csrfmiddlewaretoken\" value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\"\
       \ class=\"form-group\"> <label for=\"id_username\" class=\" requiredField\"\
-      >\n                Username<span class=\"asteriskField\">*</span> </label> <div\
+      >\n                Usuario<span class=\"asteriskField\">*</span> </label> <div\
       \ class=\"\"> <input type=\"text\" name=\"username\" autofocus autocapitalize=\"\
       none\" autocomplete=\"username\" maxlength=\"150\" class=\"textinput textInput\
       \ form-control\" required id=\"id_username\"> </div> </div> <div id=\"div_id_password\"\
       \ class=\"form-group\"> <label for=\"id_password\" class=\" requiredField\"\
-      >\n                Password<span class=\"asteriskField\">*</span> </label> <div\
-      \ class=\"\"> <input type=\"password\" name=\"password\" autocomplete=\"current-password\"\
-      \ class=\"textinput textInput form-control\" required id=\"id_password\"> </div>\
-      \ </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"\
-      g-recaptcha-response\">\n\n<input id=\"login-form\" type=\"submit\" value=\"\
-      login\">\n<input type=\"hidden\" name=\"next\" value=\"\">\n</form>\n\n\n  \
-      \      </div>\n        <aside class=\"col-md-4\">\n          \n          <div\
-      \ class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n\
-      \            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
+      >\n                Contrase\xF1a<span class=\"asteriskField\">*</span> </label>\
+      \ <div class=\"\"> <input type=\"password\" name=\"password\" autocomplete=\"\
+      current-password\" class=\"textinput textInput form-control\" required id=\"\
+      id_password\"> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"\
+      \ name=\"g-recaptcha-response\">\n\n<input id=\"login-form\" type=\"submit\"\
+      \ value=\"login\">\n<input type=\"hidden\" name=\"next\" value=\"\">\n</form>\n\
+      \n\n        </div>\n        <aside class=\"col-md-4\">\n          \n       \
+      \   <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\"\
+      >Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
       >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
       \    </div>\n      </article>\n    </main>\n\n  </body>\n</html>\n"
     headers:
@@ -65,11 +65,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4300'
+      - '4302'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.24.0
+      - python-requests/2.25.1
       charset:
       - utf-8
     method: POST
@@ -92,7 +92,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 19 Dec 2020 19:16:57 GMT
+      - Tue, 19 Jan 2021 20:45:42 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
