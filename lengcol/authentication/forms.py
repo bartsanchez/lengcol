@@ -29,4 +29,13 @@ class CustomUserCreationForm(auth_forms.UserCreationForm):
 
 
 class CustomAuthenticationForm(auth_forms.AuthenticationForm):
+    username = auth_forms.UsernameField(
+        label='Usuario',
+        widget=forms.TextInput(attrs={'autofocus': True}),
+    )
+    password = forms.CharField(
+        label="Contraseña",
+        strip=False,
+        widget=forms.PasswordInput(attrs={'autocomplete': 'current-password'}),
+    )
     captcha = fields.ReCaptchaField()
