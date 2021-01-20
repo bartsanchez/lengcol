@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-ansible-base==2.10.4
+ansible-base==2.10.5
     # via ansible
 ansible==2.10.5
     # via -r requirements.in
@@ -22,7 +22,7 @@ pycparser==2.20
     # via cffi
 pyparsing==2.4.7
     # via packaging
-pyyaml==5.3.1
+pyyaml==5.4
     # via ansible-base
 six==1.15.0
     # via cryptography
