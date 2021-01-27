@@ -6,7 +6,7 @@
 #
 ansible-base==2.10.5
     # via ansible
-ansible==2.10.5
+ansible==2.10.6
     # via -r requirements.in
 cffi==1.14.4
     # via cryptography
@@ -22,7 +22,7 @@ pycparser==2.20
     # via cffi
 pyparsing==2.4.7
     # via packaging
-pyyaml==5.4
+pyyaml==5.4.1
     # via ansible-base
 six==1.15.0
     # via cryptography
