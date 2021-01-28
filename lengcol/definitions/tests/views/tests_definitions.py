@@ -4,6 +4,7 @@ import freezegun
 from django import test
 from django.core import exceptions
 from django.urls import reverse
+from tagging import models as tagging_models
 
 from authentication import factories as auth_factories
 from base import mixins
@@ -112,6 +113,37 @@ class DefinitionCreateViewTests(test.TestCase,
         example = models.Example.objects.first()
         self.assertEqual(example.value, 'fake example')
         self.assertEqual(example.definition, definition)
+
+    def test_add_new__with_tags(self):
+        self.assertEqual(models.Term.objects.count(), 0)
+        self.assertEqual(models.Definition.objects.count(), 0)
+
+        self._login()
+
+        tags = ['this is a tag', 'tag', 'anothertag']
+        tags_str = 'this is a tag,   tag, anothertag   '
+
+        form_data = {
+            'term': 'fake term', 'value': 'fake definition', 'tags': tags_str
+        }
+        form_data.update(self.management_data)
+
+        response = self.client.post(self.url, form_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(tagging_models.Tag.objects.count(), 3)
+        self.assertEqual(tagging_models.TaggedItem.objects.count(), 3)
+
+        definition = models.Definition.objects.first()
+        for tag in tags:
+            tag_instance = tagging_models.Tag.objects.get(name=tag)
+            tagged_item = tagging_models.TaggedItem.objects.get(
+                tag=tag_instance, object_id=definition.pk
+            )
+            content_type = tagged_item.content_type
+            self.assertEqual(content_type.name, 'definition')
+            self.assertEqual(content_type.model, 'definition')
 
     def test_add_new__not_logged_user(self):
         self.assertEqual(models.Term.objects.count(), 0)

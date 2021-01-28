@@ -4,6 +4,7 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django_extensions.db import fields
+from tagging import fields as tags_fields
 
 from base import managers
 from base import models as base_models
@@ -35,6 +36,7 @@ class Definition(base_models.BaseModel):
                              blank=True,
                              null=True,
                              on_delete=models.PROTECT)
+    tags = tags_fields.TagField()
 
     objects = managers.ActiveManager()
     all_objects = models.Manager()

@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=./requirements.txt requirements.in
 #
-amqp==5.0.3
+amqp==5.0.5
     # via kombu
 asgiref==3.3.1
     # via django
@@ -39,6 +39,8 @@ django-extra-views==0.13.0
 django-prometheus==2.1.0
     # via -r requirements.in
 django-recaptcha3==0.4.0
+    # via -r requirements.in
+django-tagging==0.5.0
     # via -r requirements.in
 django==3.1.5
     # via

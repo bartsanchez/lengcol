@@ -1,5 +1,6 @@
 Django
 django-extensions
+django-tagging
 dj-database-url
 psycopg2-binary
 whitenoise
