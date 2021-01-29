@@ -1,61 +1,59 @@
 interactions:
 - request:
-    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\"\
-      >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,\
-      \ shrink-to-fit=no\">\n    <meta name=\"description\" content=\"fake term se\
-      \ define en espa\xF1ol como fake definition.\">\n\n    \n\n    <link rel=\"\
-      stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\
-      \ integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"\
-      \ crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\
-      \ integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\
-      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\
-      \ integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\
-      \ crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\
-      \ integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\
-      \ crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"\
-      text/css\" href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje\
-      \ Coloquial | Definiciones de fake term por fake_username</title>\n  </head>\n\
-      \  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\"\
-      >\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n     \
-      \ <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"\
-      \ data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"\
-      false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"\
-      ></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"\
-      navbarToggler\">\n        <ul class=\"navbar-nav m-auto\">\n          <li class=\"\
-      nav-item mx-2\">\n            <form class=\"form-inline\" action=\"/terms/search/\"\
-      \ method=\"get\">\n              <input name=\"v\" class=\"form-control\" type=\"\
-      search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n              <button\
-      \ id=\"form-button\" class=\"btn btn-outline-warning ml-1\" type=\"submit\"\
-      >Buscar</button>\n            </form>\n          </li>\n          <li class=\"\
-      nav-item\">\n            <a class=\"nav-link\" href=\"/definitions/add/\">A\xF1\
-      adir definici\xF3n</a>\n          </li>\n        </ul>\n        <ul class=\"\
-      navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n        \
-      \    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"\
-      \ role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"\
-      false\">\n                Usuario: fake_username\n            </a>\n       \
-      \     <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n   \
-      \           \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n\
-      \              \n            </div>\n          </li>\n        </ul>\n      </div>\n\
-      \    </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Definici\xF3\
-      n de fake term</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\"\
-      >\n          \n  <div class=\"card\">\n\n  <div class=\"card-body\">\n    <h5\
-      \ class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake term</a>\n\
-      \    </h5>\n\n    <p>\n      <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\"\
-      >&#128279;</a>\n      fake definition\n    </p>\n\n    \n  </div>\n\n  <div\
-      \ class=\"card-footer text-right text-muted\">\n    \n      <div class=\"float-left\"\
-      >\n          <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/change\"\
-      >&#9998; Editar</a></div>\n          <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/disable\"\
-      >&#10007; Eliminar</a></div>\n      </div>\n    \n    <div>Fecha de creaci\xF3\
-      n 01-01-2020</div>\n    <div>Autor: fake_username</div>\n  </div>\n</div>\n\n\
-      \n        </div>\n        <aside class=\"col-md-4\">\n          \n         \
-      \ <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDA\
-      ltimas definiciones</h4>\n            <ul>\n              \n              <li><a\
-      \ class=\"last-terms\" href=\"/terms/fake-term/\">fake term</a></li>\n     \
-      \         \n            </ul>\n          </div>\n          \n          <div\
-      \ class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n\
-      \            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\"\
-      >info@lenguajecoloquial.com</a></p>\n          </div>\n        </aside>\n  \
-      \    </div>\n      </article>\n    </main>\n\n  </body>\n</html>\n"
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\">\n
+      \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n
+      \   <meta name=\"description\" content=\"fake term se define en espa\xF1ol como
+      fake definition.\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"
+      integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\"
+      crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
+      integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
+      crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"
+      integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"
+      crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"
+      integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"
+      crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\"
+      href=\"/static/definitions/style.css\">\n    <link rel=\"stylesheet\" type=\"text/css\"
+      href=\"/static/definitions/tagsinput.css\">\n    <script src=\"/static/definitions/tagsinput.js\"></script>\n\n
+      \   \n\n    <title>Lenguaje Coloquial | Definiciones de fake term por fake_username</title>\n
+      \ </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark
+      bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n
+      \     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"
+      data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"false\"
+      aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
+      \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
+      \       <ul class=\"navbar-nav m-auto\">\n          <li class=\"nav-item mx-2\">\n
+      \           <form class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n
+      \             <input name=\"v\" class=\"form-control\" type=\"search\" placeholder=\"Buscar\"
+      aria-label=\"Buscar\">\n              <button id=\"form-button\" class=\"btn
+      btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n            </form>\n
+      \         </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\"
+      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n          </li>\n        </ul>\n
+      \       <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n
+      \           <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
+      role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
+      \               Usuario: fake_username\n            </a>\n            <div class=\"dropdown-menu\"
+      aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
+      href=\"/logout/\">Logout</a>\n              \n            </div>\n          </li>\n
+      \       </ul>\n      </div>\n    </nav>\n\n    <main class=\"container\">\n
+      \     <article>\n      <h1>Definici\xF3n de fake term</h1>\n      <div class=\"row\">\n
+      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n  <div
+      class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake
+      term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">&#128279;</a>\n
+      \     fake definition\n    </p>\n\n    \n  </div>\n\n  <div class=\"card-footer
+      text-right text-muted\">\n    \n      <div class=\"float-left\">\n          <div><a
+      href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/change\">&#9998; Editar</a></div>\n
+      \         <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/disable\">&#10007;
+      Eliminar</a></div>\n      </div>\n    \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n
+      \   <div>Autor: fake_username</div>\n  </div>\n</div>\n\n\n        </div>\n
+      \       <aside class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3
+      bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n
+      \           <ul>\n              \n              <li><a class=\"last-terms\"
+      href=\"/terms/fake-term/\">fake term</a></li>\n              \n            </ul>\n
+      \         </div>\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
+      \           <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a
+      href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
+      \ </body>\n</html>\n"
     headers:
       Accept:
       - '*/*'
@@ -64,11 +62,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4271'
+      - '4417'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.24.0
+      - python-requests/2.25.1
       charset:
       - utf-8
     method: POST
@@ -91,7 +89,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 20 Dec 2020 17:44:54 GMT
+      - Fri, 29 Jan 2021 19:58:41 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

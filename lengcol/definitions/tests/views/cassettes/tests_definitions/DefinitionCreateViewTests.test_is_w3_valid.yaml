@@ -12,12 +12,14 @@ interactions:
       crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"
       integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"
       crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\"
-      href=\"/static/definitions/style.css\">\n\n    \n  \n  \n\n\n    <title>Lenguaje
-      Coloquial | Diccionario en espa\xF1ol</title>\n  </head>\n  <body>\n\n    <nav
-      class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n      <a class=\"navbar-brand\"
-      href=\"/\">Lenguaje coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\"
-      data-toggle=\"collapse\" data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\"
-      aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
+      href=\"/static/definitions/style.css\">\n    <link rel=\"stylesheet\" type=\"text/css\"
+      href=\"/static/definitions/tagsinput.css\">\n    <script src=\"/static/definitions/tagsinput.js\"></script>\n\n
+      \   \n  \n  \n\n\n    <title>Lenguaje Coloquial | Diccionario en espa\xF1ol</title>\n
+      \ </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark
+      bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n
+      \     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"
+      data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"false\"
+      aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
       \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
       \       <ul class=\"navbar-nav m-auto\">\n          <li class=\"nav-item mx-2\">\n
       \           <form class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n
@@ -45,8 +47,8 @@ interactions:
       class=\" requiredField\">\n                Definici\xF3n<span class=\"asteriskField\">*</span>
       </label> <div class=\"\"> <textarea name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea
       form-control\" required id=\"id_value\">\n</textarea> </div> </div> <div id=\"div_id_tags\"
-      class=\"form-group\"> <label for=\"id_tags\" class=\"\">\n                Tags\n
-      \           </label> <div class=\"\"> <input type=\"text\" name=\"tags\" maxlength=\"255\"
+      class=\"form-group\"> <label for=\"id_tags\" class=\"\">\n                Etiquetas\n
+      \           </label> <div class=\"\"> <input type=\"text\" name=\"tags\" data-role=\"tagsinput\"
       class=\"textinput textInput form-control\" id=\"id_tags\"> </div> </div> <input
       type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n
       \       <p>Ejemplos</p>\n        \n          \n    \n\n<input type=\"hidden\"
@@ -87,7 +89,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6484'
+      - '6641'
       Content-Type:
       - text/html
       User-Agent:
@@ -114,7 +116,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Thu, 28 Jan 2021 22:39:38 GMT
+      - Fri, 29 Jan 2021 19:58:40 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
