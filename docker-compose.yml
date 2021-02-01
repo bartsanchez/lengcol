@@ -79,7 +79,7 @@ services:
             - prometheus
 
     blackbox_exporter:
-        image: prom/blackbox-exporter
+        image: prom/blackbox-exporter:v0.18.0
         links:
           - lengcol
 
