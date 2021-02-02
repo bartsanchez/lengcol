@@ -63,7 +63,7 @@ decorator==4.4.2
     # via ipython
 dj-database-url==0.5.0
     # via -r requirements.txt
-django-crispy-forms==1.10.0
+django-crispy-forms==1.11.0
     # via -r requirements.txt
 django-extensions==3.1.0
     # via -r requirements.txt
@@ -75,7 +75,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-django==3.1.5
+django==3.1.6
     # via
     #   -r requirements.txt
     #   django-extra-views
@@ -105,7 +105,7 @@ ipdb==0.13.4
     # via -r requirements_tests.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.19.0
+ipython==7.20.0
     # via ipdb
 jedi==0.18.0
     # via ipython
@@ -117,7 +117,7 @@ lxml==4.6.2
     # via splinter
 multidict==5.1.0
     # via yarl
-packaging==20.8
+packaging==20.9
     # via pytest
 parso==0.8.1
     # via jedi
@@ -161,7 +161,7 @@ python-dateutil==2.8.1
     # via
     #   faker
     #   freezegun
-pytz==2020.5
+pytz==2021.1
     # via
     #   -r requirements.txt
     #   celery
