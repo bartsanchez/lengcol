@@ -30,7 +30,7 @@ click==7.1.2
     #   click-repl
 dj-database-url==0.5.0
     # via -r requirements.in
-django-crispy-forms==1.10.0
+django-crispy-forms==1.11.0
     # via -r requirements.in
 django-extensions==3.1.0
     # via -r requirements.in
@@ -42,7 +42,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.in
 django-tagging==0.5.0
     # via -r requirements.in
-django==3.1.5
+django==3.1.6
     # via
     #   -r requirements.in
     #   django-extra-views
@@ -60,7 +60,7 @@ prompt-toolkit==3.0.14
     # via click-repl
 psycopg2-binary==2.8.6
     # via -r requirements.in
-pytz==2020.5
+pytz==2021.1
     # via
     #   celery
     #   django
