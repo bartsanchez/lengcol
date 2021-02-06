@@ -114,6 +114,18 @@ class IndexViewTests(test.TestCase,
 
         self.assertContains(response, 'fake example')
 
+    def test_has_tags(self):
+        factories.DefinitionFactory(
+            value='fake definition', tags='first_tag, second_tag'
+        )
+
+        response = self.client.get(self.url)
+
+        tag_html = '<a href="#" class="badge badge-pill badge-info">{}</a>'
+
+        for tag in ('first_tag', 'second_tag'):
+            self.assertContains(response, tag_html.format(tag))
+
     def test_has_email_contact_link(self):
         response = self.client.get(self.url)
 

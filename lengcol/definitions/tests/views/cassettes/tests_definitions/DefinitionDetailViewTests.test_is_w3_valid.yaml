@@ -39,7 +39,9 @@ interactions:
       \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n  <div
       class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake
       term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">&#128279;</a>\n
-      \     fake definition\n    </p>\n\n    \n  </div>\n\n  <div class=\"card-footer
+      \     fake definition\n    </p>\n\n    \n\n    \n      <a href=\"#\" class=\"badge
+      badge-pill badge-info\">another fake tag 2</a>\n    \n      <a href=\"#\" class=\"badge
+      badge-pill badge-info\">fake tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer
       text-right text-muted\">\n    \n      <div class=\"float-left\">\n          <div><a
       href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/change\">&#9998; Editar</a></div>\n
       \         <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/disable\">&#10007;
@@ -62,7 +64,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4417'
+      - '4580'
       Content-Type:
       - text/html
       User-Agent:
@@ -89,7 +91,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 29 Jan 2021 19:58:41 GMT
+      - Sat, 06 Feb 2021 20:37:31 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

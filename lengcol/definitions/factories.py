@@ -20,6 +20,7 @@ class DefinitionFactory(django.DjangoModelFactory):
     uuid = factory.Faker('uuid4')
     term = factory.SubFactory(TermFactory)
     value = 'definition fake'
+    tags = 'fake tag 1, another fake tag 2'
 
 
 class ExampleFactory(django.DjangoModelFactory):
