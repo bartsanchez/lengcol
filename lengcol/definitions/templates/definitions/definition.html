@@ -17,6 +17,11 @@
       {% endfor %}
     </ul>
     {% endif %}
+
+    {% for tag in definition.assigned_tags %}
+      <a href="#" class="badge badge-pill badge-info">{{ tag }}</a>
+    {% endfor %}
+
   </div>
 
   <div class="card-footer text-right text-muted">

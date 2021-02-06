@@ -5,6 +5,7 @@ from django.db import models
 from django.urls import reverse
 from django_extensions.db import fields
 from tagging import fields as tags_fields
+from tagging import registry
 
 from base import managers
 from base import models as base_models
@@ -65,3 +66,8 @@ class Example(base_models.BaseModel):
 
     def __str__(self):
         return self.value
+
+
+registry.register(
+    Definition, tag_descriptor_attr='assigned_tags'
+)
