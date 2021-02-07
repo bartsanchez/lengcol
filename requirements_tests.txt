@@ -82,7 +82,7 @@ django==3.1.6
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==5.8.0
+faker==6.0.0
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
