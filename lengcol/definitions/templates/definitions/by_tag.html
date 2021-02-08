@@ -1,0 +1,12 @@
+{% extends "lengcol/base.html" %}
+
+{% block metadescription %}Definiciones que incluyen la etiqueta {{ tag_name}}.{% endblock %}
+
+{% block h1 %}Definiciones con la etiqueta {{ tag_name }}{% endblock %}
+
+{% block content %}
+{% for definition in definitions %}
+  {% include 'definitions/definition.html' with definition=definition %}
+{% endfor %}
+{% include 'lengcol/pagination.html' %}
+{% endblock %}

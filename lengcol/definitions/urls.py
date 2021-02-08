@@ -28,4 +28,8 @@ urlpatterns = [
     path('terms/<slug:slug>/',
          views.TermDetailView.as_view(),
          name='term-detail'),
+
+    path('tags/<str:tag_name>/definitions/',
+         views.DefinitionsByTagView.as_view(),
+         name='definitions-by-tag'),
 ]
