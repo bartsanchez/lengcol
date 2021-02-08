@@ -5,6 +5,7 @@ from django.contrib.postgres import search
 from django.db.models import functions
 from django.views import generic
 from extra_views import CreateWithInlinesView, UpdateWithInlinesView
+from tagging import models as tagging_models
 
 from definitions import forms, models
 
@@ -99,3 +100,23 @@ class TermSearchView(generic.ListView):
                     )
                 ).filter(similarity__gt=0.1).order_by('-similarity')
         return query
+
+
+class DefinitionsByTagView(generic.ListView):
+    model = models.Definition
+    template_name = 'definitions/by_tag.html'
+    context_object_name = 'definitions'
+    paginate_by = 5
+
+    def get_queryset(self, *args, **kwargs):
+        tag_name = self.kwargs["tag_name"]
+        tag = shortcuts.get_object_or_404(tagging_models.Tag, name=tag_name)
+        tagged_items = tagging_models.TaggedItem.objects.get_by_model(
+            models.Definition, tag
+        )
+        return models.Definition.objects.filter(id__in=tagged_items)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tag_name'] = self.kwargs['tag_name']
+        return context
