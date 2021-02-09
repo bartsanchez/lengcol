@@ -41,24 +41,26 @@ interactions:
       class=\"col-md-8\">\n          \n\n  <div class=\"card\">\n\n  <div class=\"card-body\">\n
       \   <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake term</a>\n
       \   </h5>\n\n    <p>\n      <a href=\"/definitions/cb8d30f8-b60a-46e8-9cad-f3d5ff28d269/\">&#128279;</a>\n
-      \     foo\n    </p>\n\n    \n\n    \n      <a href=\"#\" class=\"badge badge-pill
-      badge-info\">another fake tag 2</a>\n    \n      <a href=\"#\" class=\"badge
-      badge-pill badge-info\">fake tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer
-      text-right text-muted\">\n    \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n
-      \   <div>Autor: An\xF3nimo</div>\n  </div>\n</div>\n\n\n  <div class=\"card\">\n\n
-      \ <div class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake
-      term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/75484634-4f96-4bc9-8d94-bfe8523ba7cd/\">&#128279;</a>\n
-      \     bar\n    </p>\n\n    \n\n    \n      <a href=\"#\" class=\"badge badge-pill
-      badge-info\">another fake tag 2</a>\n    \n      <a href=\"#\" class=\"badge
-      badge-pill badge-info\">fake tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer
-      text-right text-muted\">\n    \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n
-      \   <div>Autor: An\xF3nimo</div>\n  </div>\n</div>\n\n\n\n        </div>\n        <aside
-      class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
-      \           <h4 class=\"font-italic\">\xDAltimas definiciones</h4>\n            <ul>\n
-      \             \n              <li><a class=\"last-terms\" href=\"/terms/fake-term/\">fake
-      term</a></li>\n              \n            </ul>\n          </div>\n          \n
-      \         <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n
-      \           <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      \     foo\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
+      class=\"badge badge-pill badge-info\">another fake tag 2</a>\n    \n      <a
+      href=\"/tags/fake%20tag%201/definitions/\" class=\"badge badge-pill badge-info\">fake
+      tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer text-right text-muted\">\n
+      \   \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n    <div>Autor: An\xF3nimo</div>\n
+      \ </div>\n</div>\n\n\n  <div class=\"card\">\n\n  <div class=\"card-body\">\n
+      \   <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake term</a>\n
+      \   </h5>\n\n    <p>\n      <a href=\"/definitions/75484634-4f96-4bc9-8d94-bfe8523ba7cd/\">&#128279;</a>\n
+      \     bar\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
+      class=\"badge badge-pill badge-info\">another fake tag 2</a>\n    \n      <a
+      href=\"/tags/fake%20tag%201/definitions/\" class=\"badge badge-pill badge-info\">fake
+      tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer text-right text-muted\">\n
+      \   \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n    <div>Autor: An\xF3nimo</div>\n
+      \ </div>\n</div>\n\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas
+      definiciones</h4>\n            <ul>\n              \n              <li><a class=\"last-terms\"
+      href=\"/terms/fake-term/\">fake term</a></li>\n              \n            </ul>\n
+      \         </div>\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
+      \           <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a
+      href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \ </body>\n</html>\n"
     headers:
@@ -69,7 +71,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4952'
+      - '5100'
       Content-Type:
       - text/html
       User-Agent:
@@ -96,7 +98,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 06 Feb 2021 20:37:33 GMT
+      - Tue, 09 Feb 2021 18:28:22 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
