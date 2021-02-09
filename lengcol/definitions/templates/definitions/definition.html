@@ -19,7 +19,7 @@
     {% endif %}
 
     {% for tag in definition.assigned_tags %}
-      <a href="#" class="badge badge-pill badge-info">{{ tag }}</a>
+      <a href="{% url 'definitions-by-tag' tag %}" class="badge badge-pill badge-info">{{ tag }}</a>
     {% endfor %}
 
   </div>

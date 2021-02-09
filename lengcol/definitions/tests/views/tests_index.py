@@ -121,10 +121,11 @@ class IndexViewTests(test.TestCase,
 
         response = self.client.get(self.url)
 
-        tag_html = '<a href="#" class="badge badge-pill badge-info">{}</a>'
+        tag_html = '<a href="{}" class="badge badge-pill badge-info">{}</a>'
 
         for tag in ('first_tag', 'second_tag'):
-            self.assertContains(response, tag_html.format(tag))
+            email_link = '/tags/{}/definitions/'.format(tag)
+            self.assertContains(response, tag_html.format(email_link, tag))
 
     def test_has_email_contact_link(self):
         response = self.client.get(self.url)
