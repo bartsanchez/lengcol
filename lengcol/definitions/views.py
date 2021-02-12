@@ -97,6 +97,7 @@ class TermSearchView(generic.ListView):
                     similarity=functions.Greatest(
                         search.TrigramSimilarity('value', term),
                         search.TrigramSimilarity('definition__value', term),
+                        search.TrigramSimilarity('definition__tags', term),
                     )
                 ).filter(similarity__gt=0.1).order_by('-similarity')
         return query
