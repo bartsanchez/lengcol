@@ -56,7 +56,7 @@ kombu==5.0.2
     # via celery
 prometheus-client==0.9.0
     # via django-prometheus
-prompt-toolkit==3.0.15
+prompt-toolkit==3.0.16
     # via click-repl
 psycopg2-binary==2.8.6
     # via -r requirements.in
