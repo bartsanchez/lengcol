@@ -10,7 +10,7 @@ ansible==2.10.7
     # via -r requirements.in
 cffi==1.14.5
     # via cryptography
-cryptography==3.4.4
+cryptography==3.4.5
     # via ansible-base
 jinja2==2.11.3
     # via ansible-base
