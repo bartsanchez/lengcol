@@ -4,6 +4,10 @@
 
 # Lenguaje coloquial project
 
+## Features
+
+- Domain included in HTTP Strict Transport Security (HSTS) [preload list](https://hstspreload.org/?domain=lenguajecoloquial.com)
+
 ## Requirements
 
 [docker](https://www.docker.com/)
