@@ -6,6 +6,7 @@
 
 ## Features
 
+- Continuous Integration Development using [Github actions](https://github.com/bartsanchez/lengcol/actions)
 - Domain included in HTTP Strict Transport Security (HSTS) [preload list](https://hstspreload.org/?domain=lenguajecoloquial.com)
 
 ## Requirements
