@@ -43,6 +43,14 @@ class IndexViewTests(test.TestCase,
             html=True
         )
 
+    def test_footer(self):
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            'Copyright 2021. All Rights Reserved.',
+        )
+
     def test_has_link_to_term_detail(self):
         term = factories.TermFactory(value='my fake term')
         factories.DefinitionFactory(term=term, value='fake definition')

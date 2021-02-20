@@ -55,7 +55,9 @@ interactions:
       \           <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a
       href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
-      \ </body>\n</html>\n"
+      \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
+      class=\"text-muted\">Copyright 2021. All Rights Reserved.</span>\n      </div>\n
+      \   </footer>\n\n  </body>\n</html>\n"
     headers:
       Accept:
       - '*/*'
@@ -64,7 +66,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4654'
+      - '4825'
       Content-Type:
       - text/html
       User-Agent:
@@ -91,7 +93,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 09 Feb 2021 18:28:20 GMT
+      - Sat, 20 Feb 2021 15:30:29 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
