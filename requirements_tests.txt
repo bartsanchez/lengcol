@@ -63,7 +63,7 @@ decorator==4.4.2
     # via ipython
 dj-database-url==0.5.0
     # via -r requirements.txt
-django-crispy-forms==1.11.0
+django-crispy-forms==1.11.1
     # via -r requirements.txt
 django-extensions==3.1.1
     # via -r requirements.txt
@@ -75,14 +75,14 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-django==3.1.6
+django==3.1.7
     # via
     #   -r requirements.txt
     #   django-extra-views
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==6.1.1
+faker==6.4.1
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
@@ -93,7 +93,7 @@ idna==2.10
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==3.4.0
+importlib-metadata==3.5.0
     # via
     #   -r requirements.txt
     #   kombu
