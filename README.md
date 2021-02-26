@@ -10,6 +10,7 @@
 - [TLS 1.3 A+](https://www.ssllabs.com/ssltest/analyze.html?d=lenguajecoloquial.com)
 - Domain included in HTTP Strict Transport Security (HSTS) [preload list](https://hstspreload.org/?domain=lenguajecoloquial.com)
 - [Google Recaptcha V3](https://developers.google.com/recaptcha)
+- Automatic [W3C validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.lenguajecoloquial.com%2F) with neither errors nor warnings
 - Metrics collection with [Prometheus](https://prometheus.io/)
 
 ## Requirements
