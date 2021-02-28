@@ -6,6 +6,7 @@
 
 ## Features
 
+- Full containerization using [Docker](https://www.docker.com/)
 - Continuous Integration Development using [Github actions](https://github.com/bartsanchez/lengcol/actions)
 - [TLS 1.3 A+](https://www.ssllabs.com/ssltest/analyze.html?d=lenguajecoloquial.com)
 - Domain included in HTTP Strict Transport Security (HSTS) [preload list](https://hstspreload.org/?domain=lenguajecoloquial.com)
