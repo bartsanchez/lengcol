@@ -13,6 +13,7 @@
 - [Google Recaptcha V3](https://developers.google.com/recaptcha)
 - Automatic [W3C validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.lenguajecoloquial.com%2F) with neither errors nor warnings
 - Metrics collection with [Prometheus](https://prometheus.io/)
+- [Django](https://www.djangoproject.com/) Web Framework
 
 ## Requirements
 
