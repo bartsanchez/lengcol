@@ -1,0 +1,16 @@
+{% extends "lengcol/base.html" %}
+
+{% block metadescription %}Etiquetas asignadas a definiciones, creadas por usuarios de esta página, de expresiones usadas de manera coloquial.{% endblock %}
+
+{% block h1 %}Etiquetas{% endblock %}
+
+{% block content %}
+<ul class="list-group list-group-flush">
+{% for tag in tags %}
+  <li class="list-group-item">
+    {{ tag }}
+  </li>
+{% endfor %}
+</ul>
+{% include 'lengcol/pagination.html' %}
+{% endblock %}

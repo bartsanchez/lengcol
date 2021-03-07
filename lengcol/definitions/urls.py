@@ -29,6 +29,10 @@ urlpatterns = [
          views.TermDetailView.as_view(),
          name='term-detail'),
 
+    path('tags/',
+         views.TagListView.as_view(),
+         name='tag-list'),
+
     path('tags/<str:tag_name>/definitions/',
          views.DefinitionsByTagView.as_view(),
          name='definitions-by-tag'),

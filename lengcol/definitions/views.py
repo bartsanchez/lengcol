@@ -121,3 +121,10 @@ class DefinitionsByTagView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['tag_name'] = self.kwargs['tag_name']
         return context
+
+
+class TagListView(generic.ListView):
+    model = tagging_models.Tag
+    template_name = 'definitions/tag_list.html'
+    context_object_name = 'tags'
+    paginate_by = 100
