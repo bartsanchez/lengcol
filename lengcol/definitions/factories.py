@@ -1,5 +1,6 @@
 import factory
 from factory import django
+from tagging import models as tagging_models
 
 from definitions import models
 
@@ -30,3 +31,11 @@ class ExampleFactory(django.DjangoModelFactory):
 
     definition = factory.SubFactory(DefinitionFactory)
     value = 'example fake'
+
+
+class TagFactory(django.DjangoModelFactory):
+    class Meta:
+        model = tagging_models.Tag
+        django_get_or_create = ('name',)
+
+    name = 'tag fake'
