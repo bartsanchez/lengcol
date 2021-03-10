@@ -16,6 +16,7 @@
 - [Grafana](https://grafana.com/grafana/) dashboards
 - [Django](https://www.djangoproject.com/) Web Framework
 - [Bootstrap](https://getbootstrap.com/)
+- [Fail2ban](https://www.fail2ban.org/) intrusion prevention.
 
 ## Requirements
 
