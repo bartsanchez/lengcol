@@ -50,13 +50,13 @@ gunicorn==20.0.4
     # via -r requirements.in
 idna==2.10
     # via requests
-importlib-metadata==3.7.0
+importlib-metadata==3.7.2
     # via kombu
 kombu==5.0.2
     # via celery
 prometheus-client==0.9.0
     # via django-prometheus
-prompt-toolkit==3.0.16
+prompt-toolkit==3.0.17
     # via click-repl
 psycopg2-binary==2.8.6
     # via -r requirements.in
