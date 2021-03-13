@@ -1,10 +1,21 @@
 {% extends "lengcol/base.html" %}
+{% load tagging_tags %}
 
 {% block metadescription %}Etiquetas asignadas a definiciones, creadas por usuarios de esta página, de expresiones usadas de manera coloquial.{% endblock %}
 
 {% block h1 %}Etiquetas{% endblock %}
 
 {% block content %}
+
+{% tag_cloud_for_model definitions.Definition as cloud_tags %}
+<div class="d-flex justify-content-center bg-light">
+{% for cloud_tag in cloud_tags %}
+  <span style="font-size:{{ cloud_tag.font_size }}em">{{ cloud_tag }}</span>
+{% endfor %}
+</div>
+
+<h3>Lista completa</h3>
+
 <ul class="list-group list-group-flush">
 {% for tag in tags %}
   <li class="list-group-item">

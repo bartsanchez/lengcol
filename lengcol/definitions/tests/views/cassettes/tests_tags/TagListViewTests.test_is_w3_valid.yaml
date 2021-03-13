@@ -38,7 +38,8 @@ interactions:
       tu cuenta</a>\n              \n            </div>\n          </li>\n        </ul>\n
       \     </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
       \     <h1>Etiquetas</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
-      \         \n<ul class=\"list-group list-group-flush\">\n\n  <li class=\"list-group-item\">\n
+      \         \n\n\n<div class=\"d-flex justify-content-center bg-light\">\n\n</div>\n\n<h3>Lista
+      completa</h3>\n\n<ul class=\"list-group list-group-flush\">\n\n  <li class=\"list-group-item\">\n
       \   a fake tag\n  </li>\n\n</ul>\n\n<div class=\"row justify-content-center\">\n<nav
       aria-label=\"Page navigation example\">\n  <ul class=\"pagination\">\n\n    \n\n
       \   <li class=\"page-item active\"><a class=\"page-link\" href=\"#\">1<span
@@ -58,7 +59,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4078'
+      - '4167'
       Content-Type:
       - text/html
       User-Agent:
@@ -85,7 +86,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 07 Mar 2021 12:52:26 GMT
+      - Sat, 13 Mar 2021 16:06:34 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
