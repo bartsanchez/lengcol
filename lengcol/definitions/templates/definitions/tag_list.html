@@ -10,7 +10,7 @@
 {% tag_cloud_for_model definitions.Definition as cloud_tags %}
 <div class="d-flex justify-content-center bg-light">
 {% for cloud_tag in cloud_tags %}
-  <span style="font-size:{{ cloud_tag.font_size }}em">{{ cloud_tag }}</span>
+  <span style="font-size:{{ cloud_tag.font_size }}em; margin: 3px">{{ cloud_tag }}</span>
 {% endfor %}
 </div>
 
