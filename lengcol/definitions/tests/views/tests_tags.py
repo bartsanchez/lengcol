@@ -17,7 +17,7 @@ class TagListViewTests(test.TestCase,
     )
 
     def setUp(self):
-        factories.TagFactory(name='a fake tag')
+        factories.DefinitionFactory(tags='a fake tag, othertag')
         self.client = test.Client()
         self.url = reverse('tag-list')
 
@@ -32,5 +32,10 @@ class TagListViewTests(test.TestCase,
         self.assertContains(
             response,
             '<li class="list-group-item">a fake tag</li>',
+            html=True
+        )
+        self.assertContains(
+            response,
+            '<li class="list-group-item">othertag</li>',
             html=True
         )
