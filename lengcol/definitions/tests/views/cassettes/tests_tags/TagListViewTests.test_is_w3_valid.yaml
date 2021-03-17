@@ -38,17 +38,17 @@ interactions:
       tu cuenta</a>\n              \n            </div>\n          </li>\n        </ul>\n
       \     </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
       \     <h1>Etiquetas</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
-      \         \n\n<div class=\"card\">\n  <div class=\"card-body bg-light\">\n    \n
-      \   <div class=\"d-flex justify-content-center\">\n    \n      <span style=\"font-size:1em;
-      margin: 3px\">a fake tag</span>\n    \n      <span style=\"font-size:1em; margin:
-      3px\">othertag</span>\n    \n    </div>\n  </div>\n</div>\n\n<h3>Lista completa</h3>\n\n<ul
-      class=\"list-group list-group-flush\">\n\n  <li class=\"list-group-item\">\n
-      \   a fake tag\n  </li>\n\n  <li class=\"list-group-item\">\n    othertag\n
-      \ </li>\n\n</ul>\n\n<div class=\"row justify-content-center\">\n<nav aria-label=\"Page
-      navigation example\">\n  <ul class=\"pagination\">\n\n    \n\n    <li class=\"page-item
-      active\"><a class=\"page-link\" href=\"#\">1<span class=\"sr-only\">(current)</span></a></li>\n\n
-      \   \n\n  </ul>\n</nav>\n</div>\n\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
-      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas
+      \         \n\n<ul class=\"cloud\">\n    \n    \n      <li>\n        <a href=\"/tags/a%20fake%20tag/definitions/\"
+      data-weight=\"1\">a fake tag</a>\n      </li>\n    \n      <li>\n        <a
+      href=\"/tags/othertag/definitions/\" data-weight=\"1\">othertag</a>\n      </li>\n
+      \   \n</ul>\n\n<h3>Lista completa</h3>\n\n<ul class=\"list-group list-group-flush\">\n\n
+      \ <li class=\"list-group-item\">\n    a fake tag\n  </li>\n\n  <li class=\"list-group-item\">\n
+      \   othertag\n  </li>\n\n</ul>\n\n<div class=\"row justify-content-center\">\n<nav
+      aria-label=\"Page navigation example\">\n  <ul class=\"pagination\">\n\n    \n\n
+      \   <li class=\"page-item active\"><a class=\"page-link\" href=\"#\">1<span
+      class=\"sr-only\">(current)</span></a></li>\n\n    \n\n  </ul>\n</nav>\n</div>\n\n\n\n
+      \       </div>\n        <aside class=\"col-md-4\">\n          \n          <div
+      class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas
       definiciones</h4>\n            <ul>\n              \n              <li><a class=\"last-terms\"
       href=\"/terms/term-fake/\">term fake</a></li>\n              \n            </ul>\n
       \         </div>\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
@@ -66,7 +66,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4717'
+      - '4689'
       Content-Type:
       - text/html
       User-Agent:
@@ -93,7 +93,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 16 Mar 2021 22:22:19 GMT
+      - Wed, 17 Mar 2021 18:21:43 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

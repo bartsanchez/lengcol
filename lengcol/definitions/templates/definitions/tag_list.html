@@ -7,16 +7,14 @@
 
 {% block content %}
 
-<div class="card">
-  <div class="card-body bg-light">
-    {% tag_cloud_for_model definitions.Definition as cloud_tags %}
-    <div class="d-flex justify-content-center">
+<ul class="cloud">
+    {% tag_cloud_for_model definitions.Definition as cloud_tags with steps=9 %}
     {% for cloud_tag in cloud_tags %}
-      <span style="font-size:{{ cloud_tag.font_size }}em; margin: 3px">{{ cloud_tag }}</span>
+      <li>
+        <a href="{% url 'definitions-by-tag' cloud_tag %}" data-weight="{{ cloud_tag.font_size }}">{{ cloud_tag }}</a>
+      </li>
     {% endfor %}
-    </div>
-  </div>
-</div>
+</ul>
 
 <h3>Lista completa</h3>
 
