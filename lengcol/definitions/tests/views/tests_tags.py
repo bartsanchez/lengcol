@@ -39,3 +39,17 @@ class TagListViewTests(test.TestCase,
             '<li class="list-group-item">othertag</li>',
             html=True
         )
+
+    def test_has_link_to_tags(self):
+        response = self.client.get(self.url)
+
+        tag_html = (
+            '<a href="{}" data-weight="1">{}</a>'
+        )
+        for tag in ('a fake tag', 'othertag'):
+            href_url = reverse('definitions-by-tag', kwargs={'tag_name': tag})
+            self.assertContains(
+                response,
+                tag_html.format(href_url, tag),
+                html=True
+            )
