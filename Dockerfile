@@ -20,7 +20,7 @@ RUN mkdir -p /opt/lengcol/
 WORKDIR /opt/lengcol
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . /opt/lengcol/
 
