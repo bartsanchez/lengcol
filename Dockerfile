@@ -4,7 +4,12 @@ LABEL maintainer="Bartolome Sanchez Salado"
 
 ENV ENVIRONMENT dev
 
-RUN apt update && apt install -y python3-psycopg2 git
+RUN apt-get update \
+ && apt-get install --no-install-recommends -y \
+    python3-psycopg2 \
+    git \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /var/log/gunicorn/
 RUN touch /var/log/gunicorn/access.log
