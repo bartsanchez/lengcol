@@ -30,3 +30,6 @@ jobs:
 
       - name: Run isort
         run: tox -e isort
+
+      - name: Run semgrep
+        run: tox -e semgrep
