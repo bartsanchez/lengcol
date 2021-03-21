@@ -33,4 +33,4 @@ WORKDIR /opt/lengcol/lengcol/
 
 EXPOSE 8000
 
-CMD gunicorn lengcol.wsgi:application -c ../docker/gunicorn/settings/${ENVIRONMENT}.py
+CMD ["sh", "-c", "gunicorn lengcol.wsgi:application -c ../docker/gunicorn/settings/${ENVIRONMENT}.py"]
