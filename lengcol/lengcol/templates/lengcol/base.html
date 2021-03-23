@@ -69,7 +69,7 @@
             <h4 class="font-italic">Últimas definiciones</h4>
             <ul>
               {% for term in last_terms %}
-              <li><a class="last-terms" href="{{ term.get_absolute_url }}">{{ term }}</a></li>
+              <li><a class="last-terms" href="{% url 'term-detail' term.slug %}">{{ term }}</a></li>
               {% endfor %}
             </ul>
           </div>
