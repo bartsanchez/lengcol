@@ -2,11 +2,11 @@
 
   <div class="card-body">
     <h5 class="card-title">
-      <a href="{{ definition.term.get_absolute_url }}">{{ definition.term }}</a>
+      <a href="{% url 'term-detail' definition.term.slug %}">{{ definition.term }}</a>
     </h5>
 
     <p>
-      <a href="{{ definition.get_absolute_url }}">&#128279;</a>
+      <a href="{% url 'definition-detail' definition.uuid %}">&#128279;</a>
       {{ definition }}
     </p>
 
