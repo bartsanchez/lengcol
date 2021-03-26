@@ -4,3 +4,10 @@
     minute: "1"
     hour: "4"
     job: "/opt/apps/lengcol/scripts/create_backup.sh"
+
+- name: Restart nginx
+  cron:
+    name: "restart nginx"
+    minute: "0/5"
+    hour: "*"
+    job: "/opt/apps/lengcol/scripts/restart_nginx.sh"
