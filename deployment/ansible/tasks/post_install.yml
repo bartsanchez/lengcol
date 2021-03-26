@@ -8,6 +8,6 @@
 - name: Restart nginx
   cron:
     name: "restart nginx"
-    minute: "0/5"
+    minute: "*/5"
     hour: "*"
     job: "/opt/apps/lengcol/scripts/restart_nginx.sh"
