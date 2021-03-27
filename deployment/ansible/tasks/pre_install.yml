@@ -3,3 +3,11 @@
   package:
     name: make
     state: present
+
+- name: Disable restart nginx task
+  cron:
+    name: "restart nginx"
+    minute: "*/5"
+    hour: "*"
+    job: "/opt/apps/lengcol/scripts/restart_nginx.sh"
+    disabled: yes
