@@ -20,7 +20,8 @@ class W3ValidatorMixin:
             W3_VALIDATOR_URL,
             headers={'Content-Type': 'text/html', 'charset': 'utf-8'},
             params={'out': 'json'},
-            data=index_web.getvalue()
+            data=index_web.getvalue(),
+            timeout=5,
         )
 
         self.assertEqual(request.status_code, 200)
