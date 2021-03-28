@@ -4,7 +4,7 @@ import requests
 
 
 def insert_definition(definition, value, tags):
-    r = requests.get("http://web/definitions/add/")
+    r = requests.get("http://web/definitions/add/", timeout=5)
     csrftoken = r.cookies['csrftoken']
     data = {
             "csrfmiddlewaretoken": csrftoken,
@@ -25,6 +25,7 @@ def insert_definition(definition, value, tags):
         "http://web/definitions/add/",
         data=data,
         headers=headers,
+        timeout=5,
     )
 
 
@@ -45,13 +46,13 @@ def test_search_is_improved():
     )
     assert r.status_code == 200
 
-    r = requests.get("http://web/terms/search/?v=mesage")
+    r = requests.get("http://web/terms/search/?v=mesage", timeout=5)
     assert r.status_code == 200
     # One appearing is in last_definitions, so we have to increment by 1
     assert len(re.findall(first_definition, r.content)) == 2
     assert len(re.findall(second_definition, r.content)) == 1
 
-    r = requests.get("http://web/terms/search/?v=frowing+mike")
+    r = requests.get("http://web/terms/search/?v=frowing+mike", timeout=5)
     assert r.status_code == 200
     assert len(re.findall(first_definition, r.content)) == 1
     assert len(re.findall(second_definition, r.content)) == 2
@@ -60,7 +61,7 @@ def test_search_is_improved():
 def test_search_includes_definition_value():
     first_definition = b"The secret messages are calling to me endlessly"
 
-    r = requests.get("http://web/terms/search/?v=orkestra")
+    r = requests.get("http://web/terms/search/?v=orkestra", timeout=5)
     assert r.status_code == 200
     # One appearing is in last_definitions, so we have to increment by 1
     assert len(re.findall(first_definition, r.content)) == 2
@@ -69,7 +70,7 @@ def test_search_includes_definition_value():
 def test_search_includes_tag_name():
     first_definition = b"The secret messages are calling to me endlessly"
 
-    r = requests.get("http://web/terms/search/?v=Lynne")
+    r = requests.get("http://web/terms/search/?v=Lynne", timeout=5)
     assert r.status_code == 200
     # One appearing is in last_definitions, so we have to increment by 1
     assert len(re.findall(first_definition, r.content)) == 2
