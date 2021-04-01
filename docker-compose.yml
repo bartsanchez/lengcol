@@ -59,7 +59,7 @@ services:
             - redis_broker
 
     redis_broker:
-        image: redis:6.0.10
+        image: redis:6.2.1
         restart: always
         sysctls:
             net.core.somaxconn: 511
