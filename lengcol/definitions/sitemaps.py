@@ -12,3 +12,14 @@ class TermSitemap(sitemaps.Sitemap):
 
     def lastmod(self, obj):
         return obj.created
+
+
+class DefinitionSitemap(sitemaps.Sitemap):
+    changefreq = 'never'
+    priority = 0.5
+
+    def items(self):
+        return models.Definition.objects.all()
+
+    def lastmod(self, obj):
+        return obj.created

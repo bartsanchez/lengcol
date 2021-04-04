@@ -12,3 +12,11 @@ class TermSitemapViewTests(test.TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, term.get_absolute_url())
+
+    def test_has_definition(self):
+        definition = factories.DefinitionFactory(value='fake definition')
+
+        response = self.client.get(reverse('sitemap'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, definition.get_absolute_url())
