@@ -11,4 +11,5 @@ htmlcov/
 docker/static/*
 docker/logs/*
 deployment/aws_key_pair.pem
+aws_key_pair.pem
 vault_password_file.txt
