@@ -4,11 +4,11 @@
 #
 #    pip-compile --output-file=./requirements_tests.txt requirements_tests.in
 #
-amqp==5.0.5
+amqp==5.0.6
     # via
     #   -r requirements.txt
     #   kombu
-asgiref==3.3.1
+asgiref==3.3.4
     # via
     #   -r requirements.txt
     #   django
@@ -18,7 +18,7 @@ attrs==20.3.0
     #   pytest-recording
 backcall==0.2.0
     # via ipython
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via
     #   -r requirements.txt
     #   celery
@@ -59,13 +59,13 @@ coverage==5.5
     #   pytest-cov
 cssselect==1.1.0
     # via splinter
-decorator==4.4.2
+decorator==5.0.6
     # via ipython
 dj-database-url==0.5.0
     # via -r requirements.txt
 django-crispy-forms==1.11.2
     # via -r requirements.txt
-django-extensions==3.1.1
+django-extensions==3.1.2
     # via -r requirements.txt
 django-extra-views==0.13.0
     # via -r requirements.txt
@@ -75,25 +75,26 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-django==3.1.7
+django==3.2
     # via
     #   -r requirements.txt
+    #   django-extensions
     #   django-extra-views
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==6.6.2
+faker==8.0.0
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
-gunicorn==20.0.4
+gunicorn==20.1.0
     # via -r requirements.txt
 idna==2.10
     # via
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==3.7.3
+importlib-metadata==3.10.0
     # via
     #   -r requirements.txt
     #   kombu
@@ -105,7 +106,7 @@ ipdb==0.13.7
     # via -r requirements_tests.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.21.0
+ipython==7.22.0
     # via ipdb
 jedi==0.18.0
     # via ipython
@@ -119,7 +120,7 @@ multidict==5.1.0
     # via yarl
 packaging==20.9
     # via pytest
-parso==0.8.1
+parso==0.8.2
     # via jedi
 pexpect==4.8.0
     # via ipython
@@ -127,7 +128,7 @@ pickleshare==0.7.5
     # via ipython
 pluggy==0.13.1
     # via pytest
-prometheus-client==0.9.0
+prometheus-client==0.10.1
     # via
     #   -r requirements.txt
     #   django-prometheus
@@ -152,7 +153,7 @@ pytest-django==4.1.0
     # via -r requirements_tests.in
 pytest-recording==0.11.0
     # via -r requirements_tests.in
-pytest==6.2.2
+pytest==6.2.3
     # via
     #   pytest-cov
     #   pytest-django
@@ -203,6 +204,7 @@ traitlets==5.0.5
 typing-extensions==3.7.4.3
     # via
     #   -r requirements.txt
+    #   asgiref
     #   importlib-metadata
     #   yarl
 urllib3==1.26.4
