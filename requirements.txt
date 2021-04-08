@@ -4,11 +4,11 @@
 #
 #    pip-compile --output-file=./requirements.txt requirements.in
 #
-amqp==5.0.5
+amqp==5.0.6
     # via kombu
-asgiref==3.3.1
+asgiref==3.3.4
     # via django
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via celery
 celery==5.0.5
     # via -r requirements.in
@@ -32,7 +32,7 @@ dj-database-url==0.5.0
     # via -r requirements.in
 django-crispy-forms==1.11.2
     # via -r requirements.in
-django-extensions==3.1.1
+django-extensions==3.1.2
     # via -r requirements.in
 django-extra-views==0.13.0
     # via -r requirements.in
@@ -42,19 +42,20 @@ django-recaptcha3==0.4.0
     # via -r requirements.in
 django-tagging==0.5.0
     # via -r requirements.in
-django==3.1.7
+django==3.2
     # via
     #   -r requirements.in
+    #   django-extensions
     #   django-extra-views
-gunicorn==20.0.4
+gunicorn==20.1.0
     # via -r requirements.in
 idna==2.10
     # via requests
-importlib-metadata==3.7.3
+importlib-metadata==3.10.0
     # via kombu
 kombu==5.0.2
     # via celery
-prometheus-client==0.9.0
+prometheus-client==0.10.1
     # via django-prometheus
 prompt-toolkit==3.0.18
     # via click-repl
@@ -75,7 +76,9 @@ six==1.15.0
 sqlparse==0.4.1
     # via django
 typing-extensions==3.7.4.3
-    # via importlib-metadata
+    # via
+    #   asgiref
+    #   importlib-metadata
 urllib3==1.26.4
     # via requests
 vine==5.0.0
