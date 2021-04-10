@@ -17,3 +17,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r deployment/requirements.txt
+
+      - name: Deploy
+        run: make deploy
