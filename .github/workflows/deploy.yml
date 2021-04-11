@@ -20,3 +20,6 @@ jobs:
 
       - name: Deploy
         run: make deploy
+        env:
+          AWS_KEY_PAIR_PEM_FILE: ${{ secrets.AWS_KEY_PAIR_PEM_FILE }}
+          VAULT_PASSWORD: ${{ secrets.VAULT_PASSWORD }}
