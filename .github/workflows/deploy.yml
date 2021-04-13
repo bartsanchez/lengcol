@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  deployment:
 
     runs-on: ubuntu-latest
 
@@ -23,3 +23,4 @@ jobs:
         env:
           AWS_KEY_PAIR_PEM_FILE: ${{ secrets.AWS_KEY_PAIR_PEM_FILE }}
           VAULT_PASSWORD: ${{ secrets.VAULT_PASSWORD }}
+          ANSIBLE_HOST_KEY_CHECKING: False
