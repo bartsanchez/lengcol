@@ -59,7 +59,7 @@ coverage==5.5
     #   pytest-cov
 cssselect==1.1.0
     # via splinter
-decorator==5.0.6
+decorator==5.0.7
     # via ipython
 dj-database-url==0.5.0
     # via -r requirements.txt
@@ -83,7 +83,7 @@ django==3.2
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==8.0.0
+faker==8.1.0
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
@@ -94,7 +94,7 @@ idna==2.10
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==3.10.0
+importlib-metadata==3.10.1
     # via
     #   -r requirements.txt
     #   kombu
@@ -149,7 +149,7 @@ pyparsing==2.4.7
     # via packaging
 pytest-cov==2.11.1
     # via -r requirements_tests.in
-pytest-django==4.1.0
+pytest-django==4.2.0
     # via -r requirements_tests.in
 pytest-recording==0.11.0
     # via -r requirements_tests.in
