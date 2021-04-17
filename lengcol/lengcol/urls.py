@@ -7,6 +7,7 @@ from definitions import sitemaps
 sitemaps_info = {
     'terms': sitemaps.TermSitemap,
     'definitions': sitemaps.DefinitionSitemap,
+    'tags': sitemaps.TagSitemap,
 }
 sitemap = {'sitemaps': sitemaps_info}
 

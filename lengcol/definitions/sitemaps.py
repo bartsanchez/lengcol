@@ -1,4 +1,6 @@
 from django.contrib import sitemaps
+from django.urls import reverse
+from tagging import models as tagging_models
 
 from definitions import models
 
@@ -23,3 +25,14 @@ class DefinitionSitemap(sitemaps.Sitemap):
 
     def lastmod(self, obj):
         return obj.created
+
+
+class TagSitemap(sitemaps.Sitemap):
+    changefreq = 'never'
+    priority = 0.5
+
+    def items(self):
+        return tagging_models.Tag.objects.all()
+
+    def location(self, item):
+        return reverse('definitions-by-tag', kwargs={'tag_name': item})
