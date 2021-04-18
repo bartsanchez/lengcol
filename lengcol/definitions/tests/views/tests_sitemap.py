@@ -1,7 +1,7 @@
 from django import test
 from django.urls import reverse
 
-from definitions import factories
+from definitions import factories, sitemaps
 
 
 class TermSitemapViewTests(test.TestCase):
@@ -36,3 +36,14 @@ class TermSitemapViewTests(test.TestCase):
                 response,
                 reverse('definitions-by-tag', kwargs={'tag_name': tag})
             )
+
+    def test_has_statics(self):
+        static_view_sitemap = sitemaps.StaticViewSitemap()
+        static_page_names = static_view_sitemap.items()
+
+        response = self.client.get(reverse('sitemap'))
+
+        self.assertEqual(response.status_code, 200)
+
+        for static_page_name in static_page_names:
+            self.assertContains(response, reverse(static_page_name))
