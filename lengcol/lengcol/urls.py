@@ -8,6 +8,7 @@ sitemaps_info = {
     'terms': sitemaps.TermSitemap,
     'definitions': sitemaps.DefinitionSitemap,
     'tags': sitemaps.TagSitemap,
+    'static': sitemaps.StaticViewSitemap,
 }
 sitemap = {'sitemaps': sitemaps_info}
 

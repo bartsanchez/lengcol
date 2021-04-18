@@ -36,3 +36,14 @@ class TagSitemap(sitemaps.Sitemap):
 
     def location(self, item):
         return reverse('definitions-by-tag', kwargs={'tag_name': item})
+
+
+class StaticViewSitemap(sitemaps.Sitemap):
+    changefreq = 'daily'
+    priority = 0.5
+
+    def items(self):
+        return ['tag-list', 'term-search', 'definition-add']
+
+    def location(self, item):
+        return reverse(item)
