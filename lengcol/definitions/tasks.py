@@ -1,4 +1,7 @@
+import os
+
 from django.conf import settings
+from django.contrib import sitemaps
 from django.core import mail
 
 from definitions import models
@@ -16,3 +19,10 @@ def send_new_definition_mail(pk):
         'fail_silently': True,
     }
     mail.send_mail(**mail_content)
+
+
+@app.task()
+def ping_google_for_sitemap():
+    django_settings_module = os.environ.get('DJANGO_SETTINGS_MODULE')
+    if 'prod' in django_settings_module:
+        sitemaps.ping_google()
