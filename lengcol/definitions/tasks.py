@@ -25,4 +25,4 @@ def send_new_definition_mail(pk):
 def ping_google_for_sitemap():
     django_settings_module = os.environ.get('DJANGO_SETTINGS_MODULE')
     if 'prod' in django_settings_module:
-        sitemaps.ping_google()
+        sitemaps.ping_google(sitemap_url='/sitemap.xml')
