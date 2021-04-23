@@ -18,7 +18,9 @@ class PingGoogleForSitemapTests(test.TestCase):
         django_settings = {'DJANGO_SETTINGS_MODULE': 'fake-prod'}
         with mock.patch.dict('os.environ', django_settings):
             factories.DefinitionFactory()
-            ping_google_mock.assert_called_once_with()
+            ping_google_mock.assert_called_once_with(
+                sitemap_url='/sitemap.xml'
+            )
 
     def test_ping_google_for_sitemap__not_prod(self, ping_google_mock):
         factories.DefinitionFactory()
