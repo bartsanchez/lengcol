@@ -77,6 +77,8 @@ DATABASES = {
     ),
 }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 AUTH_USER_MODEL = 'authentication.User'
 AUTH_PASSWORD_VALIDATORS = [
     {
