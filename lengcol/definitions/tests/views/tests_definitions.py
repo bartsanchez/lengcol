@@ -21,11 +21,12 @@ class DefinitionCreateViewTests(test.TestCase,
         'Añadir nueva definición para el proyecto Lenguaje Coloquial.'
     )
 
-    def setUp(self):
-        self.client = test.Client()
-        self.user = auth_factories.UserFactory()
-        self.url = reverse('definition-add')
-        self.management_data = {
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.user = auth_factories.UserFactory()
+        cls.url = reverse('definition-add')
+        cls.management_data = {
             "example_set-TOTAL_FORMS": "2",
             "example_set-INITIAL_FORMS": "0",
             "example_set-MIN_NUM_FORMS": "0",
@@ -368,17 +369,18 @@ class DefinitionDetailViewTests(test.TestCase,
         'fake term se define en español como fake definition.'
     )
 
-    def setUp(self):
-        self.client = test.Client()
-        self.user = auth_factories.UserFactory()
-        self.term = factories.TermFactory(value='fake term')
-        self.definition = factories.DefinitionFactory(
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.user = auth_factories.UserFactory()
+        cls.term = factories.TermFactory(value='fake term')
+        cls.definition = factories.DefinitionFactory(
             uuid='6b4a7a9f-3b8f-494b-8565-f960065802ba',
-            term=self.term,
+            term=cls.term,
             value='fake definition',
-            user=self.user,
+            user=cls.user,
         )
-        self.url = self.definition.get_absolute_url()
+        cls.url = cls.definition.get_absolute_url()
 
     def test_template_extends(self):
         response = self.client.get(self.url)
@@ -488,18 +490,19 @@ class DefinitionUpdateViewTests(test.TestCase,
         'Lenguaje Coloquial.'
     )
 
-    def setUp(self):
-        self.client = test.Client()
-        self.user = auth_factories.UserFactory()
-        self.definition = factories.DefinitionFactory(
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.user = auth_factories.UserFactory()
+        cls.definition = factories.DefinitionFactory(
             uuid='869fc83b-2004-428d-9870-9089a8f29f20',
-            user=self.user,
+            user=cls.user,
         )
-        self.url = reverse(
+        cls.url = reverse(
             'definition-update',
-            kwargs={'uuid': self.definition.uuid}
+            kwargs={'uuid': cls.definition.uuid}
         )
-        self.management_data = {
+        cls.management_data = {
             "example_set-TOTAL_FORMS": "2",
             "example_set-INITIAL_FORMS": "0",
             "example_set-MIN_NUM_FORMS": "0",
@@ -820,16 +823,17 @@ class DefinitionDisableViewTests(test.TestCase,
         'proyecto Lenguaje Coloquial.'
     )
 
-    def setUp(self):
-        self.client = test.Client()
-        self.user = auth_factories.UserFactory()
-        self.definition = factories.DefinitionFactory(
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.user = auth_factories.UserFactory()
+        cls.definition = factories.DefinitionFactory(
             uuid='869fc83b-2004-428d-9870-9089a8f29f20',
-            user=self.user,
+            user=cls.user,
         )
-        self.url = reverse(
+        cls.url = reverse(
             'definition-disable',
-            kwargs={'uuid': self.definition.uuid}
+            kwargs={'uuid': cls.definition.uuid}
         )
 
     def _login(self):

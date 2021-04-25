@@ -4,13 +4,14 @@ from definitions import factories, services
 
 
 class DefinitionGatherinTests(test.TestCase):
-    def setUp(self):
-        self.service = services.DefinitionGathering
-        self.fake_def_1 = factories.DefinitionFactory(value='l')
-        self.fake_def_2 = factories.DefinitionFactory(value='o')
-        self.fake_def_3 = factories.DefinitionFactory(value='e')
-        self.fake_def_4 = factories.DefinitionFactory(value='d', active=False)
-        self.objects = [self.fake_def_1, self.fake_def_2, self.fake_def_3]
+    @classmethod
+    def setUpTestData(cls):
+        cls.service = services.DefinitionGathering
+        cls.fake_def_1 = factories.DefinitionFactory(value='l')
+        cls.fake_def_2 = factories.DefinitionFactory(value='o')
+        cls.fake_def_3 = factories.DefinitionFactory(value='e')
+        cls.fake_def_4 = factories.DefinitionFactory(value='d', active=False)
+        cls.objects = [cls.fake_def_1, cls.fake_def_2, cls.fake_def_3]
 
     def test_get_definitions(self):
         self.assertListEqual(

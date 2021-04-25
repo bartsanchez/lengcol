@@ -5,9 +5,10 @@ from definitions import factories
 
 
 class LastTermsTests(test.TestCase):
-    def setUp(self):
-        self.client = test.Client()
-        self.url = reverse('index')
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.url = reverse('index')
 
     def test_hasnt_header_in_last_terms(self):
         response = self.client.get(self.url)

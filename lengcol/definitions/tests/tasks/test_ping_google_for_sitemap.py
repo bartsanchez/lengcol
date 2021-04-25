@@ -10,7 +10,8 @@ from definitions import factories
 
 @mock.patch('django.contrib.sitemaps.ping_google')
 class PingGoogleForSitemapTests(test.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpTestData(cls):
         signals.post_save.disconnect(auth_signals.new_registered_user_handler,
                                      sender=auth_models.User)
 

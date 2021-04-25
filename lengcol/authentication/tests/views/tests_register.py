@@ -17,8 +17,9 @@ class RegisterViewTests(test.TestCase,
         'Página de registro de usuarios para el proyecto Lenguaje Coloquial.'
     )
 
-    def setUp(self):
-        self.url = reverse('register')
+    @classmethod
+    def setUpTestData(cls):
+        cls.url = reverse('register')
 
     def fill_and_send_form(self, browser, username, password1, password2,
                            email):
