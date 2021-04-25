@@ -11,13 +11,14 @@ from definitions import factories, models
 
 
 class NewDefinitionMailTests(test.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpTestData(cls):
         signals.post_save.disconnect(auth_signals.new_registered_user_handler,
                                      sender=auth_models.User)
-        self.client = test.Client()
-        self.user = auth_factories.UserFactory()
-        self.url = reverse('definition-add')
-        self.management_data = {
+        cls.client = test.Client()
+        cls.user = auth_factories.UserFactory()
+        cls.url = reverse('definition-add')
+        cls.management_data = {
             "example_set-TOTAL_FORMS": "2",
             "example_set-INITIAL_FORMS": "0",
             "example_set-MIN_NUM_FORMS": "0",

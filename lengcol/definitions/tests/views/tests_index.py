@@ -20,14 +20,15 @@ class IndexViewTests(test.TestCase,
         'en español hablado en la calle o en ambientes informales.'
     )
 
-    def setUp(self):
+    @classmethod
+    def setUpTestData(cls):
         definition = factories.DefinitionFactory(
             uuid='13bf0f68-eeb2-4777-a739-6ee5be30bacc',
             value='fake_definition',
         )
         factories.ExampleFactory(definition=definition)
-        self.client = test.Client()
-        self.url = reverse('index')
+        cls.client = test.Client()
+        cls.url = reverse('index')
 
     def test_template_extends(self):
         response = self.client.get(self.url)
@@ -175,9 +176,10 @@ class IndexViewTests(test.TestCase,
 
 
 class IndexPaginationTests(test.TestCase):
-    def setUp(self):
-        self.client = test.Client()
-        self.url = reverse('index')
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.url = reverse('index')
 
     def test_dont_have_link_current_page_with_no_items(self):
         response = self.client.get(self.url)

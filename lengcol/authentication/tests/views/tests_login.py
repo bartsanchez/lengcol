@@ -18,9 +18,10 @@ class LoginViewTests(test.TestCase,
         'Coloquial.'
     )
 
-    def setUp(self):
-        self.url = reverse('login')
-        self.user = factories.UserFactory()
+    @classmethod
+    def setUpTestData(cls):
+        cls.url = reverse('login')
+        cls.user = factories.UserFactory()
 
     def fill_and_send_form(self, browser, username, password):
         browser.fill('username', username)

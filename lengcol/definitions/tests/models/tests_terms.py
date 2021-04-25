@@ -5,8 +5,9 @@ from definitions import factories, models
 
 
 class TermTests(test.TestCase):
-    def setUp(self):
-        self.term = factories.TermFactory(value='my fake term')
+    @classmethod
+    def setUpTestData(cls):
+        cls.term = factories.TermFactory(value='my fake term')
 
     def test_str(self):
         self.assertEqual(str(self.term), 'my fake term')

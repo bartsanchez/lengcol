@@ -5,8 +5,9 @@ from definitions import factories, models
 
 
 class DefinitionTests(test.TestCase):
-    def setUp(self):
-        self.definition = factories.DefinitionFactory(
+    @classmethod
+    def setUpTestData(cls):
+        cls.definition = factories.DefinitionFactory(
             value='my fake definition'
         )
 

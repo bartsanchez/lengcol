@@ -16,10 +16,11 @@ class TagListViewTests(test.TestCase,
         'página, de expresiones usadas de manera coloquial.'
     )
 
-    def setUp(self):
+    @classmethod
+    def setUpTestData(cls):
         factories.DefinitionFactory(tags='a fake tag, othertag')
-        self.client = test.Client()
-        self.url = reverse('tag-list')
+        cls.client = test.Client()
+        cls.url = reverse('tag-list')
 
     def test_template_extends(self):
         response = self.client.get(self.url)

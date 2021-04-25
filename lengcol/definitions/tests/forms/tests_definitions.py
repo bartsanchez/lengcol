@@ -4,8 +4,9 @@ from definitions import forms, models
 
 
 class ModelChoiceFieldAsTextTests(test.TestCase):
-    def setUp(self):
-        self.model_choice_field = forms.ModelChoiceFieldAsText(
+    @classmethod
+    def setUpTestData(cls):
+        cls.model_choice_field = forms.ModelChoiceFieldAsText(
             queryset=models.Definition.objects.all(),
             field='value',
         )
@@ -18,12 +19,13 @@ class ModelChoiceFieldAsTextTests(test.TestCase):
 
 
 class DefinitionFormTests(test.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpTestData(cls):
         data = {
             'term': 'this is a fake term',
             'value': 'this is a fake definition',
         }
-        self.form = forms.DefinitionForm(data=data)
+        cls.form = forms.DefinitionForm(data=data)
 
     def test_form_is_valid(self):
         self.assertTrue(self.form.is_valid())

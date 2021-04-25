@@ -6,9 +6,10 @@ from authentication import factories
 
 
 class LogoutViewTests(test.TestCase):
-    def setUp(self):
-        self.url = reverse('logout')
-        self.user = factories.UserFactory()
+    @classmethod
+    def setUpTestData(cls):
+        cls.url = reverse('logout')
+        cls.user = factories.UserFactory()
 
     def fill_and_send_form(self, browser, username, password):
         browser.fill('username', username)

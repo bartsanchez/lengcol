@@ -4,13 +4,14 @@ from definitions import factories, services
 
 
 class TermGatherinTests(test.TestCase):
-    def setUp(self):
-        self.service = services.TermGathering
-        self.fake_term_1 = factories.TermFactory(value='l')
-        self.fake_term_2 = factories.TermFactory(value='o')
-        self.fake_term_3 = factories.TermFactory(value='e')
-        self.fake_term_4 = factories.TermFactory(value='d', active=False)
-        self.objects = [self.fake_term_1, self.fake_term_2, self.fake_term_3]
+    @classmethod
+    def setUpTestData(cls):
+        cls.service = services.TermGathering
+        cls.fake_term_1 = factories.TermFactory(value='l')
+        cls.fake_term_2 = factories.TermFactory(value='o')
+        cls.fake_term_3 = factories.TermFactory(value='e')
+        cls.fake_term_4 = factories.TermFactory(value='d', active=False)
+        cls.objects = [cls.fake_term_1, cls.fake_term_2, cls.fake_term_3]
 
     def test_get_terms(self):
         self.assertListEqual(

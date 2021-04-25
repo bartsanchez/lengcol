@@ -9,9 +9,10 @@ from django.urls import reverse
 
 
 class NewRegisteredUserMailTests(test.TestCase):
-    def setUp(self):
-        self.client = test.Client()
-        self.url = reverse('register')
+    @classmethod
+    def setUpTestData(cls):
+        cls.client = test.Client()
+        cls.url = reverse('register')
 
     def fill_and_send_form(self, browser, username, password1, password2,
                            email):
