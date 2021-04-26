@@ -36,5 +36,4 @@ class DefinitionTests(test.TestCase):
         )
         self.assertQuerysetEqual(self.definition.examples,
                                  queryset,
-                                 ordered=False,
-                                 transform=lambda x: x)
+                                 ordered=False)

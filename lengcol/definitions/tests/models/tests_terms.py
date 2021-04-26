@@ -30,5 +30,4 @@ class TermTests(test.TestCase):
         )
         self.assertQuerysetEqual(self.term.definitions,
                                  queryset,
-                                 ordered=False,
-                                 transform=lambda x: x)
+                                 ordered=False)
