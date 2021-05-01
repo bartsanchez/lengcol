@@ -17,6 +17,16 @@ class DefinitionTests(test.TestCase):
     def test_inheritance(self):
         self.assertTrue(issubclass(models.Definition, base_models.BaseModel))
 
+    def test_ordering(self):
+        def1 = factories.DefinitionFactory(value='definition_1')
+        def2 = factories.DefinitionFactory(value='definition_2')
+        def3 = factories.DefinitionFactory(value='definition_3')
+
+        self.assertEqual(
+            list(models.Definition.objects.all()),
+            [self.definition, def1, def2, def3]
+        )
+
     def test_has_examples(self):
         self.assertFalse(self.definition.has_examples)
 
