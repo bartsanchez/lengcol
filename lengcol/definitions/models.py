@@ -18,6 +18,9 @@ class Term(base_models.BaseModel):
     objects = managers.ActiveManager()
     all_objects = models.Manager()
 
+    class Meta:
+        ordering = ['created']
+
     def __str__(self):
         return self.value
 
