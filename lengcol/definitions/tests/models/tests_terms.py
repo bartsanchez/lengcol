@@ -18,6 +18,16 @@ class TermTests(test.TestCase):
     def test_slug(self):
         self.assertEqual(self.term.slug, 'my-fake-term')
 
+    def test_ordering(self):
+        term1 = factories.TermFactory(value='term_1')
+        term2 = factories.TermFactory(value='term_2')
+        term3 = factories.TermFactory(value='term_3')
+
+        self.assertEqual(
+            list(models.Term.objects.all()),
+            [self.term, term1, term2, term3]
+        )
+
     def test_definitions(self):
         definition_foo = factories.DefinitionFactory(term=self.term,
                                                      value='foo')
