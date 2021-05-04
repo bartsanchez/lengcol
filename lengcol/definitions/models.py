@@ -20,6 +20,9 @@ class Term(base_models.BaseModel):
 
     class Meta:
         ordering = ['created']
+        indexes = [
+            models.Index(fields=['created'])
+        ]
 
     def __str__(self):
         return self.value
