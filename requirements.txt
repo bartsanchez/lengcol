@@ -42,7 +42,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.in
 django-tagging==0.5.0
     # via -r requirements.in
-django==3.2
+django==3.2.2
     # via
     #   -r requirements.in
     #   django-extensions
@@ -69,13 +69,13 @@ redis==3.5.3
     # via -r requirements.in
 requests==2.25.1
     # via django-recaptcha3
-six==1.15.0
+six==1.16.0
     # via
     #   click-repl
     #   django-extra-views
 sqlparse==0.4.1
     # via django
-typing-extensions==3.7.4.3
+typing-extensions==3.10.0.0
     # via
     #   asgiref
     #   importlib-metadata
