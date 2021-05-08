@@ -44,6 +44,15 @@ class IndexViewTests(test.TestCase,
             html=True
         )
 
+    def test_tag_list_link(self):
+        response = self.client.get(self.url)
+
+        self.assertContains(
+            response,
+            '<a class="dropdown-item" href="/tags/">Etiquetas</a>',
+            html=True
+        )
+
     def test_footer(self):
         response = self.client.get(self.url)
 
