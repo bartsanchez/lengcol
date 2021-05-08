@@ -5,6 +5,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+.menu-header li {
+  font-size: 0.8em;
+  background-color: #4f5963;
+}
+.menu-header li a {
+  text-decoration: none;
+  color: white;
+
+}
 .footer {
   position: absolute;
   bottom: 0;

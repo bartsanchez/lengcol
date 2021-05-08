@@ -14,20 +14,27 @@ interactions:
       href=\"/static/definitions/tagsinput.css\">\n    <script src=\"/static/definitions/tagsinput.js\"></script>\n\n
       \   \n\n    <title>Lenguaje Coloquial | Diccionario en espa\xF1ol</title>\n
       \ </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark
-      bg-dark\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n
+      bg-dark m-0 py-2\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n
       \     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"
       data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"false\"
       aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
       \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
-      \       <ul class=\"navbar-nav m-auto\">\n          <li class=\"nav-item mx-2\">\n
-      \           <form class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n
-      \             <input name=\"v\" class=\"form-control\" type=\"search\" placeholder=\"Buscar\"
-      aria-label=\"Buscar\">\n              <button id=\"form-button\" class=\"btn
-      btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n            </form>\n
-      \         </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\"
-      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n          </li>\n        </ul>\n
-      \       <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n
-      \           <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
+      \       <div class=\"container m-0 p-0\">\n          <div class=\"row mx-auto
+      pb-1\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
+      \               <li class=\"nav-item mx-2\">\n                  <form class=\"form-inline\"
+      action=\"/terms/search/\" method=\"get\">\n                    <input name=\"v\"
+      class=\"form-control\" type=\"search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n
+      \                   <button id=\"form-button\" class=\"btn btn-outline-warning
+      ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n                </li>\n
+      \               <li class=\"nav-item\">\n                  <a class=\"nav-link\"
+      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n                </li>\n
+      \             </ul>\n            </div>\n          </div>\n          <div class=\"w-100\"></div>\n
+      \         <div class=\"row mx-auto\">\n            <div class=\"col\">\n              <ul
+      class=\"menu-header navbar-nav\">\n                <li class=\"nav-item mx-2\">\n
+      \                 <a class=\"dropdown-item\" href=\"/tags/\">Etiquetas</a>\n
+      \               </li>\n              </ul>\n            </div>\n          </div>\n
+      \       </div>\n        <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item
+      dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
       role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
       \               Usuario: An\xF3nimo\n            </a>\n            <div class=\"dropdown-menu\"
       aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
@@ -66,7 +73,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4741'
+      - '5315'
       Content-Type:
       - text/html
       User-Agent:
@@ -93,7 +100,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 30 Apr 2021 17:58:08 GMT
+      - Sat, 08 May 2021 14:31:40 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
