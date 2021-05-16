@@ -21,7 +21,7 @@
 <ul class="list-group list-group-flush">
 {% for tag in tags %}
   <li class="list-group-item">
-    {{ tag }}
+    <a href="{% url 'definitions-by-tag' tag %}">{{ tag }}</a>
   </li>
 {% endfor %}
 </ul>
