@@ -4,17 +4,17 @@
 #
 #    pip-compile requirements.in
 #
-ansible-base==2.10.8
+ansible-base==2.10.9
     # via ansible
-ansible==3.3.0
+ansible==3.4.0
     # via -r requirements.in
 cffi==1.14.5
     # via cryptography
 cryptography==3.4.7
     # via ansible-base
-jinja2==2.11.3
+jinja2==3.0.0
     # via ansible-base
-markupsafe==1.1.1
+markupsafe==2.0.0
     # via jinja2
 packaging==20.9
     # via ansible-base
