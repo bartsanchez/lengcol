@@ -24,6 +24,9 @@ body {
 .card {
   margin: 1em;
 }
+a {
+  color: #17a2b8;
+}
 h1 {
   font-size: 2em;
   margin-top: 0.5em;
