@@ -21,31 +21,32 @@ interactions:
       aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
       \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
       \       <div class=\"container m-0 p-0\">\n          <div class=\"row mx-auto
-      pb-1\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
-      \               <li class=\"nav-item mx-2\">\n                  <form class=\"form-inline\"
-      action=\"/terms/search/\" method=\"get\">\n                    <input name=\"v\"
-      class=\"form-control\" type=\"search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n
-      \                   <button id=\"form-button\" class=\"btn btn-outline-warning
-      ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n                </li>\n
-      \               <li class=\"nav-item\">\n                  <a class=\"nav-link\"
-      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n                </li>\n
-      \             </ul>\n            </div>\n          </div>\n          <div class=\"w-100\"></div>\n
-      \         <div class=\"row mx-auto\">\n            <div class=\"col\">\n              <ul
-      class=\"menu-header navbar-nav\">\n                <li class=\"nav-item mx-2\">\n
-      \                 <a class=\"dropdown-item\" href=\"/tags/\">Etiquetas</a>\n
+      pb-1 w-100\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
+      \               <li class=\"nav-item mx-2 pl-5 w-75\">\n                  <form
+      class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n                    <input
+      name=\"v\" class=\"form-control w-75\" type=\"search\" placeholder=\"Buscar\"
+      aria-label=\"Buscar\">\n                    <button id=\"form-button\" class=\"btn
+      btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n
+      \               </li>\n                <li class=\"nav-item\">\n                  <a
+      class=\"nav-link\" href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n
       \               </li>\n              </ul>\n            </div>\n          </div>\n
-      \       </div>\n        <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item
-      dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
-      role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
-      \               Usuario: An\xF3nimo\n            </a>\n            <div class=\"dropdown-menu\"
-      aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
-      href=\"/login/\">Login</a>\n                <a class=\"dropdown-item\" href=\"/register/\">Crea
-      tu cuenta</a>\n              \n            </div>\n          </li>\n        </ul>\n
-      \     </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
-      \     <h1>Resultados de la b\xFAsqueda</h1>\n      <div class=\"row\">\n        <div
-      class=\"col-md-8\">\n          \n  \n    \n      <div class=\"card\">\n\n  <div
-      class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/foo-term/\">foo
-      term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/b3ec0487-d422-4d0e-86c0-0b80402fb012/\">&#128279;</a>\n
+      \         <div class=\"w-100\"></div>\n          <div class=\"row mx-auto\">\n
+      \           <div class=\"col\">\n              <ul class=\"menu-header navbar-nav\">\n
+      \               <li class=\"nav-item mx-2\">\n                  <a class=\"dropdown-item\"
+      href=\"/tags/\">Etiquetas</a>\n                </li>\n              </ul>\n
+      \           </div>\n          </div>\n        </div>\n        <ul class=\"navbar-nav
+      ml-auto\">\n          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link
+      dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"
+      aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: An\xF3nimo\n
+      \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
+      \             \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n
+      \               <a class=\"dropdown-item\" href=\"/register/\">Crea tu cuenta</a>\n
+      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
+      \   </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Resultados
+      de la b\xFAsqueda</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
+      \         \n  \n    \n      <div class=\"card\">\n\n  <div class=\"card-body\">\n
+      \   <h5 class=\"card-title\">\n      <a href=\"/terms/foo-term/\">foo term</a>\n
+      \   </h5>\n\n    <p>\n      <a href=\"/definitions/b3ec0487-d422-4d0e-86c0-0b80402fb012/\">&#128279;</a>\n
       \     foo\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
       class=\"badge badge-pill badge-info\">another fake tag 2</a>\n    \n      <a
       href=\"/tags/fake%20tag%201/definitions/\" class=\"badge badge-pill badge-info\">fake
@@ -83,7 +84,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6024'
+      - '6045'
       Content-Type:
       - text/html
       User-Agent:
@@ -110,7 +111,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 08 May 2021 14:31:43 GMT
+      - Sat, 22 May 2021 18:18:13 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
@@ -130,5 +131,5 @@ interactions:
       - 1; mode=block
     status:
       code: 200
-      message: OK
+      message: ''
 version: 1
