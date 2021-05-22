@@ -21,29 +21,30 @@ interactions:
       aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
       \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
       \       <div class=\"container m-0 p-0\">\n          <div class=\"row mx-auto
-      pb-1\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
-      \               <li class=\"nav-item mx-2\">\n                  <form class=\"form-inline\"
-      action=\"/terms/search/\" method=\"get\">\n                    <input name=\"v\"
-      class=\"form-control\" type=\"search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n
-      \                   <button id=\"form-button\" class=\"btn btn-outline-warning
-      ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n                </li>\n
-      \               <li class=\"nav-item\">\n                  <a class=\"nav-link\"
-      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n                </li>\n
-      \             </ul>\n            </div>\n          </div>\n          <div class=\"w-100\"></div>\n
-      \         <div class=\"row mx-auto\">\n            <div class=\"col\">\n              <ul
-      class=\"menu-header navbar-nav\">\n                <li class=\"nav-item mx-2\">\n
-      \                 <a class=\"dropdown-item\" href=\"/tags/\">Etiquetas</a>\n
+      pb-1 w-100\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
+      \               <li class=\"nav-item mx-2 pl-5 w-75\">\n                  <form
+      class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n                    <input
+      name=\"v\" class=\"form-control w-75\" type=\"search\" placeholder=\"Buscar\"
+      aria-label=\"Buscar\">\n                    <button id=\"form-button\" class=\"btn
+      btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n
+      \               </li>\n                <li class=\"nav-item\">\n                  <a
+      class=\"nav-link\" href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n
       \               </li>\n              </ul>\n            </div>\n          </div>\n
-      \       </div>\n        <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item
-      dropdown\">\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
-      role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
-      \               Usuario: An\xF3nimo\n            </a>\n            <div class=\"dropdown-menu\"
-      aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
-      href=\"/login/\">Login</a>\n                <a class=\"dropdown-item\" href=\"/register/\">Crea
-      tu cuenta</a>\n              \n            </div>\n          </li>\n        </ul>\n
-      \     </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
-      \     <h1>Etiquetas</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
-      \         \n\n<ul class=\"cloud\">\n    \n    \n      <li>\n        <a href=\"/tags/a%20fake%20tag/definitions/\"
+      \         <div class=\"w-100\"></div>\n          <div class=\"row mx-auto\">\n
+      \           <div class=\"col\">\n              <ul class=\"menu-header navbar-nav\">\n
+      \               <li class=\"nav-item mx-2\">\n                  <a class=\"dropdown-item\"
+      href=\"/tags/\">Etiquetas</a>\n                </li>\n              </ul>\n
+      \           </div>\n          </div>\n        </div>\n        <ul class=\"navbar-nav
+      ml-auto\">\n          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link
+      dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"
+      aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: An\xF3nimo\n
+      \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
+      \             \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n
+      \               <a class=\"dropdown-item\" href=\"/register/\">Crea tu cuenta</a>\n
+      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
+      \   </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Etiquetas</h1>\n
+      \     <div class=\"row\">\n        <div class=\"col-md-8\">\n          \n\n<ul
+      class=\"cloud\">\n    \n    \n      <li>\n        <a href=\"/tags/a%20fake%20tag/definitions/\"
       data-weight=\"1\">a fake tag</a>\n      </li>\n    \n      <li>\n        <a
       href=\"/tags/othertag/definitions/\" data-weight=\"1\">othertag</a>\n      </li>\n
       \   \n</ul>\n\n<h3>Lista completa</h3>\n\n<ul class=\"list-group list-group-flush\">\n\n
@@ -71,7 +72,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5148'
+      - '5169'
       Content-Type:
       - text/html
       User-Agent:
@@ -98,7 +99,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sun, 16 May 2021 15:02:06 GMT
+      - Sat, 22 May 2021 18:18:12 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
