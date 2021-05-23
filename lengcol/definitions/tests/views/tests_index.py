@@ -78,8 +78,9 @@ class IndexViewTests(test.TestCase,
         linked_url = reverse('definition-add')
         self.assertContains(
             response,
-            '<a class="nav-link" href="{}">Añadir definición</a>'.format(
-                linked_url
+            (
+                '<a class="dropdown-item font-weight-bold" href="{}">'
+                'Añadir definición</a>'.format(linked_url)
             ),
             html=True
         )

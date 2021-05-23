@@ -21,31 +21,31 @@ interactions:
       \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
       \       <div class=\"container m-0 p-0\">\n          <div class=\"row mx-auto
       pb-1 w-100\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
-      \               <li class=\"nav-item mx-2 pl-5 w-75\">\n                  <form
+      \               <li class=\"nav-item mx-2 pl-5 w-100\">\n                  <form
       class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n                    <input
       name=\"v\" class=\"form-control w-75\" type=\"search\" placeholder=\"Buscar\"
       aria-label=\"Buscar\">\n                    <button id=\"form-button\" class=\"btn
       btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n
-      \               </li>\n                <li class=\"nav-item\">\n                  <a
-      class=\"nav-link\" href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n
       \               </li>\n              </ul>\n            </div>\n          </div>\n
       \         <div class=\"w-100\"></div>\n          <div class=\"row mx-auto\">\n
       \           <div class=\"col\">\n              <ul class=\"menu-header navbar-nav\">\n
       \               <li class=\"nav-item mx-2\">\n                  <a class=\"dropdown-item\"
-      href=\"/tags/\">Etiquetas</a>\n                </li>\n              </ul>\n
-      \           </div>\n          </div>\n        </div>\n        <ul class=\"navbar-nav
-      ml-auto\">\n          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link
-      dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"
-      aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: An\xF3nimo\n
-      \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
-      \             \n                <a class=\"dropdown-item\" href=\"/login/\">Login</a>\n
-      \               <a class=\"dropdown-item\" href=\"/register/\">Crea tu cuenta</a>\n
-      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
-      \   </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Definiciones
-      con la etiqueta fake_tag</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
-      \         \n\n  <div class=\"card\">\n\n  <div class=\"card-body\">\n    <h5
-      class=\"card-title\">\n      <a href=\"/terms/term-fake/\">term fake</a>\n    </h5>\n\n
-      \   <p>\n      <a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\">&#128279;</a>\n
+      href=\"/tags/\">Etiquetas</a>\n                </li>\n                <li class=\"nav-item
+      mx-2 bg-primary\">\n                  <a class=\"dropdown-item font-weight-bold\"
+      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n                </li>\n
+      \             </ul>\n            </div>\n          </div>\n        </div>\n
+      \       <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n
+      \           <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
+      role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
+      \               Usuario: An\xF3nimo\n            </a>\n            <div class=\"dropdown-menu\"
+      aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
+      href=\"/login/\">Login</a>\n                <a class=\"dropdown-item\" href=\"/register/\">Crea
+      tu cuenta</a>\n              \n            </div>\n          </li>\n        </ul>\n
+      \     </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
+      \     <h1>Definiciones con la etiqueta fake_tag</h1>\n      <div class=\"row\">\n
+      \       <div class=\"col-md-8\">\n          \n\n  <div class=\"card\">\n\n  <div
+      class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/term-fake/\">term
+      fake</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/13bf0f68-eeb2-4777-a739-6ee5be30bacc/\">&#128279;</a>\n
       \     fake_definition\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20tag/definitions/\"
       class=\"badge badge-pill badge-info\">another tag</a>\n    \n      <a href=\"/tags/fake_tag/definitions/\"
       class=\"badge badge-pill badge-info\">fake_tag</a>\n    \n      <a href=\"/tags/one%20tag/definitions/\"
@@ -74,7 +74,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5336'
+      - '5375'
       Content-Type:
       - text/html
       User-Agent:
@@ -101,7 +101,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 22 May 2021 18:18:10 GMT
+      - Sun, 23 May 2021 17:30:15 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:

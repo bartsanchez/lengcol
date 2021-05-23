@@ -22,38 +22,39 @@ interactions:
       \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
       \       <div class=\"container m-0 p-0\">\n          <div class=\"row mx-auto
       pb-1 w-100\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
-      \               <li class=\"nav-item mx-2 pl-5 w-75\">\n                  <form
+      \               <li class=\"nav-item mx-2 pl-5 w-100\">\n                  <form
       class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n                    <input
       name=\"v\" class=\"form-control w-75\" type=\"search\" placeholder=\"Buscar\"
       aria-label=\"Buscar\">\n                    <button id=\"form-button\" class=\"btn
       btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n
-      \               </li>\n                <li class=\"nav-item\">\n                  <a
-      class=\"nav-link\" href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n
       \               </li>\n              </ul>\n            </div>\n          </div>\n
       \         <div class=\"w-100\"></div>\n          <div class=\"row mx-auto\">\n
       \           <div class=\"col\">\n              <ul class=\"menu-header navbar-nav\">\n
       \               <li class=\"nav-item mx-2\">\n                  <a class=\"dropdown-item\"
-      href=\"/tags/\">Etiquetas</a>\n                </li>\n              </ul>\n
-      \           </div>\n          </div>\n        </div>\n        <ul class=\"navbar-nav
-      ml-auto\">\n          <li class=\"nav-item dropdown\">\n            <a class=\"nav-link
-      dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"
-      aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: fake_username\n
-      \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
-      \             \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n
-      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
-      \   </nav>\n\n    <main class=\"container\">\n      <article>\n      <h1>Identificaci\xF3n</h1>\n
-      \     <div class=\"row\">\n        <div class=\"col-md-8\">\n          \n\n<form
-      method=\"post\" action=\"/login/\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\"
-      value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\" class=\"form-group\">
-      <label for=\"id_username\" class=\" requiredField\">\n                Usuario<span
-      class=\"asteriskField\">*</span> </label> <div class=\"\"> <input type=\"text\"
-      name=\"username\" autofocus autocapitalize=\"none\" autocomplete=\"username\"
-      maxlength=\"150\" class=\"textinput textInput form-control\" required id=\"id_username\">
-      </div> </div> <div id=\"div_id_password\" class=\"form-group\"> <label for=\"id_password\"
-      class=\" requiredField\">\n                Contrase\xF1a<span class=\"asteriskField\">*</span>
-      </label> <div class=\"\"> <input type=\"password\" name=\"password\" autocomplete=\"current-password\"
-      class=\"textinput textInput form-control\" required id=\"id_password\"> </div>
-      </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
+      href=\"/tags/\">Etiquetas</a>\n                </li>\n                <li class=\"nav-item
+      mx-2 bg-primary\">\n                  <a class=\"dropdown-item font-weight-bold\"
+      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n                </li>\n
+      \             </ul>\n            </div>\n          </div>\n        </div>\n
+      \       <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n
+      \           <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
+      role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
+      \               Usuario: fake_username\n            </a>\n            <div class=\"dropdown-menu\"
+      aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
+      href=\"/logout/\">Logout</a>\n              \n            </div>\n          </li>\n
+      \       </ul>\n      </div>\n    </nav>\n\n    <main class=\"container\">\n
+      \     <article>\n      <h1>Identificaci\xF3n</h1>\n      <div class=\"row\">\n
+      \       <div class=\"col-md-8\">\n          \n\n<form method=\"post\" action=\"/login/\">\n<input
+      type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n\n\n<div
+      id=\"div_id_username\" class=\"form-group\"> <label for=\"id_username\" class=\"
+      requiredField\">\n                Usuario<span class=\"asteriskField\">*</span>
+      </label> <div class=\"\"> <input type=\"text\" name=\"username\" autofocus autocapitalize=\"none\"
+      autocomplete=\"username\" maxlength=\"150\" class=\"textinput textInput form-control\"
+      required id=\"id_username\"> </div> </div> <div id=\"div_id_password\" class=\"form-group\">
+      <label for=\"id_password\" class=\" requiredField\">\n                Contrase\xF1a<span
+      class=\"asteriskField\">*</span> </label> <div class=\"\"> <input type=\"password\"
+      name=\"password\" autocomplete=\"current-password\" class=\"textinput textInput
+      form-control\" required id=\"id_password\"> </div> </div> <input type=\"hidden\"
+      class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
       id=\"login-form\" type=\"submit\" value=\"login\">\n<input type=\"hidden\" name=\"next\"
       value=\"\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n
@@ -70,7 +71,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5009'
+      - '5048'
       Content-Type:
       - text/html
       User-Agent:
@@ -97,7 +98,7 @@ interactions:
       content-type:
       - application/json;charset=utf-8
       date:
-      - Sat, 22 May 2021 18:18:04 GMT
+      - Sun, 23 May 2021 17:30:09 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
