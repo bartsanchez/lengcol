@@ -22,7 +22,11 @@ billiard==3.6.4.0
     # via
     #   -r requirements.txt
     #   celery
-celery==5.0.5
+cached-property==1.5.2
+    # via
+    #   -r requirements.txt
+    #   kombu
+celery==5.1.0
     # via -r requirements.txt
 certifi==2020.12.5
     # via
@@ -59,7 +63,7 @@ coverage[toml]==5.5
     #   pytest-cov
 cssselect==1.1.0
     # via splinter
-decorator==5.0.8
+decorator==5.0.9
     # via ipython
 dj-database-url==0.5.0
     # via -r requirements.txt
@@ -83,7 +87,7 @@ django==3.2.3
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==8.1.4
+faker==8.2.1
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
@@ -110,7 +114,7 @@ ipython==7.23.1
     # via ipdb
 jedi==0.18.0
     # via ipython
-kombu==5.0.2
+kombu==5.1.0
     # via
     #   -r requirements.txt
     #   celery
@@ -151,7 +155,7 @@ pyparsing==2.4.7
     # via packaging
 pytest-cov==2.12.0
     # via -r requirements_tests.in
-pytest-django==4.2.0
+pytest-django==4.3.0
     # via -r requirements_tests.in
 pytest-recording==0.11.0
     # via -r requirements_tests.in
@@ -224,6 +228,7 @@ vine==5.0.0
     #   -r requirements.txt
     #   amqp
     #   celery
+    #   kombu
 wcwidth==0.2.5
     # via
     #   -r requirements.txt

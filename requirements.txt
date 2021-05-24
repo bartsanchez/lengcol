@@ -10,7 +10,9 @@ asgiref==3.3.4
     # via django
 billiard==3.6.4.0
     # via celery
-celery==5.0.5
+cached-property==1.5.2
+    # via kombu
+celery==5.1.0
     # via -r requirements.in
 certifi==2020.12.5
     # via requests
@@ -53,7 +55,7 @@ idna==2.10
     # via requests
 importlib-metadata==4.0.1
     # via kombu
-kombu==5.0.2
+kombu==5.1.0
     # via celery
 prometheus-client==0.10.1
     # via django-prometheus
@@ -85,6 +87,7 @@ vine==5.0.0
     # via
     #   amqp
     #   celery
+    #   kombu
 wcwidth==0.2.5
     # via prompt-toolkit
 whitenoise==5.2.0
