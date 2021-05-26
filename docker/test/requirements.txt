@@ -12,7 +12,7 @@ chardet==4.0.0
     # via requests
 idna==2.10
     # via requests
-importlib-metadata==4.0.1
+importlib-metadata==4.2.0
     # via
     #   pluggy
     #   pytest
@@ -34,7 +34,7 @@ toml==0.10.2
     # via pytest
 typing-extensions==3.10.0.0
     # via importlib-metadata
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 zipp==3.4.1
     # via importlib-metadata
