@@ -47,3 +47,7 @@ services:
     blackbox_exporter:
         ports:
             - 9115:9115
+
+    loki:
+        ports:
+            - 3100:3100
