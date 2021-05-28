@@ -91,3 +91,11 @@ services:
             - redis_broker
         depends_on:
             - prometheus
+
+    loki:
+        image: grafana/loki:2.2.1
+        links:
+            - lengcol
+            - grafana
+        depends_on:
+            - lengcol
