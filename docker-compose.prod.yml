@@ -60,3 +60,8 @@ services:
         user: root
         volumes:
             - /data/grafana:/var/lib/grafana
+
+    promtail:
+        volumes:
+            - ./docker/prometheus/config_promtail.yml:/etc/promtail/config.yml
+            - /data/logs/nginx/:/var/log/nginx/

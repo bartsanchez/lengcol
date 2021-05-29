@@ -99,3 +99,10 @@ services:
             - grafana
         depends_on:
             - lengcol
+
+    promtail:
+        image: grafana/promtail:2.2.1
+        links:
+            - loki
+        depends_on:
+            - loki
