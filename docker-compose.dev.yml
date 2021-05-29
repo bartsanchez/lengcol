@@ -51,3 +51,8 @@ services:
     loki:
         ports:
             - 3100:3100
+
+    promtail:
+        volumes:
+            - ./docker/prometheus/config_promtail.yml:/etc/promtail/config.yml
+            - ./docker/logs/nginx/:/var/log/nginx/
