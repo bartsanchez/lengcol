@@ -15,7 +15,7 @@ scrape_configs:
         labels:
           job: nginx
           host: lengcol
-          __path__: /var/log/nginx/{access,error}.log
+          __path__: /var/log/nginx/{access,error}.log*
     pipeline_stages:
     - match:
         selector: '{job="nginx"}'
