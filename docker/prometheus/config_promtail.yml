@@ -33,3 +33,11 @@ scrape_configs:
             #body_bytes_sent:
             http_referer:
             http_user_agent:
+  - job_name: gunicorn
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: gunicorn
+          host: lengcol
+          __path__: /var/log/gunicorn/{access,error,recaptcha}.log*
