@@ -56,3 +56,4 @@ services:
         volumes:
             - ./docker/prometheus/config_promtail.yml:/etc/promtail/config.yml
             - ./docker/logs/nginx/:/var/log/nginx/
+            - ./docker/logs/gunicorn/:/var/log/gunicorn/
