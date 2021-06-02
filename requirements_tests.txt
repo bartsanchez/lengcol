@@ -28,7 +28,7 @@ cached-property==1.5.2
     #   kombu
 celery==5.1.0
     # via -r requirements.txt
-certifi==2020.12.5
+certifi==2021.5.30
     # via
     #   -r requirements.txt
     #   requests
@@ -44,7 +44,7 @@ click-plugins==1.1.1
     # via
     #   -r requirements.txt
     #   celery
-click-repl==0.1.6
+click-repl==0.2.0
     # via
     #   -r requirements.txt
     #   celery
@@ -57,14 +57,16 @@ click==7.1.2
     #   click-repl
 codecov==2.1.11
     # via -r requirements_tests.in
-coverage[toml]==5.5
+coverage==5.5
     # via
     #   codecov
     #   pytest-cov
 cssselect==1.1.0
     # via splinter
 decorator==5.0.9
-    # via ipython
+    # via
+    #   ipdb
+    #   ipython
 dj-database-url==0.5.0
     # via -r requirements.txt
 django-crispy-forms==1.11.2
@@ -79,7 +81,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-django==3.2.3
+django==3.2.4
     # via
     #   -r requirements.txt
     #   django-extensions
@@ -87,7 +89,7 @@ django==3.2.3
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==8.2.1
+faker==8.5.0
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
@@ -98,7 +100,7 @@ idna==2.10
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==4.0.1
+importlib-metadata==4.4.0
     # via
     #   -r requirements.txt
     #   kombu
@@ -106,11 +108,11 @@ importlib-metadata==4.0.1
     #   pytest
 iniconfig==1.1.1
     # via pytest
-ipdb==0.13.7
+ipdb==0.13.9
     # via -r requirements_tests.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.23.1
+ipython==7.24.0
     # via ipdb
 jedi==0.18.0
     # via ipython
@@ -134,7 +136,7 @@ pickleshare==0.7.5
     # via ipython
 pluggy==0.13.1
     # via pytest
-prometheus-client==0.10.1
+prometheus-client==0.11.0
     # via
     #   -r requirements.txt
     #   django-prometheus
@@ -153,7 +155,7 @@ pygments==2.9.0
     # via ipython
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.12.0
+pytest-cov==2.12.1
     # via -r requirements_tests.in
 pytest-django==4.3.0
     # via -r requirements_tests.in
@@ -203,9 +205,9 @@ text-unidecode==1.3
     # via faker
 toml==0.10.2
     # via
-    #   coverage
     #   ipdb
     #   pytest
+    #   pytest-cov
 traitlets==5.0.5
     # via
     #   ipython
@@ -216,7 +218,7 @@ typing-extensions==3.10.0.0
     #   asgiref
     #   importlib-metadata
     #   yarl
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   -r requirements.txt
     #   requests
