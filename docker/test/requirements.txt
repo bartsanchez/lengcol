@@ -6,13 +6,13 @@
 #
 attrs==21.2.0
     # via pytest
-certifi==2020.12.5
+certifi==2021.5.30
     # via requests
 chardet==4.0.0
     # via requests
 idna==2.10
     # via requests
-importlib-metadata==4.2.0
+importlib-metadata==4.4.0
     # via
     #   pluggy
     #   pytest
