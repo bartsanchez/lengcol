@@ -12,7 +12,7 @@ chardet==4.0.0
     # via requests
 idna==2.10
     # via requests
-importlib-metadata==4.4.0
+importlib-metadata==4.5.0
     # via
     #   pluggy
     #   pytest
