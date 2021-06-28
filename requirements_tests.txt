@@ -8,7 +8,7 @@ amqp==5.0.6
     # via
     #   -r requirements.txt
     #   kombu
-asgiref==3.3.4
+asgiref==3.4.0
     # via
     #   -r requirements.txt
     #   django
@@ -26,7 +26,7 @@ cached-property==1.5.2
     # via
     #   -r requirements.txt
     #   kombu
-celery==5.1.0
+celery==5.1.2
     # via -r requirements.txt
 certifi==2021.5.30
     # via
@@ -89,7 +89,7 @@ django==3.2.4
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==8.8.1
+faker==8.8.2
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
@@ -100,7 +100,7 @@ idna==2.10
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==4.5.0
+importlib-metadata==4.6.0
     # via
     #   -r requirements.txt
     #   kombu
@@ -112,7 +112,7 @@ ipdb==0.13.9
     # via -r requirements_tests.in
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.24.1
+ipython==7.25.0
     # via ipdb
 jedi==0.18.0
     # via ipython
@@ -140,12 +140,12 @@ prometheus-client==0.11.0
     # via
     #   -r requirements.txt
     #   django-prometheus
-prompt-toolkit==3.0.18
+prompt-toolkit==3.0.19
     # via
     #   -r requirements.txt
     #   click-repl
     #   ipython
-psycopg2-binary==2.9
+psycopg2-binary==2.9.1
     # via -r requirements.txt
 ptyprocess==0.7.0
     # via pexpect
@@ -217,7 +217,7 @@ typing-extensions==3.10.0.0
     #   asgiref
     #   importlib-metadata
     #   yarl
-urllib3==1.26.5
+urllib3==1.26.6
     # via
     #   -r requirements.txt
     #   requests

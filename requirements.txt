@@ -6,13 +6,13 @@
 #
 amqp==5.0.6
     # via kombu
-asgiref==3.3.4
+asgiref==3.4.0
     # via django
 billiard==3.6.4.0
     # via celery
 cached-property==1.5.2
     # via kombu
-celery==5.1.0
+celery==5.1.2
     # via -r requirements.in
 certifi==2021.5.30
     # via requests
@@ -53,15 +53,15 @@ gunicorn==20.1.0
     # via -r requirements.in
 idna==2.10
     # via requests
-importlib-metadata==4.5.0
+importlib-metadata==4.6.0
     # via kombu
 kombu==5.1.0
     # via celery
 prometheus-client==0.11.0
     # via django-prometheus
-prompt-toolkit==3.0.18
+prompt-toolkit==3.0.19
     # via click-repl
-psycopg2-binary==2.9
+psycopg2-binary==2.9.1
     # via -r requirements.in
 pytz==2021.1
     # via
@@ -79,7 +79,7 @@ typing-extensions==3.10.0.0
     # via
     #   asgiref
     #   importlib-metadata
-urllib3==1.26.5
+urllib3==1.26.6
     # via requests
 vine==5.0.0
     # via
