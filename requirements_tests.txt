@@ -81,7 +81,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-django==3.2.4
+django==3.2.5
     # via
     #   -r requirements.txt
     #   django-extensions
