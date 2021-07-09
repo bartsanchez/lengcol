@@ -8,7 +8,7 @@ amqp==5.0.6
     # via
     #   -r requirements.txt
     #   kombu
-asgiref==3.4.0
+asgiref==3.4.1
     # via
     #   -r requirements.txt
     #   django
@@ -81,7 +81,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-django==3.2.4
+django==3.2.5
     # via
     #   -r requirements.txt
     #   django-extensions
@@ -89,7 +89,7 @@ django==3.2.4
     #   splinter
 factory-boy==3.2.0
     # via -r requirements_tests.in
-faker==8.8.2
+faker==8.10.0
     # via factory-boy
 freezegun==1.1.0
     # via -r requirements_tests.in
@@ -100,7 +100,7 @@ idna==2.10
     #   -r requirements.txt
     #   requests
     #   yarl
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
     # via
     #   -r requirements.txt
     #   kombu
@@ -126,7 +126,7 @@ matplotlib-inline==0.1.2
     # via ipython
 multidict==5.1.0
     # via yarl
-packaging==20.9
+packaging==21.0
     # via pytest
 parso==0.8.2
     # via jedi
@@ -159,7 +159,7 @@ pytest-cov==2.12.1
     # via -r requirements_tests.in
 pytest-django==4.4.0
     # via -r requirements_tests.in
-pytest-recording==0.11.0
+pytest-recording==0.12.0
     # via -r requirements_tests.in
 pytest==6.2.4
     # via
@@ -194,7 +194,7 @@ six==1.16.0
     #   python-dateutil
     #   splinter
     #   vcrpy
-splinter[django]==0.14.0
+splinter[django]==0.15.0
     # via -r requirements_tests.in
 sqlparse==0.4.1
     # via
@@ -240,7 +240,7 @@ wrapt==1.12.1
     # via vcrpy
 yarl==1.6.3
     # via vcrpy
-zipp==3.4.1
+zipp==3.5.0
     # via
     #   -r requirements.txt
     #   importlib-metadata
