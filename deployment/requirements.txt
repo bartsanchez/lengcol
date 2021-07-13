@@ -6,9 +6,9 @@
 #
 ansible-core==2.11.2
     # via ansible
-ansible==4.1.0
+ansible==4.2.0
     # via -r requirements.in
-cffi==1.14.5
+cffi==1.14.6
     # via cryptography
 cryptography==3.4.7
     # via ansible-core
@@ -16,7 +16,7 @@ jinja2==3.0.1
     # via ansible-core
 markupsafe==2.0.1
     # via jinja2
-packaging==20.9
+packaging==21.0
     # via ansible-core
 pycparser==2.20
     # via cffi
