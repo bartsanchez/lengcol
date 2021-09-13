@@ -73,7 +73,7 @@ requests==2.26.0
     # via django-recaptcha3
 six==1.16.0
     # via click-repl
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via django
 typing-extensions==3.10.0.2
     # via
