@@ -9,7 +9,7 @@
         "AvailabilityZone" : "us-east-2a",
         "SecurityGroupIds" : [ "sg-0cf8372ffe407a632" ],
         "KeyName" : "aws_key_pair",
-        "ImageId" : "ami-0c6b1848aeece8f28"
+        "ImageId" : "ami-0ed7d9c5cf96af7aa"
       }
     },
 
