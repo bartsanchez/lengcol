@@ -5,11 +5,11 @@
     "EC2Instance" : {
       "Type" : "AWS::EC2::Instance",
       "Properties" : {
-        "InstanceType" : "t4g.small",
+        "InstanceType" : "t2.small",
         "AvailabilityZone" : "us-east-2a",
         "SecurityGroupIds" : [ "sg-0cf8372ffe407a632" ],
         "KeyName" : "aws_key_pair",
-        "ImageId" : "ami-0ed7d9c5cf96af7aa"
+        "ImageId" : "ami-0b3b51fc5902a4a78"
       }
     },
 
