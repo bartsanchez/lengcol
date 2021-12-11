@@ -1,4 +1,4 @@
-Django
+Django<4.0
 django-extensions
 django-tagging
 dj-database-url
