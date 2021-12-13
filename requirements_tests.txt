@@ -112,7 +112,7 @@ kombu==5.2.2
     # via
     #   -r requirements.txt
     #   celery
-lxml==4.6.4
+lxml==4.6.5
     # via splinter
 matplotlib-inline==0.1.3
     # via ipython
