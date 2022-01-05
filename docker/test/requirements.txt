@@ -4,11 +4,11 @@
 #
 #    pip-compile --output-file=./requirements.txt requirements.in
 #
-attrs==21.2.0
+attrs==21.4.0
     # via pytest
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.7
+charset-normalizer==2.0.10
     # via requests
 idna==3.3
     # via requests
@@ -24,7 +24,7 @@ pyparsing==3.0.6
     # via packaging
 pytest==6.2.5
     # via -r requirements.in
-requests==2.26.0
+requests==2.27.1
     # via -r requirements.in
 toml==0.10.2
     # via pytest
