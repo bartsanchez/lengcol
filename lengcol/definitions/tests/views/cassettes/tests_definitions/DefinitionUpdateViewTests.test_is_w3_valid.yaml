@@ -48,36 +48,36 @@ interactions:
       \     <form action=\"#\" method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"
       value=\"fake_csrf\">\n        \n\n<div id=\"div_id_term\" class=\"form-group\">
       <label for=\"id_term\" class=\" requiredField\">\n                T\xE9rmino<span
-      class=\"asteriskField\">*</span> </label> <div class=\"\"> <input type=\"text\"
-      name=\"term\" value=\"term fake\" class=\"textinput textInput form-control\"
-      required id=\"id_term\"> </div> </div> <div id=\"div_id_value\" class=\"form-group\">
-      <label for=\"id_value\" class=\" requiredField\">\n                Definici\xF3n<span
-      class=\"asteriskField\">*</span> </label> <div class=\"\"> <textarea name=\"value\"
-      cols=\"40\" rows=\"10\" class=\"textarea form-control\" required id=\"id_value\">\ndefinition
-      fake</textarea> </div> </div> <div id=\"div_id_tags\" class=\"form-group\">
-      <label for=\"id_tags\" class=\"\">\n                Etiquetas\n            </label>
-      <div class=\"\"> <input type=\"text\" name=\"tags\" value=\"fake tag 1, another
-      fake tag 2\" data-role=\"tagsinput\" class=\"textinput textInput form-control\"
-      id=\"id_tags\"> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
-      name=\"g-recaptcha-response\">\n\n        <p>Ejemplos</p>\n        \n          \n
-      \   \n\n<input type=\"hidden\" name=\"example_set-TOTAL_FORMS\" value=\"2\"
-      id=\"id_example_set-TOTAL_FORMS\"> <input type=\"hidden\" name=\"example_set-INITIAL_FORMS\"
-      value=\"0\" id=\"id_example_set-INITIAL_FORMS\"> <input type=\"hidden\" name=\"example_set-MIN_NUM_FORMS\"
-      value=\"0\" id=\"id_example_set-MIN_NUM_FORMS\"> <input type=\"hidden\" name=\"example_set-MAX_NUM_FORMS\"
-      value=\"5\" id=\"id_example_set-MAX_NUM_FORMS\">\n\n\n\n    <div class=\"multiField\">\n
-      \       \n\n<div id=\"div_id_example_set-0-value\" class=\"form-group\"> <div
-      class=\"\"> <input type=\"text\" name=\"example_set-0-value\" class=\"textinput
-      textInput form-control\" id=\"id_example_set-0-value\"> </div> </div> <input
-      type=\"hidden\" name=\"example_set-0-id\" id=\"id_example_set-0-id\"> <div class=\"form-group\">
-      <div id=\"div_id_example_set-0-DELETE\" class=\"form-check\"> <input type=\"checkbox\"
-      name=\"example_set-0-DELETE\" class=\"checkboxinput form-check-input\" id=\"id_example_set-0-DELETE\">
-      <label for=\"id_example_set-0-DELETE\" class=\"form-check-label\">\n                    Delete\n
-      \               </label> </div> </div> <input type=\"hidden\" name=\"example_set-0-definition\"
-      value=\"1\" id=\"id_example_set-0-definition\">\n\n    </div>\n\n    <div class=\"multiField\">\n
-      \       \n\n<div id=\"div_id_example_set-1-value\" class=\"form-group\"> <div
-      class=\"\"> <input type=\"text\" name=\"example_set-1-value\" class=\"textinput
-      textInput form-control\" id=\"id_example_set-1-value\"> </div> </div> <input
-      type=\"hidden\" name=\"example_set-1-id\" id=\"id_example_set-1-id\"> <div class=\"form-group\">
+      class=\"asteriskField\">*</span> </label> <div> <input type=\"text\" name=\"term\"
+      value=\"term fake\" class=\"textinput textInput form-control\" required id=\"id_term\">
+      </div> </div> <div id=\"div_id_value\" class=\"form-group\"> <label for=\"id_value\"
+      class=\" requiredField\">\n                Definici\xF3n<span class=\"asteriskField\">*</span>
+      </label> <div> <textarea name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea
+      form-control\" required id=\"id_value\">\ndefinition fake</textarea> </div>
+      </div> <div id=\"div_id_tags\" class=\"form-group\"> <label for=\"id_tags\"
+      class=\"\">\n                Etiquetas\n            </label> <div> <input type=\"text\"
+      name=\"tags\" value=\"fake tag 1, another fake tag 2\" data-role=\"tagsinput\"
+      class=\"textinput textInput form-control\" id=\"id_tags\"> </div> </div> <input
+      type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n
+      \       <p>Ejemplos</p>\n        \n          \n    \n\n<input type=\"hidden\"
+      name=\"example_set-TOTAL_FORMS\" value=\"2\" id=\"id_example_set-TOTAL_FORMS\">
+      <input type=\"hidden\" name=\"example_set-INITIAL_FORMS\" value=\"0\" id=\"id_example_set-INITIAL_FORMS\">
+      <input type=\"hidden\" name=\"example_set-MIN_NUM_FORMS\" value=\"0\" id=\"id_example_set-MIN_NUM_FORMS\">
+      <input type=\"hidden\" name=\"example_set-MAX_NUM_FORMS\" value=\"5\" id=\"id_example_set-MAX_NUM_FORMS\">\n\n\n\n
+      \   <div class=\"multiField\">\n        \n\n<div id=\"div_id_example_set-0-value\"
+      class=\"form-group\"> <div> <input type=\"text\" name=\"example_set-0-value\"
+      class=\"textinput textInput form-control\" id=\"id_example_set-0-value\"> </div>
+      </div> <input type=\"hidden\" name=\"example_set-0-id\" id=\"id_example_set-0-id\">
+      <div class=\"form-group\"> <div id=\"div_id_example_set-0-DELETE\" class=\"form-check\">
+      <input type=\"checkbox\" name=\"example_set-0-DELETE\" class=\"checkboxinput
+      form-check-input\" id=\"id_example_set-0-DELETE\"> <label for=\"id_example_set-0-DELETE\"
+      class=\"form-check-label\">\n                    Delete\n                </label>
+      </div> </div> <input type=\"hidden\" name=\"example_set-0-definition\" value=\"1\"
+      id=\"id_example_set-0-definition\">\n\n    </div>\n\n    <div class=\"multiField\">\n
+      \       \n\n<div id=\"div_id_example_set-1-value\" class=\"form-group\"> <div>
+      <input type=\"text\" name=\"example_set-1-value\" class=\"textinput textInput
+      form-control\" id=\"id_example_set-1-value\"> </div> </div> <input type=\"hidden\"
+      name=\"example_set-1-id\" id=\"id_example_set-1-id\"> <div class=\"form-group\">
       <div id=\"div_id_example_set-1-DELETE\" class=\"form-check\"> <input type=\"checkbox\"
       name=\"example_set-1-DELETE\" class=\"checkboxinput form-check-input\" id=\"id_example_set-1-DELETE\">
       <label for=\"id_example_set-1-DELETE\" class=\"form-check-label\">\n                    Delete\n
@@ -103,11 +103,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '7656'
+      - '7611'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.25.1
+      - python-requests/2.27.1
       charset:
       - utf-8
     method: POST
@@ -117,38 +117,50 @@ interactions:
       string: !!binary |
         H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6fad636b4891663b-MAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 12 Apr 2022 16:37:45 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
       accept-encoding:
       - gzip
       access-control-allow-headers:
       - content-type
       access-control-allow-origin:
       - '*'
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
       cache-control:
       - no-cache
       content-encoding:
       - gzip
-      content-type:
-      - application/json;charset=utf-8
-      date:
-      - Sun, 23 May 2021 17:30:13 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
       - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
         pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
-      server:
-      - Jetty(9.4.z-SNAPSHOT)
       strict-transport-security:
       - max-age=15552015; preload
-      transfer-encoding:
-      - chunked
       vary:
       - Accept-Encoding, User-Agent
       x-frame-options:
       - deny
+      x-request-id:
+      - 6fad636b4891663b
       x-xss-protection:
       - 1; mode=block
     status:
       code: 200
-      message: ''
+      message: OK
 version: 1
