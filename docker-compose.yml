@@ -65,7 +65,7 @@ services:
             net.core.somaxconn: 511
 
     prometheus:
-        image: prom/prometheus:v2.32.1
+        image: prom/prometheus:v2.35.0
         volumes:
             - ./docker/prometheus/config/alerts_probes_rules.yml:/etc/prometheus/alerts_probes_rules.yml
         links:
