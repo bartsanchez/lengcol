@@ -88,7 +88,7 @@ deprecated==1.2.13
     #   redis
 dj-database-url==1.0.0
     # via -r requirements.txt
-django==3.2.15
+django==3.2.16
     # via
     #   -r requirements.txt
     #   dj-database-url
