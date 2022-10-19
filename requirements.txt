@@ -34,7 +34,7 @@ deprecated==1.2.13
     # via redis
 dj-database-url==1.0.0
     # via -r requirements.in
-django==3.2.15
+django==3.2.16
     # via
     #   -r requirements.in
     #   dj-database-url
@@ -60,15 +60,15 @@ kombu==5.2.4
     # via celery
 packaging==21.3
     # via redis
-prometheus-client==0.14.1
+prometheus-client==0.15.0
     # via django-prometheus
 prompt-toolkit==3.0.31
     # via click-repl
-psycopg2-binary==2.9.3
+psycopg2-binary==2.9.4
     # via -r requirements.in
 pyparsing==3.0.9
     # via packaging
-pytz==2022.2.1
+pytz==2022.5
     # via
     #   celery
     #   django
