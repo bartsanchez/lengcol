@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements.txt
     #   django
-asttokens==2.1.0
+asttokens==2.2.0
     # via stack-data
 async-generator==1.10
     # via
@@ -76,10 +76,6 @@ decorator==5.1.1
     # via
     #   ipdb
     #   ipython
-deprecated==1.2.13
-    # via
-    #   -r requirements.txt
-    #   redis
 dj-database-url==1.0.0
     # via -r requirements.txt
 django==3.2.16
@@ -101,7 +97,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via
     #   pytest
     #   trio
@@ -109,7 +105,7 @@ executing==1.2.0
     # via stack-data
 factory-boy==3.2.1
     # via -r requirements_tests.in
-faker==15.3.1
+faker==15.3.4
     # via factory-boy
 freezegun==1.2.2
     # via -r requirements_tests.in
@@ -127,9 +123,9 @@ iniconfig==1.1.1
     # via pytest
 ipdb==0.13.9
     # via -r requirements_tests.in
-ipython==8.6.0
+ipython==8.7.0
     # via ipdb
-jedi==0.18.1
+jedi==0.18.2
     # via ipython
 kombu==5.2.4
     # via
@@ -160,12 +156,12 @@ prometheus-client==0.15.0
     # via
     #   -r requirements.txt
     #   django-prometheus
-prompt-toolkit==3.0.31
+prompt-toolkit==3.0.33
     # via
     #   -r requirements.txt
     #   click-repl
     #   ipython
-psycopg2-binary==2.9.4
+psycopg2-binary==2.9.5
     # via -r requirements.txt
 ptyprocess==0.7.0
     # via pexpect
@@ -194,14 +190,14 @@ python-dateutil==2.8.2
     # via
     #   faker
     #   freezegun
-pytz==2022.5
+pytz==2022.6
     # via
     #   -r requirements.txt
     #   celery
     #   django
 pyyaml==6.0
     # via vcrpy
-redis==4.3.4
+redis==4.3.5
     # via -r requirements.txt
 requests==2.28.1
     # via
@@ -209,7 +205,7 @@ requests==2.28.1
     #   -r requirements_tests.in
     #   codecov
     #   django-recaptcha3
-selenium==4.6.0
+selenium==4.7.0
     # via splinter
 six==1.16.0
     # via
@@ -228,7 +224,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements.txt
     #   django
-stack-data==0.6.0
+stack-data==0.6.2
     # via ipython
 toml==0.10.2
     # via ipdb
@@ -236,7 +232,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-traitlets==5.5.0
+traitlets==5.6.0
     # via
     #   ipython
     #   matplotlib-inline
@@ -246,7 +242,7 @@ trio==0.22.0
     #   trio-websocket
 trio-websocket==0.9.2
     # via selenium
-urllib3[socks]==1.26.12
+urllib3[socks]==1.26.13
     # via
     #   -r requirements.txt
     #   requests
@@ -266,10 +262,7 @@ wcwidth==0.2.5
 whitenoise==6.2.0
     # via -r requirements.txt
 wrapt==1.14.1
-    # via
-    #   -r requirements.txt
-    #   deprecated
-    #   vcrpy
+    # via vcrpy
 wsproto==1.2.0
     # via trio-websocket
 yarl==1.8.1
