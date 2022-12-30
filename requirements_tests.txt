@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements.txt
     #   django
-asttokens==2.2.0
+asttokens==2.2.1
     # via stack-data
 async-generator==1.10
     # via
@@ -22,7 +22,7 @@ async-timeout==4.0.2
     # via
     #   -r requirements.txt
     #   redis
-attrs==22.1.0
+attrs==22.2.0
     # via
     #   outcome
     #   pytest
@@ -66,7 +66,7 @@ click-repl==0.2.0
     #   celery
 codecov==2.1.12
     # via -r requirements_tests.in
-coverage[toml]==6.5.0
+coverage[toml]==7.0.1
     # via
     #   codecov
     #   pytest-cov
@@ -97,7 +97,7 @@ django-recaptcha3==0.4.0
     # via -r requirements.txt
 django-tagging==0.5.0
     # via -r requirements.txt
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via
     #   pytest
     #   trio
@@ -121,7 +121,7 @@ idna==3.4
     #   yarl
 iniconfig==1.1.1
     # via pytest
-ipdb==0.13.9
+ipdb==0.13.11
     # via -r requirements_tests.in
 ipython==8.7.0
     # via ipdb
@@ -131,11 +131,11 @@ kombu==5.2.4
     # via
     #   -r requirements.txt
     #   celery
-lxml==4.9.1
+lxml==4.9.2
     # via splinter
 matplotlib-inline==0.1.6
     # via ipython
-multidict==6.0.2
+multidict==6.0.4
     # via yarl
 outcome==1.2.0
     # via trio
@@ -205,7 +205,7 @@ requests==2.28.1
     #   -r requirements_tests.in
     #   codecov
     #   django-recaptcha3
-selenium==4.7.0
+selenium==4.7.2
     # via splinter
 six==1.16.0
     # via
@@ -226,13 +226,12 @@ sqlparse==0.4.3
     #   django
 stack-data==0.6.2
     # via ipython
-toml==0.10.2
-    # via ipdb
 tomli==2.0.1
     # via
     #   coverage
+    #   ipdb
     #   pytest
-traitlets==5.6.0
+traitlets==5.8.0
     # via
     #   ipython
     #   matplotlib-inline
@@ -265,7 +264,7 @@ wrapt==1.14.1
     # via vcrpy
 wsproto==1.2.0
     # via trio-websocket
-yarl==1.8.1
+yarl==1.8.2
     # via vcrpy
 
 # The following packages are considered to be unsafe in a requirements file:
