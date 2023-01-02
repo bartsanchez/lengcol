@@ -8,7 +8,7 @@ amqp==5.1.1
     # via
     #   -r requirements.txt
     #   kombu
-asgiref==3.5.2
+asgiref==3.6.0
     # via
     #   -r requirements.txt
     #   django
@@ -36,7 +36,7 @@ billiard==3.6.4.0
     #   celery
 celery==5.2.7
     # via -r requirements.txt
-certifi==2022.9.24
+certifi==2022.12.7
     # via
     #   -r requirements.txt
     #   requests
@@ -76,7 +76,7 @@ decorator==5.1.1
     # via
     #   ipdb
     #   ipython
-dj-database-url==1.0.0
+dj-database-url==1.2.0
     # via -r requirements.txt
 django==3.2.16
     # via
@@ -139,11 +139,8 @@ multidict==6.0.4
     # via yarl
 outcome==1.2.0
     # via trio
-packaging==21.3
-    # via
-    #   -r requirements.txt
-    #   pytest
-    #   redis
+packaging==22.0
+    # via pytest
 parso==0.8.3
     # via jedi
 pexpect==4.8.0
@@ -156,7 +153,7 @@ prometheus-client==0.15.0
     # via
     #   -r requirements.txt
     #   django-prometheus
-prompt-toolkit==3.0.33
+prompt-toolkit==3.0.36
     # via
     #   -r requirements.txt
     #   click-repl
@@ -167,12 +164,8 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
-pygments==2.13.0
+pygments==2.14.0
     # via ipython
-pyparsing==3.0.9
-    # via
-    #   -r requirements.txt
-    #   packaging
 pysocks==1.7.1
     # via urllib3
 pytest==7.2.0
@@ -190,14 +183,14 @@ python-dateutil==2.8.2
     # via
     #   faker
     #   freezegun
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements.txt
     #   celery
     #   django
 pyyaml==6.0
     # via vcrpy
-redis==4.3.5
+redis==4.4.0
     # via -r requirements.txt
 requests==2.28.1
     # via
