@@ -213,7 +213,7 @@ sortedcontainers==2.4.0
     # via trio
 splinter[django,selenium4]==0.18.1
     # via -r requirements_tests.in
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements.txt
     #   django
