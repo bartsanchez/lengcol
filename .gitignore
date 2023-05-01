@@ -8,6 +8,7 @@ lengcol.egg-info
 coverage.xml
 htmlcov/
 .env
+docker/db/pg_data/
 docker/static/*
 docker/logs/*
 deployment/aws_key_pair.pem
