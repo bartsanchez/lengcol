@@ -68,7 +68,7 @@ pytz==2023.3
     #   django
 redis==4.5.4
     # via -r requirements.in
-requests==2.29.0
+requests==2.31.0
     # via django-recaptcha3
 six==1.16.0
     # via click-repl
