@@ -201,7 +201,7 @@ pyyaml==6.0
     # via vcrpy
 redis==4.5.1
     # via -r requirements.txt
-requests==2.28.2
+requests==2.31.0
     # via
     #   -r requirements.txt
     #   -r requirements_tests.in
