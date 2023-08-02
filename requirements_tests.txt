@@ -17,9 +17,7 @@ asttokens==2.2.1
 async-generator==1.10
     # via trio
 async-timeout==4.0.2
-    # via
-    #   -r requirements.txt
-    #   redis
+    # via -r requirements.txt
 attrs==23.1.0
     # via
     #   outcome
@@ -40,11 +38,11 @@ certifi==2023.5.7
     #   urllib3
 cffi==1.15.1
     # via cryptography
-charset-normalizer==3.1.0
+charset-normalizer==3.2.0
     # via
     #   -r requirements.txt
     #   requests
-click==8.1.3
+click==8.1.4
     # via
     #   -r requirements.txt
     #   celery
@@ -69,7 +67,7 @@ coverage[toml]==7.2.7
     # via
     #   codecov
     #   pytest-cov
-cryptography==41.0.1
+cryptography==41.0.3
     # via
     #   pyopenssl
     #   urllib3
@@ -81,7 +79,7 @@ decorator==5.1.1
     #   ipython
 dj-database-url==2.0.0
     # via -r requirements.txt
-django==3.2.19
+django==3.2.20
     # via
     #   -r requirements.txt
     #   dj-database-url
@@ -101,10 +99,7 @@ django-recaptcha3==0.4.0
 django-tagging==0.5.0
     # via -r requirements.txt
 exceptiongroup==1.1.1
-    # via
-    #   pytest
-    #   trio
-    #   trio-websocket
+    # via trio-websocket
 executing==1.2.0
     # via stack-data
 factory-boy==3.2.1
@@ -158,7 +153,7 @@ prometheus-client==0.17.0
     # via
     #   -r requirements.txt
     #   django-prometheus
-prompt-toolkit==3.0.38
+prompt-toolkit==3.0.39
     # via
     #   -r requirements.txt
     #   click-repl
@@ -228,11 +223,6 @@ sqlparse==0.4.4
     #   django
 stack-data==0.6.2
     # via ipython
-tomli==2.0.1
-    # via
-    #   coverage
-    #   ipdb
-    #   pytest
 traitlets==5.9.0
     # via
     #   ipython
@@ -243,10 +233,9 @@ trio==0.22.0
     #   trio-websocket
 trio-websocket==0.10.3
     # via selenium
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via
     #   -r requirements.txt
-    #   asgiref
     #   dj-database-url
 tzdata==2023.3
     # via
