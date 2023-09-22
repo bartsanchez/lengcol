@@ -69,7 +69,7 @@ coverage[toml]==7.2.7
     # via
     #   codecov
     #   pytest-cov
-cryptography==41.0.1
+cryptography==41.0.4
     # via
     #   pyopenssl
     #   urllib3
