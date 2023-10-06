@@ -81,7 +81,7 @@ decorator==5.1.1
     #   ipython
 dj-database-url==2.0.0
     # via -r requirements.txt
-django==3.2.19
+django==3.2.22
     # via
     #   -r requirements.txt
     #   dj-database-url
