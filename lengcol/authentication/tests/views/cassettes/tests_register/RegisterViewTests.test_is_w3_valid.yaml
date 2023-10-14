@@ -59,12 +59,13 @@ interactions:
       class=\"textinput textInput form-control\" required id=\"id_password2\"> </div>
       </div> <div id=\"div_id_email\" class=\"form-group\"> <label for=\"id_email\"
       class=\" requiredField\">\n                Correo electr\xF3nico<span class=\"asteriskField\">*</span>
-      </label> <div> <input type=\"email\" name=\"email\" class=\"emailinput form-control\"
-      required id=\"id_email\"> </div> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
-      name=\"g-recaptcha-response\">\n\n<input id=\"register-form\" type=\"submit\"
-      value=\"Submit\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
-      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n
-      \           <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      </label> <div> <input type=\"email\" name=\"email\" maxlength=\"320\" class=\"emailinput
+      form-control\" required id=\"id_email\"> </div> </div> <input type=\"hidden\"
+      class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
+      id=\"register-form\" type=\"submit\" value=\"Submit\">\n</form>\n\n\n        </div>\n
+      \       <aside class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3
+      bg-light\">\n            <h4 class=\"font-italic\">Contacto</h4>\n            <p
+      class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
       class=\"text-muted\">Copyright 2021. All Rights Reserved.</span>\n      </div>\n
@@ -77,11 +78,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5656'
+      - '5672'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
       charset:
       - utf-8
     method: POST
@@ -94,17 +95,23 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6fad63460eab3676-MAD
+      - 8160bd1e5d9f866e-MAD
+      Cache-Control:
+      - no-cache
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 12 Apr 2022 16:37:39 GMT
-      Expect-CT:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - Sat, 14 Oct 2023 15:08:37 GMT
       Server:
       - cloudflare
+      Set-Cookie:
+      - __cf_bm=IvCq_.SrPPe6jatysBI4jP7d88krdaGdPv.Cfe70BHQ-1697296117-0-AYSHKBCIVltvRj5mTABHMQnTdpyjsokfNWffI2wk/2ymgzxNnHuGmRdXmliCwq5XA3BQoV2C89gZff4ddOjXxFU=;
+        path=/; expires=Sat, 14-Oct-23 15:38:37 GMT; domain=.w3.org; HttpOnly; Secure;
+        SameSite=None
       Transfer-Encoding:
       - chunked
       accept-encoding:
@@ -114,11 +121,7 @@ interactions:
       access-control-allow-origin:
       - '*'
       alt-svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-      cache-control:
-      - no-cache
-      content-encoding:
-      - gzip
+      - h3=":443"; ma=86400
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
@@ -131,7 +134,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 6fad63460eab3676
+      - 8160bd1e5d9f866e
       x-xss-protection:
       - 1; mode=block
     status:
