@@ -11,7 +11,3 @@ django-prometheus
 celery
 redis
 gunicorn
-
-
-# TO BE REMOVED
-urllib3<2.0

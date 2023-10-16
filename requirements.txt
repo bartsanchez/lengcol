@@ -83,10 +83,8 @@ typing-extensions==4.8.0
     #   kombu
 tzdata==2023.3
     # via celery
-urllib3==1.26.17
-    # via
-    #   -r requirements.in
-    #   requests
+urllib3==2.0.6
+    # via requests
 vine==5.0.0
     # via
     #   amqp
