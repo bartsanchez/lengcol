@@ -1,3 +1,4 @@
+# App
 Django<4.0
 django-extensions
 django-tagging
@@ -11,3 +12,14 @@ django-prometheus
 celery
 redis
 gunicorn
+
+# Tests
+pytest-django
+pytest-cov
+pytest-recording
+factory_boy
+freezegun
+requests
+ipdb
+splinter[django,selenium4]
+codecov
