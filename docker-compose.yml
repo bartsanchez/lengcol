@@ -72,7 +72,7 @@ services:
             - blackbox_exporter
 
     alertmanager:
-        image: prom/alertmanager:v0.24.0
+        image: prom/alertmanager:v0.26.0
         links:
             - prometheus
         depends_on:
