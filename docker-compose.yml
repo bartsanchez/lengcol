@@ -93,7 +93,7 @@ services:
             - prometheus
 
     loki:
-        image: grafana/loki:2.5.0
+        image: grafana/loki:2.9.2
         links:
             - lengcol
             - grafana
