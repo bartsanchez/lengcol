@@ -84,7 +84,7 @@ class IndexViewTests(
         self.assertContains(
             response,
             (
-                f'<a class="dropdown-item font-weight-bold" href="{linked_url}">'
+                f'<a class="dropdown-item fw-bold" href="{linked_url}">'
                 "Añadir definición</a>"
             ),
             html=True,
@@ -142,7 +142,7 @@ class IndexViewTests(
 
         response = self.client.get(self.url)
 
-        tag_html = '<a href="{}" class="badge badge-pill badge-info">{}</a>'
+        tag_html = '<a href="{}" class="badge rounded-pill text-bg-secondary">{}</a>'
 
         for tag in ("first_tag", "second_tag"):
             email_link = f"/tags/{tag}/definitions/"
@@ -196,24 +196,14 @@ class IndexPaginationTests(test.TestCase):
     def test_dont_have_link_current_page_with_no_items(self):
         response = self.client.get(self.url)
 
-        html_text = (
-            '<a class="page-link" href="#">'
-            "1"
-            '<span class="sr-only">(current)</span>'
-            "</a>"
-        )
+        html_text = '<a class="page-link" href="#">1</a>'
         self.assertNotContains(response, html_text, html=True)
 
     def test_has_link_current_page(self):
         factories.DefinitionFactory()
         response = self.client.get(self.url)
 
-        html_text = (
-            '<a class="page-link" href="#">'
-            "1"
-            '<span class="sr-only">(current)</span>'
-            "</a>"
-        )
+        html_text = '<a class="page-link" href="#">1</a>'
         self.assertContains(response, html_text, html=True)
 
     def test_has_link_to_next_page(self):

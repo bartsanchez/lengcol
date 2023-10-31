@@ -162,12 +162,7 @@ class TermSearchViewPaginationTests(test.TestCase):
         factories.TermFactory()
         response = self.client.get(self.url)
 
-        html_text = (
-            '<a class="page-link" href="#">'
-            "1"
-            '<span class="sr-only">(current)</span>'
-            "</a>"
-        )
+        html_text = '<a class="page-link" href="#">1</a>'
         self.assertContains(response, html_text, html=True)
 
     def test_dont_have_link_current_page_with_no_items(self):
@@ -175,12 +170,7 @@ class TermSearchViewPaginationTests(test.TestCase):
         url = "{}?{}".format(self.url, http.urlencode({"v": "zñ"}))
         response = self.client.get(url)
 
-        html_text = (
-            '<a class="page-link" href="#">'
-            "1"
-            '<span class="sr-only">(current)</span>'
-            "</a>"
-        )
+        html_text = '<a class="page-link" href="#">1</a>'
         self.assertNotContains(response, html_text, html=True)
 
     def test_has_link_current_page(self):
@@ -189,12 +179,7 @@ class TermSearchViewPaginationTests(test.TestCase):
         url = "{}?{}".format(self.url, http.urlencode({"v": searched_value}))
         response = self.client.get(url)
 
-        html_text = (
-            '<a class="page-link" href="#">'
-            "1"
-            '<span class="sr-only">(current)</span>'
-            "</a>"
-        )
+        html_text = '<a class="page-link" href="#">1</a>'
         self.assertContains(response, html_text, html=True)
 
     def test_has_link_to_next_page(self):

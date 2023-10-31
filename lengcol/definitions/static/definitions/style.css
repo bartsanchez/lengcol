@@ -5,32 +5,39 @@ html {
 body {
   margin-bottom: 60px;
 }
+#header {
+  background-color: #343a40;
+}
 .menu-header li {
   font-size: 0.8em;
   background-color: #4f5963;
 }
 .menu-header li a {
-  text-decoration: none;
   color: white;
 
 }
-.footer {
+#footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
   line-height: 60px;
+  background-color: #343a40;
 }
 .card {
   margin: 1em;
 }
 a {
   color: #17a2b8;
+  text-decoration: none;
 }
 h1 {
   font-size: 2em;
   margin-top: 0.5em;
   margin-bottom: 0em;
+}
+h4 {
+    font-style: italic;
 }
 ul.examples {
   list-style: none;
