@@ -1,50 +1,48 @@
 interactions:
 - request:
-    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\">\n
-      \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n
+    body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"utf-8\">\n
+      \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n
       \   <meta name=\"description\" content=\"A\xF1adir nueva definici\xF3n para
-      el proyecto Lenguaje Coloquial.\">\n\n    \n\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css\"
-      integrity=\"sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l\"
-      crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\"
-      integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\"
-      crossorigin=\"anonymous\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js\"
-      integrity=\"sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns\"
-      crossorigin=\"anonymous\"></script>\n\n    <link rel=\"stylesheet\" type=\"text/css\"
-      href=\"/static/definitions/style.css\">\n    <link rel=\"stylesheet\" type=\"text/css\"
-      href=\"/static/definitions/tagsinput.css\">\n    <script src=\"/static/definitions/tagsinput.js\"></script>\n\n
-      \   \n  \n  \n\n\n    <title>Lenguaje Coloquial | Diccionario en espa\xF1ol</title>\n
-      \ </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark
-      bg-dark m-0 py-2\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n
-      \     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"
-      data-target=\"#navbarToggler\" aria-controls=\"navbarToggler\" aria-expanded=\"false\"
-      aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n
-      \     </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n
-      \       <div class=\"container m-0 p-0\">\n          <div class=\"row mx-auto
-      pb-1 w-100\">\n            <div class=\"col\">\n              <ul class=\"navbar-nav\">\n
-      \               <li class=\"nav-item mx-2 pl-5 w-100\">\n                  <form
-      class=\"form-inline\" action=\"/terms/search/\" method=\"get\">\n                    <input
-      name=\"v\" class=\"form-control w-75\" type=\"search\" placeholder=\"Buscar\"
-      aria-label=\"Buscar\">\n                    <button id=\"form-button\" class=\"btn
-      btn-outline-warning ml-1\" type=\"submit\">Buscar</button>\n                  </form>\n
-      \               </li>\n              </ul>\n            </div>\n          </div>\n
-      \         <div class=\"w-100\"></div>\n          <div class=\"row mx-auto\">\n
-      \           <div class=\"col\">\n              <ul class=\"menu-header navbar-nav\">\n
-      \               <li class=\"nav-item mx-2\">\n                  <a class=\"dropdown-item\"
-      href=\"/tags/\">Etiquetas</a>\n                </li>\n                <li class=\"nav-item
-      mx-2 bg-primary\">\n                  <a class=\"dropdown-item font-weight-bold\"
-      href=\"/definitions/add/\">A\xF1adir definici\xF3n</a>\n                </li>\n
-      \             </ul>\n            </div>\n          </div>\n        </div>\n
-      \       <ul class=\"navbar-nav ml-auto\">\n          <li class=\"nav-item dropdown\">\n
-      \           <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"
-      role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
-      \               Usuario: fake_username\n            </a>\n            <div class=\"dropdown-menu\"
-      aria-labelledby=\"navbarDropdown\">\n              \n                <a class=\"dropdown-item\"
-      href=\"/logout/\">Logout</a>\n              \n            </div>\n          </li>\n
-      \       </ul>\n      </div>\n    </nav>\n\n    <main class=\"container\">\n
-      \     <article>\n      <h1>Insertar definici\xF3n</h1>\n      <div class=\"row\">\n
-      \       <div class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n    <div
-      class=\"card-header\">\n      Nueva definici\xF3n\n    </div>\n\n    <div class=\"card-body\">\n
-      \     <form action=\"#\" method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"
+      el proyecto Lenguaje Coloquial.\">\n\n    \n\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\"
+      rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\"
+      crossorigin=\"anonymous\">\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"
+      integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\"
+      crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\"
+      href=\"/static/definitions/style.css\">\n\n    \n  \n  \n\n\n    <title>Lenguaje
+      Coloquial | Diccionario en espa\xF1ol</title>\n  </head>\n  <body>\n\n    <nav
+      id=\"header\" class=\"navbar navbar-expand-lg navbar-dark\">\n    <div class=\"container-fluid\">\n
+      \     <a class=\"navbar-brand\" href=\"/\">Lenguaje coloquial</a>\n      <button
+      class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarToggler\"
+      aria-controls=\"navbarToggler\" aria-expanded=\"false\" aria-label=\"Toggle
+      navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n
+      \     <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n        <div
+      class=\"container-fluid\">\n          <div class=\"container\">\n            <div
+      class=\"row\">\n              <div class=\"col\">\n                <div class=\"container\">\n
+      \                 <form class=\"row\" action=\"/terms/search/\" method=\"get\">\n
+      \                   <div class=\"col col-10 p-0\">\n                      <input
+      name=\"v\" class=\"form-control\" type=\"search\" placeholder=\"Buscar\" aria-label=\"Buscar\">\n
+      \                   </div>\n                    <div class=\"col col-1\">\n
+      \                     <button id=\"form-button\" class=\"btn btn-outline-warning\"
+      type=\"submit\">Buscar</button>\n                    </div>\n                  </form>\n
+      \               </div>\n              </div>\n            </div>\n            <div
+      class=\"row text-center justify-content-md-center row-cols-auto\">\n              <ul
+      class=\"navbar-nav menu-header\">\n                <li class=\"nav-item mx-2
+      mt-1 py-2 px-4\">\n                  <a class=\"dropdown-item\" href=\"/tags/\">Etiquetas</a>\n
+      \               </li>\n                <li class=\"nav-item mx-2 mt-1 py-2 px-4
+      bg-primary\">\n                  <a class=\"dropdown-item fw-bold\" href=\"/definitions/add/\">A\xF1adir
+      definici\xF3n</a>\n                </li>\n             </ul>\n            </div>\n
+      \         </div>\n        </div>\n        <ul class=\"navbar-nav ms-auto\">\n
+      \         <li class=\"nav-item dropdown\">\n            <a class=\"nav-link
+      dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\"
+      aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: fake_username\n
+      \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
+      \             \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n
+      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
+      \   </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
+      \     <h1>Insertar definici\xF3n</h1>\n      <div class=\"row\">\n        <div
+      class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n    <div class=\"card-header\">\n
+      \     Nueva definici\xF3n\n    </div>\n\n    <div class=\"card-body\">\n      <form
+      action=\"#\" method=\"post\"><input type=\"hidden\" name=\"csrfmiddlewaretoken\"
       value=\"fake_csrf\">\n        \n\n<div id=\"div_id_term\" class=\"form-group\">
       <label for=\"id_term\" class=\" requiredField\">\n                T\xE9rmino<span
       class=\"asteriskField\">*</span> </label> <div> <input type=\"text\" name=\"term\"
@@ -53,8 +51,8 @@ interactions:
       requiredField\">\n                Definici\xF3n<span class=\"asteriskField\">*</span>
       </label> <div> <textarea name=\"value\" cols=\"40\" rows=\"10\" class=\"textarea
       form-control\" required id=\"id_value\">\n</textarea> </div> </div> <div id=\"div_id_tags\"
-      class=\"form-group\"> <label for=\"id_tags\" class=\"\">\n                Etiquetas\n
-      \           </label> <div> <input type=\"text\" name=\"tags\" data-role=\"tagsinput\"
+      class=\"form-group\"> <label for=\"id_tags\" class=\"\">\n                Etiquetas
+      (separadas por comas)\n            </label> <div> <input type=\"text\" name=\"tags\"
       class=\"textinput textInput form-control\" id=\"id_tags\"> </div> </div> <input
       type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n
       \       <p>Ejemplos</p>\n        \n          \n    \n\n<input type=\"hidden\"
@@ -83,12 +81,11 @@ interactions:
       \   </div>\n\n\n        \n        <input type=\"submit\" value=\"Guardar\" class=\"btn
       btn-primary\">\n      </form>\n    </div>\n  </div>\n\n        </div>\n        <aside
       class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
-      \           <h4 class=\"font-italic\">Contacto</h4>\n            <p class=\"mb-0\"><a
-      href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      \           <h4>Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
-      \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
-      class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n      </div>\n
-      \   </footer>\n\n  </body>\n</html>\n"
+      \   <footer id=\"footer\" data-bs-theme=\"dark\">\n      <div class=\"container\">\n
+      \       <span class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n
+      \     </div>\n    </footer>\n\n  </body>\n</html>\n"
     headers:
       Accept:
       - '*/*'
@@ -97,7 +94,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '7195'
+      - '6971'
       Content-Type:
       - text/html
       User-Agent:
@@ -114,7 +111,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 828b5061785a0421-MAD
+      - 8316808ab8d01bb3-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -124,12 +121,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sun, 19 Nov 2023 20:48:26 GMT
+      - Wed, 06 Dec 2023 18:13:19 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=FCZEaorUQ0s3k93xb9SoFG0v1tFFTBdDKox.JbJ4LmM-1700426906-0-AeqUi7pxHQ5U8+h0zw+pA1H5glSKpP1sFzhYNvoAS3+fDShE1oVUMbB2/SCFNi1+eE7DBfai1LIxiKAJtLpmXY0=;
-        path=/; expires=Sun, 19-Nov-23 21:18:26 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=oGjfm56DZ.LAXNTJEYTF2zh0UDm7FVrvHkiSk18JYaI-1701886399-0-ATCNBUDb890Pfbq9Rph48gBZdUyJ2Ug5wbcgHfaJ4ZCYukbO5C5jOJZot8Ol6FOkSqM5vZ3sExp8rO8jjY4qf20=;
+        path=/; expires=Wed, 06-Dec-23 18:43:19 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -153,7 +150,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 828b5061785a0421
+      - 8316808ab8d01bb3
       x-xss-protection:
       - 1; mode=block
     status:

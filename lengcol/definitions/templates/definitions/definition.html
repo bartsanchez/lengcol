@@ -19,12 +19,12 @@
     {% endif %}
 
     {% for tag in definition.assigned_tags %}
-      <a href="{% url 'definitions-by-tag' tag %}" class="badge badge-pill badge-info">{{ tag }}</a>
+      <a href="{% url 'definitions-by-tag' tag %}" class="badge rounded-pill text-bg-secondary">{{ tag }}</a>
     {% endfor %}
 
   </div>
 
-  <div class="card-footer text-right text-muted">
+  <div class="card-footer text-end text-muted">
     {% if user == definition.user %}
       <div class="float-left">
           <div><a href="{% url 'definition-update' definition.uuid %}">&#9998; Editar</a></div>

@@ -39,9 +39,9 @@ class DefinitionForm(forms.ModelForm):
     )
     value = forms.CharField(label="Definición", widget=forms.Textarea())
     tags = forms.CharField(
-        label="Etiquetas",
+        label="Etiquetas (separadas por comas)",
         required=False,
-        widget=forms.TextInput(attrs={"data-role": "tagsinput"}),
+        widget=forms.TextInput(),
     )
 
     captcha = fields.ReCaptchaField()
