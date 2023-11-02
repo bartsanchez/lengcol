@@ -1,4 +1,4 @@
-FROM debian:12.2
+FROM debian:buster-slim@sha256:06a7bee0f90b6087f2b239125ef3c75d474e48cc69643d496d0c6e545fd91023
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
     logrotate \
