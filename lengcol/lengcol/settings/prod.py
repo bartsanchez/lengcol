@@ -10,9 +10,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'lenguajecoloquial.com',
-    'lenguajecoloquial.es',
     'www.lenguajecoloquial.com',
-    'www.lenguajecoloquial.es',
 ]
 
 INSTALLED_APPS += [
