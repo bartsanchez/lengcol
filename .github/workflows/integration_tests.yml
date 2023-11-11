@@ -18,9 +18,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
 
-      - name: Install Docker Compose
-        run: pip install docker-compose
-
       - name: Set env file
         run: cp example_env .env
 

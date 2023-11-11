@@ -4,26 +4,28 @@ ENV ?= dev
 START_SERVICES ?=
 RUN_SERVICE ?=
 
+COMPOSE_EXEC ?= docker compose
+
 build:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml build
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml build
 
 pull:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml pull
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml pull
 
 start:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml up -d $(START_SERVICES)
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml up -d $(START_SERVICES)
 
 stop:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml down
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml down
 
 run:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml run $(RUN_SERVICE)
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml run $(RUN_SERVICE)
 
 logs:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml logs $(ARGS)
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml logs $(ARGS)
 
 ps:
-	docker-compose -f docker-compose.yml -f docker-compose.$(ENV).yml ps
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml ps
 
 clean:
 	find . -name "*.pyc" -delete
