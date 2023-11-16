@@ -170,7 +170,7 @@ requests==2.31.0
     #   -r requirements.in
     #   codecov
     #   django-recaptcha3
-selenium==4.1.5
+selenium==4.15.1
     # via splinter
 six==1.16.0
     # via
