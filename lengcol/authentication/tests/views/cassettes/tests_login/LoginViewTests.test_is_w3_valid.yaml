@@ -61,7 +61,7 @@ interactions:
       href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
-      class=\"text-muted\">Copyright 2021. All Rights Reserved.</span>\n      </div>\n
+      class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n      </div>\n
       \   </footer>\n\n  </body>\n</html>\n"
     headers:
       Accept:
@@ -75,7 +75,7 @@ interactions:
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
       charset:
       - utf-8
     method: POST
@@ -88,17 +88,23 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6fad633de8bd6653-MAD
+      - 828b457c1e8a8675-MAD
+      Cache-Control:
+      - no-cache
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 12 Apr 2022 16:37:38 GMT
-      Expect-CT:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - Sun, 19 Nov 2023 20:40:59 GMT
       Server:
       - cloudflare
+      Set-Cookie:
+      - __cf_bm=UnN4bF9JDs0u.WBuygB2FT8sWTFjelVUpFTqgn02aCI-1700426459-0-AfDhrDMr0nYa16ifthNzF6hGzY+RVc55DKkFWTbOUArLVSCuY/npMV2v/pg80sHojMpedZxdKhGsNBjUbQjxxpo=;
+        path=/; expires=Sun, 19-Nov-23 21:10:59 GMT; domain=.w3.org; HttpOnly; Secure;
+        SameSite=None
       Transfer-Encoding:
       - chunked
       accept-encoding:
@@ -108,11 +114,7 @@ interactions:
       access-control-allow-origin:
       - '*'
       alt-svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-      cache-control:
-      - no-cache
-      content-encoding:
-      - gzip
+      - h3=":443"; ma=86400
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
@@ -125,7 +127,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 6fad633de8bd6653
+      - 828b457c1e8a8675
       x-xss-protection:
       - 1; mode=block
     status:

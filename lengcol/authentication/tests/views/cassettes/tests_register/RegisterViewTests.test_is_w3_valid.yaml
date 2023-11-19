@@ -68,7 +68,7 @@ interactions:
       class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
-      class=\"text-muted\">Copyright 2021. All Rights Reserved.</span>\n      </div>\n
+      class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n      </div>\n
       \   </footer>\n\n  </body>\n</html>\n"
     headers:
       Accept:
@@ -95,7 +95,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8160bd1e5d9f866e-MAD
+      - 828b457e2bb865fa-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -105,12 +105,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 14 Oct 2023 15:08:37 GMT
+      - Sun, 19 Nov 2023 20:41:00 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=IvCq_.SrPPe6jatysBI4jP7d88krdaGdPv.Cfe70BHQ-1697296117-0-AYSHKBCIVltvRj5mTABHMQnTdpyjsokfNWffI2wk/2ymgzxNnHuGmRdXmliCwq5XA3BQoV2C89gZff4ddOjXxFU=;
-        path=/; expires=Sat, 14-Oct-23 15:38:37 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=IaL3Jz63Z6l6MShdfoM_5nzXr52Yo9CYzZZu1GOCW7o-1700426460-0-ARFNAvht+iEeXqQiiOpyMsBydzY7+1J68WKfUOg49/ALg6bVL7WHHJkOlTxvUg3n35oHT812wasWvilJN+b/u4A=;
+        path=/; expires=Sun, 19-Nov-23 21:11:00 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -134,7 +134,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 8160bd1e5d9f866e
+      - 828b457e2bb865fa
       x-xss-protection:
       - 1; mode=block
     status:
