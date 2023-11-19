@@ -3,6 +3,7 @@ import splinter
 from django import test
 from django.conf import settings
 from django.urls import reverse
+from django.utils import timezone
 
 from base import mixins
 from definitions import factories, views
@@ -56,9 +57,11 @@ class IndexViewTests(test.TestCase,
     def test_footer(self):
         response = self.client.get(self.url)
 
+        year = timezone.now().year
+
         self.assertContains(
             response,
-            'Copyright 2021. All Rights Reserved.',
+            f'Copyright {year}. All Rights Reserved.',
         )
 
     def test_has_link_to_term_detail(self):

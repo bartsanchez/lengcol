@@ -69,7 +69,7 @@ interactions:
       href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
-      class=\"text-muted\">Copyright 2021. All Rights Reserved.</span>\n      </div>\n
+      class=\"text-muted\">Copyright 2020. All Rights Reserved.</span>\n      </div>\n
       \   </footer>\n\n  </body>\n</html>\n"
     headers:
       Accept:
@@ -83,7 +83,7 @@ interactions:
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.25.1
+      - python-requests/2.31.0
       charset:
       - utf-8
     method: POST
@@ -93,38 +93,52 @@ interactions:
       string: !!binary |
         H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
     headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 828b45a10f645cf3-MAD
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Nov 2023 20:41:05 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=fAhkKy6BLOJ6Xgrd32qn9E_aB0MKhf1QHwQgNQm8bwA-1700426465-0-AW/oBw+KzyOeDycFSN72Wp2W9SOMOXjwXLASVX2TypbVjHnuN+/dfTUWpJeLmFjr28l0GRbf9EKCvo605Qgy/fs=;
+        path=/; expires=Sun, 19-Nov-23 21:11:05 GMT; domain=.w3.org; HttpOnly; Secure;
+        SameSite=None
+      Transfer-Encoding:
+      - chunked
       accept-encoding:
       - gzip
       access-control-allow-headers:
       - content-type
       access-control-allow-origin:
       - '*'
-      cache-control:
-      - no-cache
-      content-encoding:
-      - gzip
-      content-type:
-      - application/json;charset=utf-8
-      date:
-      - Sun, 23 May 2021 17:30:18 GMT
+      alt-svc:
+      - h3=":443"; ma=86400
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
       - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
         pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
-      server:
-      - Jetty(9.4.z-SNAPSHOT)
       strict-transport-security:
       - max-age=15552015; preload
-      transfer-encoding:
-      - chunked
       vary:
       - Accept-Encoding, User-Agent
       x-frame-options:
       - deny
+      x-request-id:
+      - 828b45a10f645cf3
       x-xss-protection:
       - 1; mode=block
     status:
       code: 200
-      message: ''
+      message: OK
 version: 1

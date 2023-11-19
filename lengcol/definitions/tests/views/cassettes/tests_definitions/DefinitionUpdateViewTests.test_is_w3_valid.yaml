@@ -83,7 +83,7 @@ interactions:
       <label for=\"id_example_set-1-DELETE\" class=\"form-check-label\">\n                    Delete\n
       \               </label> </div> </div> <input type=\"hidden\" name=\"example_set-1-definition\"
       value=\"1\" id=\"id_example_set-1-definition\">\n\n    </div>\n\n\n        \n
-      \       <input type=\"submit\" value=\"Guardar\" class=\"btn btn-primary\"/>\n
+      \       <input type=\"submit\" value=\"Guardar\" class=\"btn btn-primary\">\n
       \     </form>\n    </div>\n  </div>\n\n        </div>\n        <aside class=\"col-md-4\">\n
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4 class=\"font-italic\">\xDAltimas
       definiciones</h4>\n            <ul>\n              \n              <li><a class=\"last-terms\"
@@ -93,7 +93,7 @@ interactions:
       href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer class=\"footer bg-dark\">\n      <div class=\"container\">\n        <span
-      class=\"text-muted\">Copyright 2021. All Rights Reserved.</span>\n      </div>\n
+      class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n      </div>\n
       \   </footer>\n\n  </body>\n</html>\n"
     headers:
       Accept:
@@ -103,11 +103,11 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '7611'
+      - '7610'
       Content-Type:
       - text/html
       User-Agent:
-      - python-requests/2.27.1
+      - python-requests/2.31.0
       charset:
       - utf-8
     method: POST
@@ -120,17 +120,23 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6fad636b4891663b-MAD
+      - 828b4f49bd2a2fa0-MAD
+      Cache-Control:
+      - no-cache
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 12 Apr 2022 16:37:45 GMT
-      Expect-CT:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - Sun, 19 Nov 2023 20:47:41 GMT
       Server:
       - cloudflare
+      Set-Cookie:
+      - __cf_bm=EsG0E69gqrhY.UvlJdfxuDLHmb7p82OQkakWQcvzeHc-1700426861-0-AZw5L24jwbEnHSjttmHUd9+Sdl0tXwrU8sx83NL7x5c5qnL6EtCizqEqTM4RP6gbGHNGlnJ/VzlXAzar0fucz5I=;
+        path=/; expires=Sun, 19-Nov-23 21:17:41 GMT; domain=.w3.org; HttpOnly; Secure;
+        SameSite=None
       Transfer-Encoding:
       - chunked
       accept-encoding:
@@ -140,11 +146,7 @@ interactions:
       access-control-allow-origin:
       - '*'
       alt-svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-      cache-control:
-      - no-cache
-      content-encoding:
-      - gzip
+      - h3=":443"; ma=86400
       expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       public-key-pins:
@@ -157,7 +159,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 6fad636b4891663b
+      - 828b4f49bd2a2fa0
       x-xss-protection:
       - 1; mode=block
     status:
