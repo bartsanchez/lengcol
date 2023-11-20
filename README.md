@@ -1,6 +1,7 @@
 [![Unit tests status](https://github.com/bartsanchez/lengcol/workflows/UnitTests/badge.svg?branch=master)](https://github.com/bartsanchez/lengcol/actions?query=branch%3Amaster+workflow%3AUnitTests)
 [![Integration tests status](https://github.com/bartsanchez/lengcol/workflows/IntegrationTests/badge.svg?branch=master)](https://github.com/bartsanchez/lengcol/actions?query=branch%3Amaster+workflow%3AIntegrationTests)
 [![codecov](https://codecov.io/gh/bartsanchez/lengcol/branch/master/graph/badge.svg)](https://codecov.io/gh/bartsanchez/lengcol)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/bartsanchez/lengcol/master.svg)](https://results.pre-commit.ci/latest/github/bartsanchez/lengcol/master)
 
 # Lenguaje coloquial project
 
