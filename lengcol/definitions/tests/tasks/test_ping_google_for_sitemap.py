@@ -1,11 +1,10 @@
 from unittest import mock
 
-from django import test
-from django.db.models import signals
-
 from authentication import models as auth_models
 from authentication import signals as auth_signals
 from definitions import factories
+from django import test
+from django.db.models import signals
 
 
 @mock.patch('django.contrib.sitemaps.ping_google')

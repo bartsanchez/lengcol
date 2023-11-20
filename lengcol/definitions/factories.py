@@ -1,8 +1,7 @@
 import factory
+from definitions import models
 from factory import django
 from tagging import models as tagging_models
-
-from definitions import models
 
 
 class TermFactory(django.DjangoModelFactory):

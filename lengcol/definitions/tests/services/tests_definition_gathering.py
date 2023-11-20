@@ -1,6 +1,5 @@
-from django import test
-
 from definitions import factories, services
+from django import test
 
 
 class DefinitionGatherinTests(test.TestCase):

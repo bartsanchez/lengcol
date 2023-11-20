@@ -1,10 +1,10 @@
 import os
 
+from definitions import models
 from django.conf import settings
 from django.contrib import sitemaps
 from django.core import mail
 
-from definitions import models
 from lengcol.celery import app
 
 
