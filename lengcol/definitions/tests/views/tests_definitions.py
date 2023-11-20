@@ -1,14 +1,13 @@
 from unittest import mock
 
 import freezegun
+from authentication import factories as auth_factories
+from base import mixins
+from definitions import factories, models
 from django import test
 from django.core import exceptions
 from django.urls import reverse
 from tagging import models as tagging_models
-
-from authentication import factories as auth_factories
-from base import mixins
-from definitions import factories, models
 
 
 class DefinitionCreateViewTests(test.TestCase,

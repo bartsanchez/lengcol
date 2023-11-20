@@ -1,14 +1,13 @@
 import uuid
 
+from base import managers
+from base import models as base_models
 from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django_extensions.db import fields
 from tagging import fields as tags_fields
 from tagging import registry
-
-from base import managers
-from base import models as base_models
 
 
 class Term(base_models.BaseModel):

@@ -1,7 +1,6 @@
+from definitions import models, tasks
 from django import dispatch
 from django.db.models import signals
-
-from definitions import models, tasks
 
 
 @dispatch.receiver(signals.post_save, sender=models.Definition)

@@ -1,9 +1,8 @@
 import freezegun
-from django import test
-from django.urls import reverse
-
 from base import mixins
 from definitions import factories
+from django import test
+from django.urls import reverse
 
 
 @freezegun.freeze_time('2020-01-01')

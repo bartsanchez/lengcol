@@ -1,8 +1,7 @@
+from definitions import models
 from django.contrib import sitemaps
 from django.urls import reverse
 from tagging import models as tagging_models
-
-from definitions import models
 
 
 class TermSitemap(sitemaps.Sitemap):

@@ -1,6 +1,5 @@
-from django import test
-
 from definitions import forms, models
+from django import test
 
 
 class ModelChoiceFieldAsTextTests(test.TestCase):
