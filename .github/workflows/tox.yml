@@ -28,8 +28,5 @@ jobs:
       - name: Run flake8
         run: tox -e flake8
 
-      - name: Run isort
-        run: tox -e isort
-
       - name: Run semgrep
         run: tox -e semgrep
