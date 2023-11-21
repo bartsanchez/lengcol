@@ -6,10 +6,10 @@ class TermGatherinTests(test.TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.service = services.TermGathering
-        cls.fake_term_1 = factories.TermFactory(value='l')
-        cls.fake_term_2 = factories.TermFactory(value='o')
-        cls.fake_term_3 = factories.TermFactory(value='e')
-        cls.fake_term_4 = factories.TermFactory(value='d', active=False)
+        cls.fake_term_1 = factories.TermFactory(value="l")
+        cls.fake_term_2 = factories.TermFactory(value="o")
+        cls.fake_term_3 = factories.TermFactory(value="e")
+        cls.fake_term_4 = factories.TermFactory(value="d", active=False)
         cls.objects = [cls.fake_term_1, cls.fake_term_2, cls.fake_term_3]
 
     def test_get_terms(self):
@@ -20,13 +20,13 @@ class TermGatherinTests(test.TestCase):
 
     def test_get_terms__order__asc(self):
         self.assertListEqual(
-            list(self.service._get_terms(order_by='value')),
+            list(self.service._get_terms(order_by="value")),
             [self.fake_term_3, self.fake_term_1, self.fake_term_2],
         )
 
     def test_get_terms__order__desc(self):
         self.assertListEqual(
-            list(self.service._get_terms(order_by='-value')),
+            list(self.service._get_terms(order_by="-value")),
             [self.fake_term_2, self.fake_term_1, self.fake_term_3],
         )
 

@@ -7,12 +7,12 @@ class ModelChoiceFieldAsTextTests(test.TestCase):
     def setUpTestData(cls):
         cls.model_choice_field = forms.ModelChoiceFieldAsText(
             queryset=models.Definition.objects.all(),
-            field='value',
+            field="value",
         )
 
     def test_widget(self):
         self.assertIn(
-            'TextInput',
+            "TextInput",
             str(self.model_choice_field.widget),
         )
 
@@ -21,8 +21,8 @@ class DefinitionFormTests(test.TestCase):
     @classmethod
     def setUpTestData(cls):
         data = {
-            'term': 'this is a fake term',
-            'value': 'this is a fake definition',
+            "term": "this is a fake term",
+            "value": "this is a fake definition",
         }
         cls.form = forms.DefinitionForm(data=data)
 
@@ -31,7 +31,7 @@ class DefinitionFormTests(test.TestCase):
 
     def test_missing_term(self):
         data = {
-            'value': 'this is a fake definition',
+            "value": "this is a fake definition",
         }
         form = forms.DefinitionForm(data=data)
 
@@ -39,7 +39,7 @@ class DefinitionFormTests(test.TestCase):
 
     def test_missing_value(self):
         data = {
-            'term': 'this is a fake term',
+            "term": "this is a fake term",
         }
         form = forms.DefinitionForm(data=data)
 
@@ -55,4 +55,4 @@ class DefinitionFormTests(test.TestCase):
     def test_active_field_is_not_included(self):
         f = forms.DefinitionForm()
 
-        self.assertNotIn('active', f.fields)
+        self.assertNotIn("active", f.fields)

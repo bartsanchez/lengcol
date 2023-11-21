@@ -4,18 +4,18 @@ from django.urls import path
 
 urlpatterns = [
     path(
-        'login/',
+        "login/",
         views.CustomLoginView.as_view(
-            template_name='authentication/login.html',
+            template_name="authentication/login.html",
         ),
-        name='login'
+        name="login",
     ),
     path(
-        'logout/',
+        "logout/",
         auth_views.LogoutView.as_view(
-            template_name='authentication/logout.html',
+            template_name="authentication/logout.html",
         ),
-        name='logout'
+        name="logout",
     ),
-    path('register/', views.RegisterView.as_view(), name='register'),
+    path("register/", views.RegisterView.as_view(), name="register"),
 ]

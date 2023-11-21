@@ -5,7 +5,7 @@ from tagging import models as tagging_models
 
 
 class TermSitemap(sitemaps.Sitemap):
-    changefreq = 'never'
+    changefreq = "never"
     priority = 0.5
 
     def items(self):
@@ -16,7 +16,7 @@ class TermSitemap(sitemaps.Sitemap):
 
 
 class DefinitionSitemap(sitemaps.Sitemap):
-    changefreq = 'never'
+    changefreq = "never"
     priority = 0.5
 
     def items(self):
@@ -27,22 +27,22 @@ class DefinitionSitemap(sitemaps.Sitemap):
 
 
 class TagSitemap(sitemaps.Sitemap):
-    changefreq = 'never'
+    changefreq = "never"
     priority = 0.5
 
     def items(self):
         return tagging_models.Tag.objects.all()
 
     def location(self, item):
-        return reverse('definitions-by-tag', kwargs={'tag_name': item})
+        return reverse("definitions-by-tag", kwargs={"tag_name": item})
 
 
 class StaticViewSitemap(sitemaps.Sitemap):
-    changefreq = 'daily'
+    changefreq = "daily"
     priority = 0.5
 
     def items(self):
-        return ['tag-list', 'term-search', 'definition-add']
+        return ["tag-list", "term-search", "definition-add"]
 
     def location(self, item):
         return reverse(item)

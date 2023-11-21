@@ -5,9 +5,9 @@ from django.db import models
 
 class User(auth_models.AbstractUser):
     username = models.CharField(
-        'username',
+        "username",
         max_length=150,
         unique=True,
         validators=[validators.UnicodeUsernameValidator()],
-        error_messages={'unique': 'A user with that username already exists.'},
+        error_messages={"unique": "A user with that username already exists."},
     )

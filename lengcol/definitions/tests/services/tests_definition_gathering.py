@@ -6,10 +6,10 @@ class DefinitionGatherinTests(test.TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.service = services.DefinitionGathering
-        cls.fake_def_1 = factories.DefinitionFactory(value='l')
-        cls.fake_def_2 = factories.DefinitionFactory(value='o')
-        cls.fake_def_3 = factories.DefinitionFactory(value='e')
-        cls.fake_def_4 = factories.DefinitionFactory(value='d', active=False)
+        cls.fake_def_1 = factories.DefinitionFactory(value="l")
+        cls.fake_def_2 = factories.DefinitionFactory(value="o")
+        cls.fake_def_3 = factories.DefinitionFactory(value="e")
+        cls.fake_def_4 = factories.DefinitionFactory(value="d", active=False)
         cls.objects = [cls.fake_def_1, cls.fake_def_2, cls.fake_def_3]
 
     def test_get_definitions(self):
@@ -20,13 +20,13 @@ class DefinitionGatherinTests(test.TestCase):
 
     def test_get_definitions__order__asc(self):
         self.assertListEqual(
-            list(self.service._get_definitions(order_by='value')),
+            list(self.service._get_definitions(order_by="value")),
             [self.fake_def_3, self.fake_def_1, self.fake_def_2],
         )
 
     def test_get_definitions__order__desc(self):
         self.assertListEqual(
-            list(self.service._get_definitions(order_by='-value')),
+            list(self.service._get_definitions(order_by="-value")),
             [self.fake_def_2, self.fake_def_1, self.fake_def_3],
         )
 
