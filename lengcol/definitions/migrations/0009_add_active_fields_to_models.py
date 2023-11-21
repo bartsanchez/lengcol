@@ -4,25 +4,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('definitions', '0008_definition_user'),
+        ("definitions", "0008_definition_user"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='definition',
-            name='active',
+            model_name="definition",
+            name="active",
             field=models.BooleanField(default=True),
         ),
         migrations.AddField(
-            model_name='example',
-            name='active',
+            model_name="example",
+            name="active",
             field=models.BooleanField(default=True),
         ),
         migrations.AddField(
-            model_name='term',
-            name='active',
+            model_name="term",
+            name="active",
             field=models.BooleanField(default=True),
         ),
     ]

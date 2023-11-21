@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('definitions', '0011_update_site_domain_name'),
+        ("definitions", "0011_update_site_domain_name"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='definition',
-            options={'ordering': ['created']},
+            name="definition",
+            options={"ordering": ["created"]},
         ),
     ]

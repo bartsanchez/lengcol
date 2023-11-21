@@ -51,6 +51,3 @@ ignore = [
     "UP009",
     "UP010",
 ]
-
-[tool.ruff.format]
-exclude = ["*/migrations/*"]
