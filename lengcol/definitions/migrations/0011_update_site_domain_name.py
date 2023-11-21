@@ -2,21 +2,18 @@ from django.db import migrations
 
 
 def update_site_domain_and_name(apps, schema_editor):
-    Site = apps.get_model('sites', 'Site')
+    Site = apps.get_model("sites", "Site")
 
-    domain_name = 'lenguajecoloquial.com'
+    domain_name = "lenguajecoloquial.com"
     Site.objects.update_or_create(
-        id=1,
-        defaults={'domain': domain_name, 'name': domain_name}
+        id=1, defaults={"domain": domain_name, "name": domain_name}
     )
 
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('sites', '0002_alter_domain_unique'),
-        ('definitions', '0010_definition_tags'),
+        ("sites", "0002_alter_domain_unique"),
+        ("definitions", "0010_definition_tags"),
     ]
 
-    operations = [
-        migrations.RunPython(update_site_domain_and_name)
-    ]
+    operations = [migrations.RunPython(update_site_domain_and_name)]

@@ -7,30 +7,46 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Definition',
+            name="Definition",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('value', models.TextField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("value", models.TextField()),
             ],
         ),
         migrations.CreateModel(
-            name='Term',
+            name="Term",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('value', models.CharField(max_length=255)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("value", models.CharField(max_length=255)),
             ],
         ),
         migrations.AddField(
-            model_name='definition',
-            name='term',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='definitions.Term'),
+            model_name="definition",
+            name="term",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to="definitions.Term"
+            ),
         ),
     ]

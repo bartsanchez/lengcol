@@ -5,15 +5,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('definitions', '0009_add_active_fields_to_models'),
+        ("definitions", "0009_add_active_fields_to_models"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='definition',
-            name='tags',
+            model_name="definition",
+            name="tags",
             field=tagging.fields.TagField(blank=True, max_length=255),
         ),
     ]

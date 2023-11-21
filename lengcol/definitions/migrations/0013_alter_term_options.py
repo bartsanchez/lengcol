@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('definitions', '0012_alter_definition_options'),
+        ("definitions", "0012_alter_definition_options"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='term',
-            options={'ordering': ['created']},
+            name="term",
+            options={"ordering": ["created"]},
         ),
     ]
