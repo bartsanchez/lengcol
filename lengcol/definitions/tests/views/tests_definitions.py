@@ -268,7 +268,7 @@ class DefinitionCreateViewTests(
 
         self.assertEqual(response.status_code, 200)
 
-        self.assertContains(response, "Autor: {}".format(self.user.username))
+        self.assertContains(response, f"Autor: {self.user.username}")
 
     def test_has_no_author(self):
         form_data = {"term": "fake term", "value": "fake definition"}
@@ -399,7 +399,7 @@ class DefinitionDetailViewTests(
 
         created = self.definition.created.strftime("%d-%m-%Y")
 
-        self.assertContains(response, "Fecha de creación {}".format(created))
+        self.assertContains(response, f"Fecha de creación {created}")
 
     def test_has_link_to_term_detail(self):
         response = self.client.get(self.url)
@@ -659,18 +659,18 @@ class DefinitionUpdateViewTests(
             "example_set-MIN_NUM_FORMS": "0",
             "example_set-MAX_NUM_FORMS": "5",
             "example_set-0-value": "foo",
-            "example_set-0-id": "{}".format(foo_example.pk),
-            "example_set-0-definition": "{}".format(self.definition.pk),
+            "example_set-0-id": f"{foo_example.pk}",
+            "example_set-0-definition": f"{self.definition.pk}",
             "example_set-0-DELETE": "on",
             "example_set-1-value": "bar",
-            "example_set-1-id": "{}".format(bar_example.pk),
-            "example_set-1-definition": "{}".format(self.definition.pk),
+            "example_set-1-id": f"{bar_example.pk}",
+            "example_set-1-definition": f"{self.definition.pk}",
             "example_set-2-value": "",
             "example_set-2-id": "",
-            "example_set-2-definition": "{}".format(self.definition.pk),
+            "example_set-2-definition": f"{self.definition.pk}",
             "example_set-3-value": "",
             "example_set-3-id": "",
-            "example_set-3-definition": "{}".format(self.definition.pk),
+            "example_set-3-definition": f"{self.definition.pk}",
         }
         form_data.update(management_data)
 
