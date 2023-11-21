@@ -5,5 +5,52 @@ exclude = [
     "lengcol/lengcol/settings/",
 ]
 
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN",
+    "ARG001",
+    "ARG002",
+    "B007",
+    "B904",
+    "COM812",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D203",
+    "D212",
+    "DJ006",
+    "E501",
+    "EM101",
+    "FBT002",
+    "FIX002",
+    "I001",
+    "INP001",
+    "ISC001",
+    "N806",
+    "PGH004",
+    "PLR0913",
+    "PLR2004",
+    "PT009",
+    "Q000",
+    "RUF012",
+    "S101",
+    "S106",
+    "S113",
+    "SLF001",
+    "TD002",
+    "TD003",
+    "TD004",
+    "TRY003",
+    "TRY200",
+    "UP009",
+    "UP010",
+]
+
 [tool.ruff.format]
 exclude = ["*/migrations/*"]

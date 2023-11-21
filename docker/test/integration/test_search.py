@@ -20,7 +20,7 @@ def insert_definition(definition, value, tags):
     }
     if tags:
         data["tags"] = tags
-    headers = {"Cookie": "csrftoken={}".format(csrftoken)}
+    headers = {"Cookie": f"csrftoken={csrftoken}"}
     return requests.post(
         "http://web/definitions/add/",
         data=data,

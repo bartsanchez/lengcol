@@ -79,8 +79,8 @@ class IndexViewTests(
         self.assertContains(
             response,
             (
-                '<a class="dropdown-item font-weight-bold" href="{}">'
-                "Añadir definición</a>".format(linked_url)
+                f'<a class="dropdown-item font-weight-bold" href="{linked_url}">'
+                "Añadir definición</a>"
             ),
             html=True,
         )
@@ -101,8 +101,8 @@ class IndexViewTests(
         bar_term = factories.TermFactory(value="bar term")
         factories.DefinitionFactory(term=foo_term, value="foo")
         factories.DefinitionFactory(term=bar_term, value="bar")
-        foo_term_html = '<a href="{}">foo term</a>'.format(foo_term.get_absolute_url())
-        bar_term_html = '<a href="{}">bar term</a>'.format(bar_term.get_absolute_url())
+        foo_term_html = f'<a href="{foo_term.get_absolute_url()}">foo term</a>'
+        bar_term_html = f'<a href="{bar_term.get_absolute_url()}">bar term</a>'
         with splinter.Browser("django") as browser:
             browser.visit(self.url)
 
@@ -139,7 +139,7 @@ class IndexViewTests(
         tag_html = '<a href="{}" class="badge badge-pill badge-info">{}</a>'
 
         for tag in ("first_tag", "second_tag"):
-            email_link = "/tags/{}/definitions/".format(tag)
+            email_link = f"/tags/{tag}/definitions/"
             self.assertContains(response, tag_html.format(email_link, tag))
 
     def test_has_email_contact_link(self):
@@ -147,7 +147,7 @@ class IndexViewTests(
 
         email_link = settings.APP_EMAIL
         self.assertContains(
-            response, '<a href="mailto:{0}">{0}</a>'.format(email_link), html=True
+            response, f'<a href="mailto:{email_link}">{email_link}</a>', html=True
         )
 
     def test_inactive_terms_does_not_appear(self):

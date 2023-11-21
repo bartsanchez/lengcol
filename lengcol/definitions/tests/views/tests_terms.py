@@ -113,7 +113,7 @@ class TermSearchViewTests(
         self.assertTemplateUsed(response, "lengcol/base.html")
 
     def get_html_link(self, obj):
-        return '<a href="{}">{}</a>'.format(obj.get_absolute_url(), obj.value)
+        return f'<a href="{obj.get_absolute_url()}">{obj.value}</a>'
 
     def test_search(self):
         response = self.client.get(self.url)
