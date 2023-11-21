@@ -7,34 +7,34 @@ from django.urls import reverse
 class LogoutViewTests(test.TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.url = reverse('logout')
+        cls.url = reverse("logout")
         cls.user = factories.UserFactory()
 
     def fill_and_send_form(self, browser, username, password):
-        browser.fill('username', username)
-        browser.fill('password', password)
-        browser.find_by_id('login-form').click()
+        browser.fill("username", username)
+        browser.fill("password", password)
+        browser.find_by_id("login-form").click()
 
     def test_logout_view(self):
-        with splinter.Browser('django') as browser:
-            browser.visit(reverse('login'))
+        with splinter.Browser("django") as browser:
+            browser.visit(reverse("login"))
 
-            self.assertIn('Usuario: Anónimo', browser.html)
+            self.assertIn("Usuario: Anónimo", browser.html)
 
-            self.fill_and_send_form(browser, 'fake_username', 'fake_password')
+            self.fill_and_send_form(browser, "fake_username", "fake_password")
 
-            self.assertIn('Usuario: fake_user', browser.html)
+            self.assertIn("Usuario: fake_user", browser.html)
 
-            self.assertEqual(browser.url, reverse('index'))
+            self.assertEqual(browser.url, reverse("index"))
 
             browser.visit(self.url)
 
-            self.assertIn('Usuario: Anónimo', browser.html)
+            self.assertIn("Usuario: Anónimo", browser.html)
 
     def test_logout_redirect_to_index(self):
-        with splinter.Browser('django') as browser:
-            browser.visit(reverse('login'))
+        with splinter.Browser("django") as browser:
+            browser.visit(reverse("login"))
 
             browser.visit(self.url)
 
-            self.assertEqual(browser.url, reverse('index'))
+            self.assertEqual(browser.url, reverse("index"))

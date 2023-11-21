@@ -16,7 +16,7 @@ class ObjectGathering:
 
     @classmethod
     def _get_last_objects(cls, items=5):
-        return cls._get_objects(order_by='-created', items=items)
+        return cls._get_objects(order_by="-created", items=items)
 
 
 class DefinitionGathering(ObjectGathering):

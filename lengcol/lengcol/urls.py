@@ -4,17 +4,17 @@ from django.contrib.sitemaps import views
 from django.urls import include, path
 
 sitemaps_info = {
-    'terms': sitemaps.TermSitemap,
-    'definitions': sitemaps.DefinitionSitemap,
-    'tags': sitemaps.TagSitemap,
-    'static': sitemaps.StaticViewSitemap,
+    "terms": sitemaps.TermSitemap,
+    "definitions": sitemaps.DefinitionSitemap,
+    "tags": sitemaps.TagSitemap,
+    "static": sitemaps.StaticViewSitemap,
 }
-sitemap = {'sitemaps': sitemaps_info}
+sitemap = {"sitemaps": sitemaps_info}
 
 urlpatterns = [
-    path('', include('definitions.urls')),
-    path('', include('authentication.urls')),
-    path('admin/', admin.site.urls),
-    path('', include('django_prometheus.urls')),
-    path('sitemap.xml', views.sitemap, sitemap, name='sitemap')
+    path("", include("definitions.urls")),
+    path("", include("authentication.urls")),
+    path("admin/", admin.site.urls),
+    path("", include("django_prometheus.urls")),
+    path("sitemap.xml", views.sitemap, sitemap, name="sitemap"),
 ]

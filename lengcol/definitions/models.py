@@ -12,16 +12,14 @@ from tagging import registry
 
 class Term(base_models.BaseModel):
     value = models.CharField(max_length=255, unique=True)
-    slug = fields.AutoSlugField(populate_from=('value',))
+    slug = fields.AutoSlugField(populate_from=("value",))
 
     objects = managers.ActiveManager()
     all_objects = models.Manager()
 
     class Meta:
-        ordering = ['created']
-        indexes = [
-            models.Index(fields=['created'])
-        ]
+        ordering = ["created"]
+        indexes = [models.Index(fields=["created"])]
 
     def __str__(self):
         return self.value
@@ -31,33 +29,30 @@ class Term(base_models.BaseModel):
         return self.definition_set.all()
 
     def get_absolute_url(self):
-        return reverse('term-detail', kwargs={'slug': self.slug})
+        return reverse("term-detail", kwargs={"slug": self.slug})
 
 
 class Definition(base_models.BaseModel):
     term = models.ForeignKey(Term, on_delete=models.CASCADE)
     value = models.TextField()
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             blank=True,
-                             null=True,
-                             on_delete=models.PROTECT)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.PROTECT
+    )
     tags = tags_fields.TagField()
 
     objects = managers.ActiveManager()
     all_objects = models.Manager()
 
     class Meta:
-        ordering = ['created']
-        indexes = [
-            models.Index(fields=['created'])
-        ]
+        ordering = ["created"]
+        indexes = [models.Index(fields=["created"])]
 
     def __str__(self):
         return self.value
 
     def get_absolute_url(self):
-        return reverse('definition-detail', kwargs={'uuid': self.uuid})
+        return reverse("definition-detail", kwargs={"uuid": self.uuid})
 
     @property
     def has_examples(self):
@@ -79,6 +74,4 @@ class Example(base_models.BaseModel):
         return self.value
 
 
-registry.register(
-    Definition, tag_descriptor_attr='assigned_tags'
-)
+registry.register(Definition, tag_descriptor_attr="assigned_tags")

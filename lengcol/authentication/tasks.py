@@ -9,10 +9,10 @@ from lengcol.celery import app
 def send_new_registered_user_mail(pk):
     user = models.User.objects.get(pk=pk)
     mail_content = {
-        'subject': 'New user was registered',
-        'message': f'{user.username}',
-        'from_email': f'{settings.APP_EMAIL}',
-        'recipient_list': [f'{settings.APP_EMAIL}'],
-        'fail_silently': True,
+        "subject": "New user was registered",
+        "message": f"{user.username}",
+        "from_email": f"{settings.APP_EMAIL}",
+        "recipient_list": [f"{settings.APP_EMAIL}"],
+        "fail_silently": True,
     }
     mail.send_mail(**mail_content)

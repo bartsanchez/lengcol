@@ -7,20 +7,19 @@ from django import test
 from django.db.models import signals
 
 
-@mock.patch('django.contrib.sitemaps.ping_google')
+@mock.patch("django.contrib.sitemaps.ping_google")
 class PingGoogleForSitemapTests(test.TestCase):
     @classmethod
     def setUpTestData(cls):
-        signals.post_save.disconnect(auth_signals.new_registered_user_handler,
-                                     sender=auth_models.User)
+        signals.post_save.disconnect(
+            auth_signals.new_registered_user_handler, sender=auth_models.User
+        )
 
     def test_ping_google_for_sitemap__prod(self, ping_google_mock):
-        django_settings = {'DJANGO_SETTINGS_MODULE': 'fake-prod'}
-        with mock.patch.dict('os.environ', django_settings):
+        django_settings = {"DJANGO_SETTINGS_MODULE": "fake-prod"}
+        with mock.patch.dict("os.environ", django_settings):
             factories.DefinitionFactory()
-            ping_google_mock.assert_called_once_with(
-                sitemap_url='/sitemap.xml'
-            )
+            ping_google_mock.assert_called_once_with(sitemap_url="/sitemap.xml")
 
     def test_ping_google_for_sitemap__not_prod(self, ping_google_mock):
         factories.DefinitionFactory()
