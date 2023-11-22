@@ -2,10 +2,10 @@ from django.db import migrations
 
 
 def update_site_domain_and_name(apps, schema_editor):
-    Site = apps.get_model("sites", "Site")
+    site_model = apps.get_model("sites", "Site")
 
     domain_name = "lenguajecoloquial.com"
-    Site.objects.update_or_create(
+    site_model.objects.update_or_create(
         id=1, defaults={"domain": domain_name, "name": domain_name}
     )
 
