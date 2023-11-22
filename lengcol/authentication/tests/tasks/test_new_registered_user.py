@@ -21,7 +21,7 @@ class NewRegisteredUserMailTests(test.TestCase):
         browser.fill("email", email)
         browser.find_by_id("register-form").click()
 
-    # TODO not sure why this mock is needed but VCR tests fail if not here
+    # TODO: not sure why this mock is needed but VCR tests fail if not here
     @mock.patch("django.middleware.csrf.get_token", return_value="fake_csrf")
     def test_new_registered_user_send_an_email(self, csrf_mock):
         self.assertEqual(len(mail.outbox), 0)
