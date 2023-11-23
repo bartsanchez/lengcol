@@ -211,7 +211,7 @@ class IndexPaginationTests(test.TestCase):
     def test_has_link_to_next_page(self):
         num_items_per_page = views.IndexView.paginate_by
 
-        for item in range(num_items_per_page + 1):
+        for _ in range(num_items_per_page + 1):
             factories.DefinitionFactory()
 
         response = self.client.get(self.url)
@@ -228,7 +228,7 @@ class IndexPaginationTests(test.TestCase):
     def test_has_link_to_first_page(self):
         num_items_per_page = views.IndexView.paginate_by
 
-        for item in range(num_items_per_page + 1):
+        for _ in range(num_items_per_page + 1):
             factories.DefinitionFactory()
 
         url = f"{self.url}?page=2"
