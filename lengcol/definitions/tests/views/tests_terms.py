@@ -198,7 +198,7 @@ class TermSearchViewPaginationTests(test.TestCase):
     def test_has_link_to_next_page(self):
         num_items_per_page = views.TermSearchView.paginate_by
 
-        for n, item in enumerate(range(num_items_per_page + 1)):
+        for n in range(num_items_per_page + 1):
             term = factories.TermFactory(value="a" * (n + 1))
             factories.DefinitionFactory(term=term)
 
@@ -217,7 +217,7 @@ class TermSearchViewPaginationTests(test.TestCase):
     def test_has_link_to_first_page(self):
         num_items_per_page = views.IndexView.paginate_by
 
-        for n, item in enumerate(range(num_items_per_page + 1)):
+        for n in range(num_items_per_page + 1):
             term = factories.TermFactory(value="a" * (n + 1))
             factories.DefinitionFactory(term=term)
 
