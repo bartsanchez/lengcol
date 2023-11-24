@@ -20,7 +20,8 @@ class DefinitionTests(test.TestCase):
         def3 = factories.DefinitionFactory(value="definition_3")
 
         self.assertEqual(
-            list(models.Definition.objects.all()), [self.definition, def1, def2, def3]
+            list(models.Definition.objects.all()),
+            [self.definition, def1, def2, def3],
         )
 
     def test_has_examples(self):
@@ -36,6 +37,6 @@ class DefinitionTests(test.TestCase):
         factories.ExampleFactory(value="qux")
 
         queryset = models.Example.objects.filter(
-            pk__in=[example_foo.pk, example_bar.pk]
+            pk__in=[example_foo.pk, example_bar.pk],
         )
         self.assertQuerysetEqual(self.definition.examples, queryset, ordered=False)

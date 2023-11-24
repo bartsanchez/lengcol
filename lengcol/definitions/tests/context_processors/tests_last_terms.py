@@ -24,7 +24,7 @@ class LastTermsTests(test.TestCase):
         self.assertContains(
             response,
             '<li><a class="last-terms" href="{}">fake_term</a></li>'.format(
-                term.get_absolute_url()
+                term.get_absolute_url(),
             ),
             html=True,
         )

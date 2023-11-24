@@ -4,7 +4,9 @@ from django.urls import path
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
     path(
-        "definitions/add/", views.DefinitionCreateView.as_view(), name="definition-add"
+        "definitions/add/",
+        views.DefinitionCreateView.as_view(),
+        name="definition-add",
     ),
     path(
         "definitions/<uuid:uuid>/",

@@ -13,7 +13,8 @@ class NewDefinitionMailTests(test.TestCase):
     @classmethod
     def setUpTestData(cls):
         signals.post_save.disconnect(
-            auth_signals.new_registered_user_handler, sender=auth_models.User
+            auth_signals.new_registered_user_handler,
+            sender=auth_models.User,
         )
         cls.client = test.Client()
         cls.user = auth_factories.UserFactory()

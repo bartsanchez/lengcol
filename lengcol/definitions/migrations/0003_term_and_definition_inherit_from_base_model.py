@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
             model_name="definition",
             name="created",
             field=models.DateTimeField(
-                auto_now_add=True, default=django.utils.timezone.now
+                auto_now_add=True,
+                default=django.utils.timezone.now,
             ),
             preserve_default=False,
         ),
@@ -27,7 +28,8 @@ class Migration(migrations.Migration):
             model_name="term",
             name="created",
             field=models.DateTimeField(
-                auto_now_add=True, default=django.utils.timezone.now
+                auto_now_add=True,
+                default=django.utils.timezone.now,
             ),
             preserve_default=False,
         ),

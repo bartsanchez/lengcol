@@ -140,7 +140,8 @@ class DefinitionCreateViewTests(
         for tag in tags:
             tag_instance = tagging_models.Tag.objects.get(name=tag)
             tagged_item = tagging_models.TaggedItem.objects.get(
-                tag=tag_instance, object_id=definition.pk
+                tag=tag_instance,
+                object_id=definition.pk,
             )
             content_type = tagged_item.content_type
             self.assertEqual(content_type.name, "definition")
@@ -284,7 +285,8 @@ class DefinitionCreateViewTests(
     def test_recaptcha_failed(self, recaptcha_clean_mock):
         def _validation_error_side_effect(values):
             raise exceptions.ValidationError(
-                "Connection to reCaptcha server failed", code="connection_failed"
+                "Connection to reCaptcha server failed",
+                code="connection_failed",
             )
 
         recaptcha_clean_mock.side_effect = _validation_error_side_effect
@@ -316,7 +318,8 @@ class DefinitionCreateViewTests(
     def test_recaptcha_failed__already_existing_term(self, recaptcha_clean_mock):
         def _validation_error_side_effect(values):
             raise exceptions.ValidationError(
-                "Connection to reCaptcha server failed", code="connection_failed"
+                "Connection to reCaptcha server failed",
+                code="connection_failed",
             )
 
         recaptcha_clean_mock.side_effect = _validation_error_side_effect
@@ -417,7 +420,7 @@ class DefinitionDetailViewTests(
         self.assertContains(
             response,
             '<a href="{}">&#9998; Editar</a>'.format(
-                reverse("definition-update", kwargs={"uuid": self.definition.uuid})
+                reverse("definition-update", kwargs={"uuid": self.definition.uuid}),
             ),
             html=True,
         )
@@ -432,7 +435,7 @@ class DefinitionDetailViewTests(
         self.assertNotContains(
             response,
             '<a href="{}">&#9998; Editar</a>'.format(
-                reverse("definition-update", kwargs={"uuid": self.definition.uuid})
+                reverse("definition-update", kwargs={"uuid": self.definition.uuid}),
             ),
             html=True,
         )
@@ -443,7 +446,7 @@ class DefinitionDetailViewTests(
         self.assertNotContains(
             response,
             '<a href="{}">&#9998; Editar</a>'.format(
-                reverse("definition-update", kwargs={"uuid": self.definition.uuid})
+                reverse("definition-update", kwargs={"uuid": self.definition.uuid}),
             ),
             html=True,
         )
@@ -746,7 +749,8 @@ class DefinitionUpdateViewTests(
 
         active_term = models.Term.objects.get(active=True, value="term fake")
         inactive_term = models.Term.all_objects.get(
-            active=False, value="updated term fake"
+            active=False,
+            value="updated term fake",
         )
 
         self.assertEqual(active_term.definitions.count(), 1)

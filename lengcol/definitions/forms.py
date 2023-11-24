@@ -22,7 +22,8 @@ class ModelChoiceFieldAsText(forms.ModelChoiceField):
 
         model = self.queryset.model
         obj, created = model.all_objects.update_or_create(
-            defaults={"active": True}, **{self.field: value}
+            defaults={"active": True},
+            **{self.field: value},
         )
 
         return obj

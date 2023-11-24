@@ -23,7 +23,8 @@ class TermTests(test.TestCase):
         term3 = factories.TermFactory(value="term_3")
 
         self.assertEqual(
-            list(models.Term.objects.all()), [self.term, term1, term2, term3]
+            list(models.Term.objects.all()),
+            [self.term, term1, term2, term3],
         )
 
     def test_definitions(self):
@@ -32,6 +33,6 @@ class TermTests(test.TestCase):
         factories.DefinitionFactory(value="qux")
 
         queryset = models.Definition.objects.filter(
-            pk__in=[definition_foo.pk, definition_bar.pk]
+            pk__in=[definition_foo.pk, definition_bar.pk],
         )
         self.assertQuerysetEqual(self.term.definitions, queryset, ordered=False)

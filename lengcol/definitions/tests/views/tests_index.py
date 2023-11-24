@@ -50,7 +50,9 @@ class IndexViewTests(
         response = self.client.get(self.url)
 
         self.assertContains(
-            response, '<a class="dropdown-item" href="/tags/">Etiquetas</a>', html=True
+            response,
+            '<a class="dropdown-item" href="/tags/">Etiquetas</a>',
+            html=True,
         )
 
     def test_footer(self):
@@ -69,7 +71,9 @@ class IndexViewTests(
         response = self.client.get(self.url)
 
         self.assertContains(
-            response, f'<a href="{term.get_absolute_url()}">my fake term</a>', html=True
+            response,
+            f'<a href="{term.get_absolute_url()}">my fake term</a>',
+            html=True,
         )
 
     def test_has_link_to_add_new_definition(self):
@@ -131,7 +135,8 @@ class IndexViewTests(
 
     def test_has_tags(self):
         factories.DefinitionFactory(
-            value="fake definition", tags="first_tag, second_tag"
+            value="fake definition",
+            tags="first_tag, second_tag",
         )
 
         response = self.client.get(self.url)
@@ -147,7 +152,9 @@ class IndexViewTests(
 
         email_link = settings.APP_EMAIL
         self.assertContains(
-            response, f'<a href="mailto:{email_link}">{email_link}</a>', html=True
+            response,
+            f'<a href="mailto:{email_link}">{email_link}</a>',
+            html=True,
         )
 
     def test_inactive_terms_does_not_appear(self):
@@ -217,7 +224,9 @@ class IndexPaginationTests(test.TestCase):
         response = self.client.get(self.url)
 
         self.assertContains(
-            response, '<a class="page-link" href="?page=2">2</a>', html=True
+            response,
+            '<a class="page-link" href="?page=2">2</a>',
+            html=True,
         )
         self.assertContains(
             response,
@@ -236,7 +245,9 @@ class IndexPaginationTests(test.TestCase):
         response = self.client.get(url)
 
         self.assertContains(
-            response, '<a class="page-link" href="?page=1">1</a>', html=True
+            response,
+            '<a class="page-link" href="?page=1">1</a>',
+            html=True,
         )
         self.assertContains(
             response,

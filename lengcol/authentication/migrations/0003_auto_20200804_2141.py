@@ -13,7 +13,9 @@ class Migration(migrations.Migration):
             model_name="user",
             name="first_name",
             field=models.CharField(
-                blank=True, max_length=150, verbose_name="first name"
+                blank=True,
+                max_length=150,
+                verbose_name="first name",
             ),
         ),
     ]
