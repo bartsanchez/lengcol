@@ -12,7 +12,8 @@ class Migration(migrations.Migration):
         migrations.AddIndex(
             model_name="term",
             index=models.Index(
-                fields=["created"], name="definitions_created_8d3d65_idx"
+                fields=["created"],
+                name="definitions_created_8d3d65_idx",
             ),
         ),
     ]

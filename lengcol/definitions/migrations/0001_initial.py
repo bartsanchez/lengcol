@@ -44,7 +44,8 @@ class Migration(migrations.Migration):
             model_name="definition",
             name="term",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="definitions.Term"
+                on_delete=django.db.models.deletion.CASCADE,
+                to="definitions.Term",
             ),
         ),
     ]

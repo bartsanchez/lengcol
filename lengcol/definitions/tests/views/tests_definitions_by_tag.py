@@ -50,7 +50,8 @@ class DefinitionsByTagViewTests(
 
     def test_non_existing_tag(self):
         self.url = reverse(
-            "definitions-by-tag", kwargs={"tag_name": "non existing tag"}
+            "definitions-by-tag",
+            kwargs={"tag_name": "non existing tag"},
         )
 
         response = self.client.get(self.url)

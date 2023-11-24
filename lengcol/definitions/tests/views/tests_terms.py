@@ -137,7 +137,8 @@ class TermSearchViewTests(
 
     @mock.patch("definitions.models.Term.objects.annotate")
     @mock.patch(
-        "definitions.views.TermSearchView.db_engine_is_sqlite", return_value=False
+        "definitions.views.TermSearchView.db_engine_is_sqlite",
+        return_value=False,
     )
     def test_search_postgresql_engine(self, db_check_mock, annotate_mock):
         url = "{}?{}".format(self.url, http.urlencode({"v": "bar"}))
@@ -206,7 +207,9 @@ class TermSearchViewPaginationTests(test.TestCase):
         response = self.client.get(url)
 
         self.assertContains(
-            response, '<a class="page-link" href="?page=2">2</a>', html=True
+            response,
+            '<a class="page-link" href="?page=2">2</a>',
+            html=True,
         )
         self.assertContains(
             response,
@@ -227,7 +230,9 @@ class TermSearchViewPaginationTests(test.TestCase):
         response = self.client.get(url)
 
         self.assertContains(
-            response, '<a class="page-link" href="?page=1">1</a>', html=True
+            response,
+            '<a class="page-link" href="?page=1">1</a>',
+            html=True,
         )
         self.assertContains(
             response,

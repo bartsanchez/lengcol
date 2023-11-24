@@ -6,7 +6,8 @@ def update_site_domain_and_name(apps, schema_editor):
 
     domain_name = "lenguajecoloquial.com"
     site_model.objects.update_or_create(
-        id=1, defaults={"domain": domain_name, "name": domain_name}
+        id=1,
+        defaults={"domain": domain_name, "name": domain_name},
     )
 
 

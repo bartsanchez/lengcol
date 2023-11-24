@@ -37,7 +37,9 @@ class DefinitionDetailView(generic.DetailView):
 
 
 class DefinitionUpdateView(
-    mixins.LoginRequiredMixin, mixins.UserPassesTestMixin, UpdateWithInlinesView
+    mixins.LoginRequiredMixin,
+    mixins.UserPassesTestMixin,
+    UpdateWithInlinesView,
 ):
     model = models.Definition
     form_class = forms.DefinitionForm
@@ -60,7 +62,9 @@ class DefinitionDisableView(generic.edit.DeleteView):
     def get_object(self):
         user = self.request.user
         return shortcuts.get_object_or_404(
-            models.Definition, user=user, uuid=self.kwargs["uuid"]
+            models.Definition,
+            user=user,
+            uuid=self.kwargs["uuid"],
         )
 
     def delete(self, *args, **kwargs):
@@ -96,7 +100,7 @@ class TermSearchView(generic.ListView):
                             search.TrigramSimilarity("value", term),
                             search.TrigramSimilarity("definition__value", term),
                             search.TrigramSimilarity("definition__tags", term),
-                        )
+                        ),
                     )
                     .filter(similarity__gt=0.1)
                     .order_by("-similarity")
@@ -114,7 +118,8 @@ class DefinitionsByTagView(generic.ListView):
         tag_name = self.kwargs["tag_name"]
         tag = shortcuts.get_object_or_404(tagging_models.Tag, name=tag_name)
         tagged_items = tagging_models.TaggedItem.objects.get_by_model(
-            models.Definition, tag
+            models.Definition,
+            tag,
         )
         return models.Definition.objects.filter(id__in=tagged_items)
 

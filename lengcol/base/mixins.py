@@ -9,7 +9,8 @@ W3_VALIDATOR_URL = "https://validator.w3.org/nu/"
 
 class W3ValidatorMixin:
     @mock.patch(
-        "django.template.context_processors.get_token", return_value="fake_csrf"
+        "django.template.context_processors.get_token",
+        return_value="fake_csrf",
     )
     @pytest.mark.vcr(
         match_on=["body", "method", "uri"],

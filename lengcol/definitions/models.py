@@ -37,7 +37,10 @@ class Definition(base_models.BaseModel):
     value = models.TextField()
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.PROTECT
+        settings.AUTH_USER_MODEL,
+        blank=True,
+        null=True,
+        on_delete=models.PROTECT,
     )
     tags = tags_fields.TagField()
 

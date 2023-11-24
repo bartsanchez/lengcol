@@ -29,7 +29,8 @@ class TermSitemapViewTests(test.TestCase):
 
         for tag in ("tag1", "tag3"):
             self.assertContains(
-                response, reverse("definitions-by-tag", kwargs={"tag_name": tag})
+                response,
+                reverse("definitions-by-tag", kwargs={"tag_name": tag}),
             )
 
     def test_has_statics(self):
