@@ -79,7 +79,7 @@ class ExampleInline(InlineFormSetFactory):
         formset.delete_existing = self.delete_existing
         return formset
 
-    def delete_existing(self, obj, commit=True):
+    def delete_existing(self, obj, *, commit=True):
         if commit:
             obj.active = False
             obj.save()
