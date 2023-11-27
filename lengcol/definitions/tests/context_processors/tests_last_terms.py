@@ -1,6 +1,7 @@
-from definitions import factories
 from django import test
 from django.urls import reverse
+
+from definitions import factories
 
 
 class LastTermsTests(test.TestCase):

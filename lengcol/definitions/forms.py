@@ -1,8 +1,9 @@
-from definitions import models
 from django import forms
 from django.core import exceptions
 from extra_views import InlineFormSetFactory
 from snowpenguin.django.recaptcha3 import fields
+
+from definitions import models
 
 
 class ModelChoiceFieldAsText(forms.ModelChoiceField):

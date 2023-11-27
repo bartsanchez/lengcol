@@ -1,5 +1,6 @@
-from definitions import factories
 from django import test
+
+from definitions import factories
 
 
 class ExampleTests(test.TestCase):

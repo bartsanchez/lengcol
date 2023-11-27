@@ -1,6 +1,7 @@
-from definitions import factories, sitemaps
 from django import test
 from django.urls import reverse
+
+from definitions import factories, sitemaps
 
 
 class TermSitemapViewTests(test.TestCase):

@@ -1,12 +1,13 @@
 from authentication import factories as auth_factories
 from authentication import models as auth_models
 from authentication import signals as auth_signals
-from definitions import factories, models
 from django import test
 from django.conf import settings
 from django.core import mail
 from django.db.models import signals
 from django.urls import reverse
+
+from definitions import factories, models
 
 
 class NewDefinitionMailTests(test.TestCase):
