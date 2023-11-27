@@ -1,7 +1,7 @@
-from authentication import models
 from django.conf import settings
 from django.core import mail
 
+from authentication import models
 from lengcol.celery import app
 
 

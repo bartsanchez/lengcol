@@ -1,4 +1,3 @@
-from definitions import forms, models
 from django import http, shortcuts, urls
 from django.conf import settings
 from django.contrib.auth import mixins
@@ -7,6 +6,8 @@ from django.db.models import functions
 from django.views import generic
 from extra_views import CreateWithInlinesView, UpdateWithInlinesView
 from tagging import models as tagging_models
+
+from definitions import forms, models
 
 
 class IndexView(generic.ListView):

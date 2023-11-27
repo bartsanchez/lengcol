@@ -1,7 +1,8 @@
 import freezegun
-from base import models
 from django import test
 from django.utils import timezone
+
+from base import models
 
 
 class BaseModelTests(test.TestCase):

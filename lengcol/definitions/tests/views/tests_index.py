@@ -1,11 +1,12 @@
 import freezegun
 import splinter
 from base import mixins
-from definitions import factories, views
 from django import test
 from django.conf import settings
 from django.urls import reverse
 from django.utils import timezone
+
+from definitions import factories, views
 
 
 @freezegun.freeze_time("2020-01-01")
