@@ -16,7 +16,7 @@ class LoginViewTests(
     page_title = "Lenguaje Coloquial | Diccionario en español"
     h1_header = "Identificación"
     meta_description = (
-        "Página de autenticación de usuarios para el proyecto Lenguaje " "Coloquial."
+        "Página de autenticación de usuarios para el proyecto Lenguaje Coloquial."
     )
 
     @classmethod
