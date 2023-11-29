@@ -5,4 +5,4 @@ class DefinitionsConfig(AppConfig):
     name = "definitions"
 
     def ready(self):
-        from definitions import signals  # noqa
+        from definitions import signals  # noqa: F401
