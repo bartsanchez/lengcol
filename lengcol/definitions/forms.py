@@ -59,7 +59,8 @@ class DefinitionForm(forms.ModelForm):
                 term.save()
                 self.cleaned_data.pop("term")
             if "captcha" in self.errors:
-                raise exceptions.ValidationError("Google ReCaptcha has failed!")
+                msg = "Google ReCaptcha has failed!"
+                raise exceptions.ValidationError(msg)
 
 
 class ExampleForm(forms.ModelForm):

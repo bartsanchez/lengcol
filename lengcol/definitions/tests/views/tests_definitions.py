@@ -285,8 +285,9 @@ class DefinitionCreateViewTests(
     @mock.patch("snowpenguin.django.recaptcha3.fields.ReCaptchaField.clean")
     def test_recaptcha_failed(self, recaptcha_clean_mock):
         def _validation_error_side_effect(values):
+            msg = "Connection to reCaptcha server failed"
             raise exceptions.ValidationError(
-                "Connection to reCaptcha server failed",
+                msg,
                 code="connection_failed",
             )
 
@@ -318,8 +319,9 @@ class DefinitionCreateViewTests(
     @mock.patch("snowpenguin.django.recaptcha3.fields.ReCaptchaField.clean")
     def test_recaptcha_failed__already_existing_term(self, recaptcha_clean_mock):
         def _validation_error_side_effect(values):
+            msg = "Connection to reCaptcha server failed"
             raise exceptions.ValidationError(
-                "Connection to reCaptcha server failed",
+                msg,
                 code="connection_failed",
             )
 
