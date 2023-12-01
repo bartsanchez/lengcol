@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=./requirements.txt requirements.in
 #
-amqp==5.1.1
+amqp==5.2.0
     # via kombu
 asgiref==3.7.2
     # via django
@@ -12,20 +12,12 @@ asttokens==2.4.1
     # via stack-data
 async-timeout==4.0.3
     # via redis
-attrs==23.1.0
-    # via
-    #   outcome
-    #   trio
-billiard==4.1.0
+billiard==4.2.0
     # via celery
-celery==5.3.4
+celery==5.3.6
     # via -r requirements.in
-certifi==2023.7.22
-    # via
-    #   requests
-    #   urllib3
-cffi==1.16.0
-    # via cryptography
+certifi==2023.11.17
+    # via requests
 charset-normalizer==3.3.2
     # via requests
 click==8.1.7
@@ -46,10 +38,6 @@ coverage[toml]==7.3.2
     # via
     #   codecov
     #   pytest-cov
-cryptography==41.0.5
-    # via
-    #   pyopenssl
-    #   urllib3
 cssselect==1.2.0
     # via splinter
 decorator==5.1.1
@@ -81,29 +69,25 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==19.13.0
+faker==20.1.0
     # via factory-boy
-freezegun==1.2.2
+freezegun==1.3.1
     # via -r requirements.in
 gunicorn==21.2.0
     # via -r requirements.in
-h11==0.14.0
-    # via wsproto
-idna==3.4
+idna==3.6
     # via
     #   requests
-    #   trio
-    #   urllib3
     #   yarl
 iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
     # via -r requirements.in
-ipython==8.17.2
+ipython==8.18.1
     # via ipdb
 jedi==0.19.1
     # via ipython
-kombu==5.3.2
+kombu==5.3.4
     # via celery
 lxml==4.9.3
     # via splinter
@@ -111,21 +95,19 @@ matplotlib-inline==0.1.6
     # via ipython
 multidict==6.0.4
     # via yarl
-outcome==1.3.0.post0
-    # via trio
 packaging==23.2
     # via
     #   gunicorn
     #   pytest
 parso==0.8.3
     # via jedi
-pexpect==4.8.0
+pexpect==4.9.0
     # via ipython
 pluggy==1.3.0
     # via pytest
-prometheus-client==0.18.0
+prometheus-client==0.19.0
     # via django-prometheus
-prompt-toolkit==3.0.39
+prompt-toolkit==3.0.41
     # via
     #   click-repl
     #   ipython
@@ -135,14 +117,8 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
-pycparser==2.21
-    # via cffi
-pygments==2.16.1
+pygments==2.17.2
     # via ipython
-pyopenssl==23.3.0
-    # via urllib3
-pysocks==1.7.1
-    # via urllib3
 pytest==7.4.3
     # via
     #   pytest-cov
@@ -150,9 +126,9 @@ pytest==7.4.3
     #   pytest-recording
 pytest-cov==4.1.0
     # via -r requirements.in
-pytest-django==4.6.0
+pytest-django==4.7.0
     # via -r requirements.in
-pytest-recording==0.13.0
+pytest-recording==0.13.1
     # via -r requirements.in
 python-dateutil==2.8.2
     # via
@@ -170,43 +146,28 @@ requests==2.31.0
     #   -r requirements.in
     #   codecov
     #   django-recaptcha3
-selenium==4.1.5
-    # via splinter
 six==1.16.0
     # via
     #   asttokens
     #   python-dateutil
-sniffio==1.3.0
-    # via trio
-sortedcontainers==2.4.0
-    # via trio
-splinter[django,selenium4]==0.19.0
+splinter[django,selenium4]==0.20.1
     # via -r requirements.in
 sqlparse==0.4.4
     # via django
 stack-data==0.6.3
     # via ipython
-traitlets==5.13.0
+traitlets==5.14.0
     # via
     #   ipython
     #   matplotlib-inline
-trio==0.23.1
-    # via
-    #   selenium
-    #   trio-websocket
-trio-websocket==0.11.1
-    # via selenium
 typing-extensions==4.8.0
     # via dj-database-url
 tzdata==2023.3
     # via celery
-urllib3[secure,socks]==1.26.18
+urllib3==2.1.0
     # via
     #   requests
-    #   selenium
     #   splinter
-urllib3-secure-extra==0.1.0
-    # via urllib3
 vcrpy==5.1.0
     # via pytest-recording
 vine==5.1.0
@@ -214,13 +175,11 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.9
+wcwidth==0.2.12
     # via prompt-toolkit
 whitenoise==6.6.0
     # via -r requirements.in
-wrapt==1.15.0
+wrapt==1.16.0
     # via vcrpy
-wsproto==1.2.0
-    # via trio-websocket
-yarl==1.9.2
+yarl==1.9.4
     # via vcrpy
