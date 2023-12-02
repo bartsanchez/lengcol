@@ -10,8 +10,6 @@ asgiref==3.7.2
     # via django
 asttokens==2.4.1
     # via stack-data
-async-timeout==4.0.3
-    # via redis
 attrs==23.1.0
     # via
     #   outcome
@@ -45,8 +43,9 @@ codecov==2.1.13
 coverage[toml]==7.3.2
     # via
     #   codecov
+    #   coverage
     #   pytest-cov
-cryptography==41.0.5
+cryptography==41.0.6
     # via
     #   pyopenssl
     #   urllib3
