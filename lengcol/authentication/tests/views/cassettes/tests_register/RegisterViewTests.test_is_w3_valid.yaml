@@ -42,28 +42,27 @@ interactions:
       \   </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
       \     <h1>Crea tu cuenta</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
       \         \n\n<form method=\"post\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\"
-      value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\" class=\"form-group\">
-      <label for=\"id_username\" class=\" requiredField\">\n                Usuario<span
-      class=\"asteriskField\">*</span> </label> <div> <input type=\"text\" name=\"username\"
+      value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\" class=\"mb-3\"> <label
+      for=\"id_username\" class=\"form-label requiredField\">\n                Usuario<span
+      class=\"asteriskField\">*</span> </label> <input type=\"text\" name=\"username\"
       maxlength=\"150\" autocapitalize=\"none\" autocomplete=\"username\" autofocus
-      class=\"textinput textInput form-control\" required id=\"id_username\"> </div>
-      </div> <div id=\"div_id_password1\" class=\"form-group\"> <label for=\"id_password1\"
-      class=\" requiredField\">\n                Contrase\xF1a<span class=\"asteriskField\">*</span>
-      </label> <div> <input type=\"password\" name=\"password1\" autocomplete=\"new-password\"
-      class=\"textinput textInput form-control\" required id=\"id_password1\"> </div>
-      </div> <div id=\"div_id_password2\" class=\"form-group\"> <label for=\"id_password2\"
-      class=\" requiredField\">\n                Confirma tu contrase\xF1a<span class=\"asteriskField\">*</span>
-      </label> <div> <input type=\"password\" name=\"password2\" autocomplete=\"new-password\"
-      class=\"textinput textInput form-control\" required id=\"id_password2\"> </div>
-      </div> <div id=\"div_id_email\" class=\"form-group\"> <label for=\"id_email\"
-      class=\" requiredField\">\n                Correo electr\xF3nico<span class=\"asteriskField\">*</span>
-      </label> <div> <input type=\"email\" name=\"email\" maxlength=\"320\" class=\"emailinput
-      form-control\" required id=\"id_email\"> </div> </div> <input type=\"hidden\"
-      class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
-      id=\"register-form\" type=\"submit\" value=\"Submit\">\n</form>\n\n\n        </div>\n
-      \       <aside class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3
-      bg-light\">\n            <h4>Contacto</h4>\n            <p class=\"mb-0\"><a
-      href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      class=\"textinput form-control\" required id=\"id_username\"> </div> <div id=\"div_id_password1\"
+      class=\"mb-3\"> <label for=\"id_password1\" class=\"form-label requiredField\">\n
+      \               Contrase\xF1a<span class=\"asteriskField\">*</span> </label>
+      <input type=\"password\" name=\"password1\" autocomplete=\"new-password\" class=\"passwordinput
+      form-control\" required id=\"id_password1\"> </div> <div id=\"div_id_password2\"
+      class=\"mb-3\"> <label for=\"id_password2\" class=\"form-label requiredField\">\n
+      \               Confirma tu contrase\xF1a<span class=\"asteriskField\">*</span>
+      </label> <input type=\"password\" name=\"password2\" autocomplete=\"new-password\"
+      class=\"passwordinput form-control\" required id=\"id_password2\"> </div> <div
+      id=\"div_id_email\" class=\"mb-3\"> <label for=\"id_email\" class=\"form-label
+      requiredField\">\n                Correo electr\xF3nico<span class=\"asteriskField\">*</span>
+      </label> <input type=\"email\" name=\"email\" maxlength=\"320\" class=\"emailinput
+      form-control\" required id=\"id_email\"> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
+      name=\"g-recaptcha-response\">\n\n<input id=\"register-form\" type=\"submit\"
+      value=\"Submit\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4>Contacto</h4>\n
+      \           <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer id=\"footer\" data-bs-theme=\"dark\">\n      <div class=\"container\">\n
       \       <span class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n
@@ -76,7 +75,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5448'
+      - '5390'
       Content-Type:
       - text/html
       User-Agent:
@@ -94,7 +93,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 831cf024eecc6675-MAD
+      - 831d0ce1ed861bb5-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -104,12 +103,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 07 Dec 2023 12:58:05 GMT
+      - Thu, 07 Dec 2023 13:17:42 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=i7wV174Xc8Wb4N5hbP2tO55W4ETUz58JMgcNrruua.g-1701953885-0-ATtVCP667vNxOFSR9+vyN8g/nuApNigAoeVjn+PeXLpdhHYuVfaHYijxmaqWn9ovtk99k3G9bGGl+5rKHTJBw3U=;
-        path=/; expires=Thu, 07-Dec-23 13:28:05 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=jmQXAicRi65KORkqTFfvV06z3qRVpAoOBb5Z6BCKpko-1701955062-0-Aej5udP/q8Ghl95PSkD4fQMnKWd/VqtzHe8OEYMZEXsKnyRg9ohSCrPwNaoTL6xB8ZXV3q7h1bxMl4pSfq0W42Q=;
+        path=/; expires=Thu, 07-Dec-23 13:47:42 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -133,7 +132,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 831cf024eecc6675
+      - 831d0ce1ed861bb5
       x-xss-protection:
       - 1; mode=block
     status:

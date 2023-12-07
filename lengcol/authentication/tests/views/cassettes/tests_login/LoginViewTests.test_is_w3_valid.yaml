@@ -42,15 +42,15 @@ interactions:
       \     <h1>Identificaci\xF3n</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
       \         \n\n<form method=\"post\" action=\"/login/\">\n<input type=\"hidden\"
       name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\"
-      class=\"form-group\"> <label for=\"id_username\" class=\" requiredField\">\n
-      \               Usuario<span class=\"asteriskField\">*</span> </label> <div>
-      <input type=\"text\" name=\"username\" autofocus autocapitalize=\"none\" autocomplete=\"username\"
-      maxlength=\"150\" class=\"textinput textInput form-control\" required id=\"id_username\">
-      </div> </div> <div id=\"div_id_password\" class=\"form-group\"> <label for=\"id_password\"
-      class=\" requiredField\">\n                Contrase\xF1a<span class=\"asteriskField\">*</span>
-      </label> <div> <input type=\"password\" name=\"password\" autocomplete=\"current-password\"
-      class=\"textinput textInput form-control\" required id=\"id_password\"> </div>
-      </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
+      class=\"mb-3\"> <label for=\"id_username\" class=\"form-label requiredField\">\n
+      \               Usuario<span class=\"asteriskField\">*</span> </label> <input
+      type=\"text\" name=\"username\" autofocus autocapitalize=\"none\" autocomplete=\"username\"
+      maxlength=\"150\" class=\"textinput form-control\" required id=\"id_username\">
+      </div> <div id=\"div_id_password\" class=\"mb-3\"> <label for=\"id_password\"
+      class=\"form-label requiredField\">\n                Contrase\xF1a<span class=\"asteriskField\">*</span>
+      </label> <input type=\"password\" name=\"password\" autocomplete=\"current-password\"
+      class=\"passwordinput form-control\" required id=\"id_password\"> </div> <input
+      type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
       id=\"login-form\" type=\"submit\" value=\"login\">\n<input type=\"hidden\" name=\"next\"
       value=\"\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4>Contacto</h4>\n
@@ -67,7 +67,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4806'
+      - '4772'
       Content-Type:
       - text/html
       User-Agent:
@@ -85,7 +85,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 831cf0218cf00412-MAD
+      - 831d0cd9fabc2147-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -95,12 +95,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 07 Dec 2023 12:58:04 GMT
+      - Thu, 07 Dec 2023 13:17:40 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=RI7tg3o4x1ALf69y.qky4oGkWU5R0WD.akuyrrfyrbw-1701953884-0-Acwh/HgUXCrKh9wPdAfmHhViLR1mGgr/NTbS5KBw4UaeYkcGbWJgOuX+fXxVOmo2PCrXlvUlMPLJg/wee8wp1Lk=;
-        path=/; expires=Thu, 07-Dec-23 13:28:04 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=WDd4Qf4IY9fNl6VVIVZZ7tV8ZJtr0PAZNQpmKegQvRo-1701955060-0-AcERbQ9NxyzteC1hmoQLKx+5fFhApcpCqPjCNwKg9eOLa0Qdil/ONuEp75gDvf6HFZihuADutj099nBuHZWj3S8=;
+        path=/; expires=Thu, 07-Dec-23 13:47:40 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -124,7 +124,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 831cf0218cf00412
+      - 831d0cd9fabc2147
       x-xss-protection:
       - 1; mode=block
     status:
