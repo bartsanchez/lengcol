@@ -78,13 +78,14 @@ interactions:
     uri: https://validator.w3.org/nu/?out=json
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAKtWyk0tLk5MTy1WsoqOreUCAIKV37UQAAAA
+      string: '{"messages":[]}
+
+        '
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8316806c3e081a7f-MAD
+      - 831cf0218cf00412-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -94,12 +95,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 06 Dec 2023 18:13:14 GMT
+      - Thu, 07 Dec 2023 12:58:04 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=9bmyRxxmP_893_CWVMVYTA0cax4ZT86Eror.A5CwgTw-1701886394-0-ARV9WUwV2Vi+LHpJ1BkG+N0jqWBpPo+FGfe8ohDKvStrVSa9cldoTRs2LBxTPu1Bs3wcI9rxWRJ+PVjKvOPIA6I=;
-        path=/; expires=Wed, 06-Dec-23 18:43:14 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=RI7tg3o4x1ALf69y.qky4oGkWU5R0WD.akuyrrfyrbw-1701953884-0-Acwh/HgUXCrKh9wPdAfmHhViLR1mGgr/NTbS5KBw4UaeYkcGbWJgOuX+fXxVOmo2PCrXlvUlMPLJg/wee8wp1Lk=;
+        path=/; expires=Thu, 07-Dec-23 13:28:04 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -123,7 +124,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 8316806c3e081a7f
+      - 831cf0218cf00412
       x-xss-protection:
       - 1; mode=block
     status:
