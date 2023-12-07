@@ -1,4 +1,4 @@
-FROM python:3.10.13-slim
+FROM python:3.11.7-slim
 
 LABEL maintainer="Bartolome Sanchez Salado"
 
