@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'extra_views',
     'crispy_forms',
+    'crispy_bootstrap5',
     'snowpenguin.django.recaptcha3',
     'tagging',
 ]
@@ -112,7 +113,8 @@ SITE_ID = 1
 CELERY_BROKER_URL = 'redis://redis_broker:6379/0'
 CELERY_TASK_ALWAYS_EAGER = True
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY', 'fake_private_key')
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY', 'fake_public_key')
