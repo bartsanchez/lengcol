@@ -1,7 +1,7 @@
 # App
-Django<4.0
+Django<5.0
 django-extensions
-django-tagging
+git+https://github.com/bartsanchez/django-tagging.git@develop#egg=django-tagging
 dj-database-url
 psycopg2-binary
 whitenoise
@@ -9,6 +9,7 @@ django-crispy-forms
 crispy-bootstrap5
 django-extra-views
 django-recaptcha3
+git+https://github.com/bartsanchez/django-recaptcha3.git@master#egg=django-recaptcha3
 django-prometheus
 celery
 redis
