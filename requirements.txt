@@ -38,7 +38,7 @@ coverage[toml]==7.3.2
     # via
     #   codecov
     #   pytest-cov
-crispy-bootstrap5==2023.10
+crispy-bootstrap5==0.7
     # via -r requirements.in
 cssselect==1.2.0
     # via splinter
@@ -48,7 +48,7 @@ decorator==5.1.1
     #   ipython
 dj-database-url==2.1.0
     # via -r requirements.in
-django==4.2.8
+django==3.2.23
     # via
     #   -r requirements.in
     #   crispy-bootstrap5
@@ -57,7 +57,7 @@ django==4.2.8
     #   django-extensions
     #   django-extra-views
     #   splinter
-django-crispy-forms==2.1
+django-crispy-forms==2.0
     # via
     #   -r requirements.in
     #   crispy-bootstrap5
@@ -67,9 +67,9 @@ django-extra-views==0.14.0
     # via -r requirements.in
 django-prometheus==2.3.1
     # via -r requirements.in
-django-recaptcha3 @ git+https://github.com/kbytesys/django-recaptcha3.git@master
+django-recaptcha3==0.4.0
     # via -r requirements.in
-django-tagging @ git+https://github.com/bartsanchez/django-tagging.git@develop
+django-tagging==0.5.0
     # via -r requirements.in
 executing==2.0.1
     # via stack-data
@@ -141,6 +141,8 @@ python-dateutil==2.8.2
     #   celery
     #   faker
     #   freezegun
+pytz==2023.3.post1
+    # via django
 pyyaml==6.0.1
     # via vcrpy
 redis==5.0.1

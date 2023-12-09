@@ -68,7 +68,7 @@ class DefinitionDisableView(generic.edit.DeleteView):
             uuid=self.kwargs["uuid"],
         )
 
-    def form_valid(self, *args, **kwargs):
+    def delete(self, *args, **kwargs):
         self.object = self.get_object()
         success_url = self.get_success_url()
         self.object.active = False
