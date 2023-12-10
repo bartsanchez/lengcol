@@ -36,13 +36,16 @@ interactions:
       dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\"
       aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: fake_username\n
       \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
-      \             \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n
-      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
-      \   </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
-      \     <h1>Definici\xF3n de fake term</h1>\n      <div class=\"row\">\n        <div
-      class=\"col-md-8\">\n          \n  <div class=\"card\">\n\n  <div class=\"card-body\">\n
-      \   <h5 class=\"card-title\">\n      <a href=\"/terms/fake-term/\">fake term</a>\n
-      \   </h5>\n\n    <p>\n      <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">&#128279;</a>\n
+      \             \n                <form method=\"post\" action=\"/logout/\">\n
+      \                   <input type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n
+      \                   <button id=\"logout-button\" type=\"submit\" class=\"btn
+      btn-light\">Logout</button>\n                </form>\n              \n            </div>\n
+      \         </li>\n        </ul>\n      </div>\n    </div>\n    </nav>\n\n    <main
+      class=\"container\">\n      <article>\n      <h1>Definici\xF3n de fake term</h1>\n
+      \     <div class=\"row\">\n        <div class=\"col-md-8\">\n          \n  <div
+      class=\"card\">\n\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">\n
+      \     <a href=\"/terms/fake-term/\">fake term</a>\n    </h5>\n\n    <p>\n      <a
+      href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">&#128279;</a>\n
       \     fake definition\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
       class=\"badge rounded-pill text-bg-secondary\">another fake tag 2</a>\n    \n
       \     <a href=\"/tags/fake%20tag%201/definitions/\" class=\"badge rounded-pill
@@ -70,7 +73,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5026'
+      - '5223'
       Content-Type:
       - text/html
       User-Agent:
@@ -88,7 +91,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 831d0d039f6f2162-MAD
+      - 8337096638f260c0-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -98,12 +101,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 07 Dec 2023 13:17:47 GMT
+      - Sun, 10 Dec 2023 16:59:09 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=tONZyH_3RVJU9tecIkv16m10VX2SEvHkaXA79b7iLeY-1701955067-0-AfZJX8uv20dhunvDRMRdk9LJ0mGl4fFgLTyRtW4Gn+RZPnHbdOHS8DcAVwImX0IilZltmIy2cfd8qy4gGFc7mCw=;
-        path=/; expires=Thu, 07-Dec-23 13:47:47 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=M3LCHuO2MtToqLC0MtMCOZn7..EeA.9VTc3ck6W9o_0-1702227549-0-AWCZBcnpIpb4PMqfA9vZ6aleyLGUXu0zzstKMpR//PD+T2t7PRiiAWUS2t5PdwK1E51HcHRv4rJozO71y+2/5dQ=;
+        path=/; expires=Sun, 10-Dec-23 17:29:09 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -127,7 +130,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 831d0d039f6f2162
+      - 8337096638f260c0
       x-xss-protection:
       - 1; mode=block
     status:

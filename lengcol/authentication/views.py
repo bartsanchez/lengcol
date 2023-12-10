@@ -23,3 +23,7 @@ class RegisterView(edit.FormView):
 
 class CustomLoginView(views.LoginView):
     form_class = forms.CustomAuthenticationForm
+
+
+class CustomLogoutView(views.LogoutView):
+    http_method_names = ["post", "options"]
