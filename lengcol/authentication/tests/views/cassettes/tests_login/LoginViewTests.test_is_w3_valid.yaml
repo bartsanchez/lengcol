@@ -36,25 +36,27 @@ interactions:
       dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\"
       aria-haspopup=\"true\" aria-expanded=\"false\">\n                Usuario: fake_username\n
       \           </a>\n            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n
-      \             \n                <a class=\"dropdown-item\" href=\"/logout/\">Logout</a>\n
-      \             \n            </div>\n          </li>\n        </ul>\n      </div>\n
-      \   </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
-      \     <h1>Identificaci\xF3n</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
-      \         \n\n<form method=\"post\" action=\"/login/\">\n<input type=\"hidden\"
-      name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\"
-      class=\"mb-3\"> <label for=\"id_username\" class=\"form-label requiredField\">\n
-      \               Usuario<span class=\"asteriskField\">*</span> </label> <input
-      type=\"text\" name=\"username\" autofocus autocapitalize=\"none\" autocomplete=\"username\"
-      maxlength=\"150\" class=\"textinput form-control\" required id=\"id_username\">
-      </div> <div id=\"div_id_password\" class=\"mb-3\"> <label for=\"id_password\"
-      class=\"form-label requiredField\">\n                Contrase\xF1a<span class=\"asteriskField\">*</span>
-      </label> <input type=\"password\" name=\"password\" autocomplete=\"current-password\"
-      class=\"passwordinput form-control\" required id=\"id_password\"> </div> <input
-      type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
-      id=\"login-form\" type=\"submit\" value=\"login\">\n<input type=\"hidden\" name=\"next\"
-      value=\"\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
-      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4>Contacto</h4>\n
-      \           <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      \             \n                <form method=\"post\" action=\"/logout/\">\n
+      \                   <input type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n
+      \                   <button id=\"logout-button\" type=\"submit\" class=\"btn
+      btn-light\">Logout</button>\n                </form>\n              \n            </div>\n
+      \         </li>\n        </ul>\n      </div>\n    </div>\n    </nav>\n\n    <main
+      class=\"container\">\n      <article>\n      <h1>Identificaci\xF3n</h1>\n      <div
+      class=\"row\">\n        <div class=\"col-md-8\">\n          \n\n<form method=\"post\"
+      action=\"/login/\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n\n\n<div
+      id=\"div_id_username\" class=\"mb-3\"> <label for=\"id_username\" class=\"form-label
+      requiredField\">\n                Usuario<span class=\"asteriskField\">*</span>
+      </label> <input type=\"text\" name=\"username\" autofocus autocapitalize=\"none\"
+      autocomplete=\"username\" maxlength=\"150\" class=\"textinput form-control\"
+      required id=\"id_username\"> </div> <div id=\"div_id_password\" class=\"mb-3\">
+      <label for=\"id_password\" class=\"form-label requiredField\">\n                Contrase\xF1a<span
+      class=\"asteriskField\">*</span> </label> <input type=\"password\" name=\"password\"
+      autocomplete=\"current-password\" class=\"passwordinput form-control\" required
+      id=\"id_password\"> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
+      name=\"g-recaptcha-response\">\n\n<input id=\"login-form\" type=\"submit\" value=\"login\">\n<input
+      type=\"hidden\" name=\"next\" value=\"\">\n</form>\n\n\n        </div>\n        <aside
+      class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
+      \           <h4>Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer id=\"footer\" data-bs-theme=\"dark\">\n      <div class=\"container\">\n
       \       <span class=\"text-muted\">Copyright 2023. All Rights Reserved.</span>\n
@@ -67,7 +69,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4772'
+      - '4969'
       Content-Type:
       - text/html
       User-Agent:
@@ -85,7 +87,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 831d0cd9fabc2147-MAD
+      - 8337091a997b2faf-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -95,12 +97,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 07 Dec 2023 13:17:40 GMT
+      - Sun, 10 Dec 2023 16:58:57 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=WDd4Qf4IY9fNl6VVIVZZ7tV8ZJtr0PAZNQpmKegQvRo-1701955060-0-AcERbQ9NxyzteC1hmoQLKx+5fFhApcpCqPjCNwKg9eOLa0Qdil/ONuEp75gDvf6HFZihuADutj099nBuHZWj3S8=;
-        path=/; expires=Thu, 07-Dec-23 13:47:40 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=X5WWwMjouP23ph59i3daSBd91D1OsozvpHFmrXQ4Qqc-1702227537-0-AYm5Av54G2YUyp5AcTxSJIGrOr02eE6CSTmDdwno7Sw0NoAq1LSDrF1ekLRW71yRdBYZGKUsHoqFQ/1XAknB9NA=;
+        path=/; expires=Sun, 10-Dec-23 17:28:57 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -124,7 +126,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 831d0cd9fabc2147
+      - 8337091a997b2faf
       x-xss-protection:
       - 1; mode=block
     status:

@@ -28,7 +28,7 @@ class LogoutViewTests(test.TestCase):
 
             self.assertEqual(browser.url, reverse("index"))
 
-            browser.visit(self.url)
+            browser.find_by_id("logout-button").click()
 
             self.assertIn("Usuario: Anónimo", browser.html)
 
@@ -36,6 +36,23 @@ class LogoutViewTests(test.TestCase):
         with splinter.Browser("django") as browser:
             browser.visit(reverse("login"))
 
-            browser.visit(self.url)
+            self.fill_and_send_form(browser, "fake_username", "fake_password")
+
+            browser.find_by_id("logout-button").click()
 
             self.assertEqual(browser.url, reverse("index"))
+
+    def test_logout_dont_allow_get_calls(self):
+        request = self.client.get(self.url)
+        self.assertEqual(request.status_code, 405)
+
+    def test_logout_post_without_login(self):
+        with splinter.Browser("django") as browser:
+            browser.visit(reverse("login"))
+            self.assertIn("Usuario: Anónimo", browser.html)
+
+            request = self.client.post(self.url)
+            self.assertEqual(request.status_code, 302)
+
+            self.assertEqual(browser.url, reverse("login"))
+            self.assertIn("Usuario: Anónimo", browser.html)
