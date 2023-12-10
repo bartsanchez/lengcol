@@ -37,3 +37,7 @@ ignore = [
     "TRY003",
     "TRY200",
 ]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "lengcol.settings.base"
+python_files = "tests.py test*"
