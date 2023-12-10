@@ -40,4 +40,4 @@ class DefinitionTests(test.TestCase):
         queryset = models.Example.objects.filter(
             pk__in=[example_foo.pk, example_bar.pk],
         )
-        self.assertQuerysetEqual(self.definition.examples, queryset, ordered=False)
+        self.assertQuerySetEqual(self.definition.examples, queryset, ordered=False)

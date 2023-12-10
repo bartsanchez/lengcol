@@ -36,4 +36,4 @@ class TermTests(test.TestCase):
         queryset = models.Definition.objects.filter(
             pk__in=[definition_foo.pk, definition_bar.pk],
         )
-        self.assertQuerysetEqual(self.term.definitions, queryset, ordered=False)
+        self.assertQuerySetEqual(self.term.definitions, queryset, ordered=False)
