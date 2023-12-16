@@ -3,7 +3,7 @@ Django<5.0
 django-extensions
 git+https://github.com/bartsanchez/django-tagging.git@develop#egg=django-tagging
 dj-database-url
-psycopg2-binary
+psycopg[binary]
 whitenoise
 django-crispy-forms
 crispy-bootstrap5
