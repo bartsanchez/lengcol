@@ -118,8 +118,10 @@ prompt-toolkit==3.0.43
     # via
     #   click-repl
     #   ipython
-psycopg2-binary==2.9.9
+psycopg[binary]==3.1.15
     # via -r requirements.in
+psycopg-binary==3.1.15
+    # via psycopg
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
@@ -166,7 +168,9 @@ traitlets==5.14.0
     #   ipython
     #   matplotlib-inline
 typing-extensions==4.9.0
-    # via dj-database-url
+    # via
+    #   dj-database-url
+    #   psycopg
 tzdata==2023.3
     # via celery
 urllib3==2.1.0
