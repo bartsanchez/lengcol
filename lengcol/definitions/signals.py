@@ -8,4 +8,3 @@ from definitions import models, tasks
 def new_definition_handler(sender, instance, created, *args, **kwargs):
     if created:
         tasks.send_new_definition_mail.delay(pk=instance.pk)
-    tasks.ping_google_for_sitemap.delay()
