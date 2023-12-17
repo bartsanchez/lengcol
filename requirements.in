@@ -1,5 +1,5 @@
 # App
-Django<5.0
+Django
 django-extensions
 git+https://github.com/bartsanchez/django-tagging.git@develop#egg=django-tagging
 dj-database-url
