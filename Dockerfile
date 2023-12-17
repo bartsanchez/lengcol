@@ -6,7 +6,6 @@ ENV ENVIRONMENT dev
 
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
-    python3-psycopg2 \
     git \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
