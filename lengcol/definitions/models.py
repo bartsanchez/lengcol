@@ -11,7 +11,7 @@ from tagging import registry
 
 
 class Term(base_models.BaseModel):
-    value = models.CharField(max_length=255, unique=True)
+    value = models.CharField(unique=True)
     slug = fields.AutoSlugField(populate_from=("value",))
 
     objects = managers.ActiveManager()
