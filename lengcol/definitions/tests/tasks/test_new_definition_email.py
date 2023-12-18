@@ -55,7 +55,12 @@ class NewDefinitionMailTests(test.TestCase):
         # Body
         definition = models.Definition.objects.first()
         definition_url = definition.get_absolute_url()
-        self.assertEqual(email_sent.body, f"{settings.BASE_URL}{definition_url}")
+        body = (
+            "Término: --fake term--\n"
+            "Definición: --fake definition--\n"
+            f"URL: {settings.BASE_URL}{definition_url}"
+        )
+        self.assertEqual(email_sent.body, body)
 
     def test_update_definition_dont_send_an_email(self):
         self.client.login(username=self.user.username, password="fake_password")
