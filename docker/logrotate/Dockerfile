@@ -1,4 +1,4 @@
-FROM debian:12.2
+FROM debian:bookworm-20231218
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
     logrotate \
