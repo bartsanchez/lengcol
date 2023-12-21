@@ -62,7 +62,7 @@ class NewDefinitionMailTests(test.TestCase):
         )
         self.assertEqual(email_sent.body, body)
 
-    def test_update_definition_dont_send_an_email(self):
+    def test_update_definition_send_an_email(self):
         self.client.login(username=self.user.username, password="fake_password")
 
         self.assertEqual(len(mail.outbox), 0)
@@ -84,4 +84,20 @@ class NewDefinitionMailTests(test.TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(models.Definition.objects.count(), 1)
-        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(len(mail.outbox), 2)
+
+        email_sent = mail.outbox[1]
+        self.assertEqual(email_sent.subject, "New definition was updated")
+        self.assertEqual(email_sent.from_email, settings.APP_EMAIL)
+        self.assertTrue(len(email_sent.to), 1)
+        self.assertEqual(email_sent.to[0], settings.APP_EMAIL)
+
+        # Body
+        definition = models.Definition.objects.first()
+        definition_url = definition.get_absolute_url()
+        body = (
+            "Término: --fake term--\n"
+            "Definición: --modified definition--\n"
+            f"URL: {settings.BASE_URL}{definition_url}"
+        )
+        self.assertEqual(email_sent.body, body)
