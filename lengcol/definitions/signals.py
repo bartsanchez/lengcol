@@ -6,5 +6,4 @@ from definitions import models, tasks
 
 @dispatch.receiver(signals.post_save, sender=models.Definition)
 def new_definition_handler(sender, instance, created, *args, **kwargs):
-    if created:
-        tasks.send_new_definition_mail.delay(pk=instance.pk)
+    tasks.send_new_definition_mail.delay(pk=instance.pk, created=created)

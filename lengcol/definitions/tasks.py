@@ -6,7 +6,8 @@ from lengcol.celery import app
 
 
 @app.task()
-def send_new_definition_mail(pk):
+def send_new_definition_mail(pk, created):
+    action = "created" if created else "updated"
     definition = models.Definition.objects.get(pk=pk)
     message = (
         f"Término: --{definition.term}--",
@@ -14,7 +15,7 @@ def send_new_definition_mail(pk):
         f"URL: {settings.BASE_URL}{definition.get_absolute_url()}",
     )
     mail_content = {
-        "subject": "New definition was created",
+        "subject": f"New definition was {action}",
         "message": "\n".join(message),
         "from_email": f"{settings.APP_EMAIL}",
         "recipient_list": [f"{settings.APP_EMAIL}"],
