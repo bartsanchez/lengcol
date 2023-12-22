@@ -34,7 +34,7 @@ click-repl==0.3.0
     # via celery
 codecov==2.1.13
     # via -r requirements.in
-coverage[toml]==7.3.3
+coverage[toml]==7.3.4
     # via
     #   codecov
     #   coverage
@@ -90,13 +90,13 @@ iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
     # via -r requirements.in
-ipython==8.18.1
+ipython==8.19.0
     # via ipdb
 jedi==0.19.1
     # via ipython
 kombu==5.3.4
     # via celery
-lxml==4.9.3
+lxml==4.9.4
     # via splinter
 matplotlib-inline==0.1.6
     # via ipython
