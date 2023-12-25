@@ -2,14 +2,14 @@ interactions:
 - request:
     body: "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"utf-8\">\n
       \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n
-      \   <meta name=\"description\" content=\"fake term se define en espa\xF1ol como
-      fake definition.\">\n\n    \n\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\"
+      \   <meta name=\"description\" content=\"popular term se define en espa\xF1ol
+      como fake definition.\">\n\n    \n\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\"
       rel=\"stylesheet\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\"
       crossorigin=\"anonymous\">\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"
       integrity=\"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL\"
       crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\"
       href=\"/static/definitions/style.css\">\n\n    \n\n    <title>Lenguaje Coloquial
-      | Definiciones de fake term por fake_username</title>\n  </head>\n  <body>\n\n
+      | Definiciones de popular term por fake_username</title>\n  </head>\n  <body>\n\n
       \   <nav id=\"header\" class=\"navbar navbar-expand-lg navbar-dark\">\n    <div
       class=\"container-fluid\">\n      <a class=\"navbar-brand\" href=\"/\">Lenguaje
       coloquial</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\"
@@ -41,11 +41,11 @@ interactions:
       \                   <button id=\"logout-button\" type=\"submit\" class=\"btn
       btn-light\">Logout</button>\n                </form>\n              \n            </div>\n
       \         </li>\n        </ul>\n      </div>\n    </div>\n    </nav>\n\n    <main
-      class=\"container\">\n      <article>\n      <h1>Definici\xF3n de fake term</h1>\n
+      class=\"container\">\n      <article>\n      <h1>Definici\xF3n de popular term</h1>\n
       \     <div class=\"row\">\n        <div class=\"col-md-8\">\n          \n  <div
       class=\"card\">\n\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">\n
-      \     <a href=\"/terms/fake-term/\">fake term</a>\n    </h5>\n\n    <p>\n      <a
-      href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">&#128279;</a>\n
+      \     <a href=\"/terms/popular-term/\">popular term</a>\n    </h5>\n\n    <p>\n
+      \     <a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/\">&#128279;</a>\n
       \     fake definition\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
       class=\"badge rounded-pill text-bg-secondary\">another fake tag 2</a>\n    \n
       \     <a href=\"/tags/fake%20tag%201/definitions/\" class=\"badge rounded-pill
@@ -54,10 +54,27 @@ interactions:
       href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/change\">&#9998; Editar</a></div>\n
       \         <div><a href=\"/definitions/6b4a7a9f-3b8f-494b-8565-f960065802ba/disable\">&#10007;
       Eliminar</a></div>\n      </div>\n    \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n
-      \   <div>Autor: fake_username</div>\n  </div>\n</div>\n\n  \n\n\n        </div>\n
+      \   <div>Autor: fake_username</div>\n  </div>\n</div>\n\n  \n  <h2>Otras definiciones</h2>\n
+      \ \n    <div class=\"card\">\n\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">\n
+      \     <a href=\"/terms/popular-term/\">popular term</a>\n    </h5>\n\n    <p>\n
+      \     <a href=\"/definitions/d4c9aa71-ff3e-4dd3-9bec-8c64b0f9ab6b/\">&#128279;</a>\n
+      \     another definition\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
+      class=\"badge rounded-pill text-bg-secondary\">another fake tag 2</a>\n    \n
+      \     <a href=\"/tags/fake%20tag%201/definitions/\" class=\"badge rounded-pill
+      text-bg-secondary\">fake tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer
+      text-end text-muted\">\n    \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n
+      \   <div>Autor: An\xF3nimo</div>\n  </div>\n</div>\n\n  \n    <div class=\"card\">\n\n
+      \ <div class=\"card-body\">\n    <h5 class=\"card-title\">\n      <a href=\"/terms/popular-term/\">popular
+      term</a>\n    </h5>\n\n    <p>\n      <a href=\"/definitions/24b77ed6-90b0-47f7-a487-2d09f11ffa23/\">&#128279;</a>\n
+      \     one more def\n    </p>\n\n    \n\n    \n      <a href=\"/tags/another%20fake%20tag%202/definitions/\"
+      class=\"badge rounded-pill text-bg-secondary\">another fake tag 2</a>\n    \n
+      \     <a href=\"/tags/fake%20tag%201/definitions/\" class=\"badge rounded-pill
+      text-bg-secondary\">fake tag 1</a>\n    \n\n  </div>\n\n  <div class=\"card-footer
+      text-end text-muted\">\n    \n    <div>Fecha de creaci\xF3n 01-01-2020</div>\n
+      \   <div>Autor: An\xF3nimo</div>\n  </div>\n</div>\n\n  \n\n\n\n        </div>\n
       \       <aside class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3
       bg-light\">\n            <h4>\xDAltimas definiciones</h4>\n            <ul>\n
-      \             \n              <li><a class=\"last-terms\" href=\"/terms/fake-term/\">fake
+      \             \n              <li><a class=\"last-terms\" href=\"/terms/popular-term/\">popular
       term</a></li>\n              \n            </ul>\n          </div>\n          \n
       \         <div class=\"p-3 mb-3 bg-light\">\n            <h4>Contacto</h4>\n
       \           <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
@@ -73,7 +90,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5227'
+      - '6648'
       Content-Type:
       - text/html
       User-Agent:
@@ -91,7 +108,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83b8f71be8b25e1c-MAD
+      - 83b8fea5bc415e1c-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -101,12 +118,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 26 Dec 2023 11:25:49 GMT
+      - Tue, 26 Dec 2023 11:30:58 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=EZXPqXJkpywivoI.4Y1.2OyDfIgRltN5_B0E93e5ANQ-1703589949-1-AZzXNf1NmkkbRa1Q31J6mQ5B11MAk7r0OcTV9Wl1yLeHJxE5mxc2kl6HCkOMWvyz+jMeQoQ4PZ5MGZgoch7Di5s=;
-        path=/; expires=Tue, 26-Dec-23 11:55:49 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=9sLa8C3Mt7EHwCEqtbVXg7hk_UrsRQEy07qkfrvxdN0-1703590258-1-Ad3deAKjbxnsZabxuOSdlcfhrCvcI0g+FywLlZIub7kpzNiOpyLbEx8pc9hamEpmiY3+mqwooktHKawgk3itaCw=;
+        path=/; expires=Tue, 26-Dec-23 12:00:58 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -130,7 +147,7 @@ interactions:
       x-frame-options:
       - deny
       x-request-id:
-      - 83b8f71be8b25e1c
+      - 83b8fea5bc415e1c
       x-xss-protection:
       - 1; mode=block
     status:

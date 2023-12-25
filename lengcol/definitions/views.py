@@ -36,6 +36,13 @@ class DefinitionDetailView(generic.DetailView):
     def get_object(self):
         return shortcuts.get_object_or_404(models.Definition, uuid=self.kwargs["uuid"])
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["other_definitions"] = self.model().other_definitions(
+            to_exclude=self.object,
+        )
+        return context
+
 
 class DefinitionUpdateView(
     mixins.LoginRequiredMixin,
