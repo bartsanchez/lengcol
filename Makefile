@@ -19,7 +19,7 @@ stop:
 	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml down
 
 run:
-	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml run $(RUN_SERVICE)
+	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml run --rm $(RUN_SERVICE)
 
 logs:
 	${COMPOSE_EXEC} -f docker-compose.yml -f docker-compose.$(ENV).yml logs $(ARGS)
