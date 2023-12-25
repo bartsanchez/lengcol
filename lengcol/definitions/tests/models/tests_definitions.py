@@ -41,3 +41,43 @@ class DefinitionTests(test.TestCase):
             pk__in=[example_foo.pk, example_bar.pk],
         )
         self.assertQuerySetEqual(self.definition.examples, queryset, ordered=False)
+
+
+class OtherDefinitionTests(test.TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.definition = factories.DefinitionFactory(value="my fake definition")
+
+    def test_no_other_definitions(self):
+        self.assertEqual(
+            [],
+            list(models.Definition().other_definitions(self.definition)),
+        )
+
+    def test_other_definitions(self):
+        term = self.definition.term
+        second_definition = factories.DefinitionFactory(term=term, value="second")
+        third_definition = factories.DefinitionFactory(term=term, value="third")
+
+        other_definitions = models.Definition.objects.filter(
+            pk__in=((second_definition.pk, third_definition.pk)),
+        )
+
+        self.assertQuerySetEqual(
+            other_definitions,
+            list(models.Definition().other_definitions(self.definition)),
+        )
+
+    def test_only_other_active_definitions(self):
+        term = self.definition.term
+        active_definition = factories.DefinitionFactory(term=term, value="active")
+        factories.DefinitionFactory(term=term, value="inactive", active=False)
+
+        other_definitions = models.Definition.objects.filter(pk=active_definition.pk)
+
+        self.assertQuerySetEqual(
+            other_definitions,
+            list(models.Definition().other_definitions(self.definition)),
+        )
+
+        self.assertEqual(models.Definition.all_objects.filter(term=term).count(), 3)

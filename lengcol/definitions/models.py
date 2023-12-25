@@ -65,6 +65,14 @@ class Definition(base_models.BaseModel):
     def examples(self):
         return self.example_set.all()
 
+    @classmethod
+    def other_definitions(cls, to_exclude):
+        return (
+            Definition.objects.filter(term=to_exclude.term)
+            .exclude(pk=to_exclude.pk)
+            .all()
+        )
+
 
 class Example(base_models.BaseModel):
     definition = models.ForeignKey(Definition, on_delete=models.CASCADE)

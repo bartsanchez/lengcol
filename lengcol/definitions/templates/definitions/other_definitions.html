@@ -1,0 +1,6 @@
+{% if other_definitions %}
+  <h2>Otras definiciones</h2>
+  {% for definition in other_definitions %}
+    {% include 'definitions/definition.html' with definition=definition %}
+  {% endfor %}
+{% endif %}
