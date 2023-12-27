@@ -15,3 +15,6 @@ class BaseModel(models.Model):
 class TestModel(BaseModel):
     objects = models.Manager()
     active_objects = managers.ActiveManager()
+
+    def __str__(self):
+        return "test instance"
