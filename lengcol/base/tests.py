@@ -6,6 +6,9 @@ from base import models
 
 
 class BaseModelTests(test.TestCase):
+    def test_str(self):
+        self.assertEqual(str(models.TestModel()), "test instance")
+
     @freezegun.freeze_time("2000-01-05 10:00:05Z")
     def test_created_field(self):
         fake_instance = models.TestModel()
