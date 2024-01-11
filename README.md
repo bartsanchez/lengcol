@@ -5,6 +5,10 @@
 
 # Lenguaje coloquial project
 
+Informal Spanish language dictionary.
+
+[https://lenguajecoloquial.com/](https://lenguajecoloquial.com/)
+
 ## Features
 
 - Full containerization using [Docker](https://www.docker.com/)
