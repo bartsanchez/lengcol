@@ -1,4 +1,4 @@
-FROM debian:12.2
+FROM debian:12.4-slim
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
     logrotate \
