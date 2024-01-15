@@ -94,7 +94,7 @@ ipython==8.20.0
     # via ipdb
 jedi==0.19.1
     # via ipython
-kombu==5.3.4
+kombu==5.3.5
     # via celery
 lxml==5.1.0
     # via splinter
