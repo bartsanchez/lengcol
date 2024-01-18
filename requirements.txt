@@ -157,7 +157,7 @@ six==1.16.0
     # via
     #   asttokens
     #   python-dateutil
-splinter[django,selenium4]==0.20.1
+splinter[django,selenium4]==0.21.0
     # via -r requirements.in
 sqlparse==0.4.4
     # via django
