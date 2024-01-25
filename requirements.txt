@@ -76,7 +76,7 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==22.5.0
+faker==22.5.1
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
@@ -110,7 +110,7 @@ parso==0.8.3
     # via jedi
 pexpect==4.9.0
     # via ipython
-pluggy==1.3.0
+pluggy==1.4.0
     # via pytest
 prometheus-client==0.19.0
     # via django-prometheus
@@ -177,7 +177,7 @@ urllib3==2.1.0
     # via
     #   requests
     #   splinter
-vcrpy==5.1.0
+vcrpy==6.0.1
     # via pytest-recording
 vine==5.1.0
     # via
