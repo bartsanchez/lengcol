@@ -76,7 +76,7 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==22.5.1
+faker==22.6.0
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
@@ -90,7 +90,7 @@ iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
     # via -r requirements.in
-ipython==8.20.0
+ipython==8.21.0
     # via ipdb
 jedi==0.19.1
     # via ipython
@@ -128,14 +128,14 @@ pure-eval==0.2.2
     # via stack-data
 pygments==2.17.2
     # via ipython
-pytest==7.4.4
+pytest==8.0.0
     # via
     #   pytest-cov
     #   pytest-django
     #   pytest-recording
 pytest-cov==4.1.0
     # via -r requirements.in
-pytest-django==4.7.0
+pytest-django==4.8.0
     # via -r requirements.in
 pytest-recording==0.13.1
     # via -r requirements.in
@@ -173,7 +173,7 @@ typing-extensions==4.9.0
     #   psycopg
 tzdata==2023.4
     # via celery
-urllib3==2.1.0
+urllib3==2.2.0
     # via
     #   requests
     #   splinter
