@@ -75,7 +75,7 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==23.1.0
+faker==23.2.0
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
