@@ -16,9 +16,9 @@ packaging==23.2
     # via pytest
 pluggy==1.4.0
     # via pytest
-pytest==8.0.0
+pytest==8.0.1
     # via -r requirements.in
 requests==2.31.0
     # via -r requirements.in
-urllib3==2.2.0
+urllib3==2.2.1
     # via requests
