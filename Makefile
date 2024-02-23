@@ -1,4 +1,4 @@
-.PHONY: build run start stop run logs ps clean deploy tests
+.PHONY: build run start stop logs ps clean deploy tests
 
 ENV ?= dev
 START_SERVICES ?=
