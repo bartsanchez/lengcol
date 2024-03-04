@@ -87,7 +87,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 84155c060fc85e24-MAD
+      - 85f4d84d3f862174-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -97,12 +97,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 06 Jan 2024 16:32:52 GMT
+      - Mon, 04 Mar 2024 21:09:01 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=653Q_8vSDjvxoMDVvWNvOXuzGaSUGUQ1jan83PM_wkY-1704558772-1-ASPx2mjeGIKJ1nyo0FhTU8zDl8cN4KjLpaT471V2Zm+2A5A1NtMRiPZL5d3tkE7GBsdNwgXeEZIzRfketZlaUYY=;
-        path=/; expires=Sat, 06-Jan-24 17:02:52 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=nGDCiccsoBB6zm1AJw8MgvbkRQNiCpezQz4R8oT8034-1709586541-1.0.1.1-uFn0MbuB_1OzyMbRQ.zQJkcDtIkFgz9a7lwqRycuVWYVEHz6P22enu_YM0Y8gOT8Qp30TcXHgQANBqO3Nbkacw;
+        path=/; expires=Mon, 04-Mar-24 21:39:01 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -122,11 +122,13 @@ interactions:
       strict-transport-security:
       - max-age=15552015; preload
       vary:
-      - Accept-Encoding, User-Agent
+      - Accept-Encoding,User-Agent
+      via:
+      - 1.1 fornjot.w3.org
       x-frame-options:
       - deny
       x-request-id:
-      - 84155c060fc85e24
+      - 85f4d84d3f862174
       x-xss-protection:
       - 1; mode=block
     status:
