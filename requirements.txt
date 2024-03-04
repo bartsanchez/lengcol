@@ -34,11 +34,11 @@ click-repl==0.3.0
     # via celery
 codecov==2.1.13
     # via -r requirements.in
-coverage[toml]==7.4.1
+coverage[toml]==7.4.3
     # via
     #   codecov
     #   pytest-cov
-crispy-bootstrap5==2023.10
+crispy-bootstrap5==2024.2
     # via -r requirements.in
 cssselect==1.2.0
     # via splinter
@@ -48,7 +48,7 @@ decorator==5.1.1
     #   ipython
 dj-database-url==2.1.0
     # via -r requirements.in
-django==5.0.2
+django==5.0.3
     # via
     #   -r requirements.in
     #   crispy-bootstrap5
@@ -75,7 +75,7 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==23.2.1
+faker==24.0.0
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
@@ -89,7 +89,7 @@ iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
     # via -r requirements.in
-ipython==8.21.0
+ipython==8.22.2
     # via ipdb
 jedi==0.19.1
     # via ipython
@@ -127,7 +127,7 @@ pure-eval==0.2.2
     # via stack-data
 pygments==2.17.2
     # via ipython
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -138,14 +138,14 @@ pytest-django==4.8.0
     # via -r requirements.in
 pytest-recording==0.13.1
     # via -r requirements.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   celery
     #   faker
     #   freezegun
 pyyaml==6.0.1
     # via vcrpy
-redis==5.0.1
+redis==5.0.2
     # via -r requirements.in
 requests==2.31.0
     # via
@@ -166,7 +166,7 @@ traitlets==5.14.1
     # via
     #   ipython
     #   matplotlib-inline
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   dj-database-url
     #   psycopg
