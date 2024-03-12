@@ -24,8 +24,6 @@ class LastTermsTests(test.TestCase):
         response = self.client.get(self.url)
         self.assertContains(
             response,
-            '<li><a class="last-terms" href="{}">fake_term</a></li>'.format(
-                term.get_absolute_url(),
-            ),
+            f'<li><a class="last-terms" href="{term.get_absolute_url()}">fake_term</a></li>',
             html=True,
         )
