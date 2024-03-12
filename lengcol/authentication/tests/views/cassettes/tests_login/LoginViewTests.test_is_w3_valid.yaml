@@ -44,19 +44,20 @@ interactions:
       class=\"container\">\n      <article>\n      <h1>Identificaci\xF3n</h1>\n      <div
       class=\"row\">\n        <div class=\"col-md-8\">\n          \n\n<form method=\"post\"
       action=\"/login/\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n\n\n<div
-      id=\"div_id_username\" class=\"mb-3\"> <label for=\"id_username\" class=\"form-label
-      requiredField\">\n                Usuario<span class=\"asteriskField\">*</span>
+      id=\"div_id_username\" class=\"mb-3\"> <label\n                for=\"id_username\"
+      class=\"form-label requiredField\">\n                Usuario<span class=\"asteriskField\">*</span>
       </label> <input type=\"text\" name=\"username\" autofocus autocapitalize=\"none\"
       autocomplete=\"username\" maxlength=\"150\" class=\"textinput form-control\"
       required id=\"id_username\"> </div> <div id=\"div_id_password\" class=\"mb-3\">
-      <label for=\"id_password\" class=\"form-label requiredField\">\n                Contrase\xF1a<span
-      class=\"asteriskField\">*</span> </label> <input type=\"password\" name=\"password\"
-      autocomplete=\"current-password\" class=\"passwordinput form-control\" required
-      id=\"id_password\"> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
-      name=\"g-recaptcha-response\">\n\n<input id=\"login-form\" type=\"submit\" value=\"login\">\n<input
-      type=\"hidden\" name=\"next\" value=\"\">\n</form>\n\n\n        </div>\n        <aside
-      class=\"col-md-4\">\n          \n          <div class=\"p-3 mb-3 bg-light\">\n
-      \           <h4>Contacto</h4>\n            <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
+      <label\n                for=\"id_password\" class=\"form-label requiredField\">\n
+      \               Contrase\xF1a<span class=\"asteriskField\">*</span> </label>
+      <input type=\"password\" name=\"password\" autocomplete=\"current-password\"
+      class=\"passwordinput form-control\" required id=\"id_password\"> </div> <input
+      type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n<input
+      id=\"login-form\" type=\"submit\" value=\"login\">\n<input type=\"hidden\" name=\"next\"
+      value=\"\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
+      \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4>Contacto</h4>\n
+      \           <p class=\"mb-0\"><a href=\"mailto:info@lenguajecoloquial.com\">info@lenguajecoloquial.com</a></p>\n
       \         </div>\n        </aside>\n      </div>\n      </article>\n    </main>\n\n
       \   <footer id=\"footer\" data-bs-theme=\"dark\">\n      <div class=\"container\">\n
       \       <span class=\"text-muted\">Copyright 2024. All Rights Reserved.</span>\n
@@ -69,7 +70,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4969'
+      - '5001'
       Content-Type:
       - text/html
       User-Agent:
@@ -87,7 +88,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 84155c060fc85e24-MAD
+      - 863733681d53218a-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -97,12 +98,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 06 Jan 2024 16:32:52 GMT
+      - Tue, 12 Mar 2024 22:25:33 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=653Q_8vSDjvxoMDVvWNvOXuzGaSUGUQ1jan83PM_wkY-1704558772-1-ASPx2mjeGIKJ1nyo0FhTU8zDl8cN4KjLpaT471V2Zm+2A5A1NtMRiPZL5d3tkE7GBsdNwgXeEZIzRfketZlaUYY=;
-        path=/; expires=Sat, 06-Jan-24 17:02:52 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=ZX7tafwx_9JMfTZOfuaPjpOr7pi25u3AgZPOFUQ98Xs-1710282333-1.0.1.1-3vkKCS4Nnf60jZqU_jepyAGBxwMRdwPMykIPkyouhgT_YVkRAysCIkqNCOn9Uzj_MAF7A5b_CWqBq9ZRPOmm_Q;
+        path=/; expires=Tue, 12-Mar-24 22:55:33 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -122,11 +123,13 @@ interactions:
       strict-transport-security:
       - max-age=15552015; preload
       vary:
-      - Accept-Encoding, User-Agent
+      - Accept-Encoding,User-Agent
+      via:
+      - 1.1 fornjot.w3.org
       x-frame-options:
       - deny
       x-request-id:
-      - 84155c060fc85e24
+      - 863733681d53218a
       x-xss-protection:
       - 1; mode=block
     status:

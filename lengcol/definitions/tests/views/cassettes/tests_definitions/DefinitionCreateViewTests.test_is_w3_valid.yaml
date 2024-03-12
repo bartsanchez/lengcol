@@ -46,16 +46,16 @@ interactions:
       class=\"card\">\n\n    <div class=\"card-header\">\n      Nueva definici\xF3n\n
       \   </div>\n\n    <div class=\"card-body\">\n      <form action=\"#\" method=\"post\"><input
       type=\"hidden\" name=\"csrfmiddlewaretoken\" value=\"fake_csrf\">\n        \n\n<div
-      id=\"div_id_term\" class=\"mb-3\"> <label for=\"id_term\" class=\"form-label
+      id=\"div_id_term\" class=\"mb-3\"> <label\n                for=\"id_term\" class=\"form-label
       requiredField\">\n                T\xE9rmino<span class=\"asteriskField\">*</span>
       </label> <input type=\"text\" name=\"term\" class=\"textinput form-control\"
-      required id=\"id_term\"> </div> <div id=\"div_id_value\" class=\"mb-3\"> <label
-      for=\"id_value\" class=\"form-label requiredField\">\n                Definici\xF3n<span
+      required id=\"id_term\"> </div> <div id=\"div_id_value\" class=\"mb-3\"> <label\n
+      \               for=\"id_value\" class=\"form-label requiredField\">\n                Definici\xF3n<span
       class=\"asteriskField\">*</span> </label> <textarea name=\"value\" cols=\"40\"
       rows=\"10\" class=\"textarea form-control\" required id=\"id_value\">\n</textarea>
-      </div> <div id=\"div_id_tags\" class=\"mb-3\"> <label for=\"id_tags\" class=\"form-label\">\n
-      \               Etiquetas (separadas por comas)\n            </label> <input
-      type=\"text\" name=\"tags\" class=\"textinput form-control\" id=\"id_tags\">
+      </div> <div id=\"div_id_tags\" class=\"mb-3\"> <label\n                for=\"id_tags\"
+      class=\"form-label\">\n                Etiquetas (separadas por comas)\n            </label>
+      <input type=\"text\" name=\"tags\" class=\"textinput form-control\" id=\"id_tags\">
       </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\" name=\"g-recaptcha-response\">\n\n
       \       <p>Ejemplos</p>\n        \n          \n    \n\n<input type=\"hidden\"
       name=\"example_set-TOTAL_FORMS\" value=\"2\" id=\"id_example_set-TOTAL_FORMS\">
@@ -66,7 +66,7 @@ interactions:
       class=\"mb-3\"> <input type=\"text\" name=\"example_set-0-value\" class=\"textinput
       form-control\" id=\"id_example_set-0-value\"> </div> <input type=\"hidden\"
       name=\"example_set-0-id\" id=\"id_example_set-0-id\"> <div class=\"mb-3\"> <div
-      id=\"div_id_example_set-0-DELETE\" class=\"mb-3 form-check\"> <input type=\"checkbox\"
+      id=\"div_id_example_set-0-DELETE\" class=\"form-check\"> <input type=\"checkbox\"
       name=\"example_set-0-DELETE\" class=\"checkboxinput form-check-input\" id=\"id_example_set-0-DELETE\">
       <label for=\"id_example_set-0-DELETE\" class=\"form-check-label\">\n                    Delete\n
       \               </label> </div> </div> <input type=\"hidden\" name=\"example_set-0-definition\"
@@ -74,7 +74,7 @@ interactions:
       \       \n\n<div id=\"div_id_example_set-1-value\" class=\"mb-3\"> <input type=\"text\"
       name=\"example_set-1-value\" class=\"textinput form-control\" id=\"id_example_set-1-value\">
       </div> <input type=\"hidden\" name=\"example_set-1-id\" id=\"id_example_set-1-id\">
-      <div class=\"mb-3\"> <div id=\"div_id_example_set-1-DELETE\" class=\"mb-3 form-check\">
+      <div class=\"mb-3\"> <div id=\"div_id_example_set-1-DELETE\" class=\"form-check\">
       <input type=\"checkbox\" name=\"example_set-1-DELETE\" class=\"checkboxinput
       form-check-input\" id=\"id_example_set-1-DELETE\"> <label for=\"id_example_set-1-DELETE\"
       class=\"form-check-label\">\n                    Delete\n                </label>
@@ -95,7 +95,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '7061'
+      - '7099'
       Content-Type:
       - text/html
       User-Agent:
@@ -113,7 +113,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 84155c12af6703aa-MAD
+      - 863730fe8a1c1a7b-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -123,12 +123,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 06 Jan 2024 16:32:54 GMT
+      - Tue, 12 Mar 2024 22:23:54 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=RZ3x_vfhOQ6Gsh_cCDBI4UuSRcJIEqWwbN2S6MxzGIc-1704558774-1-AWax37hM3Mzmsn8Reu+1oJm4APA8AvoyY5HtWGjysdsgdfu8JQa4V+CK7YDDmQFPJ+GvqLyNPBtbYZZtAY57F0c=;
-        path=/; expires=Sat, 06-Jan-24 17:02:54 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=lveU84tgNB41kh9KE2sMkegGs4HQBLE307CO_10Wop4-1710282234-1.0.1.1-AXQ_6xHLb8aWxsrkh9MkHk8D.zkCgFaAtT8OuhL0bd5A9tgT_ejLPEC_GcY1XomI.mOepkVMt7thwacuAnYehw;
+        path=/; expires=Tue, 12-Mar-24 22:53:54 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -148,11 +148,13 @@ interactions:
       strict-transport-security:
       - max-age=15552015; preload
       vary:
-      - Accept-Encoding, User-Agent
+      - Accept-Encoding,User-Agent
+      via:
+      - 1.1 surtur.w3.org
       x-frame-options:
       - deny
       x-request-id:
-      - 84155c12af6703aa
+      - 863730fe8a1c1a7b
       x-xss-protection:
       - 1; mode=block
     status:

@@ -42,23 +42,24 @@ interactions:
       \   </div>\n    </nav>\n\n    <main class=\"container\">\n      <article>\n
       \     <h1>Crea tu cuenta</h1>\n      <div class=\"row\">\n        <div class=\"col-md-8\">\n
       \         \n\n<form method=\"post\">\n<input type=\"hidden\" name=\"csrfmiddlewaretoken\"
-      value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\" class=\"mb-3\"> <label
-      for=\"id_username\" class=\"form-label requiredField\">\n                Usuario<span
+      value=\"fake_csrf\">\n\n\n<div id=\"div_id_username\" class=\"mb-3\"> <label\n
+      \               for=\"id_username\" class=\"form-label requiredField\">\n                Usuario<span
       class=\"asteriskField\">*</span> </label> <input type=\"text\" name=\"username\"
       maxlength=\"150\" autocapitalize=\"none\" autocomplete=\"username\" autofocus
       class=\"textinput form-control\" required id=\"id_username\"> </div> <div id=\"div_id_password1\"
-      class=\"mb-3\"> <label for=\"id_password1\" class=\"form-label requiredField\">\n
-      \               Contrase\xF1a<span class=\"asteriskField\">*</span> </label>
-      <input type=\"password\" name=\"password1\" autocomplete=\"new-password\" class=\"passwordinput
-      form-control\" required id=\"id_password1\"> </div> <div id=\"div_id_password2\"
-      class=\"mb-3\"> <label for=\"id_password2\" class=\"form-label requiredField\">\n
-      \               Confirma tu contrase\xF1a<span class=\"asteriskField\">*</span>
-      </label> <input type=\"password\" name=\"password2\" autocomplete=\"new-password\"
-      class=\"passwordinput form-control\" required id=\"id_password2\"> </div> <div
-      id=\"div_id_email\" class=\"mb-3\"> <label for=\"id_email\" class=\"form-label
-      requiredField\">\n                Correo electr\xF3nico<span class=\"asteriskField\">*</span>
-      </label> <input type=\"email\" name=\"email\" maxlength=\"320\" class=\"emailinput
-      form-control\" required id=\"id_email\"> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
+      class=\"mb-3\"> <label\n                for=\"id_password1\" class=\"form-label
+      requiredField\">\n                Contrase\xF1a<span class=\"asteriskField\">*</span>
+      </label> <input type=\"password\" name=\"password1\" autocomplete=\"new-password\"
+      class=\"passwordinput form-control\" required id=\"id_password1\"> </div> <div
+      id=\"div_id_password2\" class=\"mb-3\"> <label\n                for=\"id_password2\"
+      class=\"form-label requiredField\">\n                Confirma tu contrase\xF1a<span
+      class=\"asteriskField\">*</span> </label> <input type=\"password\" name=\"password2\"
+      autocomplete=\"new-password\" class=\"passwordinput form-control\" required
+      id=\"id_password2\"> </div> <div id=\"div_id_email\" class=\"mb-3\"> <label\n
+      \               for=\"id_email\" class=\"form-label requiredField\">\n                Correo
+      electr\xF3nico<span class=\"asteriskField\">*</span> </label> <input type=\"email\"
+      name=\"email\" maxlength=\"320\" class=\"emailinput form-control\" required
+      id=\"id_email\"> </div> <input type=\"hidden\" class=\"django-recaptcha-hidden-field\"
       name=\"g-recaptcha-response\">\n\n<input id=\"register-form\" type=\"submit\"
       value=\"Submit\">\n</form>\n\n\n        </div>\n        <aside class=\"col-md-4\">\n
       \         \n          <div class=\"p-3 mb-3 bg-light\">\n            <h4>Contacto</h4>\n
@@ -75,7 +76,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5390'
+      - '5454'
       Content-Type:
       - text/html
       User-Agent:
@@ -93,7 +94,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 84155c0998cb74de-MAD
+      - 8637328b3c071ba6-MAD
       Cache-Control:
       - no-cache
       Connection:
@@ -103,12 +104,12 @@ interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 06 Jan 2024 16:32:53 GMT
+      - Tue, 12 Mar 2024 22:24:58 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=nhETCmnZwHkDdjrGIKSqM3jOIJXEQaST3vlmszbQjs4-1704558773-1-AbR2fmCGGXJWXTRaQE+t4QOguftEaqR0cP8IJV/XNc9ft4ovSmWc/nX/BMK+mU7kHRrACZyZaI82TCIHUerhd3k=;
-        path=/; expires=Sat, 06-Jan-24 17:02:53 GMT; domain=.w3.org; HttpOnly; Secure;
+      - __cf_bm=XlV4VSEHcpEjL0_KOXFzUJVM20UmLT_JGXx.XnrSdgU-1710282298-1.0.1.1-niC6IcT7QG1M9YxlC3t_.aMCoeb_NxcSvFkBoJKxamxxGPvfaeVSsfauI3zGSS11RTgQl3VonBglNMmu4DOONg;
+        path=/; expires=Tue, 12-Mar-24 22:54:58 GMT; domain=.w3.org; HttpOnly; Secure;
         SameSite=None
       Transfer-Encoding:
       - chunked
@@ -128,11 +129,13 @@ interactions:
       strict-transport-security:
       - max-age=15552015; preload
       vary:
-      - Accept-Encoding, User-Agent
+      - Accept-Encoding,User-Agent
+      via:
+      - 1.1 namaka.w3.org
       x-frame-options:
       - deny
       x-request-id:
-      - 84155c0998cb74de
+      - 8637328b3c071ba6
       x-xss-protection:
       - 1; mode=block
     status:
