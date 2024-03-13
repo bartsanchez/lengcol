@@ -12,11 +12,11 @@ idna==3.6
     # via requests
 iniconfig==2.0.0
     # via pytest
-packaging==23.2
+packaging==24.0
     # via pytest
 pluggy==1.4.0
     # via pytest
-pytest==8.0.2
+pytest==8.1.1
     # via -r requirements.in
 requests==2.31.0
     # via -r requirements.in
