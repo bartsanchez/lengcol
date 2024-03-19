@@ -12,7 +12,7 @@ services:
 
     run_migrations:
         build: .
-        command: ../scripts/run_migrations.sh
+        command: ["dockerize", "-wait", "tcp://db:5432", "../scripts/run_migrations.sh"]
         env_file: .env
         depends_on:
             - db
