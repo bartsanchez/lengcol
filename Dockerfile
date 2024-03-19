@@ -7,6 +7,7 @@ ENV ENVIRONMENT dev
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
     git \
+    wget \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
@@ -22,6 +23,9 @@ RUN chmod 640 /var/log/celery/worker.log
 
 RUN mkdir -p /opt/lengcol/
 WORKDIR /opt/lengcol
+
+RUN wget https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz
+RUN tar -C /usr/local/bin -xvzf dockerize-linux-amd64-v0.6.1.tar.gz
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
