@@ -48,7 +48,7 @@ decorator==5.1.1
     #   ipython
 dj-database-url==2.1.0
     # via -r requirements.in
-django==5.0.3
+django==5.0.4
     # via
     #   -r requirements.in
     #   crispy-bootstrap5
@@ -75,7 +75,7 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==24.4.0
+faker==24.7.1
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
@@ -89,13 +89,13 @@ iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
     # via -r requirements.in
-ipython==8.22.2
+ipython==8.23.0
     # via ipdb
 jedi==0.19.1
     # via ipython
 kombu==5.3.6
     # via celery
-lxml==5.1.0
+lxml==5.2.1
     # via splinter
 matplotlib-inline==0.1.6
     # via ipython
@@ -105,7 +105,7 @@ packaging==24.0
     # via
     #   gunicorn
     #   pytest
-parso==0.8.3
+parso==0.8.4
     # via jedi
 pexpect==4.9.0
     # via ipython
@@ -166,9 +166,10 @@ traitlets==5.14.2
     # via
     #   ipython
     #   matplotlib-inline
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   dj-database-url
+    #   ipython
     #   psycopg
 tzdata==2024.1
     # via celery
