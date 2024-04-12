@@ -75,13 +75,13 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==24.8.0
+faker==24.9.0
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
 gunicorn==21.2.0
     # via -r requirements.in
-idna==3.6
+idna==3.7
     # via
     #   requests
     #   yarl
@@ -93,7 +93,7 @@ ipython==8.23.0
     # via ipdb
 jedi==0.19.1
     # via ipython
-kombu==5.3.6
+kombu==5.3.7
     # via celery
 lxml==5.2.1
     # via splinter
