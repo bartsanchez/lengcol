@@ -14,7 +14,7 @@ async-timeout==4.0.3
     # via redis
 billiard==4.2.0
     # via celery
-celery==5.3.6
+celery==5.4.0
     # via -r requirements.in
 certifi==2024.2.2
     # via requests
@@ -75,11 +75,11 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==24.9.0
+faker==24.11.0
     # via factory-boy
 freezegun==1.4.0
     # via -r requirements.in
-gunicorn==21.2.0
+gunicorn==22.0.0
     # via -r requirements.in
 idna==3.7
     # via
@@ -97,7 +97,7 @@ kombu==5.3.7
     # via celery
 lxml==5.2.1
     # via splinter
-matplotlib-inline==0.1.6
+matplotlib-inline==0.1.7
     # via ipython
 multidict==6.0.5
     # via yarl
@@ -158,11 +158,11 @@ six==1.16.0
     #   python-dateutil
 splinter[django,selenium4]==0.21.0
     # via -r requirements.in
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via django
 stack-data==0.6.3
     # via ipython
-traitlets==5.14.2
+traitlets==5.14.3
     # via
     #   ipython
     #   matplotlib-inline
