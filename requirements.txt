@@ -34,7 +34,7 @@ click-repl==0.3.0
     # via celery
 codecov==2.1.13
     # via -r requirements.in
-coverage[toml]==7.4.4
+coverage[toml]==7.5.1
     # via
     #   codecov
     #   pytest-cov
@@ -48,7 +48,7 @@ decorator==5.1.1
     #   ipython
 dj-database-url==2.1.0
     # via -r requirements.in
-django==5.0.4
+django==5.0.5
     # via
     #   -r requirements.in
     #   crispy-bootstrap5
@@ -75,9 +75,9 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==24.11.0
+faker==25.0.1
     # via factory-boy
-freezegun==1.4.0
+freezegun==1.5.0
     # via -r requirements.in
 gunicorn==22.0.0
     # via -r requirements.in
@@ -89,7 +89,7 @@ iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
     # via -r requirements.in
-ipython==8.23.0
+ipython==8.24.0
     # via ipdb
 jedi==0.19.1
     # via ipython
@@ -109,7 +109,7 @@ parso==0.8.4
     # via jedi
 pexpect==4.9.0
     # via ipython
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
 prometheus-client==0.20.0
     # via django-prometheus
@@ -125,9 +125,9 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
-pygments==2.17.2
+pygments==2.18.0
     # via ipython
-pytest==8.1.1
+pytest==8.2.0
     # via
     #   pytest-cov
     #   pytest-django
@@ -145,7 +145,7 @@ python-dateutil==2.9.0.post0
     #   freezegun
 pyyaml==6.0.1
     # via vcrpy
-redis==5.0.3
+redis==5.0.4
     # via -r requirements.in
 requests==2.31.0
     # via
