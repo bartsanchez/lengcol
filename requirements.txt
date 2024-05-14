@@ -75,9 +75,9 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==25.1.0
+faker==25.2.0
     # via factory-boy
-freezegun==1.5.0
+freezegun==1.5.1
     # via -r requirements.in
 gunicorn==22.0.0
     # via -r requirements.in
@@ -95,7 +95,7 @@ jedi==0.19.1
     # via ipython
 kombu==5.3.7
     # via celery
-lxml==5.2.1
+lxml==5.2.2
     # via splinter
 matplotlib-inline==0.1.7
     # via ipython
@@ -117,9 +117,9 @@ prompt-toolkit==3.0.43
     # via
     #   click-repl
     #   ipython
-psycopg[binary]==3.1.18
+psycopg[binary]==3.1.19
     # via -r requirements.in
-psycopg-binary==3.1.18
+psycopg-binary==3.1.19
     # via psycopg
 ptyprocess==0.7.0
     # via pexpect
