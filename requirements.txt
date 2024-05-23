@@ -127,7 +127,7 @@ pure-eval==0.2.2
     # via stack-data
 pygments==2.18.0
     # via ipython
-pytest==8.2.0
+pytest==8.2.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -147,7 +147,7 @@ pyyaml==6.0.1
     # via vcrpy
 redis==5.0.4
     # via -r requirements.in
-requests==2.31.0
+requests==2.32.2
     # via
     #   -r requirements.in
     #   codecov
