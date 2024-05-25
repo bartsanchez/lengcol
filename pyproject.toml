@@ -25,7 +25,6 @@ ignore = [
     "E501",     # line-too-long
     "FIX002",   # line-contains-todo
     "INP001",   # implicit-namespace-package
-    "PLR0913",  # too-many-arguments
     "PLR2004",  # magic-value-comparison
     "PT009",    # pytest-unittest-assertion
     "RUF012",   # mutable-class-default
