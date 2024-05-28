@@ -34,7 +34,7 @@ click-repl==0.3.0
     # via celery
 codecov==2.1.13
     # via -r requirements.in
-coverage[toml]==7.5.1
+coverage[toml]==7.5.3
     # via
     #   codecov
     #   pytest-cov
@@ -46,7 +46,7 @@ decorator==5.1.1
     # via
     #   ipdb
     #   ipython
-dj-database-url==2.1.0
+dj-database-url==2.2.0
     # via -r requirements.in
 django==5.0.6
     # via
@@ -75,7 +75,7 @@ executing==2.0.1
     # via stack-data
 factory-boy==3.3.0
     # via -r requirements.in
-faker==25.2.0
+faker==25.3.0
     # via factory-boy
 freezegun==1.5.1
     # via -r requirements.in
@@ -113,7 +113,7 @@ pluggy==1.5.0
     # via pytest
 prometheus-client==0.20.0
     # via django-prometheus
-prompt-toolkit==3.0.43
+prompt-toolkit==3.0.45
     # via
     #   click-repl
     #   ipython
@@ -166,7 +166,7 @@ traitlets==5.14.3
     # via
     #   ipython
     #   matplotlib-inline
-typing-extensions==4.11.0
+typing-extensions==4.12.0
     # via
     #   dj-database-url
     #   ipython
