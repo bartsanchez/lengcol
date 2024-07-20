@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=./requirements.txt requirements.in
 #
-certifi==2024.6.2
+certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
@@ -12,13 +12,13 @@ idna==3.7
     # via requests
 iniconfig==2.0.0
     # via pytest
-packaging==24.0
+packaging==24.1
     # via pytest
 pluggy==1.5.0
     # via pytest
-pytest==8.2.1
+pytest==8.3.1
     # via -r requirements.in
 requests==2.32.3
     # via -r requirements.in
-urllib3==2.2.1
+urllib3==2.2.2
     # via requests
