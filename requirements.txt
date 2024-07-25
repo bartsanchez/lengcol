@@ -57,7 +57,7 @@ django==5.0.7
     #   django-extensions
     #   django-extra-views
     #   splinter
-django-crispy-forms==2.2
+django-crispy-forms==2.3
     # via
     #   -r requirements.in
     #   crispy-bootstrap5
@@ -123,11 +123,11 @@ psycopg-binary==3.2.1
     # via psycopg
 ptyprocess==0.7.0
     # via pexpect
-pure-eval==0.2.2
+pure-eval==0.2.3
     # via stack-data
 pygments==2.18.0
     # via ipython
-pytest==8.2.2
+pytest==8.3.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -158,7 +158,7 @@ six==1.16.0
     #   python-dateutil
 splinter[django,selenium4]==0.21.0
     # via -r requirements.in
-sqlparse==0.5.0
+sqlparse==0.5.1
     # via django
 stack-data==0.6.3
     # via ipython
