@@ -4,13 +4,13 @@
 #
 #    pip-compile requirements.in
 #
-ansible==10.2.0
+ansible==10.3.0
     # via -r requirements.in
-ansible-core==2.17.2
+ansible-core==2.17.4
     # via ansible
-cffi==1.17.0
+cffi==1.17.1
     # via cryptography
-cryptography==43.0.0
+cryptography==43.0.1
     # via ansible-core
 jinja2==3.1.4
     # via ansible-core
