@@ -100,7 +100,7 @@ services:
             - lengcol
 
     promtail:
-        image: grafana/promtail:2.9.8
+        image: grafana/promtail:2.9.10
         links:
             - loki
         depends_on:
