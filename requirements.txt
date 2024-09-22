@@ -12,7 +12,7 @@ asttokens==2.4.1
     # via stack-data
 async-timeout==4.0.3
     # via redis
-billiard==4.2.0
+billiard==4.2.1
     # via celery
 celery==5.4.0
     # via -r requirements.in
@@ -75,13 +75,13 @@ executing==2.1.0
     # via stack-data
 factory-boy==3.3.1
     # via -r requirements.in
-faker==28.4.1
+faker==29.0.0
     # via factory-boy
 freezegun==1.5.1
     # via -r requirements.in
 gunicorn==23.0.0
     # via -r requirements.in
-idna==3.9
+idna==3.10
     # via
     #   requests
     #   yarl
@@ -93,7 +93,7 @@ ipython==8.27.0
     # via ipdb
 jedi==0.19.1
     # via ipython
-kombu==5.4.1
+kombu==5.4.2
     # via celery
 lxml==5.3.0
     # via splinter
@@ -111,15 +111,15 @@ pexpect==4.9.0
     # via ipython
 pluggy==1.5.0
     # via pytest
-prometheus-client==0.20.0
+prometheus-client==0.21.0
     # via django-prometheus
 prompt-toolkit==3.0.47
     # via
     #   click-repl
     #   ipython
-psycopg[binary]==3.2.1
+psycopg[binary]==3.2.2
     # via -r requirements.in
-psycopg-binary==3.2.1
+psycopg-binary==3.2.2
     # via psycopg
 ptyprocess==0.7.0
     # via pexpect
@@ -172,7 +172,9 @@ typing-extensions==4.12.2
     #   ipython
     #   psycopg
 tzdata==2024.1
-    # via celery
+    # via
+    #   celery
+    #   kombu
 urllib3==2.2.3
     # via
     #   requests
