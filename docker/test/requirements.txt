@@ -8,7 +8,7 @@ certifi==2024.8.30
     # via requests
 charset-normalizer==3.3.2
     # via requests
-idna==3.8
+idna==3.10
     # via requests
 iniconfig==2.0.0
     # via pytest
@@ -16,9 +16,9 @@ packaging==24.1
     # via pytest
 pluggy==1.5.0
     # via pytest
-pytest==8.3.2
+pytest==8.3.3
     # via -r requirements.in
 requests==2.32.3
     # via -r requirements.in
-urllib3==2.2.2
+urllib3==2.2.3
     # via requests
