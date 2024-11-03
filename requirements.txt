@@ -10,8 +10,6 @@ asgiref==3.8.1
     # via django
 asttokens==2.4.1
     # via stack-data
-async-timeout==4.0.3
-    # via redis
 billiard==4.2.1
     # via celery
 celery==5.4.0
@@ -63,7 +61,7 @@ django-crispy-forms==2.3
     #   crispy-bootstrap5
 django-extensions==3.2.3
     # via -r requirements.in
-django-extra-views==0.14.0
+django-extra-views==0.15.0
     # via -r requirements.in
 django-prometheus==2.3.1
     # via -r requirements.in
