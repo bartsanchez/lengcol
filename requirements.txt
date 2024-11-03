@@ -10,8 +10,6 @@ asgiref==3.8.1
     # via django
 asttokens==2.4.1
     # via stack-data
-async-timeout==4.0.3
-    # via redis
 billiard==4.2.1
     # via celery
 celery==5.4.0
@@ -132,7 +130,7 @@ pytest==8.3.3
     #   pytest-cov
     #   pytest-django
     #   pytest-recording
-pytest-cov==5.0.0
+pytest-cov==6.0.0
     # via -r requirements.in
 pytest-django==4.9.0
     # via -r requirements.in
