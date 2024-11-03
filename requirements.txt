@@ -10,8 +10,6 @@ asgiref==3.8.1
     # via django
 asttokens==2.4.1
     # via stack-data
-async-timeout==4.0.3
-    # via redis
 billiard==4.2.1
     # via celery
 celery==5.4.0
@@ -189,7 +187,7 @@ vine==5.1.0
     #   kombu
 wcwidth==0.2.13
     # via prompt-toolkit
-whitenoise==6.7.0
+whitenoise==6.8.2
     # via -r requirements.in
 wrapt==1.16.0
     # via vcrpy
