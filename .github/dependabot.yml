@@ -1,7 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    versioning-strategy: "lockfile-only"
     directory: "/"
+    ignore:
+      - dependency-name: "*.txt"
     schedule:
       interval: "daily"
