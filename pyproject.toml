@@ -1,3 +1,38 @@
+[project]
+name = "lengcol"
+version = "0.0.1"
+dependencies = [
+    # App
+    "django",
+    "django-extensions",
+    "django-tagging @ git+https://github.com/bartsanchez/django-tagging.git@develop",
+    "dj-database-url",
+    "psycopg[binary]",
+    "whitenoise",
+    "django-crispy-forms",
+    "crispy-bootstrap5",
+    "django-extra-views",
+    "django-recaptcha3",
+    "django-recaptcha3 @ git+https://github.com/bartsanchez/django-recaptcha3.git@master",
+    "django-prometheus",
+    "celery",
+    "redis",
+    "gunicorn",
+    # Tests
+    "pytest-django",
+    "pytest-cov",
+    "pytest-recording",
+    "factory_boy",
+    "freezegun",
+    "requests",
+    "ipdb",
+    "splinter[django,selenium4]",
+    "codecov",
+]
+
+[tool.setuptools]
+packages = ["lengcol"]
+
 [tool.ruff]
 target-version = "py311"
 
