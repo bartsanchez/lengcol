@@ -1,6 +1,12 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
+    directory: "/deployment"
+    schedule:
+      interval: "monthly"
+    ignore:
+      - dependency-name: "*"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
