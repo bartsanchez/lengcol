@@ -16,7 +16,7 @@ billiard==4.2.1
     # via celery
 celery==5.4.0
     # via lengcol (pyproject.toml)
-certifi==2024.8.30
+certifi==2025.1.31
     # via requests
 charset-normalizer==3.4.0
     # via requests
@@ -76,7 +76,7 @@ executing==2.1.0
     # via stack-data
 factory-boy==3.3.1
     # via lengcol (pyproject.toml)
-faker==33.1.0
+faker==36.1.1
     # via factory-boy
 freezegun==1.5.1
     # via lengcol (pyproject.toml)
@@ -173,7 +173,7 @@ typing-extensions==4.12.2
     #   faker
     #   ipython
     #   psycopg
-tzdata==2024.2
+tzdata==2025.1
     # via
     #   celery
     #   kombu
@@ -182,7 +182,7 @@ urllib3==2.2.3
     #   requests
     #   splinter
     #   vcrpy
-vcrpy==6.0.2
+vcrpy==7.0.0
     # via pytest-recording
 vine==5.1.0
     # via
