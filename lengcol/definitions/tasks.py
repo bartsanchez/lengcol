@@ -1,8 +1,8 @@
 from django.conf import settings
 from django.core import mail
+from lengcol.celery import app
 
 from definitions import models
-from lengcol.celery import app
 
 
 @app.task()

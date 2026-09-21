@@ -833,8 +833,7 @@ class DefinitionDisableViewTests(
 
         self.assertContains(
             response,
-            "Se va a proceder a eliminar la definición "
-            f'"{term_text}". ¿Estás seguro?',
+            f'Se va a proceder a eliminar la definición "{term_text}". ¿Estás seguro?',
         )
 
     def test_confirm_message_appear_in_view__another_user(self):
