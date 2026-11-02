@@ -87,8 +87,7 @@ class TermSearchViewTests(
     page_title = "Lenguaje Coloquial | Diccionario en español"
     h1_header = "Resultados de la búsqueda"
     meta_description = (
-        "Resultados de una búsqueda de definición para el "
-        "proyecto Lenguaje Coloquial."
+        "Resultados de una búsqueda de definición para el proyecto Lenguaje Coloquial."
     )
 
     @classmethod
